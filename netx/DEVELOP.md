@@ -26,24 +26,43 @@ The initial import used these revisions.
 - Cornetto at `21641495fb6485c1d6d61d44597a58d87ed29de2`
 - CloudOpsBench at `5644a96962f937534290a767a0e5cecf8e0b2df2`
 
-## Tool outputs
+## Tool contracts
 
-Register each tool once, with the same name, input schema, and defaults in both
-modes. Select the mode at session startup. Each call executes the operation once.
+**How Codex handles MCP tools.** Codex exposes the tool name, description, and
+input JSON Schema to the model. On a direct function call, the model supplies
+JSON arguments. Codex pairs the result with the request using `call_id`. For
+ordinary MCP data, Codex serializes `structuredContent` as JSON text, adds a
+timing header, and applies an output budget. Plain text is also supported.
+[Tool definition](../codex-rs/tools/src/responses_api.rs#L32) ·
+[MCP result conversion](../codex-rs/protocol/src/models.rs#L2488) ·
+[Direct call output](../codex-rs/core/src/tools/context.rs#L211)
 
-- `full` returns the complete result.
-- `compact` returns the answer, essential evidence, and a run-scoped `result_id`
-  for fetching details by field or page.
-
-For example, a compact `reachability(snapshot, src, dst)` result identifies
-the router that had no route to the destination.
+**Inputs.** Give each tool one operation. Describe what it reads or changes.
+Define required fields, types, and accepted values in MCP `inputSchema`, and
+validate them in the handler. For example, `reachability` takes a snapshot ID,
+a source router, and a destination IP address. The decoded arguments look like this.
 
 ```json
-{"reachable": false, "reason": "no_route", "node": "r2", "result_id": "r17"}
+{"snapshot":"s1","src":"r1","dst":"192.0.2.9"}
 ```
 
-Test both modes against the same snapshot. Give failed and incomplete queries
-distinct statuses. Reserve `reachable: false` for a confirmed negative result.
+**Outputs.** For network queries, return a JSON object in MCP `structuredContent`.
+Select `full` or `compact` at session startup. Both modes use the same tool
+name, inputs, defaults, and execution. `full` returns the complete result.
+`compact` returns the verdict, the evidence needed to interpret it, and a
+run-scoped `result_id` for details. This example identifies where routing failed.
+
+```json
+{"status":"ok","reachable":false,"reason":"no_route","node":"r2","result_id":"r17"}
+```
+
+`status` describes the query. Here it succeeded and found no route. Use
+`partial` for incomplete evidence. On execution failure, return `error` with
+a short reason and set MCP `isError` to true. Omit
+`reachable` when the verdict is unknown. Keep full traces in the run store.
+Expose details by field or page through `result_id`, and apply the same
+compact view to any text fallback. Test both modes on the same snapshot,
+including failure and partial-result cases.
 
 ## Benchmark runs
 
