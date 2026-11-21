@@ -1,0 +1,3090 @@
+{
+  "topology": "Pern",
+  "node_count": 127,
+  "nodes": [
+    {
+      "id": "0",
+      "hostname": "0_as65005_0",
+      "config_paths": {
+        "final": "final_configs/configs/0_as65005_0.cfg"
+      }
+    },
+    {
+      "id": "1",
+      "hostname": "1_as65005_1",
+      "config_paths": {
+        "final": "final_configs/configs/1_as65005_1.cfg"
+      }
+    },
+    {
+      "id": "10",
+      "hostname": "10_as65004_10",
+      "config_paths": {
+        "final": "final_configs/configs/10_as65004_10.cfg"
+      }
+    },
+    {
+      "id": "100",
+      "hostname": "100_as65001_100",
+      "config_paths": {
+        "final": "final_configs/configs/100_as65001_100.cfg"
+      }
+    },
+    {
+      "id": "101",
+      "hostname": "101_as65005_101",
+      "config_paths": {
+        "final": "final_configs/configs/101_as65005_101.cfg"
+      }
+    },
+    {
+      "id": "102",
+      "hostname": "102_as65005_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/102_as65005_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "103",
+      "hostname": "103_as65003_103",
+      "config_paths": {
+        "final": "final_configs/configs/103_as65003_103.cfg"
+      }
+    },
+    {
+      "id": "104",
+      "hostname": "104_as65003_104",
+      "config_paths": {
+        "final": "final_configs/configs/104_as65003_104.cfg"
+      }
+    },
+    {
+      "id": "105",
+      "hostname": "105_as65003_105",
+      "config_paths": {
+        "final": "final_configs/configs/105_as65003_105.cfg"
+      }
+    },
+    {
+      "id": "106",
+      "hostname": "106_as65003_106",
+      "config_paths": {
+        "final": "final_configs/configs/106_as65003_106.cfg"
+      }
+    },
+    {
+      "id": "107",
+      "hostname": "107_as65003_107",
+      "config_paths": {
+        "final": "final_configs/configs/107_as65003_107.cfg"
+      }
+    },
+    {
+      "id": "108",
+      "hostname": "108_as65003_108",
+      "config_paths": {
+        "final": "final_configs/configs/108_as65003_108.cfg"
+      }
+    },
+    {
+      "id": "109",
+      "hostname": "109_as65003_109",
+      "config_paths": {
+        "final": "final_configs/configs/109_as65003_109.cfg"
+      }
+    },
+    {
+      "id": "11",
+      "hostname": "11_as65007_11",
+      "config_paths": {
+        "final": "final_configs/configs/11_as65007_11.cfg"
+      }
+    },
+    {
+      "id": "110",
+      "hostname": "110_as65003_110",
+      "config_paths": {
+        "final": "final_configs/configs/110_as65003_110.cfg"
+      }
+    },
+    {
+      "id": "111",
+      "hostname": "111_as65003_111",
+      "config_paths": {
+        "final": "final_configs/configs/111_as65003_111.cfg"
+      }
+    },
+    {
+      "id": "112",
+      "hostname": "112_as65003_112",
+      "config_paths": {
+        "final": "final_configs/configs/112_as65003_112.cfg"
+      }
+    },
+    {
+      "id": "113",
+      "hostname": "113_as65001_113",
+      "config_paths": {
+        "final": "final_configs/configs/113_as65001_113.cfg"
+      }
+    },
+    {
+      "id": "114",
+      "hostname": "114_as65001_114",
+      "config_paths": {
+        "final": "final_configs/configs/114_as65001_114.cfg"
+      }
+    },
+    {
+      "id": "115",
+      "hostname": "115_as65001_115",
+      "config_paths": {
+        "final": "final_configs/configs/115_as65001_115.cfg"
+      }
+    },
+    {
+      "id": "116",
+      "hostname": "116_as65001_116",
+      "config_paths": {
+        "final": "final_configs/configs/116_as65001_116.cfg"
+      }
+    },
+    {
+      "id": "117",
+      "hostname": "117_as65001_117",
+      "config_paths": {
+        "final": "final_configs/configs/117_as65001_117.cfg"
+      }
+    },
+    {
+      "id": "118",
+      "hostname": "118_as65001_118",
+      "config_paths": {
+        "final": "final_configs/configs/118_as65001_118.cfg"
+      }
+    },
+    {
+      "id": "119",
+      "hostname": "119_as65008_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/119_as65008_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "12",
+      "hostname": "12_as65004_12",
+      "config_paths": {
+        "final": "final_configs/configs/12_as65004_12.cfg"
+      }
+    },
+    {
+      "id": "120",
+      "hostname": "120_as65008_120",
+      "config_paths": {
+        "final": "final_configs/configs/120_as65008_120.cfg"
+      }
+    },
+    {
+      "id": "121",
+      "hostname": "121_as65008_121",
+      "config_paths": {
+        "final": "final_configs/configs/121_as65008_121.cfg"
+      }
+    },
+    {
+      "id": "122",
+      "hostname": "122_as65008_122",
+      "config_paths": {
+        "final": "final_configs/configs/122_as65008_122.cfg"
+      }
+    },
+    {
+      "id": "123",
+      "hostname": "123_as65008_123",
+      "config_paths": {
+        "final": "final_configs/configs/123_as65008_123.cfg"
+      }
+    },
+    {
+      "id": "124",
+      "hostname": "124_as65008_124",
+      "config_paths": {
+        "final": "final_configs/configs/124_as65008_124.cfg"
+      }
+    },
+    {
+      "id": "125",
+      "hostname": "125_as65008_125",
+      "config_paths": {
+        "final": "final_configs/configs/125_as65008_125.cfg"
+      }
+    },
+    {
+      "id": "126",
+      "hostname": "126_as65003_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/126_as65003_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "13",
+      "hostname": "13_as65004_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/13_as65004_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "14",
+      "hostname": "14_as65007_14",
+      "config_paths": {
+        "final": "final_configs/configs/14_as65007_14.cfg"
+      }
+    },
+    {
+      "id": "15",
+      "hostname": "15_as65007_15",
+      "config_paths": {
+        "final": "final_configs/configs/15_as65007_15.cfg"
+      }
+    },
+    {
+      "id": "16",
+      "hostname": "16_as65007_16",
+      "config_paths": {
+        "final": "final_configs/configs/16_as65007_16.cfg"
+      }
+    },
+    {
+      "id": "17",
+      "hostname": "17_as65007_17",
+      "config_paths": {
+        "final": "final_configs/configs/17_as65007_17.cfg"
+      }
+    },
+    {
+      "id": "18",
+      "hostname": "18_as65004_18",
+      "config_paths": {
+        "final": "final_configs/configs/18_as65004_18.cfg"
+      }
+    },
+    {
+      "id": "19",
+      "hostname": "19_as65004_19",
+      "config_paths": {
+        "final": "final_configs/configs/19_as65004_19.cfg"
+      }
+    },
+    {
+      "id": "2",
+      "hostname": "2_as65005_2",
+      "config_paths": {
+        "final": "final_configs/configs/2_as65005_2.cfg"
+      }
+    },
+    {
+      "id": "20",
+      "hostname": "20_as65001_20",
+      "config_paths": {
+        "final": "final_configs/configs/20_as65001_20.cfg"
+      }
+    },
+    {
+      "id": "21",
+      "hostname": "21_as65001_21",
+      "config_paths": {
+        "final": "final_configs/configs/21_as65001_21.cfg"
+      }
+    },
+    {
+      "id": "22",
+      "hostname": "22_as65001_22",
+      "config_paths": {
+        "final": "final_configs/configs/22_as65001_22.cfg"
+      }
+    },
+    {
+      "id": "23",
+      "hostname": "23_as65001_23",
+      "config_paths": {
+        "final": "final_configs/configs/23_as65001_23.cfg"
+      }
+    },
+    {
+      "id": "24",
+      "hostname": "24_as65001_24",
+      "config_paths": {
+        "final": "final_configs/configs/24_as65001_24.cfg"
+      }
+    },
+    {
+      "id": "25",
+      "hostname": "25_as65001_25",
+      "config_paths": {
+        "final": "final_configs/configs/25_as65001_25.cfg"
+      }
+    },
+    {
+      "id": "26",
+      "hostname": "26_as65001_26",
+      "config_paths": {
+        "final": "final_configs/configs/26_as65001_26.cfg"
+      }
+    },
+    {
+      "id": "27",
+      "hostname": "27_as65003_27",
+      "config_paths": {
+        "final": "final_configs/configs/27_as65003_27.cfg"
+      }
+    },
+    {
+      "id": "28",
+      "hostname": "28_as65003_28",
+      "config_paths": {
+        "final": "final_configs/configs/28_as65003_28.cfg"
+      }
+    },
+    {
+      "id": "29",
+      "hostname": "29_as65003_29",
+      "config_paths": {
+        "final": "final_configs/configs/29_as65003_29.cfg"
+      }
+    },
+    {
+      "id": "3",
+      "hostname": "3_as65005_3",
+      "config_paths": {
+        "final": "final_configs/configs/3_as65005_3.cfg"
+      }
+    },
+    {
+      "id": "30",
+      "hostname": "30_as65003_30",
+      "config_paths": {
+        "final": "final_configs/configs/30_as65003_30.cfg"
+      }
+    },
+    {
+      "id": "31",
+      "hostname": "31_as65003_31",
+      "config_paths": {
+        "final": "final_configs/configs/31_as65003_31.cfg"
+      }
+    },
+    {
+      "id": "32",
+      "hostname": "32_as65003_32",
+      "config_paths": {
+        "final": "final_configs/configs/32_as65003_32.cfg"
+      }
+    },
+    {
+      "id": "33",
+      "hostname": "33_as65003_33",
+      "config_paths": {
+        "final": "final_configs/configs/33_as65003_33.cfg"
+      }
+    },
+    {
+      "id": "34",
+      "hostname": "34_as65003_34",
+      "config_paths": {
+        "final": "final_configs/configs/34_as65003_34.cfg"
+      }
+    },
+    {
+      "id": "35",
+      "hostname": "35_as65003_35",
+      "config_paths": {
+        "final": "final_configs/configs/35_as65003_35.cfg"
+      }
+    },
+    {
+      "id": "36",
+      "hostname": "36_as65003_36",
+      "config_paths": {
+        "final": "final_configs/configs/36_as65003_36.cfg"
+      }
+    },
+    {
+      "id": "37",
+      "hostname": "37_as65001_37",
+      "config_paths": {
+        "final": "final_configs/configs/37_as65001_37.cfg"
+      }
+    },
+    {
+      "id": "38",
+      "hostname": "38_as65001_38",
+      "config_paths": {
+        "final": "final_configs/configs/38_as65001_38.cfg"
+      }
+    },
+    {
+      "id": "39",
+      "hostname": "39_as65004_39",
+      "config_paths": {
+        "final": "final_configs/configs/39_as65004_39.cfg"
+      }
+    },
+    {
+      "id": "4",
+      "hostname": "4_as65005_4",
+      "config_paths": {
+        "final": "final_configs/configs/4_as65005_4.cfg"
+      }
+    },
+    {
+      "id": "40",
+      "hostname": "40_as65004_40",
+      "config_paths": {
+        "final": "final_configs/configs/40_as65004_40.cfg"
+      }
+    },
+    {
+      "id": "41",
+      "hostname": "41_as65004_41",
+      "config_paths": {
+        "final": "final_configs/configs/41_as65004_41.cfg"
+      }
+    },
+    {
+      "id": "42",
+      "hostname": "42_as65004_42",
+      "config_paths": {
+        "final": "final_configs/configs/42_as65004_42.cfg"
+      }
+    },
+    {
+      "id": "43",
+      "hostname": "43_as65001_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/43_as65001_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "44",
+      "hostname": "44_as65001_44",
+      "config_paths": {
+        "final": "final_configs/configs/44_as65001_44.cfg"
+      }
+    },
+    {
+      "id": "45",
+      "hostname": "45_as65004_45",
+      "config_paths": {
+        "final": "final_configs/configs/45_as65004_45.cfg"
+      }
+    },
+    {
+      "id": "46",
+      "hostname": "46_as65004_46",
+      "config_paths": {
+        "final": "final_configs/configs/46_as65004_46.cfg"
+      }
+    },
+    {
+      "id": "47",
+      "hostname": "47_as65006_47",
+      "config_paths": {
+        "final": "final_configs/configs/47_as65006_47.cfg"
+      }
+    },
+    {
+      "id": "48",
+      "hostname": "48_as65006_48",
+      "config_paths": {
+        "final": "final_configs/configs/48_as65006_48.cfg"
+      }
+    },
+    {
+      "id": "49",
+      "hostname": "49_as65006_49",
+      "config_paths": {
+        "final": "final_configs/configs/49_as65006_49.cfg"
+      }
+    },
+    {
+      "id": "5",
+      "hostname": "5_as65005_5",
+      "config_paths": {
+        "final": "final_configs/configs/5_as65005_5.cfg"
+      }
+    },
+    {
+      "id": "50",
+      "hostname": "50_as65006_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/50_as65006_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "51",
+      "hostname": "51_as65002_51",
+      "config_paths": {
+        "final": "final_configs/configs/51_as65002_51.cfg"
+      }
+    },
+    {
+      "id": "52",
+      "hostname": "52_as65002_52",
+      "config_paths": {
+        "final": "final_configs/configs/52_as65002_52.cfg"
+      }
+    },
+    {
+      "id": "53",
+      "hostname": "53_as65002_53",
+      "config_paths": {
+        "final": "final_configs/configs/53_as65002_53.cfg"
+      }
+    },
+    {
+      "id": "54",
+      "hostname": "54_as65002_54",
+      "config_paths": {
+        "final": "final_configs/configs/54_as65002_54.cfg"
+      }
+    },
+    {
+      "id": "55",
+      "hostname": "55_as65006_55",
+      "config_paths": {
+        "final": "final_configs/configs/55_as65006_55.cfg"
+      }
+    },
+    {
+      "id": "56",
+      "hostname": "56_as65006_56",
+      "config_paths": {
+        "final": "final_configs/configs/56_as65006_56.cfg"
+      }
+    },
+    {
+      "id": "57",
+      "hostname": "57_as65006_57",
+      "config_paths": {
+        "final": "final_configs/configs/57_as65006_57.cfg"
+      }
+    },
+    {
+      "id": "58",
+      "hostname": "58_as65006_58",
+      "config_paths": {
+        "final": "final_configs/configs/58_as65006_58.cfg"
+      }
+    },
+    {
+      "id": "59",
+      "hostname": "59_as65004_59",
+      "config_paths": {
+        "final": "final_configs/configs/59_as65004_59.cfg"
+      }
+    },
+    {
+      "id": "6",
+      "hostname": "6_as65005_6",
+      "config_paths": {
+        "final": "final_configs/configs/6_as65005_6.cfg"
+      }
+    },
+    {
+      "id": "60",
+      "hostname": "60_as65004_60",
+      "config_paths": {
+        "final": "final_configs/configs/60_as65004_60.cfg"
+      }
+    },
+    {
+      "id": "61",
+      "hostname": "61_as65006_61",
+      "config_paths": {
+        "final": "final_configs/configs/61_as65006_61.cfg"
+      }
+    },
+    {
+      "id": "62",
+      "hostname": "62_as65006_62",
+      "config_paths": {
+        "final": "final_configs/configs/62_as65006_62.cfg"
+      }
+    },
+    {
+      "id": "63",
+      "hostname": "63_as65006_63",
+      "config_paths": {
+        "final": "final_configs/configs/63_as65006_63.cfg"
+      }
+    },
+    {
+      "id": "64",
+      "hostname": "64_as65006_64",
+      "config_paths": {
+        "final": "final_configs/configs/64_as65006_64.cfg"
+      }
+    },
+    {
+      "id": "65",
+      "hostname": "65_as65001_65",
+      "config_paths": {
+        "final": "final_configs/configs/65_as65001_65.cfg"
+      }
+    },
+    {
+      "id": "66",
+      "hostname": "66_as65007_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/66_as65007_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "67",
+      "hostname": "67_as65007_67",
+      "config_paths": {
+        "final": "final_configs/configs/67_as65007_67.cfg"
+      }
+    },
+    {
+      "id": "68",
+      "hostname": "68_as65001_68",
+      "config_paths": {
+        "final": "final_configs/configs/68_as65001_68.cfg"
+      }
+    },
+    {
+      "id": "69",
+      "hostname": "69_as65002_69",
+      "config_paths": {
+        "final": "final_configs/configs/69_as65002_69.cfg"
+      }
+    },
+    {
+      "id": "7",
+      "hostname": "7_as65005_7",
+      "config_paths": {
+        "final": "final_configs/configs/7_as65005_7.cfg"
+      }
+    },
+    {
+      "id": "70",
+      "hostname": "70_as65002_70",
+      "config_paths": {
+        "final": "final_configs/configs/70_as65002_70.cfg"
+      }
+    },
+    {
+      "id": "71",
+      "hostname": "71_as65002_71",
+      "config_paths": {
+        "final": "final_configs/configs/71_as65002_71.cfg"
+      }
+    },
+    {
+      "id": "72",
+      "hostname": "72_as65002_Pakistan",
+      "config_paths": {
+        "final": "final_configs/configs/72_as65002_Pakistan.cfg"
+      }
+    },
+    {
+      "id": "73",
+      "hostname": "73_as65002_73",
+      "config_paths": {
+        "final": "final_configs/configs/73_as65002_73.cfg"
+      }
+    },
+    {
+      "id": "74",
+      "hostname": "74_as65002_74",
+      "config_paths": {
+        "final": "final_configs/configs/74_as65002_74.cfg"
+      }
+    },
+    {
+      "id": "75",
+      "hostname": "75_as65002_75",
+      "config_paths": {
+        "final": "final_configs/configs/75_as65002_75.cfg"
+      }
+    },
+    {
+      "id": "76",
+      "hostname": "76_as65002_76",
+      "config_paths": {
+        "final": "final_configs/configs/76_as65002_76.cfg"
+      }
+    },
+    {
+      "id": "77",
+      "hostname": "77_as65002_77",
+      "config_paths": {
+        "final": "final_configs/configs/77_as65002_77.cfg"
+      }
+    },
+    {
+      "id": "78",
+      "hostname": "78_as65002_78",
+      "config_paths": {
+        "final": "final_configs/configs/78_as65002_78.cfg"
+      }
+    },
+    {
+      "id": "79",
+      "hostname": "79_as65002_79",
+      "config_paths": {
+        "final": "final_configs/configs/79_as65002_79.cfg"
+      }
+    },
+    {
+      "id": "8",
+      "hostname": "8_as65005_8",
+      "config_paths": {
+        "final": "final_configs/configs/8_as65005_8.cfg"
+      }
+    },
+    {
+      "id": "80",
+      "hostname": "80_as65002_80",
+      "config_paths": {
+        "final": "final_configs/configs/80_as65002_80.cfg"
+      }
+    },
+    {
+      "id": "81",
+      "hostname": "81_as65002_81",
+      "config_paths": {
+        "final": "final_configs/configs/81_as65002_81.cfg"
+      }
+    },
+    {
+      "id": "82",
+      "hostname": "82_as65002_82",
+      "config_paths": {
+        "final": "final_configs/configs/82_as65002_82.cfg"
+      }
+    },
+    {
+      "id": "83",
+      "hostname": "83_as65002_83",
+      "config_paths": {
+        "final": "final_configs/configs/83_as65002_83.cfg"
+      }
+    },
+    {
+      "id": "84",
+      "hostname": "84_as65002_84",
+      "config_paths": {
+        "final": "final_configs/configs/84_as65002_84.cfg"
+      }
+    },
+    {
+      "id": "85",
+      "hostname": "85_as65002_85",
+      "config_paths": {
+        "final": "final_configs/configs/85_as65002_85.cfg"
+      }
+    },
+    {
+      "id": "86",
+      "hostname": "86_as65002_86",
+      "config_paths": {
+        "final": "final_configs/configs/86_as65002_86.cfg"
+      }
+    },
+    {
+      "id": "87",
+      "hostname": "87_as65002_87",
+      "config_paths": {
+        "final": "final_configs/configs/87_as65002_87.cfg"
+      }
+    },
+    {
+      "id": "88",
+      "hostname": "88_as65002_88",
+      "config_paths": {
+        "final": "final_configs/configs/88_as65002_88.cfg"
+      }
+    },
+    {
+      "id": "89",
+      "hostname": "89_as65001_89",
+      "config_paths": {
+        "final": "final_configs/configs/89_as65001_89.cfg"
+      }
+    },
+    {
+      "id": "9",
+      "hostname": "9_as65005_9",
+      "config_paths": {
+        "final": "final_configs/configs/9_as65005_9.cfg"
+      }
+    },
+    {
+      "id": "90",
+      "hostname": "90_as65001_90",
+      "config_paths": {
+        "final": "final_configs/configs/90_as65001_90.cfg"
+      }
+    },
+    {
+      "id": "91",
+      "hostname": "91_as65001_91",
+      "config_paths": {
+        "final": "final_configs/configs/91_as65001_91.cfg"
+      }
+    },
+    {
+      "id": "92",
+      "hostname": "92_as65001_92",
+      "config_paths": {
+        "final": "final_configs/configs/92_as65001_92.cfg"
+      }
+    },
+    {
+      "id": "93",
+      "hostname": "93_as65001_93",
+      "config_paths": {
+        "final": "final_configs/configs/93_as65001_93.cfg"
+      }
+    },
+    {
+      "id": "94",
+      "hostname": "94_as65001_94",
+      "config_paths": {
+        "final": "final_configs/configs/94_as65001_94.cfg"
+      }
+    },
+    {
+      "id": "95",
+      "hostname": "95_as65001_95",
+      "config_paths": {
+        "final": "final_configs/configs/95_as65001_95.cfg"
+      }
+    },
+    {
+      "id": "96",
+      "hostname": "96_as65001_96",
+      "config_paths": {
+        "final": "final_configs/configs/96_as65001_96.cfg"
+      }
+    },
+    {
+      "id": "97",
+      "hostname": "97_as65001_97",
+      "config_paths": {
+        "final": "final_configs/configs/97_as65001_97.cfg"
+      }
+    },
+    {
+      "id": "98",
+      "hostname": "98_as65001_98",
+      "config_paths": {
+        "final": "final_configs/configs/98_as65001_98.cfg"
+      }
+    },
+    {
+      "id": "99",
+      "hostname": "99_as65001_99",
+      "config_paths": {
+        "final": "final_configs/configs/99_as65001_99.cfg"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "edge-0000",
+      "nodes": [
+        "0",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "0",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0001",
+      "nodes": [
+        "1",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "1",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0002",
+      "nodes": [
+        "2",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "2",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0003",
+      "nodes": [
+        "3",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "3",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/3"
+        }
+      ]
+    },
+    {
+      "id": "edge-0004",
+      "nodes": [
+        "4",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "4",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/4"
+        }
+      ]
+    },
+    {
+      "id": "edge-0005",
+      "nodes": [
+        "5",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "5",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/5"
+        }
+      ]
+    },
+    {
+      "id": "edge-0006",
+      "nodes": [
+        "6",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "6",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/6"
+        }
+      ]
+    },
+    {
+      "id": "edge-0007",
+      "nodes": [
+        "7",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "7",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/7"
+        }
+      ]
+    },
+    {
+      "id": "edge-0008",
+      "nodes": [
+        "8",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "8",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/8"
+        }
+      ]
+    },
+    {
+      "id": "edge-0009",
+      "nodes": [
+        "9",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "9",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/9"
+        }
+      ]
+    },
+    {
+      "id": "edge-0010",
+      "nodes": [
+        "10",
+        "59"
+      ],
+      "interfaces": [
+        {
+          "node": "10",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "59",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0011",
+      "nodes": [
+        "10",
+        "13"
+      ],
+      "interfaces": [
+        {
+          "node": "10",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0012",
+      "nodes": [
+        "10",
+        "46"
+      ],
+      "interfaces": [
+        {
+          "node": "10",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "46",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0013",
+      "nodes": [
+        "11",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "11",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0014",
+      "nodes": [
+        "12",
+        "13"
+      ],
+      "interfaces": [
+        {
+          "node": "12",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0015",
+      "nodes": [
+        "13",
+        "39"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "39",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0016",
+      "nodes": [
+        "13",
+        "40"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/3"
+        },
+        {
+          "node": "40",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0017",
+      "nodes": [
+        "13",
+        "41"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/4"
+        },
+        {
+          "node": "41",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0018",
+      "nodes": [
+        "13",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/5"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0019",
+      "nodes": [
+        "13",
+        "45"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/6"
+        },
+        {
+          "node": "45",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0020",
+      "nodes": [
+        "13",
+        "46"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/7"
+        },
+        {
+          "node": "46",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0021",
+      "nodes": [
+        "13",
+        "18"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/8"
+        },
+        {
+          "node": "18",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0022",
+      "nodes": [
+        "13",
+        "19"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/9"
+        },
+        {
+          "node": "19",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0023",
+      "nodes": [
+        "13",
+        "42"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/10"
+        },
+        {
+          "node": "42",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0024",
+      "nodes": [
+        "14",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "14",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0025",
+      "nodes": [
+        "15",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "15",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0026",
+      "nodes": [
+        "16",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "16",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/3"
+        }
+      ]
+    },
+    {
+      "id": "edge-0027",
+      "nodes": [
+        "17",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "17",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/4"
+        }
+      ]
+    },
+    {
+      "id": "edge-0028",
+      "nodes": [
+        "20",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "20",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0029",
+      "nodes": [
+        "21",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "21",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0030",
+      "nodes": [
+        "22",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "22",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/3"
+        }
+      ]
+    },
+    {
+      "id": "edge-0031",
+      "nodes": [
+        "23",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "23",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/4"
+        }
+      ]
+    },
+    {
+      "id": "edge-0032",
+      "nodes": [
+        "24",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "24",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/5"
+        }
+      ]
+    },
+    {
+      "id": "edge-0033",
+      "nodes": [
+        "25",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "25",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/6"
+        }
+      ]
+    },
+    {
+      "id": "edge-0034",
+      "nodes": [
+        "26",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "26",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/7"
+        }
+      ]
+    },
+    {
+      "id": "edge-0035",
+      "nodes": [
+        "27",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "27",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0036",
+      "nodes": [
+        "28",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "28",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0037",
+      "nodes": [
+        "29",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "29",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0038",
+      "nodes": [
+        "30",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "30",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/3"
+        }
+      ]
+    },
+    {
+      "id": "edge-0039",
+      "nodes": [
+        "31",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "31",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/4"
+        }
+      ]
+    },
+    {
+      "id": "edge-0040",
+      "nodes": [
+        "32",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "32",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/5"
+        }
+      ]
+    },
+    {
+      "id": "edge-0041",
+      "nodes": [
+        "33",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "33",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/6"
+        }
+      ]
+    },
+    {
+      "id": "edge-0042",
+      "nodes": [
+        "34",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "34",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/7"
+        }
+      ]
+    },
+    {
+      "id": "edge-0043",
+      "nodes": [
+        "35",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "35",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/8"
+        }
+      ]
+    },
+    {
+      "id": "edge-0044",
+      "nodes": [
+        "36",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "36",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/9"
+        }
+      ]
+    },
+    {
+      "id": "edge-0045",
+      "nodes": [
+        "37",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "37",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/8"
+        }
+      ]
+    },
+    {
+      "id": "edge-0046",
+      "nodes": [
+        "38",
+        "43"
+      ],
+      "interfaces": [
+        {
+          "node": "38",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/9"
+        }
+      ]
+    },
+    {
+      "id": "edge-0047",
+      "nodes": [
+        "43",
+        "44"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/10"
+        },
+        {
+          "node": "44",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0048",
+      "nodes": [
+        "43",
+        "65"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/11"
+        },
+        {
+          "node": "65",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0049",
+      "nodes": [
+        "43",
+        "68"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/12"
+        },
+        {
+          "node": "68",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0050",
+      "nodes": [
+        "43",
+        "89"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/13"
+        },
+        {
+          "node": "89",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0051",
+      "nodes": [
+        "43",
+        "90"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/14"
+        },
+        {
+          "node": "90",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0052",
+      "nodes": [
+        "43",
+        "91"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/15"
+        },
+        {
+          "node": "91",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0053",
+      "nodes": [
+        "43",
+        "92"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/16"
+        },
+        {
+          "node": "92",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0054",
+      "nodes": [
+        "43",
+        "93"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/17"
+        },
+        {
+          "node": "93",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0055",
+      "nodes": [
+        "43",
+        "94"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/18"
+        },
+        {
+          "node": "94",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0056",
+      "nodes": [
+        "43",
+        "95"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/19"
+        },
+        {
+          "node": "95",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0057",
+      "nodes": [
+        "43",
+        "96"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/20"
+        },
+        {
+          "node": "96",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0058",
+      "nodes": [
+        "43",
+        "97"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/21"
+        },
+        {
+          "node": "97",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0059",
+      "nodes": [
+        "43",
+        "98"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/22"
+        },
+        {
+          "node": "98",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0060",
+      "nodes": [
+        "43",
+        "99"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/23"
+        },
+        {
+          "node": "99",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0061",
+      "nodes": [
+        "43",
+        "100"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/24"
+        },
+        {
+          "node": "100",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0062",
+      "nodes": [
+        "43",
+        "113"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/25"
+        },
+        {
+          "node": "113",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0063",
+      "nodes": [
+        "43",
+        "114"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/26"
+        },
+        {
+          "node": "114",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0064",
+      "nodes": [
+        "43",
+        "115"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/27"
+        },
+        {
+          "node": "115",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0065",
+      "nodes": [
+        "43",
+        "116"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/28"
+        },
+        {
+          "node": "116",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0066",
+      "nodes": [
+        "43",
+        "117"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/29"
+        },
+        {
+          "node": "117",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0067",
+      "nodes": [
+        "43",
+        "118"
+      ],
+      "interfaces": [
+        {
+          "node": "43",
+          "name": "GigabitEthernet0/30"
+        },
+        {
+          "node": "118",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0068",
+      "nodes": [
+        "46",
+        "66"
+      ],
+      "interfaces": [
+        {
+          "node": "46",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/5"
+        }
+      ]
+    },
+    {
+      "id": "edge-0069",
+      "nodes": [
+        "46",
+        "60"
+      ],
+      "interfaces": [
+        {
+          "node": "46",
+          "name": "GigabitEthernet0/3"
+        },
+        {
+          "node": "60",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0070",
+      "nodes": [
+        "47",
+        "50"
+      ],
+      "interfaces": [
+        {
+          "node": "47",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0071",
+      "nodes": [
+        "48",
+        "50"
+      ],
+      "interfaces": [
+        {
+          "node": "48",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0072",
+      "nodes": [
+        "49",
+        "50"
+      ],
+      "interfaces": [
+        {
+          "node": "49",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0073",
+      "nodes": [
+        "50",
+        "64"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/3"
+        },
+        {
+          "node": "64",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0074",
+      "nodes": [
+        "50",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/4"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0075",
+      "nodes": [
+        "50",
+        "55"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/5"
+        },
+        {
+          "node": "55",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0076",
+      "nodes": [
+        "50",
+        "56"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/6"
+        },
+        {
+          "node": "56",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0077",
+      "nodes": [
+        "50",
+        "57"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/7"
+        },
+        {
+          "node": "57",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0078",
+      "nodes": [
+        "50",
+        "58"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/8"
+        },
+        {
+          "node": "58",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0079",
+      "nodes": [
+        "50",
+        "59"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/9"
+        },
+        {
+          "node": "59",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0080",
+      "nodes": [
+        "50",
+        "61"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/10"
+        },
+        {
+          "node": "61",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0081",
+      "nodes": [
+        "50",
+        "62"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/11"
+        },
+        {
+          "node": "62",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0082",
+      "nodes": [
+        "50",
+        "63"
+      ],
+      "interfaces": [
+        {
+          "node": "50",
+          "name": "GigabitEthernet0/12"
+        },
+        {
+          "node": "63",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0083",
+      "nodes": [
+        "51",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "51",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0084",
+      "nodes": [
+        "52",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "52",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0085",
+      "nodes": [
+        "53",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "53",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/3"
+        }
+      ]
+    },
+    {
+      "id": "edge-0086",
+      "nodes": [
+        "54",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "54",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/4"
+        }
+      ]
+    },
+    {
+      "id": "edge-0087",
+      "nodes": [
+        "59",
+        "60"
+      ],
+      "interfaces": [
+        {
+          "node": "59",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "60",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0088",
+      "nodes": [
+        "60",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "60",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/10"
+        }
+      ]
+    },
+    {
+      "id": "edge-0089",
+      "nodes": [
+        "66",
+        "67"
+      ],
+      "interfaces": [
+        {
+          "node": "66",
+          "name": "GigabitEthernet0/6"
+        },
+        {
+          "node": "67",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0090",
+      "nodes": [
+        "69",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "69",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/5"
+        }
+      ]
+    },
+    {
+      "id": "edge-0091",
+      "nodes": [
+        "70",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "70",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/6"
+        }
+      ]
+    },
+    {
+      "id": "edge-0092",
+      "nodes": [
+        "71",
+        "72"
+      ],
+      "interfaces": [
+        {
+          "node": "71",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/7"
+        }
+      ]
+    },
+    {
+      "id": "edge-0093",
+      "nodes": [
+        "72",
+        "73"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/8"
+        },
+        {
+          "node": "73",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0094",
+      "nodes": [
+        "72",
+        "74"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/9"
+        },
+        {
+          "node": "74",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0095",
+      "nodes": [
+        "72",
+        "75"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/10"
+        },
+        {
+          "node": "75",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0096",
+      "nodes": [
+        "72",
+        "76"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/11"
+        },
+        {
+          "node": "76",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0097",
+      "nodes": [
+        "72",
+        "77"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/12"
+        },
+        {
+          "node": "77",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0098",
+      "nodes": [
+        "72",
+        "78"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/13"
+        },
+        {
+          "node": "78",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0099",
+      "nodes": [
+        "72",
+        "79"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/14"
+        },
+        {
+          "node": "79",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0100",
+      "nodes": [
+        "72",
+        "80"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/15"
+        },
+        {
+          "node": "80",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0101",
+      "nodes": [
+        "72",
+        "81"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/16"
+        },
+        {
+          "node": "81",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0102",
+      "nodes": [
+        "72",
+        "82"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/17"
+        },
+        {
+          "node": "82",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0103",
+      "nodes": [
+        "72",
+        "83"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/18"
+        },
+        {
+          "node": "83",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0104",
+      "nodes": [
+        "72",
+        "84"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/19"
+        },
+        {
+          "node": "84",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0105",
+      "nodes": [
+        "72",
+        "85"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/20"
+        },
+        {
+          "node": "85",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0106",
+      "nodes": [
+        "72",
+        "86"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/21"
+        },
+        {
+          "node": "86",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0107",
+      "nodes": [
+        "72",
+        "87"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/22"
+        },
+        {
+          "node": "87",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0108",
+      "nodes": [
+        "72",
+        "88"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/23"
+        },
+        {
+          "node": "88",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0109",
+      "nodes": [
+        "72",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "72",
+          "name": "GigabitEthernet0/24"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/10"
+        }
+      ]
+    },
+    {
+      "id": "edge-0110",
+      "nodes": [
+        "101",
+        "102"
+      ],
+      "interfaces": [
+        {
+          "node": "101",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/11"
+        }
+      ]
+    },
+    {
+      "id": "edge-0111",
+      "nodes": [
+        "102",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "102",
+          "name": "GigabitEthernet0/12"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/11"
+        }
+      ]
+    },
+    {
+      "id": "edge-0112",
+      "nodes": [
+        "103",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "103",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/12"
+        }
+      ]
+    },
+    {
+      "id": "edge-0113",
+      "nodes": [
+        "104",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "104",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/13"
+        }
+      ]
+    },
+    {
+      "id": "edge-0114",
+      "nodes": [
+        "105",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "105",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/14"
+        }
+      ]
+    },
+    {
+      "id": "edge-0115",
+      "nodes": [
+        "106",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "106",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/15"
+        }
+      ]
+    },
+    {
+      "id": "edge-0116",
+      "nodes": [
+        "107",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "107",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/16"
+        }
+      ]
+    },
+    {
+      "id": "edge-0117",
+      "nodes": [
+        "108",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "108",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/17"
+        }
+      ]
+    },
+    {
+      "id": "edge-0118",
+      "nodes": [
+        "109",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "109",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/18"
+        }
+      ]
+    },
+    {
+      "id": "edge-0119",
+      "nodes": [
+        "110",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "110",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/19"
+        }
+      ]
+    },
+    {
+      "id": "edge-0120",
+      "nodes": [
+        "111",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "111",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/20"
+        }
+      ]
+    },
+    {
+      "id": "edge-0121",
+      "nodes": [
+        "112",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "112",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/21"
+        }
+      ]
+    },
+    {
+      "id": "edge-0122",
+      "nodes": [
+        "119",
+        "120"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "120",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0123",
+      "nodes": [
+        "119",
+        "121"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "121",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0124",
+      "nodes": [
+        "119",
+        "122"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "122",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0125",
+      "nodes": [
+        "119",
+        "123"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/3"
+        },
+        {
+          "node": "123",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0126",
+      "nodes": [
+        "119",
+        "124"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/4"
+        },
+        {
+          "node": "124",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0127",
+      "nodes": [
+        "119",
+        "125"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/5"
+        },
+        {
+          "node": "125",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0128",
+      "nodes": [
+        "119",
+        "126"
+      ],
+      "interfaces": [
+        {
+          "node": "119",
+          "name": "GigabitEthernet0/6"
+        },
+        {
+          "node": "126",
+          "name": "GigabitEthernet0/22"
+        }
+      ]
+    }
+  ]
+}

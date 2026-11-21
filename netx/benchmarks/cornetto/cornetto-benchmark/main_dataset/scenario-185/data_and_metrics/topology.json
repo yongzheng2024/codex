@@ -1,0 +1,529 @@
+{
+  "topology": "Atmnet",
+  "node_count": 21,
+  "nodes": [
+    {
+      "id": "0",
+      "hostname": "0_as65004_Salt-Lake-City",
+      "config_paths": {
+        "final": "final_configs/configs/0_as65004_Salt-Lake-City.cfg"
+      }
+    },
+    {
+      "id": "1",
+      "hostname": "1_as65001_Minneapolis",
+      "config_paths": {
+        "final": "final_configs/configs/1_as65001_Minneapolis.cfg"
+      }
+    },
+    {
+      "id": "10",
+      "hostname": "10_as65002_Los-Angeles",
+      "config_paths": {
+        "final": "final_configs/configs/10_as65002_Los-Angeles.cfg"
+      }
+    },
+    {
+      "id": "11",
+      "hostname": "11_as65003_Houston",
+      "config_paths": {
+        "final": "final_configs/configs/11_as65003_Houston.cfg"
+      }
+    },
+    {
+      "id": "12",
+      "hostname": "12_as65004_St-Louis",
+      "config_paths": {
+        "final": "final_configs/configs/12_as65004_St-Louis.cfg"
+      }
+    },
+    {
+      "id": "13",
+      "hostname": "13_as65002_Seattle",
+      "config_paths": {
+        "final": "final_configs/configs/13_as65002_Seattle.cfg"
+      }
+    },
+    {
+      "id": "14",
+      "hostname": "14_as65002_Oakland",
+      "config_paths": {
+        "final": "final_configs/configs/14_as65002_Oakland.cfg"
+      }
+    },
+    {
+      "id": "15",
+      "hostname": "15_as65002_Santa-Clara",
+      "config_paths": {
+        "final": "final_configs/configs/15_as65002_Santa-Clara.cfg"
+      }
+    },
+    {
+      "id": "16",
+      "hostname": "16_as65003_Atlanta",
+      "config_paths": {
+        "final": "final_configs/configs/16_as65003_Atlanta.cfg"
+      }
+    },
+    {
+      "id": "17",
+      "hostname": "17_as65002_San-Diego",
+      "config_paths": {
+        "final": "final_configs/configs/17_as65002_San-Diego.cfg"
+      }
+    },
+    {
+      "id": "18",
+      "hostname": "18_as65002_Phoenix",
+      "config_paths": {
+        "final": "final_configs/configs/18_as65002_Phoenix.cfg"
+      }
+    },
+    {
+      "id": "19",
+      "hostname": "19_as65003_Tucson",
+      "config_paths": {
+        "final": "final_configs/configs/19_as65003_Tucson.cfg"
+      }
+    },
+    {
+      "id": "2",
+      "hostname": "2_as65004_Kansas-City",
+      "config_paths": {
+        "final": "final_configs/configs/2_as65004_Kansas-City.cfg"
+      }
+    },
+    {
+      "id": "20",
+      "hostname": "20_as65003_Dallas",
+      "config_paths": {
+        "final": "final_configs/configs/20_as65003_Dallas.cfg"
+      }
+    },
+    {
+      "id": "3",
+      "hostname": "3_as65004_Denver",
+      "config_paths": {
+        "final": "final_configs/configs/3_as65004_Denver.cfg"
+      }
+    },
+    {
+      "id": "4",
+      "hostname": "4_as65001_Pittsburgh",
+      "config_paths": {
+        "final": "final_configs/configs/4_as65001_Pittsburgh.cfg"
+      }
+    },
+    {
+      "id": "5",
+      "hostname": "5_as65001_Philadelphia",
+      "config_paths": {
+        "final": "final_configs/configs/5_as65001_Philadelphia.cfg"
+      }
+    },
+    {
+      "id": "6",
+      "hostname": "6_as65001_Chicago",
+      "config_paths": {
+        "final": "final_configs/configs/6_as65001_Chicago.cfg"
+      }
+    },
+    {
+      "id": "7",
+      "hostname": "7_as65001_Detroit",
+      "config_paths": {
+        "final": "final_configs/configs/7_as65001_Detroit.cfg"
+      }
+    },
+    {
+      "id": "8",
+      "hostname": "8_as65001_New-York",
+      "config_paths": {
+        "final": "final_configs/configs/8_as65001_New-York.cfg"
+      }
+    },
+    {
+      "id": "9",
+      "hostname": "9_as65003_Washington--DC",
+      "config_paths": {
+        "final": "final_configs/configs/9_as65003_Washington--DC.cfg"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "edge-0000",
+      "nodes": [
+        "0",
+        "3"
+      ],
+      "interfaces": [
+        {
+          "node": "0",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "3",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0001",
+      "nodes": [
+        "0",
+        "14"
+      ],
+      "interfaces": [
+        {
+          "node": "0",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "14",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0002",
+      "nodes": [
+        "1",
+        "6"
+      ],
+      "interfaces": [
+        {
+          "node": "1",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "6",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0003",
+      "nodes": [
+        "2",
+        "3"
+      ],
+      "interfaces": [
+        {
+          "node": "2",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "3",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0004",
+      "nodes": [
+        "2",
+        "12"
+      ],
+      "interfaces": [
+        {
+          "node": "2",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "12",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0005",
+      "nodes": [
+        "4",
+        "5"
+      ],
+      "interfaces": [
+        {
+          "node": "4",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "5",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0006",
+      "nodes": [
+        "4",
+        "7"
+      ],
+      "interfaces": [
+        {
+          "node": "4",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "7",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0007",
+      "nodes": [
+        "5",
+        "8"
+      ],
+      "interfaces": [
+        {
+          "node": "5",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "8",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0008",
+      "nodes": [
+        "6",
+        "12"
+      ],
+      "interfaces": [
+        {
+          "node": "6",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "12",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0009",
+      "nodes": [
+        "6",
+        "7"
+      ],
+      "interfaces": [
+        {
+          "node": "6",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "7",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0010",
+      "nodes": [
+        "8",
+        "9"
+      ],
+      "interfaces": [
+        {
+          "node": "8",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "9",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0011",
+      "nodes": [
+        "9",
+        "16"
+      ],
+      "interfaces": [
+        {
+          "node": "9",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "16",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0012",
+      "nodes": [
+        "10",
+        "17"
+      ],
+      "interfaces": [
+        {
+          "node": "10",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "17",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0013",
+      "nodes": [
+        "10",
+        "15"
+      ],
+      "interfaces": [
+        {
+          "node": "10",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "15",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0014",
+      "nodes": [
+        "11",
+        "16"
+      ],
+      "interfaces": [
+        {
+          "node": "11",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "16",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0015",
+      "nodes": [
+        "11",
+        "20"
+      ],
+      "interfaces": [
+        {
+          "node": "11",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "20",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0016",
+      "nodes": [
+        "11",
+        "12"
+      ],
+      "interfaces": [
+        {
+          "node": "11",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "12",
+          "name": "GigabitEthernet0/2"
+        }
+      ]
+    },
+    {
+      "id": "edge-0017",
+      "nodes": [
+        "13",
+        "14"
+      ],
+      "interfaces": [
+        {
+          "node": "13",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "14",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0018",
+      "nodes": [
+        "14",
+        "15"
+      ],
+      "interfaces": [
+        {
+          "node": "14",
+          "name": "GigabitEthernet0/2"
+        },
+        {
+          "node": "15",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    },
+    {
+      "id": "edge-0019",
+      "nodes": [
+        "17",
+        "18"
+      ],
+      "interfaces": [
+        {
+          "node": "17",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "18",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0020",
+      "nodes": [
+        "18",
+        "19"
+      ],
+      "interfaces": [
+        {
+          "node": "18",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "19",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0021",
+      "nodes": [
+        "19",
+        "20"
+      ],
+      "interfaces": [
+        {
+          "node": "19",
+          "name": "GigabitEthernet0/1"
+        },
+        {
+          "node": "20",
+          "name": "GigabitEthernet0/1"
+        }
+      ]
+    }
+  ]
+}

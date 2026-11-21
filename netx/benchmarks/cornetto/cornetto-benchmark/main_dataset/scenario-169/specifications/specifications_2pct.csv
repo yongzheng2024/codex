@@ -1,0 +1,15 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+isolation,10_as65001_los-angeles,10.181.0.2/31,,,intact
+isolation,13_as65001_seattle,10.181.0.2/31,,,intact
+isolation,14_as65001_oakland,10.181.0.2/31,,,intact
+isolation,16_as65004_atlanta,10.181.0.14/31,,,intact
+isolation,1_as65002_minneapolis,10.181.0.12/31,,,intact
+isolation,1_as65002_minneapolis,10.181.0.18/31,,,intact
+reachability,3_as65003_denver,10.200.0.0/24,,,broken_removed
+isolation,4_as65002_pittsburgh,10.181.0.18/31,,,intact
+isolation,6_as65002_chicago,10.181.0.12/31,,,intact
+isolation,6_as65002_chicago,10.181.0.18/31,,,intact
+isolation,7_as65002_detroit,10.181.0.12/31,,,intact
+isolation,7_as65002_detroit,10.181.0.18/31,,,intact
+isolation,8_as65004_new-york,10.181.0.14/31,,,intact
+isolation,9_as65004_washington--dc,10.181.0.14/31,,,intact

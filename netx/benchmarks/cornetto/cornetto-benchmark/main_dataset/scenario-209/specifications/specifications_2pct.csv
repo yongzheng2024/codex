@@ -1,0 +1,10 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+isolation,0_as65002_illinois,10.181.0.0/31,,,intact
+isolation,11_as65004_radc,10.181.0.10/31,,,intact
+isolation,11_as65004_radc,10.181.0.12/31,,,intact
+isolation,12_as65002_mcclellan,10.181.0.0/31,,,broken_removed
+isolation,27_as65004_lincoln,10.181.0.10/31,,,intact
+isolation,27_as65004_lincoln,10.181.0.12/31,,,intact
+isolation,28_as65002_mit,10.181.0.0/31,,,intact
+isolation,2_as65004_carnegie,10.181.0.12/31,,,intact
+isolation,3_as65004_case,10.181.0.10/31,,,intact

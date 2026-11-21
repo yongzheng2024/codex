@@ -1,0 +1,613 @@
+package org.batfish.minesweeper.bdd;
+
+import static org.batfish.common.bdd.BDDMatchers.isZero;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.testing.EqualsTester;
+import java.util.function.Consumer;
+import net.sf.javabdd.BDD;
+import net.sf.javabdd.BDDFactory;
+import net.sf.javabdd.BDDPairing;
+import net.sf.javabdd.JFactory;
+import org.batfish.datamodel.Ip;
+import org.batfish.datamodel.OriginType;
+import org.batfish.datamodel.RoutingProtocol;
+import org.batfish.datamodel.bgp.TunnelEncapsulationAttribute;
+import org.batfish.minesweeper.OspfType;
+import org.batfish.minesweeper.bdd.BDDRoute.Attribute;
+import org.batfish.minesweeper.bdd.BDDRoute.Field;
+import org.batfish.minesweeper.bdd.BDDRoute.NextHopType;
+import org.batfish.minesweeper.bdd.BDDTunnelEncapsulationAttribute.Value;
+import org.junit.Test;
+import org.junit.internal.matchers.ThrowableMessageMatcher;
+
+/** Tests for {@link BDDRoute}. */
+public class BDDRouteTest {
+  @Test
+  public void testEquals() {
+    BDDFactory factory = JFactory.init(100, 100);
+    BDDRoute orig = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    BDDRoute admin = new BDDRoute(orig);
+    admin.getAdminDist().setValue(1);
+    BDDRoute asPathRegex = new BDDRoute(orig);
+    asPathRegex.getAsPathRegexAtomicPredicates().setValue(1);
+    BDDRoute clusterListLength = new BDDRoute(orig);
+    clusterListLength.getClusterListLength().setValue(1);
+    BDDRoute communities = new BDDRoute(orig);
+    communities.getCommunityAtomicPredicates()[0] = factory.one();
+    BDDRoute localPref = new BDDRoute(orig);
+    localPref.getLocalPref().setValue(1);
+    BDDRoute med = new BDDRoute(orig);
+    med.getMed().setValue(1);
+    BDDRoute nextHop = new BDDRoute(orig);
+    nextHop.getNextHop().setValue(1);
+    BDDRoute nextHopInterfaces = new BDDRoute(orig);
+    nextHopInterfaces.getNextHopInterfaces().setValue(1);
+    BDDRoute nextHopSet = new BDDRoute(orig);
+    nextHopSet.setNextHopSet(true);
+    BDDRoute nextHopType = new BDDRoute(orig);
+    nextHopType.setNextHopType(NextHopType.BGP_PEER_ADDRESS);
+    BDDRoute originType = new BDDRoute(orig);
+    originType.getOriginType().setValue(OriginType.EGP);
+    BDDRoute ospfMetric = new BDDRoute(orig);
+    ospfMetric.getOspfMetric().setValue(OspfType.E1);
+    BDDRoute prefix = new BDDRoute(orig);
+    prefix.getPrefix().setValue(1);
+    BDDRoute prefixLength = new BDDRoute(orig);
+    prefixLength.getPrefixLength().setValue(1);
+    BDDRoute prependedAses = new BDDRoute(orig);
+    prependedAses.getPrependedASes().add(1L);
+    BDDRoute protocolHistory = new BDDRoute(orig);
+    protocolHistory.getProtocolHistory().setValue(RoutingProtocol.STATIC);
+    BDDRoute sourceVrfs = new BDDRoute(orig);
+    sourceVrfs.getSourceVrfs().setValue(1);
+    BDDRoute tag = new BDDRoute(orig);
+    tag.getTag().setValue(1);
+    BDDRoute tracks = new BDDRoute(orig);
+    tracks.getTracks()[0] = factory.one();
+    BDDRoute peerAddress = new BDDRoute(orig);
+    peerAddress.getPeerAddress().setValue(1);
+    BDDRoute tunnelEncapsulationAttribute = new BDDRoute(orig);
+    tunnelEncapsulationAttribute.getTunnelEncapsulationAttribute().setValue(Value.absent());
+    BDDRoute unsupported = new BDDRoute(orig);
+    unsupported.setUnsupported(true);
+    BDDRoute weight = new BDDRoute(orig);
+    weight.getWeight().setValue(1);
+    new EqualsTester()
+        .addEqualityGroup(orig, new BDDRoute(orig))
+        .addEqualityGroup(admin)
+        .addEqualityGroup(asPathRegex)
+        .addEqualityGroup(clusterListLength)
+        .addEqualityGroup(communities)
+        .addEqualityGroup(localPref)
+        .addEqualityGroup(med)
+        .addEqualityGroup(nextHop)
+        .addEqualityGroup(nextHopInterfaces)
+        .addEqualityGroup(nextHopType)
+        .addEqualityGroup(nextHopSet)
+        .addEqualityGroup(originType)
+        .addEqualityGroup(ospfMetric)
+        .addEqualityGroup(peerAddress)
+        .addEqualityGroup(prefix)
+        .addEqualityGroup(prefixLength)
+        .addEqualityGroup(prependedAses)
+        .addEqualityGroup(protocolHistory)
+        .addEqualityGroup(sourceVrfs)
+        .addEqualityGroup(tag)
+        .addEqualityGroup(tracks)
+        .addEqualityGroup(tunnelEncapsulationAttribute)
+        .addEqualityGroup(unsupported)
+        .addEqualityGroup(weight)
+        .testEquals();
+  }
+
+  @Test
+  public void testWellFormedOriginType() {
+    BDDFactory factory = JFactory.init(100, 100);
+    BDDRoute route = new BDDRoute(factory, 0, 0, 0, 0, 0, 0, ImmutableList.of());
+
+    BDD anyOriginType =
+        factory.orAll(
+            route.getOriginType().value(OriginType.EGP),
+            route.getOriginType().value(OriginType.IGP),
+            route.getOriginType().value(OriginType.INCOMPLETE));
+    IllegalArgumentException thrown =
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> route.getOriginType().satAssignmentToValue(anyOriginType.not()));
+    assertThat(
+        thrown, ThrowableMessageMatcher.hasMessage(containsString("is not valid in this domain")));
+    assertThat(route.wellFormednessConstraints(true).and(anyOriginType.not()), isZero());
+  }
+
+  @Test
+  public void testAugmentPairing() {
+    BDDFactory factory = JFactory.init(100, 100);
+    // a fresh, unconstrained BDDRoute
+    BDDRoute orig =
+        new BDDRoute(
+            factory,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            ImmutableList.of(new TunnelEncapsulationAttribute(Ip.create(1))));
+    BDDPairing pairing = factory.makePair();
+    BDDPairing attrPairing = factory.makePair();
+
+    // Test adminDist
+    BDD adminSupport = orig.getAdminDist().support();
+    // make a BDDRoute whose administrative distance is set to 1
+    BDDRoute admin = new BDDRoute(orig);
+    admin.getAdminDist().setValue(1);
+    // create a pairing that maps the original unconstrained BDDRoute to this one
+    admin.augmentPairing(orig, pairing);
+    // create another pairing that instead directly maps the administrative distances of the two
+    // BDDRoutes
+    admin.getAdminDist().augmentPairing(orig.getAdminDist(), attrPairing);
+    // check that these pairings are equivalent on the BDD variables of the administrative distance
+    assertEquals(adminSupport.veccompose(pairing), adminSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // do the analogous test for all other route attributes
+
+    // Test localPref
+    BDD localPrefSupport = orig.getLocalPref().support();
+    BDDRoute localPref = new BDDRoute(orig);
+    localPref.getLocalPref().setValue(100);
+    localPref.augmentPairing(orig, pairing);
+    localPref.getLocalPref().augmentPairing(orig.getLocalPref(), attrPairing);
+    assertEquals(localPrefSupport.veccompose(pairing), localPrefSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test med
+    BDD medSupport = orig.getMed().support();
+    BDDRoute med = new BDDRoute(orig);
+    med.getMed().setValue(50);
+    med.augmentPairing(orig, pairing);
+    med.getMed().augmentPairing(orig.getMed(), attrPairing);
+    assertEquals(medSupport.veccompose(pairing), medSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test weight
+    BDD weightSupport = orig.getWeight().support();
+    BDDRoute weight = new BDDRoute(orig);
+    weight.getWeight().setValue(200);
+    weight.augmentPairing(orig, pairing);
+    weight.getWeight().augmentPairing(orig.getWeight(), attrPairing);
+    assertEquals(weightSupport.veccompose(pairing), weightSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test tag
+    BDD tagSupport = orig.getTag().support();
+    BDDRoute tag = new BDDRoute(orig);
+    tag.getTag().setValue(300);
+    tag.augmentPairing(orig, pairing);
+    tag.getTag().augmentPairing(orig.getTag(), attrPairing);
+    assertEquals(tagSupport.veccompose(pairing), tagSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test nextHop
+    BDD nextHopSupport = orig.getNextHop().support();
+    BDDRoute nextHop = new BDDRoute(orig);
+    nextHop.getNextHop().setValue(12345);
+    nextHop.augmentPairing(orig, pairing);
+    nextHop.getNextHop().augmentPairing(orig.getNextHop(), attrPairing);
+    assertEquals(nextHopSupport.veccompose(pairing), nextHopSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test clusterListLength
+    BDD clusterListSupport = orig.getClusterListLength().support();
+    BDDRoute clusterList = new BDDRoute(orig);
+    clusterList.getClusterListLength().setValue(3);
+    clusterList.augmentPairing(orig, pairing);
+    clusterList.getClusterListLength().augmentPairing(orig.getClusterListLength(), attrPairing);
+    assertEquals(
+        clusterListSupport.veccompose(pairing), clusterListSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test prefix
+    BDD prefixSupport = orig.getPrefix().support();
+    BDDRoute prefix = new BDDRoute(orig);
+    prefix.getPrefix().setValue(16777216); // 1.0.0.0
+    prefix.augmentPairing(orig, pairing);
+    prefix.getPrefix().augmentPairing(orig.getPrefix(), attrPairing);
+    assertEquals(prefixSupport.veccompose(pairing), prefixSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test prefixLength
+    BDD prefixLengthSupport = orig.getPrefixLength().support();
+    BDDRoute prefixLength = new BDDRoute(orig);
+    prefixLength.getPrefixLength().setValue(24);
+    prefixLength.augmentPairing(orig, pairing);
+    prefixLength.getPrefixLength().augmentPairing(orig.getPrefixLength(), attrPairing);
+    assertEquals(
+        prefixLengthSupport.veccompose(pairing), prefixLengthSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test asPathRegexAtomicPredicates
+    BDD asPathSupport = orig.getAsPathRegexAtomicPredicates().support();
+    BDDRoute asPath = new BDDRoute(orig);
+    asPath.getAsPathRegexAtomicPredicates().setValue(1);
+    asPath.augmentPairing(orig, pairing);
+    asPath
+        .getAsPathRegexAtomicPredicates()
+        .augmentPairing(orig.getAsPathRegexAtomicPredicates(), attrPairing);
+    assertEquals(asPathSupport.veccompose(pairing), asPathSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test originType
+    BDD originTypeSupport = orig.getOriginType().support();
+    BDDRoute originType = new BDDRoute(orig);
+    originType.getOriginType().setValue(OriginType.IGP);
+    originType.augmentPairing(orig, pairing);
+    originType.getOriginType().augmentPairing(orig.getOriginType(), attrPairing);
+    assertEquals(originTypeSupport.veccompose(pairing), originTypeSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test ospfMetric
+    BDD ospfMetricSupport = orig.getOspfMetric().support();
+    BDDRoute ospfMetric = new BDDRoute(orig);
+    ospfMetric.getOspfMetric().setValue(OspfType.E1);
+    ospfMetric.augmentPairing(orig, pairing);
+    ospfMetric.getOspfMetric().augmentPairing(orig.getOspfMetric(), attrPairing);
+    assertEquals(ospfMetricSupport.veccompose(pairing), ospfMetricSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test protocolHistory
+    BDD protocolHistorySupport = orig.getProtocolHistory().support();
+    BDDRoute protocolHistory = new BDDRoute(orig);
+    protocolHistory.getProtocolHistory().setValue(RoutingProtocol.BGP);
+    protocolHistory.augmentPairing(orig, pairing);
+    protocolHistory.getProtocolHistory().augmentPairing(orig.getProtocolHistory(), attrPairing);
+    assertEquals(
+        protocolHistorySupport.veccompose(pairing), protocolHistorySupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test nextHopInterfaces
+    BDD nextHopInterfacesSupport = orig.getNextHopInterfaces().support();
+    BDDRoute nextHopInterfaces = new BDDRoute(orig);
+    nextHopInterfaces.getNextHopInterfaces().setValue(1);
+    nextHopInterfaces.augmentPairing(orig, pairing);
+    nextHopInterfaces
+        .getNextHopInterfaces()
+        .augmentPairing(orig.getNextHopInterfaces(), attrPairing);
+    assertEquals(
+        nextHopInterfacesSupport.veccompose(pairing),
+        nextHopInterfacesSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test peerAddress
+    BDD peerAddressSupport = orig.getPeerAddress().support();
+    BDDRoute peerAddress = new BDDRoute(orig);
+    peerAddress.getPeerAddress().setValue(1);
+    peerAddress.augmentPairing(orig, pairing);
+    peerAddress.getPeerAddress().augmentPairing(orig.getPeerAddress(), attrPairing);
+    assertEquals(
+        peerAddressSupport.veccompose(pairing), peerAddressSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test sourceVrfs
+    BDD sourceVrfsSupport = orig.getSourceVrfs().support();
+    BDDRoute sourceVrfs = new BDDRoute(orig);
+    sourceVrfs.getSourceVrfs().setValue(1);
+    sourceVrfs.augmentPairing(orig, pairing);
+    sourceVrfs.getSourceVrfs().augmentPairing(orig.getSourceVrfs(), attrPairing);
+    assertEquals(sourceVrfsSupport.veccompose(pairing), sourceVrfsSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test tunnelEncapsulationAttribute
+    BDD tunnelSupport = orig.getTunnelEncapsulationAttribute().support();
+    BDDRoute tunnel = new BDDRoute(orig);
+    tunnel
+        .getTunnelEncapsulationAttribute()
+        .setValue(Value.literal(new TunnelEncapsulationAttribute(Ip.create(1))));
+    tunnel.augmentPairing(orig, pairing);
+    tunnel
+        .getTunnelEncapsulationAttribute()
+        .augmentPairing(orig.getTunnelEncapsulationAttribute(), attrPairing);
+    assertEquals(tunnelSupport.veccompose(pairing), tunnelSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test communityAtomicPredicates (uses pairing.set instead of augmentPairing)
+    BDD[] origCommunities = orig.getCommunityAtomicPredicates();
+    BDD communitySupport = factory.andAll(origCommunities);
+    BDDRoute community = new BDDRoute(orig);
+    BDD[] newCommunities = community.getCommunityAtomicPredicates();
+    newCommunities[0] = factory.one(); // modify first community predicate
+    community.augmentPairing(orig, pairing);
+    attrPairing.set(origCommunities, newCommunities);
+    assertEquals(communitySupport.veccompose(pairing), communitySupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+
+    // Test tracks (uses pairing.set instead of augmentPairing)
+    BDD[] origTracks = orig.getTracks();
+    BDD trackSupport = factory.andAll(origTracks);
+    BDDRoute track = new BDDRoute(orig);
+    BDD[] newTracks = track.getTracks();
+    newTracks[0] = factory.one(); // modify first track
+    track.augmentPairing(orig, pairing);
+    attrPairing.set(origTracks, newTracks);
+    assertEquals(trackSupport.veccompose(pairing), trackSupport.veccompose(attrPairing));
+    pairing.reset();
+    attrPairing.reset();
+  }
+
+  @Test
+  public void testVeccomposeIdentity() {
+    // Composing any route through an identity pairing (each input variable mapped to itself) leaves
+    // the route unchanged.
+    BDDFactory factory = JFactory.init(10000, 1000);
+    BDDRoute orig = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    // Build a non-trivial route by setting some attributes to constants.
+    BDDRoute route = new BDDRoute(orig);
+    route.getLocalPref().setValue(300);
+    route.getOriginType().setValue(OriginType.EGP);
+
+    // A fresh route's formulas are just the canonical input variables, so pairing it with itself
+    // yields the identity pairing.
+    BDDPairing pairing = factory.makePair();
+    BDDRoute fresh = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    fresh.augmentPairing(fresh, pairing);
+
+    assertEquals(route, route.veccompose(pairing));
+  }
+
+  @Test
+  public void testVeccomposeSubstitutesInput() {
+    // veccompose feeds one route's attribute formulas in as another's input variables: composing a
+    // route whose local-pref is its input variable through a pairing that pins local-pref to a
+    // constant yields that constant.
+    BDDFactory factory = JFactory.init(10000, 1000);
+
+    // The "input" route fixes local-pref to 250.
+    BDDRoute input = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    input.getLocalPref().setValue(250);
+
+    // Pair the canonical variables (from a fresh route) with the input's formulas.
+    BDDPairing pairing = factory.makePair();
+    BDDRoute fresh = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    input.augmentPairing(fresh, pairing);
+
+    // The fresh route is the identity on the canonical input variables, so composing it through the
+    // pairing simply substitutes the input route's formulas: the result equals the input route.
+    BDDRoute composed = fresh.veccompose(pairing);
+    assertEquals(input, composed);
+  }
+
+  @Test
+  public void testFreeReturnsToBaselineOutstandingBDDs() {
+    BDDFactory factory = JFactory.init(10000, 1000);
+    long baseline = factory.numOutstandingBDDs();
+
+    BDDRoute route = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    assertThat(factory.numOutstandingBDDs(), greaterThan(baseline));
+
+    route.free();
+    assertEquals(baseline, factory.numOutstandingBDDs());
+  }
+
+  @Test
+  public void testCopyConstructorFieldsAreIndependentlyOwned() {
+    // If any field of the copy aliased the original's BDD object, free()-ing both routes would
+    // free that field's BDD twice -- an error JFactory throws on.
+    BDDFactory factory = JFactory.init(10000, 1000);
+    BDDRoute original = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    BDDRoute copy = new BDDRoute(original);
+
+    copy.free();
+    original.free();
+  }
+
+  @Test
+  public void testNegativePrefixStartIdxRejected() {
+    BDDFactory factory = JFactory.init(10000, 1000);
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new BDDRoute(
+                factory,
+                3,
+                4,
+                5,
+                6,
+                7,
+                2,
+                ImmutableList.of(),
+                /* prefixStartIdx= */ -1,
+                /* startIdx= */ 38));
+  }
+
+  @Test
+  public void testStartIdxBeforeEndOfPrefixBlockRejected() {
+    BDDFactory factory = JFactory.init(10000, 1000);
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            new BDDRoute(
+                factory,
+                3,
+                4,
+                5,
+                6,
+                7,
+                2,
+                ImmutableList.of(),
+                /* prefixStartIdx= */ 0,
+                /* startIdx= */ 37));
+  }
+
+  @Test
+  public void testStartIdxAtEndOfPrefixBlockAccepted() {
+    // 38 == PREFIX_LENGTH_BITS + PREFIX_BITS (6 + 32) -- the boundary case immediately at the end
+    // of the prefix/prefix-length block, one past the rejected 37 above -- must not throw.
+    BDDFactory factory = JFactory.init(10000, 1000);
+    new BDDRoute(
+        factory, 3, 4, 5, 6, 7, 2, ImmutableList.of(), /* prefixStartIdx= */ 0, /* startIdx= */ 38);
+  }
+
+  @Test
+  public void testEqualsRelationDoesNotLeak() {
+    BDDFactory factory = JFactory.init(10000, 1000);
+    BDDRoute route = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    BDDRoute other = new BDDRoute(route);
+    // Mutate other so every attribute actually differs from route's, rather than leaking on an
+    // exact self-comparison -- in particular this exercises the TUNNEL_ENCAPSULATION_ATTRIBUTE
+    // .allDifferences(...).notEq() path (see Attribute#eq) on a real, non-degenerate difference.
+    other.getLocalPref().setValue(100);
+    other.getTunnelEncapsulationAttribute().setValue(Value.absent());
+    long baseline = factory.numOutstandingBDDs();
+
+    BDD relation = route.equalsRelation(other);
+    relation.free();
+
+    assertEquals(baseline, factory.numOutstandingBDDs());
+  }
+
+  @Test
+  public void testEqualsRelationOnDoesNotLeak() {
+    BDDFactory factory = JFactory.init(10000, 1000);
+    BDDRoute route = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    BDDRoute other = new BDDRoute(route);
+    long baseline = factory.numOutstandingBDDs();
+
+    BDD relation =
+        route.equalsRelationOn(
+            other, ImmutableSet.of(BDDRoute.Attribute.TUNNEL_ENCAPSULATION_ATTRIBUTE));
+    relation.free();
+
+    assertEquals(baseline, factory.numOutstandingBDDs());
+  }
+
+  /**
+   * For each scalar {@link Attribute}, mutates exactly that attribute on a copy of the identity
+   * route and checks {@link BDDRoute#touchedFields}/{@link BDDRoute#fieldSupport}/{@link
+   * BDDRoute#augmentPairingOn}/{@link Field#eq} all agree it -- and only it -- was touched.
+   */
+  @Test
+  public void testTouchedFieldsAndFieldOperationsPerAttribute() {
+    BDDFactory factory = JFactory.init(1000, 1000);
+    BDDRoute identity =
+        new BDDRoute(
+            factory,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            ImmutableList.of(new TunnelEncapsulationAttribute(Ip.create(1))));
+
+    ImmutableList<Consumer<BDDRoute>> mutators =
+        ImmutableList.of(
+            x -> x.getAdminDist().setValue(1),
+            x -> x.getAsPathRegexAtomicPredicates().setValue(1),
+            x -> x.getClusterListLength().setValue(3),
+            x -> x.getLocalPref().setValue(100),
+            x -> x.getMed().setValue(50),
+            x -> x.getNextHop().setValue(12345),
+            x -> x.getNextHopInterfaces().setValue(1),
+            x -> x.getOriginType().setValue(OriginType.IGP),
+            x -> x.getOspfMetric().setValue(OspfType.E1),
+            x -> x.getPeerAddress().setValue(1),
+            x -> x.getProtocolHistory().setValue(RoutingProtocol.BGP),
+            x -> x.getSourceVrfs().setValue(1),
+            x -> x.getTag().setValue(300),
+            x ->
+                x.getTunnelEncapsulationAttribute()
+                    .setValue(Value.literal(new TunnelEncapsulationAttribute(Ip.create(1)))),
+            x -> x.getWeight().setValue(200));
+
+    for (Consumer<BDDRoute> mutator : mutators) {
+      BDDRoute mutated = new BDDRoute(identity);
+      mutator.accept(mutated);
+
+      assertEquals(1, mutated.touchedFields(identity).size());
+      Field touched = mutated.touchedFields(identity).iterator().next();
+
+      // identity's field is a free variable, so its support/fieldSupportOn are nonzero (mutated's
+      // field is now a fixed value, so its own support would trivially be one()).
+      BDD identitySupport = identity.fieldSupport(touched);
+      assertEquals(identitySupport, identity.fieldSupportOn(ImmutableSet.of(touched)));
+      assertThat(identitySupport.isOne(), equalTo(false));
+
+      // augmentPairingOn(identity, touched, ...), applied to just the touched field, must agree
+      // with the full-route augmentPairing on that same field's variables -- checked by composing
+      // the same probe (identity's touched-field support) through both.
+      BDDPairing pairingOnField = factory.makePair();
+      mutated.augmentPairingOn(identity, touched, pairingOnField);
+      BDDPairing fullPairing = factory.makePair();
+      mutated.augmentPairing(identity, fullPairing);
+      assertEquals(
+          identitySupport.veccompose(pairingOnField), identitySupport.veccompose(fullPairing));
+
+      // mutated's field is a fixed value but identity's is a free variable, so eq between them is
+      // not the tautology it is between a route and itself.
+      assertThat(touched.eq(mutated, identity).isOne(), equalTo(false));
+      assertEquals(factory.one(), touched.eq(mutated, mutated));
+    }
+  }
+
+  @Test
+  public void testTouchedFieldsAndFieldOperationsPerCommunityAndTrack() {
+    BDDFactory factory = JFactory.init(1000, 1000);
+    BDDRoute identity = new BDDRoute(factory, 3, 2, 2, 2, 2, 3, ImmutableList.of());
+
+    BDDRoute community = new BDDRoute(identity);
+    community.getCommunityAtomicPredicates()[1] = factory.one();
+    assertEquals(ImmutableSet.of(BDDRoute.community(1)), community.touchedFields(identity));
+
+    // identity's cell is a free variable, so its support/fieldSupportOn are nonzero (community's
+    // cell is now the constant true, so its own support would trivially be one()).
+    BDD identityCommunitySupport = identity.fieldSupport(BDDRoute.community(1));
+    assertEquals(
+        identityCommunitySupport, identity.fieldSupportOn(ImmutableSet.of(BDDRoute.community(1))));
+    assertThat(identityCommunitySupport.isOne(), equalTo(false));
+    assertThat(BDDRoute.community(1).eq(community, identity).isOne(), equalTo(false));
+    assertEquals(factory.one(), BDDRoute.community(1).eq(community, community));
+
+    BDDRoute track = new BDDRoute(identity);
+    track.getTracks()[2] = factory.one();
+    assertEquals(ImmutableSet.of(BDDRoute.track(2)), track.touchedFields(identity));
+
+    BDD identityTrackSupport = identity.fieldSupport(BDDRoute.track(2));
+    assertEquals(identityTrackSupport, identity.fieldSupportOn(ImmutableSet.of(BDDRoute.track(2))));
+    assertThat(identityTrackSupport.isOne(), equalTo(false));
+    assertThat(BDDRoute.track(2).eq(track, identity).isOne(), equalTo(false));
+    assertEquals(factory.one(), BDDRoute.track(2).eq(track, track));
+  }
+
+  @Test
+  public void testTouchedFieldsIsEmptyForIdentity() {
+    BDDFactory factory = JFactory.init(1000, 1000);
+    BDDRoute identity = new BDDRoute(factory, 3, 4, 5, 6, 7, 2, ImmutableList.of());
+    assertEquals(ImmutableSet.of(), identity.touchedFields(identity));
+  }
+}

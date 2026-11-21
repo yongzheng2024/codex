@@ -1,0 +1,17 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+isolation,0_as65001_mi,10.181.0.0/31,,,intact
+isolation,0_as65001_mi,10.181.0.10/31,,,intact
+isolation,0_as65001_mi,10.181.0.14/31,,,intact
+isolation,11_as65001_mi,10.181.0.0/31,,,intact
+isolation,15_as65001_ten155,10.181.0.0/31,,,intact
+isolation,15_as65001_ten155,10.181.0.10/31,,,intact
+isolation,16_as65001_usa,10.181.0.0/31,,,intact
+isolation,16_as65001_usa,10.181.0.10/31,,,intact
+isolation,1_as65001_to,10.181.0.10/31,,,intact
+isolation,2_as65001_ts,10.181.0.0/31,,,intact
+isolation,2_as65001_ts,10.181.0.10/31,,,intact
+isolation,3_as65001_pd,10.181.0.0/31,,,intact
+isolation,3_as65001_pd,10.181.0.10/31,,,intact
+waypointing,4_as65004_bo,10.200.0.0/24,12_as65002_na,,broken_added
+isolation,6_as65001_ge,10.181.0.0/31,,,intact
+isolation,6_as65001_ge,10.181.0.10/31,,,intact

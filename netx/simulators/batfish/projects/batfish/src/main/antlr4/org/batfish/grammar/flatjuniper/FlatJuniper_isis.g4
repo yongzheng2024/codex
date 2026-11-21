@@ -1,0 +1,335 @@
+parser grammar FlatJuniper_isis;
+
+import FlatJuniper_common;
+
+options {
+  tokenVocab = FlatJuniperLexer;
+}
+
+hello_authentication_type
+:
+  MD5
+  | SIMPLE
+;
+
+is_export
+:
+  EXPORT expr = policy_expression
+;
+
+is_ignore_attached_bit
+:
+  IGNORE_ATTACHED_BIT
+;
+
+is_import
+:
+  IMPORT name = junos_name
+;
+
+is_interface
+:
+  INTERFACE
+  (
+    ALL
+    | id = interface_id
+    | wildcard
+  )
+  (
+    FAMILY
+    (
+        INET
+        | INET6
+    )
+  )?
+  (
+    apply
+    | isi_bfd_liveness_detection
+    | isi_disable
+    | isi_hello_padding_null
+    | isi_ldp_synchronization_null
+    | isi_level
+    | isi_lsp_interval_null
+    | isi_no_adjacency_down_notification_null
+    | isi_node_link_protection_null
+    | isi_passive
+    | isi_point_to_point
+  )
+;
+
+is_level
+:
+  LEVEL
+  (
+    dec
+    | wildcard
+  )
+  (
+    isl_authentication_key_null
+    | isl_authentication_type_null
+    | isl_disable
+    | isl_prefix_export_limit_null
+    | isl_wide_metrics_only
+  )
+;
+
+is_no_ipv4_routing
+:
+  NO_IPV4_ROUTING
+;
+
+is_lsp_lifetime_null
+:
+   LSP_LIFETIME null_filler
+;
+is_spf_options_null
+:
+   SPF_OPTIONS null_filler
+;
+is_traceoptions_null
+:
+   TRACEOPTIONS null_filler
+;
+
+is_overload
+:
+  OVERLOAD
+  (
+    apply
+    | iso_advertise_high_metrics
+    | iso_timeout
+  )
+;
+
+iso_advertise_high_metrics
+:
+  ADVERTISE_HIGH_METRICS
+;
+
+is_reference_bandwidth
+:
+  REFERENCE_BANDWIDTH bandwidth
+;
+
+is_rib_group
+:
+  RIB_GROUP INET name = junos_name
+;
+
+is_traffic_engineering
+:
+  TRAFFIC_ENGINEERING
+  (
+    ist_credibility_protocol_preference
+    | ist_family_shortcuts
+    | ist_multipath
+  )
+;
+
+isi_bfd_liveness_detection
+:
+  BFD_LIVENESS_DETECTION
+  (
+    isib_minimum_interval
+    | isib_multiplier
+  )
+;
+
+isi_disable
+:
+  DISABLE
+;
+
+isi_level
+:
+  LEVEL dec
+  (
+    isil_disable
+    | isil_hello_authentication_key
+    | isil_hello_authentication_type
+    | isil_hello_interval
+    | isil_hold_time
+    | isil_ipv4_multicast_metric
+    | isil_ipv6_multicast_metric
+    | isil_ipv6_unicast_metric
+    | isil_metric
+    | isil_passive
+    | isil_priority
+    | isil_te_metric
+  )
+;
+
+isi_hello_padding_null
+:
+   HELLO_PADDING null_filler
+;
+isi_ldp_synchronization_null
+:
+   LDP_SYNCHRONIZATION null_filler
+;
+isi_lsp_interval_null
+:
+   LSP_INTERVAL null_filler
+;
+isi_no_adjacency_down_notification_null
+:
+   NO_ADJACENCY_DOWN_NOTIFICATION null_filler
+;
+isi_node_link_protection_null
+:
+   NODE_LINK_PROTECTION null_filler
+;
+
+isi_passive
+:
+  PASSIVE
+;
+
+isi_point_to_point
+:
+  POINT_TO_POINT
+;
+
+isib_minimum_interval
+:
+  MINIMUM_INTERVAL dec
+;
+
+isib_multiplier
+:
+  MULTIPLIER dec
+;
+
+isil_disable
+:
+  DISABLE
+;
+
+isil_hello_authentication_key
+:
+  HELLO_AUTHENTICATION_KEY key = secret_string
+;
+
+isil_hello_authentication_type
+:
+  HELLO_AUTHENTICATION_TYPE hello_authentication_type
+;
+
+isil_hello_interval
+:
+  HELLO_INTERVAL dec
+;
+
+isil_hold_time
+:
+  HOLD_TIME dec
+;
+
+isil_ipv4_multicast_metric
+:
+  IPV4_MULTICAST_METRIC isis_level_metric
+;
+
+isil_ipv6_multicast_metric
+:
+  IPV6_MULTICAST_METRIC isis_level_metric
+;
+
+isil_ipv6_unicast_metric
+:
+  IPV6_UNICAST_METRIC isis_level_metric
+;
+
+// IS-IS wide metric value, 1-16777215 (3 octets).
+isis_level_metric
+:
+  uint32
+;
+
+isil_metric
+:
+  METRIC isis_level_metric
+;
+
+isil_passive
+:
+  PASSIVE
+;
+
+isil_priority
+:
+  PRIORITY dec
+;
+
+isil_te_metric
+:
+  TE_METRIC dec
+;
+
+isl_disable
+:
+  DISABLE
+;
+
+isl_authentication_key_null
+:
+   AUTHENTICATION_KEY null_filler
+;
+isl_authentication_type_null
+:
+   AUTHENTICATION_TYPE null_filler
+;
+isl_prefix_export_limit_null
+:
+   PREFIX_EXPORT_LIMIT null_filler
+;
+
+isl_wide_metrics_only
+:
+  WIDE_METRICS_ONLY
+;
+
+ist_credibility_protocol_preference
+:
+  CREDIBILITY_PROTOCOL_PREFERENCE
+;
+
+iso_timeout
+:
+  TIMEOUT dec
+;
+
+ist_family_shortcuts
+:
+  FAMILY
+  (
+    INET
+    | INET6
+  ) SHORTCUTS
+;
+
+ist_multipath
+:
+  MULTIPATH LSP_EQUAL_COST
+;
+
+p_isis
+:
+  ISIS
+  (
+    apply
+    | is_export
+    | is_ignore_attached_bit
+    | is_import
+    | is_interface
+    | is_level
+    | is_lsp_lifetime_null
+    | is_no_ipv4_routing
+    | is_overload
+    | is_reference_bandwidth
+    | is_rib_group
+    | is_spf_options_null
+    | is_traceoptions_null
+    | is_traffic_engineering
+  )
+;

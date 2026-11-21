@@ -1,0 +1,16 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+isolation,0_as65001_eisenstadt,10.181.0.0/31,,,intact
+isolation,13_as65001_klagenfurt2,10.181.0.0/31,,,intact
+isolation,14_as65003_graz1,10.181.0.10/31,,,intact
+isolation,15_as65001_linz1,10.181.0.0/31,,,intact
+isolation,16_as65001_linz2,10.181.0.0/31,,,intact
+load_balancing,16_as65001_linz2,10.180.0.1/32,,2,broken_removed
+isolation,17_as65001_salzburg1,10.181.0.0/31,,,intact
+isolation,18_as65001_salzburg2,10.181.0.0/31,,,intact
+isolation,1_as65001_st--polten,10.181.0.0/31,,,intact
+isolation,22_as65001_klagenfurt1,10.181.0.0/31,,,intact
+isolation,2_as65003_graz2,10.181.0.10/31,,,intact
+isolation,3_as65003_leoben,10.181.0.10/31,,,intact
+isolation,4_as65001_vienna2,10.181.0.0/31,,,intact
+isolation,6_as65001_krems,10.181.0.0/31,,,intact
+isolation,7_as65001_vienna1,10.181.0.0/31,,,intact

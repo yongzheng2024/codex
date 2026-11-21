@@ -1,0 +1,3 @@
+# Keep these Batfish source files visible under the root repository's ignore rules.
+!/simulators/batfish/.claude/
+!/simulators/batfish/.github/workflows/bazel-steward.yml

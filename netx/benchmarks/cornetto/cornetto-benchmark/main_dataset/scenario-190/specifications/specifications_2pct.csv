@@ -1,0 +1,13 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+isolation,0_as65003_craiova,0.0.0.0/0,,,broken_removed
+isolation,10_as65001_targu-mures,0.0.0.0/0,,,intact
+isolation,12_as65002_sibiu,0.0.0.0/0,,,intact
+isolation,13_as65002_iasi,0.0.0.0/0,,,intact
+isolation,14_as65001_piatra-neamt,0.0.0.0/0,,,intact
+isolation,15_as65002_bacau,0.0.0.0/0,,,intact
+isolation,17_as65001_cluj,0.0.0.0/0,,,intact
+isolation,18_as65002_oradea,0.0.0.0/0,,,intact
+isolation,19_as65002_bors,0.0.0.0/0,,,intact
+isolation,1_as65001_plaiesti,0.0.0.0/0,,,intact
+isolation,2_as65001_brasov,0.0.0.0/0,,,intact
+isolation,3_as65001_targoviste,0.0.0.0/0,,,intact

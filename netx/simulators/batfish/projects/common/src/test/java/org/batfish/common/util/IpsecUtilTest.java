@@ -1,0 +1,451 @@
+package org.batfish.common.util;
+
+import static org.batfish.common.util.IpsecUtil.getIpsecSession;
+import static org.batfish.common.util.IpsecUtil.negotiateIkePhase1Key;
+import static org.batfish.common.util.IpsecUtil.retainCompatibleTunnelEdges;
+import static org.batfish.common.util.IpsecUtil.toEdgeSet;
+import static org.batfish.datamodel.ConfigurationFormat.AWS;
+import static org.batfish.datamodel.ConfigurationFormat.CISCO_IOS;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSortedMap;
+import com.google.common.collect.ImmutableSortedSet;
+import com.google.common.graph.MutableValueGraph;
+import com.google.common.graph.ValueGraphBuilder;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import org.batfish.datamodel.Configuration;
+import org.batfish.datamodel.ConfigurationFormat;
+import org.batfish.datamodel.DiffieHellmanGroup;
+import org.batfish.datamodel.Edge;
+import org.batfish.datamodel.IkeAuthenticationMethod;
+import org.batfish.datamodel.IkeKeyType;
+import org.batfish.datamodel.IkePhase1Key;
+import org.batfish.datamodel.IkePhase1Policy;
+import org.batfish.datamodel.IkePhase1Proposal;
+import org.batfish.datamodel.Interface;
+import org.batfish.datamodel.Ip;
+import org.batfish.datamodel.IpsecPeerConfigId;
+import org.batfish.datamodel.IpsecPhase2Policy;
+import org.batfish.datamodel.IpsecPhase2Proposal;
+import org.batfish.datamodel.IpsecSession;
+import org.batfish.datamodel.IpsecStaticPeerConfig;
+import org.batfish.datamodel.NetworkFactory;
+import org.batfish.datamodel.TestInterface;
+import org.batfish.datamodel.collections.NodeInterfacePair;
+import org.batfish.datamodel.ipsec.IpsecTopology;
+import org.junit.Before;
+import org.junit.Test;
+
+public class IpsecUtilTest {
+  private IpsecTopology _ipsecTopology;
+  private Map<String, Configuration> _configurations = new HashMap<>();
+
+  @Before
+  public void setup() {
+    // creates a topology with the following edges with edge between Tunnel9 and Tunnel10 having no
+    // corresponding IPsec edges/nodes
+    /*
+    * +----------------+                      +----------------+
+      |                |                      | Tunnel2        |
+      |        Tunnel1 +----------------------+                |
+      |                |                      |                |
+      |                |                      |                |
+      |        Tunnel3 +----------------------+ Tunnel4        |
+      |                |                      |                |
+      |        interface5                     |                |
+      |                +----------------------+interface6      |
+      |                |                      |                |
+      |                |                      |                |
+      |       Tunnel7  +----------------------+Tunnel8         |
+      |                |                      |                |
+      |                |                      |                |
+      |       Tunnel9  +----------------------+Tunnel10        |
+      +----------------+                      +----------------+
+    *
+    *
+    * */
+    IpsecStaticPeerConfig ipsecPeerConfig1 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface1")
+            .setTunnelInterface("Tunnel1")
+            .setLocalAddress(Ip.parse("1.1.1.1"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig2 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface2")
+            .setTunnelInterface("Tunnel2")
+            .setLocalAddress(Ip.parse("2.2.2.2"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig3 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface3")
+            .setTunnelInterface("Tunnel3")
+            .setLocalAddress(Ip.parse("3.3.3.3"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig4 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface4")
+            .setTunnelInterface("Tunnel4")
+            .setLocalAddress(Ip.parse("4.4.4.4"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig5 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface5")
+            .setLocalAddress(Ip.parse("5.5.5.5"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig6 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface6")
+            .setLocalAddress(Ip.parse("6.6.6.6"))
+            .build();
+    IpsecStaticPeerConfig ipsecPeerConfig7 =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface7")
+            .setTunnelInterface("Tunnel7")
+            .setLocalAddress(Ip.parse("7.7.7.7"))
+            .build();
+
+    IpsecSession establishedSession =
+        IpsecSession.builder().setNegotiatedIpsecP2Proposal(new IpsecPhase2Proposal()).build();
+    IpsecSession unEstablishedSession = IpsecSession.builder().build();
+
+    MutableValueGraph<IpsecPeerConfigId, IpsecSession> graph =
+        ValueGraphBuilder.directed().allowsSelfLoops(false).build();
+
+    // populate IPsec topology
+    graph.putEdgeValue(
+        new IpsecPeerConfigId("peer1", "host1"),
+        new IpsecPeerConfigId("peer2", "host2"),
+        establishedSession);
+    graph.putEdgeValue(
+        new IpsecPeerConfigId("peer2", "host2"),
+        new IpsecPeerConfigId("peer1", "host1"),
+        establishedSession);
+    // between peer3 and peer4 session is broken in one direction
+    graph.putEdgeValue(
+        new IpsecPeerConfigId("peer3", "host1"),
+        new IpsecPeerConfigId("peer4", "host2"),
+        unEstablishedSession);
+    graph.putEdgeValue(
+        new IpsecPeerConfigId("peer4", "host2"),
+        new IpsecPeerConfigId("peer3", "host1"),
+        establishedSession);
+    // peer5 and peer6 are not running IPsec on tunnel interfaces
+    graph.putEdgeValue(
+        new IpsecPeerConfigId("peer5", "host1"),
+        new IpsecPeerConfigId("peer6", "host2"),
+        unEstablishedSession);
+    // a dangling IPsec peer with no corresponding endpoint
+    graph.addNode(new IpsecPeerConfigId("peer7", "host1"));
+    _ipsecTopology = new IpsecTopology(graph);
+
+    // populate Configurations to get IPsecPeerConfig objects from IPsecPeerConfigIds
+    Configuration c1 = new Configuration("host1", ConfigurationFormat.CISCO_IOS);
+    Configuration c2 = new Configuration("host2", ConfigurationFormat.CISCO_IOS);
+    c1.setIpsecPeerConfigs(
+        ImmutableSortedMap.of(
+            "peer1",
+            ipsecPeerConfig1,
+            "peer3",
+            ipsecPeerConfig3,
+            "peer5",
+            ipsecPeerConfig5,
+            "peer7",
+            ipsecPeerConfig7));
+    c2.setIpsecPeerConfigs(
+        ImmutableSortedMap.of(
+            "peer2", ipsecPeerConfig2, "peer4", ipsecPeerConfig4, "peer6", ipsecPeerConfig6));
+
+    ImmutableSortedMap.Builder<String, Interface> interfaceBuilder =
+        ImmutableSortedMap.naturalOrder();
+    c1.setInterfaces(
+        interfaceBuilder
+            .put("Tunnel1", TestInterface.builder().setName("Tunnel1").setOwner(c1).build())
+            .put("Tunnel3", TestInterface.builder().setName("Tunnel3").setOwner(c1).build())
+            .put("interface5", TestInterface.builder().setName("interface5").setOwner(c1).build())
+            .put("Tunnel9", TestInterface.builder().setName("Tunnel9").setOwner(c1).build())
+            .put("Tunnel7", TestInterface.builder().setName("Tunnel7").setOwner(c1).build())
+            .build());
+    interfaceBuilder = ImmutableSortedMap.naturalOrder();
+    c2.setInterfaces(
+        interfaceBuilder
+            .put("Tunnel2", TestInterface.builder().setName("Tunnel2").setOwner(c2).build())
+            .put("Tunnel4", TestInterface.builder().setName("Tunnel4").setOwner(c2).build())
+            .put("interface6", TestInterface.builder().setName("interface6").setOwner(c2).build())
+            .put("Tunnel8", TestInterface.builder().setName("Tunnel8").setOwner(c2).build())
+            .put("Tunnel10", TestInterface.builder().setName("Tunnel10").setOwner(c2).build())
+            .build());
+
+    _configurations.put("host1", c1);
+    _configurations.put("host2", c2);
+  }
+
+  @Test
+  public void testRetainCompatibleTunnelEdges() {
+    Set<Edge> compatibleIpsecEdges =
+        toEdgeSet(retainCompatibleTunnelEdges(_ipsecTopology, _configurations), _configurations);
+
+    assertThat(
+        compatibleIpsecEdges,
+        containsInAnyOrder(
+            new Edge(
+                NodeInterfacePair.of("host1", "Tunnel1"), NodeInterfacePair.of("host2", "Tunnel2")),
+            new Edge(
+                NodeInterfacePair.of("host2", "Tunnel2"),
+                NodeInterfacePair.of("host1", "Tunnel1"))));
+  }
+
+  @Test
+  public void testGetIpsecSesssionCloud() {
+    NetworkFactory nf = new NetworkFactory();
+    Configuration.Builder cb = nf.configurationBuilder();
+    IpsecStaticPeerConfig.Builder ipsecPeerConfigBuilder = IpsecStaticPeerConfig.builder();
+
+    assertTrue(
+        getIpsecSession(
+                cb.setConfigurationFormat(AWS).build(),
+                cb.setConfigurationFormat(AWS).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("1.1.1.1")).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("2.2.2.2")).build())
+            .isCloud());
+
+    assertTrue(
+        getIpsecSession(
+                cb.setConfigurationFormat(CISCO_IOS).build(),
+                cb.setConfigurationFormat(AWS).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("1.1.1.1")).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("2.2.2.2")).build())
+            .isCloud());
+
+    assertFalse(
+        getIpsecSession(
+                cb.setConfigurationFormat(CISCO_IOS).build(),
+                cb.setConfigurationFormat(CISCO_IOS).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("1.1.1.1")).build(),
+                ipsecPeerConfigBuilder.setLocalAddress(Ip.parse("2.2.2.2")).build())
+            .isCloud());
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyRsa() {
+    IpsecSession.Builder ipsecSessionBuilder = IpsecSession.builder();
+    IkePhase1Key initiatorKey = new IkePhase1Key();
+    initiatorKey.setKeyType(IkeKeyType.RSA_PUB_KEY);
+    initiatorKey.setKeyHash("key1");
+    IkePhase1Key responderKey = new IkePhase1Key();
+    responderKey.setKeyType(IkeKeyType.RSA_PUB_KEY);
+    responderKey.setKeyHash("key2");
+
+    negotiateIkePhase1Key(initiatorKey, responderKey, ipsecSessionBuilder);
+
+    assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key(), notNullValue());
+    assertThat(
+        ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyType(), equalTo(IkeKeyType.RSA_PUB_KEY));
+  }
+
+  @Test
+  public void testNegotiatedIkePhase1EncryptedPsk() {
+    IpsecSession.Builder ipsecSessionBuilder = IpsecSession.builder();
+    IkePhase1Key initiatorKey = new IkePhase1Key();
+    initiatorKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED);
+    initiatorKey.setKeyHash("key1");
+    IkePhase1Key responderKey = new IkePhase1Key();
+    responderKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED);
+    responderKey.setKeyHash("key2");
+
+    negotiateIkePhase1Key(initiatorKey, responderKey, ipsecSessionBuilder);
+
+    assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key(), notNullValue());
+    assertThat(
+        ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyType(),
+        equalTo(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED));
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyMixedPsk() {
+    // A device whose config exposes the plaintext key (e.g. AWS) peering with one whose config
+    // only ever contains an encrypted key (e.g. Cisco 'key 6', or any Palo Alto gateway). The
+    // values cannot be compared, so negotiation continues with an empty key rather than failing.
+    for (boolean encryptedIsInitiator : ImmutableList.of(true, false)) {
+      IkePhase1Key encryptedKey = new IkePhase1Key();
+      encryptedKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED);
+      encryptedKey.setKeyHash("encrypted-blob");
+      IkePhase1Key plaintextKey = new IkePhase1Key();
+      plaintextKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+      plaintextKey.setKeyHash("plaintext");
+      IpsecSession.Builder ipsecSessionBuilder = IpsecSession.builder();
+
+      negotiateIkePhase1Key(
+          encryptedIsInitiator ? encryptedKey : plaintextKey,
+          encryptedIsInitiator ? plaintextKey : encryptedKey,
+          ipsecSessionBuilder);
+
+      assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key(), notNullValue());
+      assertThat(
+          ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyType(),
+          equalTo(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED));
+      assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyHash(), nullValue());
+    }
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyMissingKey() {
+    // A peer with no key configured at all, e.g. an IOS keyring with no pre-shared-key statement,
+    // is not a peer whose key Batfish could not read: it cannot authenticate, whatever the other
+    // side has. Also covers the other side's key hash being dereferenced for comparison.
+    for (IkeKeyType peerKeyType :
+        ImmutableList.of(
+            IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED,
+            IkeKeyType.PRE_SHARED_KEY_ENCRYPTED,
+            IkeKeyType.RSA_PUB_KEY)) {
+      for (boolean keylessIsInitiator : ImmutableList.of(true, false)) {
+        IkePhase1Key keylessKey = new IkePhase1Key();
+        keylessKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+        IkePhase1Key peerKey = new IkePhase1Key();
+        peerKey.setKeyType(peerKeyType);
+        peerKey.setKeyHash("key1");
+        IpsecSession.Builder builder = IpsecSession.builder();
+
+        negotiateIkePhase1Key(
+            keylessIsInitiator ? keylessKey : peerKey,
+            keylessIsInitiator ? peerKey : keylessKey,
+            builder);
+
+        assertThat(builder.getNegotiatedIkeP1Key(), nullValue());
+      }
+    }
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyRsaVersusPskFail() {
+    // Different authentication methods entirely - not merely an unreadable key - must still fail.
+    // The guard is a conjunction over both operands, so check every RSA/PSK combination.
+    for (IkeKeyType psk :
+        ImmutableList.of(
+            IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED, IkeKeyType.PRE_SHARED_KEY_ENCRYPTED)) {
+      for (boolean rsaIsInitiator : ImmutableList.of(true, false)) {
+        IkePhase1Key rsaKey = new IkePhase1Key();
+        rsaKey.setKeyType(IkeKeyType.RSA_PUB_KEY);
+        rsaKey.setKeyHash("key1");
+        IkePhase1Key pskKey = new IkePhase1Key();
+        pskKey.setKeyType(psk);
+        pskKey.setKeyHash("key1");
+        IpsecSession.Builder builder = IpsecSession.builder();
+
+        negotiateIkePhase1Key(
+            rsaIsInitiator ? rsaKey : pskKey, rsaIsInitiator ? pskKey : rsaKey, builder);
+
+        assertThat(builder.getNegotiatedIkeP1Key(), nullValue());
+      }
+    }
+  }
+
+  @Test
+  public void testGetIpsecSessionMixedPskNegotiatesPhase2() {
+    // End to end: a peer whose key is encrypted and one whose key is plaintext must still reach
+    // phase 2, since retainCompatibleTunnelEdges drops any session with no negotiated P2 proposal.
+    Configuration initiatorOwner = configWithIpsec(IkeKeyType.PRE_SHARED_KEY_ENCRYPTED);
+    Configuration responderOwner = configWithIpsec(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+
+    IpsecStaticPeerConfig initiator =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface1")
+            .setTunnelInterface("Tunnel1")
+            .setLocalAddress(Ip.parse("1.1.1.1"))
+            .setDestinationAddress(Ip.parse("2.2.2.2"))
+            .setIkePhase1Policy("ike-policy")
+            .setIpsecPolicy("ipsec-policy")
+            .build();
+    IpsecStaticPeerConfig responder =
+        IpsecStaticPeerConfig.builder()
+            .setSourceInterface("interface2")
+            .setTunnelInterface("Tunnel2")
+            .setLocalAddress(Ip.parse("2.2.2.2"))
+            .setDestinationAddress(Ip.parse("1.1.1.1"))
+            .setIkePhase1Policy("ike-policy")
+            .setIpsecPolicy("ipsec-policy")
+            .build();
+
+    IpsecSession session = getIpsecSession(initiatorOwner, responderOwner, initiator, responder);
+
+    assertThat(session.getNegotiatedIkeP1Key(), notNullValue());
+    assertThat(session.getNegotiatedIkeP1Proposal(), notNullValue());
+    assertThat(session.getNegotiatedIpsecP2Proposal(), notNullValue());
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyPsk() {
+    IpsecSession.Builder ipsecSessionBuilder = IpsecSession.builder();
+    IkePhase1Key initiatorKey = new IkePhase1Key();
+    initiatorKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+    initiatorKey.setKeyHash("key1");
+    IkePhase1Key responderKey = new IkePhase1Key();
+    responderKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+    responderKey.setKeyHash("key1");
+
+    negotiateIkePhase1Key(initiatorKey, responderKey, ipsecSessionBuilder);
+
+    assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key(), notNullValue());
+    assertThat(
+        ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyType(),
+        equalTo(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED));
+    assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key().getKeyHash(), equalTo("key1"));
+  }
+
+  @Test
+  public void testNegotiateIkePhase1KeyPskFail() {
+    IpsecSession.Builder ipsecSessionBuilder = IpsecSession.builder();
+    IkePhase1Key initiatorKey = new IkePhase1Key();
+    initiatorKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+    initiatorKey.setKeyHash("key1");
+    IkePhase1Key responderKey = new IkePhase1Key();
+    responderKey.setKeyType(IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED);
+    responderKey.setKeyHash("key2");
+
+    negotiateIkePhase1Key(initiatorKey, responderKey, ipsecSessionBuilder);
+
+    assertThat(ipsecSessionBuilder.getNegotiatedIkeP1Key(), nullValue());
+  }
+
+  /**
+   * Returns a {@link Configuration} with an IKE phase 1 policy named {@code ike-policy} and an
+   * IPsec phase 2 policy named {@code ipsec-policy}, whose pre-shared key has the given type.
+   * Policies built by separate calls are distinct but compatible objects, so negotiating between
+   * two such configurations exercises the real comparisons.
+   */
+  private static Configuration configWithIpsec(IkeKeyType keyType) {
+    Configuration c =
+        Configuration.builder()
+            .setHostname("host-" + keyType)
+            .setConfigurationFormat(ConfigurationFormat.CISCO_IOS)
+            .build();
+    IkePhase1Key key = new IkePhase1Key();
+    key.setKeyType(keyType);
+    // an encrypted key still has a value, it is just a ciphertext rather than a salted hash
+    key.setKeyHash(
+        keyType == IkeKeyType.PRE_SHARED_KEY_UNENCRYPTED ? "plaintext" : "encrypted-blob");
+    IkePhase1Proposal ikeProposal = new IkePhase1Proposal("ike-proposal");
+    ikeProposal.setAuthenticationMethod(IkeAuthenticationMethod.PRE_SHARED_KEYS);
+    IkePhase1Policy ikePolicy = new IkePhase1Policy("ike-policy");
+    ikePolicy.setIkePhase1Key(key);
+    ikePolicy.setIkePhase1Proposals(ImmutableList.of("ike-proposal"));
+    IpsecPhase2Policy ipsecPolicy = new IpsecPhase2Policy();
+    ipsecPolicy.setProposals(ImmutableList.of("ipsec-proposal"));
+    // negotiateIpsecP2 requires a non-empty intersection of PFS groups
+    ipsecPolicy.setPfsKeyGroups(ImmutableSortedSet.of(DiffieHellmanGroup.GROUP14));
+    c.setIkePhase1Proposals(ImmutableSortedMap.of("ike-proposal", ikeProposal));
+    c.setIkePhase1Policies(ImmutableSortedMap.of("ike-policy", ikePolicy));
+    c.setIpsecPhase2Proposals(ImmutableSortedMap.of("ipsec-proposal", new IpsecPhase2Proposal()));
+    c.setIpsecPhase2Policies(ImmutableSortedMap.of("ipsec-policy", ipsecPolicy));
+    return c;
+  }
+}
