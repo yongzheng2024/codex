@@ -1,0 +1,98 @@
+package org.batfish.datamodel.routing_policy.expr;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.ImmutableMap;
+import java.util.Set;
+import javax.annotation.Nonnull;
+
+import com.microsoft.z3.BoolExpr;
+import com.microsoft.z3.Context;
+import com.microsoft.z3.Solver;
+import org.batfish.common.BatfishException;
+import org.batfish.datamodel.bgp.community.Community;
+import org.batfish.datamodel.routing_policy.Environment;
+import org.batfish.datamodel.visitors.CommunitySetExprVisitor;
+import org.batfish.datamodel.visitors.VoidCommunitySetExprVisitor;
+
+/** A {@link CommunitySetExpr} matching all community-sets. */
+public class EmptyCommunitySetExpr extends CommunitySetExpr {
+
+  public static final EmptyCommunitySetExpr INSTANCE = new EmptyCommunitySetExpr();
+
+  @JsonCreator
+  private static @Nonnull EmptyCommunitySetExpr create() {
+    return INSTANCE;
+  }
+
+  private EmptyCommunitySetExpr() {}
+
+  @Override
+  public <T> T accept(CommunitySetExprVisitor<T> visitor) {
+    return visitor.visitEmptyCommunitySetExpr(this);
+  }
+
+  @Override
+  public void accept(VoidCommunitySetExprVisitor visitor) {
+    visitor.visitEmptyCommunitySetExpr(this);
+  }
+
+  /**
+   * When treated as a literal set of communities, {@link EmptyCommunitySetExpr} represents the
+   * empty-set.
+   */
+  @Nonnull
+  @Override
+  public Set<Community> asLiteralCommunities(@Nonnull Environment environment) {
+    return ImmutableSet.of();
+  }
+
+  @Override
+  public boolean dynamicMatchCommunity() {
+    return false;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return this == obj || obj instanceof EmptyCommunitySetExpr;
+  }
+
+  @Override
+  public int hashCode() {
+    return 0;
+  }
+
+  @Override
+  public boolean matchCommunities(Environment environment, Set<Community> communitySetCandidate) {
+    return false;
+  }
+
+  @Override
+  public boolean matchCommunity(Environment environment, Community community) {
+    return false;
+  }
+
+  @Override
+  public boolean reducible() {
+    return true;
+  }
+
+  /** Add configuration constant - SMT symbolic variable */
+  // private boolean _enableSmtVariable;    // Inherited from the parent class
+  // private String _configVarPrefix;       // Inherited from the parent class
+
+  @Override
+  public void initSmtVariable(
+      Context context, Solver solver, String configVarPrefix, boolean isTrue,
+      ImmutableMap<Community, Integer> commsIndex, int commsWidth) {
+    // TODO: implement me when needed
+    throw new BatfishException("EmptyCommunitySetExpr.initSmtVariable: not implemented yet.");
+  }
+
+  @Override
+  public void initSmtVariable(
+      Context context, Solver solver, String configVarPrefix,
+      ImmutableMap<Community, Integer> commsIndex, int commsWidth) {
+    initSmtVariable(context, solver, configVarPrefix, true, commsIndex, commsWidth);
+  }
+}
