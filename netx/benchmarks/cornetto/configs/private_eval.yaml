@@ -1,8 +1,7 @@
 # Private evaluation config — requires ground-truth artifacts (not in public dataset).
 #
-# Uses scenario-003 (BGP ASN mismatch, small topology) which is the only scenario
-# in the public dataset that ships with a complete set of artifacts, including
-# initial_configs/ (correct configs), fault_metrics.csv, and route/forwarding diffs.
+# This example targets scenario-003. Supply its golden configurations and
+# private fault annotations to use oracle context and the diagnosis judge.
 #
 # Run with:
 #   cornetto --config-name private_eval model.provider=openai model.model_name=gpt-4o
@@ -17,7 +16,7 @@ data:
     - "scenario-003"
 
 model:
-  context_sampling: "oracle"  # requires initial_configs/ — available in scenario-003
+  context_sampling: "oracle"  # reads the supplied initial_configs/ directory
 
 diagnosis_judge:
   enabled: True

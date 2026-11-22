@@ -2,7 +2,7 @@
 
 Cornetto is a benchmark for evaluating LLM-driven network configuration repair. Given a set of faulty router configurations and a formal specification of correct network behaviour (written as a set of data-plane predicates), a model must produce a corrected configuration. Correctness is verified with [Batfish](https://www.batfish.org/).
 
-The benchmark supports four pipeline modes — zero-shot, repair (retry on failure), retrieval-augmented, and fully agentic — and covers 231 misconfiguration scenarios across small (\>50 nodes), medium (50--100 nodes), and large (100+ nodes) network topologies.
+The benchmark supports four pipeline modes — zero-shot, repair (retry on failure), retrieval-augmented, and fully agentic — and covers 231 misconfiguration scenarios on topologies with 20 to 754 nodes.
 
 ---
 
@@ -37,7 +37,7 @@ GOOGLE_API_KEY=...
 MISTRAL_API_KEY=...
 ```
 
-You also need a running Batfish server. Cornetto uses a **customised Batfish container** that extends the standard engine with the ability to extract per-flow network forwarding behaviour, which is then parsed by the Config2Spec algorithm implemented in `src/utils/evaluation_utils/` to generate and verify the formal specifications. The standard `batfish/batfish` image does not support these extensions.
+You also need a running Batfish server. Cornetto uses a **customised Batfish container** to export forwarding decisions by router and destination prefix. Its evaluator builds per-prefix forwarding graphs and applies Config2Spec algorithms to extract predicates. The standard `batfish/batfish` image does not provide the custom forwarding table. [Forwarding table adapter](src/utils/evaluation_utils/forwarding_analysis/get_forwarding_behaviour_table.py)
 
 Pull and start the container with the provided script:
 
@@ -51,7 +51,7 @@ This stops any existing container named `batfish`, pulls `iprotogeros/batfish-al
 
 ## Dataset
 
-The dataset (231 scenarios) is hosted on HuggingFace as a [**public dataset**](https://huggingface.co/datasets/iprotogeros/cornetto-benchmark). It contains everything needed to run the benchmark: faulty router configurations, formal specifications, and network topology. Ground-truth artifacts (correct configurations, fault annotations, route/forwarding diffs) are intentionally excluded to prevent contamination of evaluation results; `scenario-003` is the only exception (see [Dataset format](#dataset-format)).
+The dataset contains faulty router configurations, forwarding specifications, and network topology. This checkout includes all 231 scenarios under `cornetto-benchmark/main_dataset/`. [Public dataset on Hugging Face](https://huggingface.co/datasets/iprotogeros/cornetto-benchmark)
 
 Download the dataset once after cloning:
 
@@ -162,9 +162,9 @@ scenario-NNN/
     └── topology.json         # network graph
 ```
 
-**`scenario-003` is an exception** — it is a complete example scenario (BGP ASN mismatch, small topology) that also includes `initial_configs/` (correct configs), `data_and_metrics/fault_metrics.csv`, route/forwarding diffs, and fault annotations. See `scenario-003/EXAMPLE.md`.
+The private evaluation example requires additional artifacts for `scenario-003`, including `initial_configs/` and `data_and_metrics/fault_metrics.csv`.
 
-The specifications CSV has columns `predicate_type, node, prefix, waypoint, num_routes, sources`. Rows with `sources` containing `broken` are the predicates that fail under the faulty configuration; the model's fix is evaluated by checking how many it restores.
+The specifications CSV compares the golden and faulty configurations. A repair should preserve `intact` predicates, restore `broken_removed` predicates, and eliminate `broken_added` predicates. [Dataset construction and CSV format](cornetto-benchmark/README.md)
 
 > **Public dataset limitations**: `oracle` and `random_with_oracle` context-sampling require `initial_configs/` (correct configurations), and the LLM-as-judge scorer requires `fault_metrics.csv`. Neither is included in the public dataset. Use `context_sampling: random` and `diagnosis_judge.enabled: False` when running against the public dataset.
 
