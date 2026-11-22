@@ -1,0 +1,13 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+reachability,customer1,192.0.2.0/24,,,broken_removed
+reachability,customer1,198.51.100.0/24,,,broken_removed
+isolation,customer1,203.0.113.0/24,,,broken_removed
+reachability,customer2,192.0.2.0/24,,,intact
+reachability,customer2,198.51.100.0/24,,,intact
+reachability,customer2,203.0.113.0/24,,,intact
+isolation,r4,10.0.0.0/10,,,intact
+isolation,r4,172.16.0.0/12,,,intact
+isolation,r4,198.168.0.0/16,,,intact
+load_balancing,r4,192.0.2.0/24,,2,broken_removed
+load_balancing,r4,198.51.100.0/24,,2,broken_removed
+load_balancing,r4,203.0.113.0/24,,2,intact

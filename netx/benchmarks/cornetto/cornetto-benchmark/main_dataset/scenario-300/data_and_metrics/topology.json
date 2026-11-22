@@ -1,0 +1,217 @@
+{
+  "topology": "scenario-300",
+  "node_count": 8,
+  "nodes": [
+    {
+      "id": "customer1",
+      "hostname": "customer1",
+      "config_paths": {
+        "final": "final_configs/configs/customer1.cfg"
+      }
+    },
+    {
+      "id": "customer2",
+      "hostname": "customer2",
+      "config_paths": {
+        "final": "final_configs/configs/customer2.cfg"
+      }
+    },
+    {
+      "id": "isp1",
+      "hostname": "isp1",
+      "config_paths": {
+        "final": "final_configs/configs/isp1.cfg"
+      }
+    },
+    {
+      "id": "isp2",
+      "hostname": "isp2",
+      "config_paths": {
+        "final": "final_configs/configs/isp2.cfg"
+      }
+    },
+    {
+      "id": "r1",
+      "hostname": "r1",
+      "config_paths": {
+        "final": "final_configs/configs/r1.cfg"
+      }
+    },
+    {
+      "id": "r2",
+      "hostname": "r2",
+      "config_paths": {
+        "final": "final_configs/configs/r2.cfg"
+      }
+    },
+    {
+      "id": "r3",
+      "hostname": "r3",
+      "config_paths": {
+        "final": "final_configs/configs/r3.cfg"
+      }
+    },
+    {
+      "id": "r4",
+      "hostname": "r4",
+      "config_paths": {
+        "final": "final_configs/configs/r4.cfg"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "edge-0000",
+      "nodes": [
+        "r1",
+        "r2"
+      ],
+      "interfaces": [
+        {
+          "node": "r1",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r2",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0001",
+      "nodes": [
+        "r1",
+        "r3"
+      ],
+      "interfaces": [
+        {
+          "node": "r1",
+          "name": "GigabitEthernet1/0"
+        },
+        {
+          "node": "r3",
+          "name": "GigabitEthernet0/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0002",
+      "nodes": [
+        "r2",
+        "r3"
+      ],
+      "interfaces": [
+        {
+          "node": "r2",
+          "name": "GigabitEthernet1/0"
+        },
+        {
+          "node": "r3",
+          "name": "GigabitEthernet1/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0003",
+      "nodes": [
+        "r4",
+        "r2"
+      ],
+      "interfaces": [
+        {
+          "node": "r4",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r2",
+          "name": "GigabitEthernet2/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0004",
+      "nodes": [
+        "r4",
+        "r3"
+      ],
+      "interfaces": [
+        {
+          "node": "r4",
+          "name": "GigabitEthernet1/0"
+        },
+        {
+          "node": "r3",
+          "name": "GigabitEthernet2/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0005",
+      "nodes": [
+        "isp1",
+        "r1"
+      ],
+      "interfaces": [
+        {
+          "node": "isp1",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r1",
+          "name": "GigabitEthernet2/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0006",
+      "nodes": [
+        "isp2",
+        "r1"
+      ],
+      "interfaces": [
+        {
+          "node": "isp2",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r1",
+          "name": "GigabitEthernet3/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0007",
+      "nodes": [
+        "customer1",
+        "r4"
+      ],
+      "interfaces": [
+        {
+          "node": "customer1",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r4",
+          "name": "GigabitEthernet2/0"
+        }
+      ]
+    },
+    {
+      "id": "edge-0008",
+      "nodes": [
+        "customer2",
+        "r4"
+      ],
+      "interfaces": [
+        {
+          "node": "customer2",
+          "name": "GigabitEthernet0/0"
+        },
+        {
+          "node": "r4",
+          "name": "GigabitEthernet3/0"
+        }
+      ]
+    }
+  ]
+}
