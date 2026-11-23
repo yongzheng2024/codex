@@ -1,0 +1,30 @@
+{
+  "flows": [
+    {
+      "id": "boone-service",
+      "flow": {
+        "ingressNode": "36_as65010_boone",
+        "ingressVrf": "default",
+        "srcIp": "10.180.0.37",
+        "dstIp": "10.200.60.1",
+        "ipProtocol": "ICMP",
+        "icmpVar": 8,
+        "icmpCode": 0,
+        "packetLength": 64
+      }
+    },
+    {
+      "id": "orangeburg-waypoint",
+      "flow": {
+        "ingressNode": "0_as65007_orangeburg",
+        "ingressVrf": "default",
+        "srcIp": "10.180.0.1",
+        "dstIp": "10.180.0.103",
+        "ipProtocol": "ICMP",
+        "icmpVar": 8,
+        "icmpCode": 0,
+        "packetLength": 64
+      }
+    }
+  ]
+}

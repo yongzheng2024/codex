@@ -1,0 +1,11 @@
+predicate_type,node,prefix,waypoint,num_routes,sources
+reachability,edge,203.0.113.0/24,,,intact
+isolation,EDGE,203.0.113.0/24,,,broken_removed
+isolation,secondary,203.0.113.0/24,,,broken_added
+isolation,edge,198.18.1.0/24,,,broken_added
+isolation,edge,198.18.2.0/24,,,broken_added
+waypointing,edge,203.0.113.8/32,edge,,intact
+load_balancing,edge,203.0.113.8/32,,2,intact
+isolation,edge,198.51.100.10/32,,,intact
+reachability,edge,203.0.113.10/32,,,broken_removed
+reachability,edge,203.0.113.9/32,,,broken_removed

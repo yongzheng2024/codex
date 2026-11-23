@@ -226,6 +226,10 @@ public final class VirtualRouter {
   private static final Logger LOGGER = LogManager.getLogger(VirtualRouter.class);
 
   VirtualRouter(@Nonnull String name, @Nonnull Node node) {
+    this(name, node, new PrefixTracer());
+  }
+
+  VirtualRouter(@Nonnull String name, @Nonnull Node node, @Nonnull PrefixTracer prefixTracer) {
     _node = node;
     _c = node.getConfiguration();
     _name = name;
@@ -244,7 +248,7 @@ public final class VirtualRouter {
     // Init rest of the RIBs
     initRibs();
 
-    _prefixTracer = new PrefixTracer();
+    _prefixTracer = prefixTracer;
     _eigrpProcesses = ImmutableMap.of();
     _ospfProcesses = ImmutableMap.of();
     _layer2Vnis = ImmutableSet.copyOf(_vrf.getLayer2Vnis().values());

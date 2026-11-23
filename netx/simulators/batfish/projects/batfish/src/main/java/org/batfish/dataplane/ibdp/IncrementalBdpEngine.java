@@ -35,6 +35,7 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.Function;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -106,9 +107,16 @@ final class IncrementalBdpEngine {
 
   private int _numIterations;
   private final IncrementalDataPlaneSettings _settings;
+  private final Function<Configuration, Node> _nodeFactory;
 
   IncrementalBdpEngine(IncrementalDataPlaneSettings settings) {
+    this(settings, Node::new);
+  }
+
+  IncrementalBdpEngine(
+      IncrementalDataPlaneSettings settings, Function<Configuration, Node> nodeFactory) {
     _settings = settings;
+    _nodeFactory = nodeFactory;
   }
 
   /**
@@ -438,7 +446,7 @@ final class IncrementalBdpEngine {
 
     // Generate our nodes, keyed by name, sorted for determinism
     SortedMap<String, Node> nodes =
-        toImmutableSortedMap(configurations.values(), Configuration::getHostname, Node::new);
+        toImmutableSortedMap(configurations.values(), Configuration::getHostname, _nodeFactory);
     // A collection of all the virtual routers in random order enables parallelization across all
     // VRs, and likely spreads nodes with similar hostnames across different cores. In contrast,
     // nodes.values().parallelStream().flatMap(get vrs stream) is only node-parallel and clusters

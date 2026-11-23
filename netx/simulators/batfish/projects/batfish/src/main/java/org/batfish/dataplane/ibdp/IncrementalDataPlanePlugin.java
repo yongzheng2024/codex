@@ -16,7 +16,7 @@ import org.batfish.datamodel.isis.IsisTopology;
 
 /** A batfish plugin that registers the Incremental Batfish Data Plane (ibdp) Engine. */
 @AutoService(Plugin.class)
-public final class IncrementalDataPlanePlugin extends DataPlanePlugin {
+public class IncrementalDataPlanePlugin extends DataPlanePlugin {
 
   private static final Logger LOGGER = LogManager.getLogger(IncrementalDataPlanePlugin.class);
 
@@ -64,7 +64,13 @@ public final class IncrementalDataPlanePlugin extends DataPlanePlugin {
   protected void dataPlanePluginInitialize() {
     _engine =
         new IncrementalBdpEngine(
-            new IncrementalDataPlaneSettings(_batfish.getSettingsConfiguration()));
+            new IncrementalDataPlaneSettings(_batfish.getSettingsConfiguration()),
+            this::createNode);
+  }
+
+  /** Creates the simulation node and its per-VRF tracing state for this computation. */
+  protected Node createNode(Configuration configuration) {
+    return new Node(configuration);
   }
 
   @Override

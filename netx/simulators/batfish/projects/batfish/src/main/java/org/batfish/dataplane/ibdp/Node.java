@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSortedMap;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.SortedMap;
+import java.util.function.Function;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import org.batfish.datamodel.Configuration;
@@ -25,10 +26,15 @@ public final class Node {
    * @param configuration the {@link Configuration} backing this node
    */
   public Node(Configuration configuration) {
+    this(configuration, vrf -> new PrefixTracer());
+  }
+
+  /** Allows a data plane plugin to collect prefix events separately for each local VRF. */
+  public Node(Configuration configuration, Function<String, PrefixTracer> tracerFactory) {
     _c = configuration;
     ImmutableSortedMap.Builder<String, VirtualRouter> b = ImmutableSortedMap.naturalOrder();
     for (String vrfName : _c.getVrfs().keySet()) {
-      VirtualRouter vr = new VirtualRouter(vrfName, this);
+      VirtualRouter vr = new VirtualRouter(vrfName, this, tracerFactory.apply(vrfName));
       b.put(vrfName, vr);
     }
     _virtualRouters = b.build();

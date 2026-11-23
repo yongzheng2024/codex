@@ -1015,6 +1015,9 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
     Builder<AnnotatedRoute<AbstractRoute>> perNeighborDeltaForRibGroups = RibDelta.builder();
 
     BgpRoutingProcess remoteProcess = getNeighborBgpProcess(remoteConfigId, nodes);
+    if (isNewSession) {
+      remoteProcess._prefixTracer.sessionOpened(edgeId);
+    }
     Iterator<RouteAdvertisement<Bgpv4Route>> exportedRoutes =
         remoteProcess
             .getOutgoingRoutesForEdge(edgeId, nodes, bgpTopology, nc, isNewSession)
@@ -1029,6 +1032,8 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
       // consume exported routes
       RouteAdvertisement<Bgpv4Route> remoteRouteAdvert = exportedRoutes.next();
       Bgpv4Route remoteRoute = remoteRouteAdvert.getRoute();
+      remoteProcess._prefixTracer.exportedAdvertisement(
+          edgeId, remoteRoute, remoteRouteAdvert.isWithdrawn());
 
       Bgpv4Route.Builder transformedIncomingRouteBuilder =
           transformBgpRouteOnImport(

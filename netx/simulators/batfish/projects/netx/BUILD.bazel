@@ -1,0 +1,15 @@
+load("@rules_java//java:defs.bzl", "java_binary")
+
+java_binary(
+    name = "snapshot_facts",
+    srcs = glob(["*.java"]),
+    main_class = "org.batfish.netx.SnapshotFacts",
+    deps = [
+        "//projects/batfish",
+        "//projects/common",
+        "//projects/question",
+        "@maven//:com_fasterxml_jackson_core_jackson_databind",
+        "@maven//:com_github_ben_manes_caffeine_caffeine",
+        "@maven//:com_google_guava_guava",
+    ],
+)

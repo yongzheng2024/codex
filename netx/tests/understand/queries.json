@@ -1,0 +1,98 @@
+{
+  "prefixes": [
+    "203.0.113.8/32",
+    "203.0.113.9/32",
+    "203.0.113.10/32"
+  ],
+  "flows": [
+    {
+      "id": "import-filtered",
+      "flow": {"ingressNode": "edge", "ingressVrf": "default", "srcIp": "10.0.0.1", "dstIp": "203.0.113.9",
+               "ipProtocol": "ICMP", "icmpVar": 8, "icmpCode": 0, "packetLength": 64}
+    },
+    {
+      "id": "export-filtered",
+      "flow": {"ingressNode": "edge", "ingressVrf": "default", "srcIp": "10.0.0.1", "dstIp": "203.0.113.10",
+               "ipProtocol": "ICMP", "icmpVar": 8, "icmpCode": 0, "packetLength": 64}
+    },
+    {
+      "id": "tcp-80",
+      "flow": {
+        "ingressNode": "edge",
+        "ingressInterface": "GigabitEthernet0/2",
+        "srcIp": "192.0.2.2",
+        "dstIp": "203.0.113.8",
+        "ipProtocol": "TCP",
+        "srcPort": 50000,
+        "dstPort": 80,
+        "packetLength": 64
+      }
+    },
+    {
+      "id": "tcp-443",
+      "flow": {
+        "ingressNode": "edge",
+        "ingressInterface": "GigabitEthernet0/2",
+        "srcIp": "192.0.2.2",
+        "dstIp": "203.0.113.8",
+        "ipProtocol": "TCP",
+        "srcPort": 50000,
+        "dstPort": 443,
+        "packetLength": 64
+      }
+    },
+    {
+      "id": "tcp-22",
+      "flow": {
+        "ingressNode": "edge",
+        "ingressInterface": "GigabitEthernet0/2",
+        "srcIp": "192.0.2.2",
+        "dstIp": "203.0.113.8",
+        "ipProtocol": "TCP",
+        "srcPort": 50000,
+        "dstPort": 22,
+        "packetLength": 64
+      }
+    },
+    {
+      "id": "tenant-address-from-tenant",
+      "flow": {
+        "ingressNode": "edge",
+        "ingressVrf": "tenant",
+        "srcIp": "192.0.2.2",
+        "dstIp": "198.51.100.10",
+        "ipProtocol": "UDP",
+        "srcPort": 50000,
+        "dstPort": 33434,
+        "packetLength": 64
+      }
+    },
+    {
+      "id": "tenant-address-from-default",
+      "flow": {
+        "ingressNode": "edge",
+        "ingressVrf": "default",
+        "srcIp": "192.0.2.2",
+        "dstIp": "198.51.100.10",
+        "ipProtocol": "UDP",
+        "srcPort": 50000,
+        "dstPort": 33434,
+        "packetLength": 64
+      }
+    }
+  ],
+  "policyTests": [
+    {
+      "id": "conditional-import",
+      "nodes": "edge",
+      "policies": "FROM-PRIMARY",
+      "direction": "IN",
+      "route": {
+        "network": "203.0.113.9/32",
+        "originatorIp": "10.255.0.2",
+        "originType": "igp",
+        "protocol": "bgp"
+      }
+    }
+  ]
+}

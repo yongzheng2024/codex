@@ -13,13 +13,15 @@ import java.util.SortedSet;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.batfish.datamodel.Bgpv4Route;
 import org.batfish.datamodel.Ip;
 import org.batfish.datamodel.Prefix;
 import org.batfish.datamodel.PrefixSpace;
+import org.batfish.datamodel.bgp.BgpTopology.EdgeId;
 import org.batfish.datamodel.routing_policy.Environment.Direction;
 
 /** Keeps data about which prefixes where advertised to neighboring routers */
-public final class PrefixTracer implements Serializable {
+public class PrefixTracer implements Serializable {
   static final String SENT = "sent";
   static final String FILTERED_OUT = "filtered_out";
   static final String FILTERED_IN = "filtered_in";
@@ -107,7 +109,7 @@ public final class PrefixTracer implements Serializable {
     this(DEFAULT_PREFIXES_TO_TRACE);
   }
 
-  PrefixTracer(@Nonnull PrefixSpace prefixesToTrace) {
+  public PrefixTracer(@Nonnull PrefixSpace prefixesToTrace) {
     _originated = Sets.newConcurrentHashSet();
     _installed = new ConcurrentHashMap<>();
     _sent = new ConcurrentHashMap<>();
@@ -115,6 +117,12 @@ public final class PrefixTracer implements Serializable {
     _filteredOnExport = new ConcurrentHashMap<>();
     _prefixesToTrace = prefixesToTrace;
   }
+
+  /** Optional observation of an IPv4 advertisement on the wire, before receiver import. */
+  protected void exportedAdvertisement(EdgeId edge, Bgpv4Route route, boolean withdrawn) {}
+
+  /** A new session starts with a fresh outbound advertisement set. */
+  protected void sessionOpened(EdgeId edge) {}
 
   /** Note that we considered given prefix for origination */
   void originated(Prefix prefix) {
