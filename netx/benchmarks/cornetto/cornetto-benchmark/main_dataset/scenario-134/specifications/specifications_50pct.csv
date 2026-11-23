@@ -107,9 +107,6 @@ isolation,10_as65001_saldus,10.181.0.90/31,,,intact
 isolation,10_as65001_saldus,10.181.0.92/31,,,intact
 isolation,10_as65001_saldus,10.181.0.96/31,,,intact
 isolation,10_as65001_saldus,10.181.0.98/31,,,intact
-isolation,10_as65001_saldus,10.200.7.0/24,,,broken_added
-isolation,10_as65001_saldus,10.200.8.0/24,,,broken_added
-isolation,10_as65001_saldus,10.200.9.0/24,,,broken_added
 reachability,10_as65001_saldus,10.180.0.1/32,,,broken_removed
 reachability,10_as65001_saldus,10.180.0.11/32,,,intact
 reachability,10_as65001_saldus,10.180.0.15/32,,,intact
@@ -287,9 +284,6 @@ isolation,15_as65001_gulbene,10.181.0.90/31,,,intact
 isolation,15_as65001_gulbene,10.181.0.92/31,,,intact
 isolation,15_as65001_gulbene,10.181.0.96/31,,,intact
 isolation,15_as65001_gulbene,10.181.0.98/31,,,intact
-isolation,15_as65001_gulbene,10.200.7.0/24,,,broken_added
-isolation,15_as65001_gulbene,10.200.8.0/24,,,broken_added
-isolation,15_as65001_gulbene,10.200.9.0/24,,,broken_added
 reachability,15_as65001_gulbene,10.180.0.1/32,,,broken_removed
 reachability,15_as65001_gulbene,10.180.0.11/32,,,intact
 reachability,15_as65001_gulbene,10.180.0.15/32,,,intact
@@ -360,9 +354,6 @@ isolation,16_as65006_rujiena,10.181.0.20/31,,,intact
 isolation,16_as65006_rujiena,10.181.0.42/31,,,intact
 isolation,16_as65006_rujiena,10.181.0.44/31,,,intact
 isolation,16_as65006_rujiena,10.181.0.46/31,,,intact
-isolation,16_as65006_rujiena,10.200.7.0/24,,,broken_added
-isolation,16_as65006_rujiena,10.200.8.0/24,,,broken_added
-isolation,16_as65006_rujiena,10.200.9.0/24,,,broken_added
 reachability,16_as65006_rujiena,10.180.0.10/32,,,intact
 reachability,16_as65006_rujiena,10.180.0.17/32,,,intact
 reachability,16_as65006_rujiena,10.180.0.19/32,,,intact
@@ -561,9 +552,6 @@ isolation,24_as65001_skriveri,10.181.0.90/31,,,intact
 isolation,24_as65001_skriveri,10.181.0.92/31,,,intact
 isolation,24_as65001_skriveri,10.181.0.96/31,,,intact
 isolation,24_as65001_skriveri,10.181.0.98/31,,,intact
-isolation,24_as65001_skriveri,10.200.7.0/24,,,broken_added
-isolation,24_as65001_skriveri,10.200.8.0/24,,,broken_added
-isolation,24_as65001_skriveri,10.200.9.0/24,,,broken_added
 reachability,24_as65001_skriveri,10.180.0.1/32,,,broken_removed
 reachability,24_as65001_skriveri,10.180.0.11/32,,,intact
 reachability,24_as65001_skriveri,10.180.0.15/32,,,intact
@@ -823,9 +811,6 @@ isolation,2_as65001_kraslava,10.181.0.90/31,,,intact
 isolation,2_as65001_kraslava,10.181.0.92/31,,,intact
 isolation,2_as65001_kraslava,10.181.0.96/31,,,intact
 isolation,2_as65001_kraslava,10.181.0.98/31,,,intact
-isolation,2_as65001_kraslava,10.200.7.0/24,,,broken_added
-isolation,2_as65001_kraslava,10.200.8.0/24,,,broken_added
-isolation,2_as65001_kraslava,10.200.9.0/24,,,broken_added
 reachability,2_as65001_kraslava,10.180.0.1/32,,,broken_removed
 reachability,2_as65001_kraslava,10.180.0.11/32,,,intact
 reachability,2_as65001_kraslava,10.180.0.15/32,,,intact
@@ -915,9 +900,6 @@ isolation,30_as65001_riga,10.181.0.90/31,,,intact
 isolation,30_as65001_riga,10.181.0.92/31,,,intact
 isolation,30_as65001_riga,10.181.0.96/31,,,intact
 isolation,30_as65001_riga,10.181.0.98/31,,,intact
-isolation,30_as65001_riga,10.200.7.0/24,,,broken_added
-isolation,30_as65001_riga,10.200.8.0/24,,,broken_added
-isolation,30_as65001_riga,10.200.9.0/24,,,broken_added
 reachability,30_as65001_riga,10.180.0.1/32,,,broken_removed
 reachability,30_as65001_riga,10.180.0.11/32,,,intact
 reachability,30_as65001_riga,10.180.0.15/32,,,intact
@@ -1070,9 +1052,6 @@ isolation,32_as65001_ventspits,10.181.0.90/31,,,intact
 isolation,32_as65001_ventspits,10.181.0.92/31,,,intact
 isolation,32_as65001_ventspits,10.181.0.96/31,,,intact
 isolation,32_as65001_ventspits,10.181.0.98/31,,,intact
-isolation,32_as65001_ventspits,10.200.7.0/24,,,broken_added
-isolation,32_as65001_ventspits,10.200.8.0/24,,,broken_added
-isolation,32_as65001_ventspits,10.200.9.0/24,,,broken_added
 reachability,32_as65001_ventspits,10.180.0.1/32,,,broken_removed
 reachability,32_as65001_ventspits,10.180.0.11/32,,,intact
 reachability,32_as65001_ventspits,10.180.0.15/32,,,intact
@@ -1320,9 +1299,6 @@ isolation,3_as65001_baldone,10.181.0.90/31,,,intact
 isolation,3_as65001_baldone,10.181.0.92/31,,,intact
 isolation,3_as65001_baldone,10.181.0.96/31,,,intact
 isolation,3_as65001_baldone,10.181.0.98/31,,,intact
-isolation,3_as65001_baldone,10.200.7.0/24,,,broken_added
-isolation,3_as65001_baldone,10.200.8.0/24,,,broken_added
-isolation,3_as65001_baldone,10.200.9.0/24,,,broken_added
 reachability,3_as65001_baldone,10.180.0.1/32,,,broken_removed
 reachability,3_as65001_baldone,10.180.0.11/32,,,intact
 reachability,3_as65001_baldone,10.180.0.15/32,,,intact
@@ -1532,9 +1508,6 @@ isolation,44_as65001_kekava,10.181.0.86/31,,,intact
 isolation,44_as65001_kekava,10.181.0.92/31,,,intact
 isolation,44_as65001_kekava,10.181.0.96/31,,,intact
 isolation,44_as65001_kekava,10.181.0.98/31,,,intact
-isolation,44_as65001_kekava,10.200.7.0/24,,,broken_added
-isolation,44_as65001_kekava,10.200.8.0/24,,,broken_added
-isolation,44_as65001_kekava,10.200.9.0/24,,,broken_added
 reachability,44_as65001_kekava,10.180.0.1/32,,,broken_removed
 reachability,44_as65001_kekava,10.180.0.11/32,,,intact
 reachability,44_as65001_kekava,10.180.0.15/32,,,intact
@@ -1622,9 +1595,6 @@ isolation,45_as65001_geant2,10.181.0.86/31,,,intact
 isolation,45_as65001_geant2,10.181.0.90/31,,,intact
 isolation,45_as65001_geant2,10.181.0.96/31,,,intact
 isolation,45_as65001_geant2,10.181.0.98/31,,,intact
-isolation,45_as65001_geant2,10.200.7.0/24,,,broken_added
-isolation,45_as65001_geant2,10.200.8.0/24,,,broken_added
-isolation,45_as65001_geant2,10.200.9.0/24,,,broken_added
 reachability,45_as65001_geant2,10.180.0.1/32,,,broken_removed
 reachability,45_as65001_geant2,10.180.0.11/32,,,intact
 reachability,45_as65001_geant2,10.180.0.15/32,,,intact
@@ -1901,9 +1871,6 @@ isolation,51_as65001_talsi,10.181.0.90/31,,,intact
 isolation,51_as65001_talsi,10.181.0.92/31,,,intact
 isolation,51_as65001_talsi,10.181.0.96/31,,,intact
 isolation,51_as65001_talsi,10.181.0.98/31,,,intact
-isolation,51_as65001_talsi,10.200.7.0/24,,,broken_added
-isolation,51_as65001_talsi,10.200.8.0/24,,,broken_added
-isolation,51_as65001_talsi,10.200.9.0/24,,,broken_added
 reachability,51_as65001_talsi,10.180.0.1/32,,,broken_removed
 reachability,51_as65001_talsi,10.180.0.11/32,,,intact
 reachability,51_as65001_talsi,10.180.0.15/32,,,intact
@@ -1989,9 +1956,6 @@ isolation,52_as65001_aizpute,10.181.0.90/31,,,intact
 isolation,52_as65001_aizpute,10.181.0.92/31,,,intact
 isolation,52_as65001_aizpute,10.181.0.96/31,,,intact
 isolation,52_as65001_aizpute,10.181.0.98/31,,,intact
-isolation,52_as65001_aizpute,10.200.7.0/24,,,broken_added
-isolation,52_as65001_aizpute,10.200.8.0/24,,,broken_added
-isolation,52_as65001_aizpute,10.200.9.0/24,,,broken_added
 reachability,52_as65001_aizpute,10.180.0.1/32,,,broken_removed
 reachability,52_as65001_aizpute,10.180.0.11/32,,,intact
 reachability,52_as65001_aizpute,10.180.0.15/32,,,intact
@@ -2229,9 +2193,6 @@ isolation,5_as65001_broceni,10.181.0.90/31,,,intact
 isolation,5_as65001_broceni,10.181.0.92/31,,,intact
 isolation,5_as65001_broceni,10.181.0.96/31,,,intact
 isolation,5_as65001_broceni,10.181.0.98/31,,,intact
-isolation,5_as65001_broceni,10.200.7.0/24,,,broken_added
-isolation,5_as65001_broceni,10.200.8.0/24,,,broken_added
-isolation,5_as65001_broceni,10.200.9.0/24,,,broken_added
 reachability,5_as65001_broceni,10.180.0.1/32,,,broken_removed
 reachability,5_as65001_broceni,10.180.0.11/32,,,intact
 reachability,5_as65001_broceni,10.180.0.15/32,,,intact

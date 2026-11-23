@@ -368,8 +368,6 @@ reachability,21_as65004_21,10.200.16.0/24,,,intact
 reachability,21_as65004_21,10.200.16.1/32,,,intact
 reachability,21_as65004_21,10.200.2.0/24,,,broken_removed
 reachability,21_as65004_21,10.200.3.0/24,,,broken_removed
-reachability,21_as65004_21,10.200.39.0/24,,,broken_added
-reachability,21_as65004_21,10.200.40.0/24,,,broken_added
 isolation,22_as65004_22,0.0.0.0/0,,,intact
 isolation,22_as65004_22,10.181.0.100/31,,,intact
 isolation,22_as65004_22,10.181.0.24/31,,,intact

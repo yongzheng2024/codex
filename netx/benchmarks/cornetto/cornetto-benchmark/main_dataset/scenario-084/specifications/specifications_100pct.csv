@@ -3996,8 +3996,8 @@ reachability,13_as65008_durham,10.180.0.84/32,,,intact
 reachability,13_as65008_durham,10.180.0.85/32,,,intact
 reachability,13_as65008_durham,10.181.0.41/32,,,intact
 reachability,13_as65008_durham,10.181.0.47/32,,,intact
-reachability,13_as65008_durham,10.200.0.0/24,,,broken_removed|intact
-reachability,13_as65008_durham,10.200.1.0/24,,,broken_removed|intact
+reachability,13_as65008_durham,10.200.0.0/24,,,intact
+reachability,13_as65008_durham,10.200.1.0/24,,,intact
 reachability,13_as65008_durham,10.200.10.0/24,,,broken_added
 reachability,13_as65008_durham,10.200.11.0/24,,,broken_added
 reachability,13_as65008_durham,10.200.26.0/24,,,intact
@@ -4076,8 +4076,8 @@ waypointing,13_as65008_durham,10.180.0.84/32,84_as65008_none,,intact
 waypointing,13_as65008_durham,10.180.0.85/32,12_as65008_burlington,,intact
 waypointing,13_as65008_durham,10.180.0.85/32,30_as65008_greensboro,,intact
 waypointing,13_as65008_durham,10.180.0.85/32,84_as65008_none,,intact
-waypointing,13_as65008_durham,10.200.0.0/24,10_as65007_raleigh,,broken_removed|intact
-waypointing,13_as65008_durham,10.200.1.0/24,10_as65007_raleigh,,broken_removed|intact
+waypointing,13_as65008_durham,10.200.0.0/24,10_as65007_raleigh,,intact
+waypointing,13_as65008_durham,10.200.1.0/24,10_as65007_raleigh,,intact
 waypointing,13_as65008_durham,10.200.10.0/24,106_as65007_florence,,broken_added
 waypointing,13_as65008_durham,10.200.10.0/24,108_as65001_bethune,,broken_added
 waypointing,13_as65008_durham,10.200.10.0/24,10_as65007_raleigh,,broken_added

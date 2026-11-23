@@ -491,7 +491,7 @@ isolation,1_as65002_1,10.181.0.52/31,,,broken_removed
 isolation,1_as65002_1,10.181.0.8/31,,,broken_removed
 isolation,1_as65002_1,10.181.0.80/31,,,broken_removed
 isolation,1_as65002_1,10.181.0.84/31,,,broken_removed
-reachability,1_as65002_1,10.180.0.1/32,,,broken_removed|intact
+reachability,1_as65002_1,10.180.0.1/32,,,intact
 reachability,1_as65002_1,10.180.0.14/32,,,broken_removed
 reachability,1_as65002_1,10.180.0.15/32,,,broken_removed
 reachability,1_as65002_1,10.180.0.2/32,,,broken_removed

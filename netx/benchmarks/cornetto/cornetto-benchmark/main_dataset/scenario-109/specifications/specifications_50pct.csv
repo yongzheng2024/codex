@@ -240,7 +240,6 @@ reachability,12_as65006_12,10.180.0.53/32,,,broken_removed
 reachability,12_as65006_12,10.180.0.54/32,,,intact
 reachability,12_as65006_12,10.180.0.56/32,,,broken_removed
 reachability,12_as65006_12,10.180.0.57/32,,,intact
-reachability,12_as65006_12,10.181.0.0/30,,,broken_added
 reachability,12_as65006_12,10.181.0.38/32,,,intact
 reachability,12_as65006_12,10.200.0.0/24,,,intact
 reachability,12_as65006_12,10.200.1.0/24,,,intact
@@ -387,7 +386,6 @@ reachability,13_as65006_13,10.180.0.53/32,,,broken_removed
 reachability,13_as65006_13,10.180.0.54/32,,,intact
 reachability,13_as65006_13,10.180.0.56/32,,,broken_removed
 reachability,13_as65006_13,10.180.0.57/32,,,intact
-reachability,13_as65006_13,10.181.0.0/30,,,broken_added
 reachability,13_as65006_13,10.181.0.40/32,,,intact
 reachability,13_as65006_13,10.181.0.42/32,,,intact
 reachability,13_as65006_13,10.181.0.44/32,,,intact
@@ -1298,7 +1296,6 @@ reachability,26_as65006_26,10.180.0.53/32,,,broken_removed
 reachability,26_as65006_26,10.180.0.54/32,,,intact
 reachability,26_as65006_26,10.180.0.56/32,,,broken_removed
 reachability,26_as65006_26,10.180.0.57/32,,,intact
-reachability,26_as65006_26,10.181.0.0/30,,,broken_added
 reachability,26_as65006_26,10.181.0.104/32,,,intact
 reachability,26_as65006_26,10.181.0.106/32,,,intact
 reachability,26_as65006_26,10.181.0.39/32,,,intact
@@ -1438,7 +1435,6 @@ reachability,27_as65006_27,10.180.0.53/32,,,broken_removed
 reachability,27_as65006_27,10.180.0.54/32,,,intact
 reachability,27_as65006_27,10.180.0.56/32,,,broken_removed
 reachability,27_as65006_27,10.180.0.57/32,,,intact
-reachability,27_as65006_27,10.181.0.0/30,,,broken_added
 reachability,27_as65006_27,10.181.0.105/32,,,intact
 reachability,27_as65006_27,10.200.0.0/24,,,intact
 reachability,27_as65006_27,10.200.1.0/24,,,intact
@@ -2929,7 +2925,6 @@ reachability,42_as65006_42,10.180.0.53/32,,,broken_removed
 reachability,42_as65006_42,10.180.0.54/32,,,intact
 reachability,42_as65006_42,10.180.0.56/32,,,broken_removed
 reachability,42_as65006_42,10.180.0.57/32,,,intact
-reachability,42_as65006_42,10.181.0.0/30,,,broken_added
 reachability,42_as65006_42,10.181.0.144/32,,,intact
 reachability,42_as65006_42,10.181.0.35/32,,,intact
 reachability,42_as65006_42,10.181.0.41/32,,,intact
@@ -3798,7 +3793,6 @@ reachability,53_as65006_53,10.180.0.53/32,,,broken_removed
 reachability,53_as65006_53,10.180.0.54/32,,,intact
 reachability,53_as65006_53,10.180.0.56/32,,,broken_removed
 reachability,53_as65006_53,10.180.0.57/32,,,intact
-reachability,53_as65006_53,10.181.0.0/30,,,broken_added
 reachability,53_as65006_53,10.181.0.47/32,,,intact
 reachability,53_as65006_53,10.181.0.49/32,,,intact
 reachability,53_as65006_53,10.200.0.0/24,,,intact
@@ -4078,7 +4072,6 @@ reachability,56_as65006_56,10.180.0.53/32,,,broken_removed
 reachability,56_as65006_56,10.180.0.54/32,,,intact
 reachability,56_as65006_56,10.180.0.56/32,,,broken_removed
 reachability,56_as65006_56,10.180.0.57/32,,,intact
-reachability,56_as65006_56,10.181.0.0/30,,,broken_added
 reachability,56_as65006_56,10.181.0.145/32,,,intact
 reachability,56_as65006_56,10.200.0.0/24,,,intact
 reachability,56_as65006_56,10.200.1.0/24,,,intact

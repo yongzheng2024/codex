@@ -1,6 +1,5 @@
 predicate_type,node,prefix,waypoint,num_routes,sources
 isolation,0_as65001_tampa,0.0.0.0/0,,,intact
-isolation,0_as65001_tampa,10.180.0.65/32,,,broken_added
 isolation,0_as65001_tampa,10.181.0.10/31,,,intact
 isolation,105_as65002_dallas,0.0.0.0/0,,,intact
 isolation,105_as65002_dallas,10.181.0.106/31,,,intact
@@ -100,7 +99,6 @@ isolation,61_as65002_beaumont,10.181.0.106/31,,,intact
 isolation,62_as65001_daytona-beach,0.0.0.0/0,,,intact
 isolation,62_as65001_daytona-beach,10.181.0.10/31,,,intact
 isolation,63_as65001_orlando,0.0.0.0/0,,,intact
-isolation,63_as65001_orlando,10.180.0.65/32,,,broken_added
 isolation,63_as65001_orlando,10.181.0.10/31,,,intact
 isolation,64_as65001_miami,0.0.0.0/0,,,intact
 isolation,64_as65001_miami,10.181.0.10/31,,,intact
@@ -117,7 +115,6 @@ isolation,69_as65001_west-palm-beach,10.181.0.10/31,,,intact
 isolation,6_as65001_jacksonville,0.0.0.0/0,,,intact
 isolation,6_as65001_jacksonville,10.181.0.10/31,,,intact
 isolation,70_as65001_cocoa-beach,0.0.0.0/0,,,intact
-isolation,70_as65001_cocoa-beach,10.180.0.65/32,,,broken_added
 isolation,70_as65001_cocoa-beach,10.181.0.10/31,,,intact
 isolation,71_as65001_melbourne,0.0.0.0/0,,,intact
 isolation,71_as65001_melbourne,10.181.0.10/31,,,intact

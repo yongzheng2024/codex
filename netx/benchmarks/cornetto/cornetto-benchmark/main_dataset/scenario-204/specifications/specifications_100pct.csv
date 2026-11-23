@@ -139,7 +139,7 @@ isolation,12_as65001_an-giang,10.181.0.16/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.18/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.20/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.22/31,,,intact
-reachability,12_as65001_an-giang,10.180.0.1/32,,,broken_removed|intact
+reachability,12_as65001_an-giang,10.180.0.1/32,,,intact
 reachability,12_as65001_an-giang,10.180.0.10/32,,,intact
 reachability,12_as65001_an-giang,10.180.0.13/32,,,broken_removed
 reachability,12_as65001_an-giang,10.180.0.14/32,,,intact
@@ -188,7 +188,7 @@ isolation,13_as65001_da-lat,10.181.0.16/31,,,intact
 isolation,13_as65001_da-lat,10.181.0.18/31,,,intact
 isolation,13_as65001_da-lat,10.181.0.22/31,,,intact
 isolation,13_as65001_da-lat,10.181.0.40/31,,,intact
-reachability,13_as65001_da-lat,10.180.0.1/32,,,broken_removed|intact
+reachability,13_as65001_da-lat,10.180.0.1/32,,,intact
 reachability,13_as65001_da-lat,10.180.0.10/32,,,intact
 reachability,13_as65001_da-lat,10.180.0.13/32,,,broken_removed
 reachability,13_as65001_da-lat,10.180.0.14/32,,,intact
@@ -205,7 +205,7 @@ reachability,13_as65001_da-lat,10.200.9.0/24,,,intact
 waypointing,13_as65001_da-lat,10.180.0.1/32,0_as65001_hue,,broken_removed
 waypointing,13_as65001_da-lat,10.180.0.1/32,12_as65001_an-giang,,broken_added
 waypointing,13_as65001_da-lat,10.180.0.1/32,16_as65001_ct,,broken_added
-waypointing,13_as65001_da-lat,10.180.0.1/32,2_as65001_hcm,,broken_removed|intact
+waypointing,13_as65001_da-lat,10.180.0.1/32,2_as65001_hcm,,intact
 waypointing,13_as65001_da-lat,10.180.0.1/32,3_as65001_dn,,broken_removed
 waypointing,13_as65001_da-lat,10.180.0.10/32,2_as65001_hcm,,intact
 waypointing,13_as65001_da-lat,10.180.0.10/32,3_as65001_dn,,intact
@@ -309,7 +309,7 @@ isolation,16_as65001_ct,10.181.0.18/31,,,intact
 isolation,16_as65001_ct,10.181.0.20/31,,,intact
 isolation,16_as65001_ct,10.181.0.22/31,,,intact
 isolation,16_as65001_ct,10.181.0.40/31,,,intact
-reachability,16_as65001_ct,10.180.0.1/32,,,broken_removed|intact
+reachability,16_as65001_ct,10.180.0.1/32,,,intact
 reachability,16_as65001_ct,10.180.0.10/32,,,intact
 reachability,16_as65001_ct,10.180.0.13/32,,,broken_removed
 reachability,16_as65001_ct,10.180.0.14/32,,,intact
@@ -680,7 +680,7 @@ isolation,2_as65001_hcm,10.181.0.18/31,,,intact
 isolation,2_as65001_hcm,10.181.0.20/31,,,intact
 isolation,2_as65001_hcm,10.181.0.22/31,,,intact
 isolation,2_as65001_hcm,10.181.0.40/31,,,intact
-reachability,2_as65001_hcm,10.180.0.1/32,,,broken_removed|intact
+reachability,2_as65001_hcm,10.180.0.1/32,,,intact
 reachability,2_as65001_hcm,10.180.0.10/32,,,intact
 reachability,2_as65001_hcm,10.180.0.13/32,,,broken_removed
 reachability,2_as65001_hcm,10.180.0.14/32,,,intact
@@ -724,7 +724,7 @@ isolation,3_as65001_dn,10.181.0.18/31,,,intact
 isolation,3_as65001_dn,10.181.0.20/31,,,intact
 isolation,3_as65001_dn,10.181.0.22/31,,,intact
 isolation,3_as65001_dn,10.181.0.40/31,,,intact
-reachability,3_as65001_dn,10.180.0.1/32,,,broken_removed|intact
+reachability,3_as65001_dn,10.180.0.1/32,,,intact
 reachability,3_as65001_dn,10.180.0.10/32,,,intact
 reachability,3_as65001_dn,10.180.0.13/32,,,broken_removed
 reachability,3_as65001_dn,10.180.0.14/32,,,intact
@@ -952,7 +952,7 @@ isolation,9_as65001_nha-trang,10.181.0.16/31,,,intact
 isolation,9_as65001_nha-trang,10.181.0.18/31,,,intact
 isolation,9_as65001_nha-trang,10.181.0.20/31,,,intact
 isolation,9_as65001_nha-trang,10.181.0.40/31,,,intact
-reachability,9_as65001_nha-trang,10.180.0.1/32,,,broken_removed|intact
+reachability,9_as65001_nha-trang,10.180.0.1/32,,,intact
 reachability,9_as65001_nha-trang,10.180.0.10/32,,,intact
 reachability,9_as65001_nha-trang,10.180.0.13/32,,,broken_removed
 reachability,9_as65001_nha-trang,10.180.0.14/32,,,intact
@@ -972,7 +972,7 @@ waypointing,9_as65001_nha-trang,10.180.0.1/32,0_as65001_hue,,broken_removed
 waypointing,9_as65001_nha-trang,10.180.0.1/32,12_as65001_an-giang,,broken_added
 waypointing,9_as65001_nha-trang,10.180.0.1/32,16_as65001_ct,,broken_added
 waypointing,9_as65001_nha-trang,10.180.0.1/32,2_as65001_hcm,,broken_added
-waypointing,9_as65001_nha-trang,10.180.0.1/32,3_as65001_dn,,broken_removed|intact
+waypointing,9_as65001_nha-trang,10.180.0.1/32,3_as65001_dn,,intact
 waypointing,9_as65001_nha-trang,10.180.0.13/32,12_as65001_an-giang,,broken_removed
 waypointing,9_as65001_nha-trang,10.180.0.13/32,16_as65001_ct,,broken_removed
 waypointing,9_as65001_nha-trang,10.180.0.13/32,2_as65001_hcm,,broken_removed

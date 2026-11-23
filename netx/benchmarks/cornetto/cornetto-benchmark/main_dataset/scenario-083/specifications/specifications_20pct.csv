@@ -169,8 +169,6 @@ reachability,104_as65003_georgetown,10.200.2.0/24,,,broken_removed
 reachability,104_as65003_georgetown,10.200.3.0/24,,,broken_removed
 reachability,104_as65003_georgetown,10.200.6.0/24,,,broken_removed
 reachability,104_as65003_georgetown,10.200.7.0/24,,,broken_removed
-reachability,104_as65003_georgetown,10.200.81.0/24,,,broken_added
-reachability,104_as65003_georgetown,10.200.82.0/24,,,broken_added
 waypointing,104_as65003_georgetown,10.200.0.0/24,105_as65007_monks-corner,,broken_removed
 waypointing,104_as65003_georgetown,10.200.0.0/24,82_as65003_none,,broken_removed
 isolation,105_as65007_monks-corner,10.181.0.0/31,,,intact
@@ -234,8 +232,6 @@ reachability,106_as65003_florence,10.200.0.0/24,,,broken_removed
 reachability,106_as65003_florence,10.200.1.0/24,,,broken_removed
 reachability,106_as65003_florence,10.200.2.0/24,,,broken_removed
 reachability,106_as65003_florence,10.200.3.0/24,,,broken_removed
-reachability,106_as65003_florence,10.200.81.0/24,,,broken_added
-reachability,106_as65003_florence,10.200.82.0/24,,,broken_added
 waypointing,106_as65003_florence,10.200.0.0/24,104_as65003_georgetown,,broken_removed
 waypointing,106_as65003_florence,10.200.0.0/24,105_as65007_monks-corner,,broken_removed
 waypointing,106_as65003_florence,10.200.0.0/24,107_as65003_myrtle-beach,,broken_removed
@@ -285,8 +281,6 @@ reachability,107_as65003_myrtle-beach,10.200.2.0/24,,,broken_removed
 reachability,107_as65003_myrtle-beach,10.200.3.0/24,,,broken_removed
 reachability,107_as65003_myrtle-beach,10.200.6.0/24,,,broken_removed
 reachability,107_as65003_myrtle-beach,10.200.7.0/24,,,broken_removed
-reachability,107_as65003_myrtle-beach,10.200.81.0/24,,,broken_added
-reachability,107_as65003_myrtle-beach,10.200.82.0/24,,,broken_added
 waypointing,107_as65003_myrtle-beach,10.200.0.0/24,104_as65003_georgetown,,broken_removed
 waypointing,107_as65003_myrtle-beach,10.200.0.0/24,105_as65007_monks-corner,,broken_removed
 waypointing,107_as65003_myrtle-beach,10.200.0.0/24,82_as65003_none,,broken_removed
@@ -394,8 +388,6 @@ reachability,10_as65003_raleigh,10.200.0.0/24,,,broken_removed
 reachability,10_as65003_raleigh,10.200.1.0/24,,,broken_removed
 reachability,10_as65003_raleigh,10.200.2.0/24,,,broken_removed
 reachability,10_as65003_raleigh,10.200.3.0/24,,,broken_removed
-reachability,10_as65003_raleigh,10.200.81.0/24,,,broken_added
-reachability,10_as65003_raleigh,10.200.82.0/24,,,broken_added
 waypointing,10_as65003_raleigh,10.200.0.0/24,104_as65003_georgetown,,broken_removed
 isolation,110_as65002_andrews,10.181.0.208/31,,,intact
 isolation,110_as65002_andrews,10.181.0.210/31,,,intact
@@ -705,8 +697,6 @@ reachability,11_as65003_rocky-mount,10.200.0.0/24,,,broken_removed
 reachability,11_as65003_rocky-mount,10.200.1.0/24,,,broken_removed
 reachability,11_as65003_rocky-mount,10.200.2.0/24,,,broken_removed
 reachability,11_as65003_rocky-mount,10.200.3.0/24,,,broken_removed
-reachability,11_as65003_rocky-mount,10.200.81.0/24,,,broken_added
-reachability,11_as65003_rocky-mount,10.200.82.0/24,,,broken_added
 isolation,120_as65006_winchester,10.181.0.180/31,,,intact
 isolation,120_as65006_winchester,10.181.0.182/31,,,intact
 isolation,120_as65006_winchester,10.181.0.184/31,,,intact
@@ -1604,8 +1594,6 @@ reachability,13_as65003_durham,10.200.2.0/24,,,broken_removed
 reachability,13_as65003_durham,10.200.3.0/24,,,broken_removed
 reachability,13_as65003_durham,10.200.6.0/24,,,broken_removed
 reachability,13_as65003_durham,10.200.7.0/24,,,broken_removed
-reachability,13_as65003_durham,10.200.81.0/24,,,broken_added
-reachability,13_as65003_durham,10.200.82.0/24,,,broken_added
 isolation,140_as65005_metter,10.181.0.118/31,,,intact
 isolation,140_as65005_metter,10.181.0.124/31,,,intact
 isolation,140_as65005_metter,10.181.0.126/31,,,intact
@@ -2035,8 +2023,6 @@ reachability,14_as65003_new-bern,10.200.0.0/24,,,broken_removed
 reachability,14_as65003_new-bern,10.200.1.0/24,,,broken_removed
 reachability,14_as65003_new-bern,10.200.2.0/24,,,broken_removed
 reachability,14_as65003_new-bern,10.200.3.0/24,,,broken_removed
-reachability,14_as65003_new-bern,10.200.81.0/24,,,broken_added
-reachability,14_as65003_new-bern,10.200.82.0/24,,,broken_added
 isolation,150_as65004_montgomery,10.181.0.118/31,,,intact
 isolation,150_as65004_montgomery,10.181.0.124/31,,,intact
 isolation,150_as65004_montgomery,10.181.0.126/31,,,intact
@@ -2497,8 +2483,6 @@ reachability,15_as65003_jacksonville,10.200.0.0/24,,,broken_removed
 reachability,15_as65003_jacksonville,10.200.1.0/24,,,broken_removed
 reachability,15_as65003_jacksonville,10.200.2.0/24,,,broken_removed
 reachability,15_as65003_jacksonville,10.200.3.0/24,,,broken_removed
-reachability,15_as65003_jacksonville,10.200.81.0/24,,,broken_added
-reachability,15_as65003_jacksonville,10.200.82.0/24,,,broken_added
 isolation,16_as65003_greenville,10.181.0.196/31,,,intact
 isolation,16_as65003_greenville,10.181.0.240/31,,,intact
 isolation,16_as65003_greenville,10.181.0.244/31,,,intact
@@ -2536,8 +2520,6 @@ reachability,16_as65003_greenville,10.200.2.0/24,,,broken_removed
 reachability,16_as65003_greenville,10.200.3.0/24,,,broken_removed
 reachability,16_as65003_greenville,10.200.6.0/24,,,broken_removed
 reachability,16_as65003_greenville,10.200.7.0/24,,,broken_removed
-reachability,16_as65003_greenville,10.200.81.0/24,,,broken_added
-reachability,16_as65003_greenville,10.200.82.0/24,,,broken_added
 isolation,17_as65003_kinston,10.181.0.196/31,,,intact
 isolation,17_as65003_kinston,10.181.0.240/31,,,intact
 isolation,17_as65003_kinston,10.181.0.244/31,,,intact
@@ -2573,8 +2555,6 @@ reachability,17_as65003_kinston,10.200.0.0/24,,,broken_removed
 reachability,17_as65003_kinston,10.200.1.0/24,,,broken_removed
 reachability,17_as65003_kinston,10.200.2.0/24,,,broken_removed
 reachability,17_as65003_kinston,10.200.3.0/24,,,broken_removed
-reachability,17_as65003_kinston,10.200.81.0/24,,,broken_added
-reachability,17_as65003_kinston,10.200.82.0/24,,,broken_added
 isolation,18_as65003_fayetteville,10.181.0.196/31,,,intact
 isolation,18_as65003_fayetteville,10.181.0.240/31,,,intact
 isolation,18_as65003_fayetteville,10.181.0.244/31,,,intact
@@ -2600,8 +2580,6 @@ load_balancing,18_as65003_fayetteville,10.200.0.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.1.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.2.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.3.0/24,,2,broken_removed
-load_balancing,18_as65003_fayetteville,10.200.81.0/24,,2,broken_added
-load_balancing,18_as65003_fayetteville,10.200.82.0/24,,2,broken_added
 reachability,18_as65003_fayetteville,10.180.0.105/32,,,intact
 reachability,18_as65003_fayetteville,10.180.0.107/32,,,intact
 reachability,18_as65003_fayetteville,10.180.0.108/32,,,intact
@@ -2621,8 +2599,6 @@ reachability,18_as65003_fayetteville,10.200.2.0/24,,,broken_removed
 reachability,18_as65003_fayetteville,10.200.3.0/24,,,broken_removed
 reachability,18_as65003_fayetteville,10.200.6.0/24,,,broken_removed
 reachability,18_as65003_fayetteville,10.200.7.0/24,,,broken_removed
-reachability,18_as65003_fayetteville,10.200.81.0/24,,,broken_added
-reachability,18_as65003_fayetteville,10.200.82.0/24,,,broken_added
 isolation,19_as65003_wilmington,10.181.0.196/31,,,intact
 isolation,19_as65003_wilmington,10.181.0.240/31,,,intact
 isolation,19_as65003_wilmington,10.181.0.244/31,,,intact
@@ -2660,8 +2636,6 @@ reachability,19_as65003_wilmington,10.200.2.0/24,,,broken_removed
 reachability,19_as65003_wilmington,10.200.3.0/24,,,broken_removed
 reachability,19_as65003_wilmington,10.200.6.0/24,,,broken_removed
 reachability,19_as65003_wilmington,10.200.7.0/24,,,broken_removed
-reachability,19_as65003_wilmington,10.200.81.0/24,,,broken_added
-reachability,19_as65003_wilmington,10.200.82.0/24,,,broken_added
 isolation,1_as65007_walterboro,10.181.0.0/31,,,intact
 isolation,1_as65007_walterboro,10.181.0.2/31,,,intact
 isolation,1_as65007_walterboro,10.181.0.20/31,,,intact
@@ -4561,8 +4535,6 @@ reachability,67_as65003_tar-heel,10.200.0.0/24,,,broken_removed
 reachability,67_as65003_tar-heel,10.200.1.0/24,,,broken_removed
 reachability,67_as65003_tar-heel,10.200.2.0/24,,,broken_removed
 reachability,67_as65003_tar-heel,10.200.3.0/24,,,broken_removed
-reachability,67_as65003_tar-heel,10.200.81.0/24,,,broken_added
-reachability,67_as65003_tar-heel,10.200.82.0/24,,,broken_added
 isolation,68_as65004_canton,10.181.0.118/31,,,intact
 isolation,68_as65004_canton,10.181.0.124/31,,,intact
 isolation,68_as65004_canton,10.181.0.126/31,,,intact
@@ -5125,14 +5097,8 @@ reachability,82_as65003_none,10.180.0.19/32,,,intact
 reachability,82_as65003_none,10.180.0.20/32,,,intact
 reachability,82_as65003_none,10.200.0.0/24,,,broken_removed
 reachability,82_as65003_none,10.200.1.0/24,,,broken_removed
-reachability,82_as65003_none,10.200.12.0/24,,,broken_added
-reachability,82_as65003_none,10.200.13.0/24,,,broken_added
-reachability,82_as65003_none,10.200.14.0/24,,,broken_added
-reachability,82_as65003_none,10.200.15.0/24,,,broken_added
 reachability,82_as65003_none,10.200.2.0/24,,,broken_removed
 reachability,82_as65003_none,10.200.3.0/24,,,broken_removed
-reachability,82_as65003_none,10.200.81.0/24,,,broken_added
-reachability,82_as65003_none,10.200.82.0/24,,,broken_added
 isolation,83_as65010_sparta,10.181.0.100/31,,,intact
 isolation,83_as65010_sparta,10.181.0.102/31,,,intact
 isolation,83_as65010_sparta,10.181.0.104/31,,,intact

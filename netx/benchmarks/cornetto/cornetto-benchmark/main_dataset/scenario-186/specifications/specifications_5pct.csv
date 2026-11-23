@@ -10,7 +10,6 @@ isolation,1_as65002_brussels-campus,10.181.0.26/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.28/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.30/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.32/31,,,intact
-isolation,1_as65002_brussels-campus,10.200.0.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.1.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.2.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.3.0/24,,,broken_added

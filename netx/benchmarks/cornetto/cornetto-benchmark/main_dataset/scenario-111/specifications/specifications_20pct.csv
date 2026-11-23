@@ -462,7 +462,6 @@ isolation,43_as65002_gar,10.181.0.24/31,,,intact
 isolation,43_as65002_gar,10.181.0.26/31,,,intact
 isolation,43_as65002_gar,10.181.0.4/31,,,intact
 isolation,43_as65002_gar,10.181.0.6/31,,,intact
-reachability,43_as65002_gar,10.180.0.12/32,,,broken_added
 isolation,44_as65005_dui,0.0.0.0/0,,,intact
 isolation,44_as65005_dui,10.181.0.112/31,,,intact
 isolation,44_as65005_dui,10.181.0.114/31,,,intact

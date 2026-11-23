@@ -75,11 +75,9 @@ waypointing,0_as65003_montreal,10.180.0.13/32,21_as65003_ottawa,,intact
 waypointing,0_as65003_montreal,10.180.0.14/32,13_as65002_toronto,,broken_removed
 waypointing,0_as65003_montreal,10.180.0.15/32,13_as65002_toronto,,broken_removed
 waypointing,0_as65003_montreal,10.180.0.15/32,14_as65002_hamilton,,broken_removed
-isolation,10_as65002_ans-co-re-t1,10.181.0.0/30,,,broken_added
 isolation,10_as65002_ans-co-re-t1,10.181.0.0/31,,,broken_removed
 isolation,10_as65002_ans-co-re-t1,10.181.0.10/31,,,intact
 isolation,10_as65002_ans-co-re-t1,10.181.0.12/31,,,intact
-isolation,10_as65002_ans-co-re-t1,10.181.0.2/31,,,broken_added
 isolation,10_as65002_ans-co-re-t1,10.181.0.24/31,,,broken_removed
 isolation,10_as65002_ans-co-re-t1,10.181.0.26/31,,,broken_removed
 isolation,10_as65002_ans-co-re-t1,10.181.0.28/31,,,intact
@@ -111,7 +109,6 @@ reachability,10_as65002_ans-co-re-t1,10.180.0.23/32,,,intact
 reachability,10_as65002_ans-co-re-t1,10.180.0.3/32,,,intact
 reachability,10_as65002_ans-co-re-t1,10.180.0.4/32,,,intact
 reachability,10_as65002_ans-co-re-t1,10.180.0.7/32,,,broken_removed
-reachability,10_as65002_ans-co-re-t1,10.181.0.0/31,,,broken_added
 reachability,10_as65002_ans-co-re-t1,10.181.0.22/32,,,intact
 reachability,10_as65002_ans-co-re-t1,10.200.0.0/24,,,broken_removed
 reachability,10_as65002_ans-co-re-t1,10.200.1.0/24,,,intact
@@ -297,11 +294,9 @@ waypointing,12_as65001_victoria,10.180.0.15/32,13_as65002_toronto,,broken_remove
 waypointing,12_as65001_victoria,10.180.0.15/32,14_as65002_hamilton,,broken_removed
 waypointing,12_as65001_victoria,10.180.0.15/32,15_as65001_vancouver,,broken_removed
 waypointing,12_as65001_victoria,10.180.0.15/32,21_as65003_ottawa,,broken_removed
-isolation,13_as65002_toronto,10.181.0.0/30,,,broken_added
 isolation,13_as65002_toronto,10.181.0.0/31,,,broken_removed
 isolation,13_as65002_toronto,10.181.0.10/31,,,intact
 isolation,13_as65002_toronto,10.181.0.12/31,,,intact
-isolation,13_as65002_toronto,10.181.0.2/31,,,broken_added
 isolation,13_as65002_toronto,10.181.0.22/31,,,intact
 isolation,13_as65002_toronto,10.181.0.24/31,,,broken_removed
 isolation,13_as65002_toronto,10.181.0.26/31,,,broken_removed
@@ -334,7 +329,6 @@ reachability,13_as65002_toronto,10.180.0.23/32,,,intact
 reachability,13_as65002_toronto,10.180.0.3/32,,,intact
 reachability,13_as65002_toronto,10.180.0.4/32,,,intact
 reachability,13_as65002_toronto,10.180.0.7/32,,,broken_removed
-reachability,13_as65002_toronto,10.181.0.0/31,,,broken_added
 reachability,13_as65002_toronto,10.181.0.11/32,,,intact
 reachability,13_as65002_toronto,10.181.0.13/32,,,intact
 reachability,13_as65002_toronto,10.181.0.23/32,,,intact
@@ -372,11 +366,9 @@ waypointing,13_as65002_toronto,10.180.0.13/32,15_as65001_vancouver,,broken_remov
 waypointing,13_as65002_toronto,10.180.0.13/32,21_as65003_ottawa,,broken_removed
 waypointing,13_as65002_toronto,10.180.0.15/32,14_as65002_hamilton,,intact
 waypointing,13_as65002_toronto,10.180.0.16/32,0_as65003_montreal,,broken_removed
-isolation,14_as65002_hamilton,10.181.0.0/30,,,broken_added
 isolation,14_as65002_hamilton,10.181.0.0/31,,,broken_removed
 isolation,14_as65002_hamilton,10.181.0.10/31,,,intact
 isolation,14_as65002_hamilton,10.181.0.12/31,,,intact
-isolation,14_as65002_hamilton,10.181.0.2/31,,,broken_added
 isolation,14_as65002_hamilton,10.181.0.22/31,,,intact
 isolation,14_as65002_hamilton,10.181.0.24/31,,,broken_removed
 isolation,14_as65002_hamilton,10.181.0.26/31,,,broken_removed
@@ -408,7 +400,6 @@ reachability,14_as65002_hamilton,10.180.0.23/32,,,intact
 reachability,14_as65002_hamilton,10.180.0.3/32,,,intact
 reachability,14_as65002_hamilton,10.180.0.4/32,,,intact
 reachability,14_as65002_hamilton,10.180.0.7/32,,,broken_removed
-reachability,14_as65002_hamilton,10.181.0.0/31,,,broken_added
 reachability,14_as65002_hamilton,10.181.0.29/32,,,intact
 reachability,14_as65002_hamilton,10.200.0.0/24,,,broken_removed
 reachability,14_as65002_hamilton,10.200.1.0/24,,,intact
@@ -1060,11 +1051,9 @@ waypointing,21_as65003_ottawa,10.180.0.14/32,13_as65002_toronto,,broken_removed
 waypointing,21_as65003_ottawa,10.180.0.15/32,0_as65003_montreal,,broken_removed
 waypointing,21_as65003_ottawa,10.180.0.15/32,13_as65002_toronto,,broken_removed
 waypointing,21_as65003_ottawa,10.180.0.15/32,14_as65002_hamilton,,broken_removed
-isolation,22_as65002_kitchener,10.181.0.0/30,,,broken_added
 isolation,22_as65002_kitchener,10.181.0.0/31,,,broken_removed
 isolation,22_as65002_kitchener,10.181.0.10/31,,,intact
 isolation,22_as65002_kitchener,10.181.0.12/31,,,intact
-isolation,22_as65002_kitchener,10.181.0.2/31,,,broken_added
 isolation,22_as65002_kitchener,10.181.0.22/31,,,intact
 isolation,22_as65002_kitchener,10.181.0.24/31,,,broken_removed
 isolation,22_as65002_kitchener,10.181.0.26/31,,,broken_removed
@@ -1096,7 +1085,6 @@ reachability,22_as65002_kitchener,10.180.0.23/32,,,intact
 reachability,22_as65002_kitchener,10.180.0.3/32,,,intact
 reachability,22_as65002_kitchener,10.180.0.4/32,,,intact
 reachability,22_as65002_kitchener,10.180.0.7/32,,,broken_removed
-reachability,22_as65002_kitchener,10.181.0.0/31,,,broken_added
 reachability,22_as65002_kitchener,10.181.0.33/32,,,intact
 reachability,22_as65002_kitchener,10.200.0.0/24,,,broken_removed
 reachability,22_as65002_kitchener,10.200.1.0/24,,,intact
@@ -1128,10 +1116,8 @@ waypointing,22_as65002_kitchener,10.180.0.13/32,13_as65002_toronto,,broken_remov
 waypointing,22_as65002_kitchener,10.180.0.13/32,15_as65001_vancouver,,broken_removed
 waypointing,22_as65002_kitchener,10.180.0.13/32,21_as65003_ottawa,,broken_removed
 waypointing,22_as65002_kitchener,10.180.0.14/32,13_as65002_toronto,,intact
-isolation,2_as65002_london,10.181.0.0/30,,,broken_added
 isolation,2_as65002_london,10.181.0.0/31,,,broken_removed
 isolation,2_as65002_london,10.181.0.12/31,,,intact
-isolation,2_as65002_london,10.181.0.2/31,,,broken_added
 isolation,2_as65002_london,10.181.0.22/31,,,intact
 isolation,2_as65002_london,10.181.0.24/31,,,broken_removed
 isolation,2_as65002_london,10.181.0.26/31,,,broken_removed
@@ -1164,7 +1150,6 @@ reachability,2_as65002_london,10.180.0.23/32,,,intact
 reachability,2_as65002_london,10.180.0.3/32,,,intact
 reachability,2_as65002_london,10.180.0.4/32,,,intact
 reachability,2_as65002_london,10.180.0.7/32,,,broken_removed
-reachability,2_as65002_london,10.181.0.0/31,,,broken_added
 reachability,2_as65002_london,10.181.0.10/32,,,intact
 reachability,2_as65002_london,10.200.0.0/24,,,broken_removed
 reachability,2_as65002_london,10.200.1.0/24,,,intact
@@ -1196,10 +1181,8 @@ waypointing,2_as65002_london,10.180.0.13/32,13_as65002_toronto,,broken_removed
 waypointing,2_as65002_london,10.180.0.13/32,15_as65001_vancouver,,broken_removed
 waypointing,2_as65002_london,10.180.0.13/32,21_as65003_ottawa,,broken_removed
 waypointing,2_as65002_london,10.180.0.14/32,13_as65002_toronto,,intact
-isolation,3_as65002_internetmci-t3,10.181.0.0/30,,,broken_added
 isolation,3_as65002_internetmci-t3,10.181.0.0/31,,,broken_removed
 isolation,3_as65002_internetmci-t3,10.181.0.10/31,,,intact
-isolation,3_as65002_internetmci-t3,10.181.0.2/31,,,broken_added
 isolation,3_as65002_internetmci-t3,10.181.0.22/31,,,intact
 isolation,3_as65002_internetmci-t3,10.181.0.24/31,,,broken_removed
 isolation,3_as65002_internetmci-t3,10.181.0.26/31,,,broken_removed
@@ -1232,7 +1215,6 @@ reachability,3_as65002_internetmci-t3,10.180.0.23/32,,,intact
 reachability,3_as65002_internetmci-t3,10.180.0.3/32,,,intact
 reachability,3_as65002_internetmci-t3,10.180.0.4/32,,,intact
 reachability,3_as65002_internetmci-t3,10.180.0.7/32,,,broken_removed
-reachability,3_as65002_internetmci-t3,10.181.0.0/31,,,broken_added
 reachability,3_as65002_internetmci-t3,10.181.0.12/32,,,intact
 reachability,3_as65002_internetmci-t3,10.200.0.0/24,,,broken_removed
 reachability,3_as65002_internetmci-t3,10.200.1.0/24,,,intact

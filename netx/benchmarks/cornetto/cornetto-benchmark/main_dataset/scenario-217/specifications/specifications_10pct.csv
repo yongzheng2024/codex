@@ -66,14 +66,12 @@ isolation,19_as65002_novaky,10.181.0.12/31,,,intact
 isolation,19_as65002_novaky,10.181.0.2/31,,,intact
 isolation,19_as65002_novaky,10.181.0.20/31,,,intact
 isolation,19_as65002_novaky,10.181.0.22/31,,,intact
-isolation,19_as65002_novaky,10.181.0.74/31,,,broken_added
 isolation,1_as65002_none,0.0.0.0/0,,,intact
 isolation,1_as65002_none,10.181.0.0/31,,,broken_removed
 isolation,1_as65002_none,10.181.0.10/31,,,intact
 isolation,1_as65002_none,10.181.0.12/31,,,intact
 isolation,1_as65002_none,10.181.0.20/31,,,intact
 isolation,1_as65002_none,10.181.0.22/31,,,intact
-isolation,1_as65002_none,10.181.0.74/31,,,broken_added
 isolation,20_as65002_prievidza,0.0.0.0/0,,,intact
 isolation,20_as65002_prievidza,10.181.0.0/31,,,broken_removed
 isolation,20_as65002_prievidza,10.181.0.10/31,,,intact
@@ -81,7 +79,6 @@ isolation,20_as65002_prievidza,10.181.0.12/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.2/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.20/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.22/31,,,intact
-isolation,20_as65002_prievidza,10.181.0.74/31,,,broken_added
 isolation,21_as65001_none,10.181.0.24/31,,,intact
 isolation,21_as65001_none,10.181.0.26/31,,,intact
 isolation,21_as65001_none,10.181.0.28/31,,,intact

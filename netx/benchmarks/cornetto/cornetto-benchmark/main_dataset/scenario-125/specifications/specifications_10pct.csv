@@ -29,8 +29,6 @@ isolation,0_as65002_144-96332,10.181.0.82/31,,,broken_removed
 isolation,0_as65002_144-96332,10.181.0.86/31,,,broken_removed
 isolation,0_as65002_144-96332,10.181.0.88/31,,,broken_removed
 isolation,0_as65002_144-96332,10.181.0.90/31,,,broken_removed
-isolation,0_as65002_144-96332,10.200.5.0/24,,,broken_added
-isolation,0_as65002_144-96332,10.200.6.0/24,,,broken_added
 isolation,10_as65002_149-12807,10.181.0.0/31,,,intact
 isolation,10_as65002_149-12807,10.181.0.10/31,,,intact
 isolation,10_as65002_149-12807,10.181.0.12/31,,,intact
@@ -82,8 +80,6 @@ isolation,11_as65002_11,10.181.0.82/31,,,broken_removed
 isolation,11_as65002_11,10.181.0.86/31,,,broken_removed
 isolation,11_as65002_11,10.181.0.88/31,,,broken_removed
 isolation,11_as65002_11,10.181.0.90/31,,,broken_removed
-isolation,11_as65002_11,10.200.5.0/24,,,broken_added
-isolation,11_as65002_11,10.200.6.0/24,,,broken_added
 isolation,12_as65005_12,10.181.0.100/31,,,intact
 isolation,12_as65005_12,10.181.0.102/31,,,intact
 isolation,12_as65005_12,10.181.0.104/31,,,intact
@@ -117,8 +113,6 @@ isolation,16_as65006_103-85007,10.181.0.52/31,,,intact
 isolation,16_as65006_103-85007,10.181.0.54/31,,,intact
 isolation,16_as65006_103-85007,10.181.0.62/31,,,intact
 isolation,16_as65006_103-85007,10.181.0.64/31,,,intact
-isolation,16_as65006_103-85007,10.200.5.0/24,,,broken_added
-isolation,16_as65006_103-85007,10.200.6.0/24,,,broken_added
 reachability,16_as65006_103-85007,10.180.0.1/32,,,broken_removed
 isolation,17_as65006_17,10.181.0.0/31,,,intact
 isolation,17_as65006_17,10.181.0.10/31,,,intact
@@ -141,8 +135,6 @@ isolation,17_as65006_17,10.181.0.52/31,,,intact
 isolation,17_as65006_17,10.181.0.54/31,,,intact
 isolation,17_as65006_17,10.181.0.62/31,,,intact
 isolation,17_as65006_17,10.181.0.64/31,,,intact
-isolation,17_as65006_17,10.200.5.0/24,,,broken_added
-isolation,17_as65006_17,10.200.6.0/24,,,broken_added
 reachability,17_as65006_17,10.180.0.1/32,,,broken_removed
 isolation,18_as65006_114-15769,10.181.0.0/31,,,intact
 isolation,18_as65006_114-15769,10.181.0.10/31,,,intact
@@ -165,8 +157,6 @@ isolation,18_as65006_114-15769,10.181.0.52/31,,,intact
 isolation,18_as65006_114-15769,10.181.0.54/31,,,intact
 isolation,18_as65006_114-15769,10.181.0.62/31,,,intact
 isolation,18_as65006_114-15769,10.181.0.64/31,,,intact
-isolation,18_as65006_114-15769,10.200.5.0/24,,,broken_added
-isolation,18_as65006_114-15769,10.200.6.0/24,,,broken_added
 reachability,18_as65006_114-15769,10.180.0.1/32,,,broken_removed
 isolation,19_as65005_121-89496,10.181.0.100/31,,,intact
 isolation,19_as65005_121-89496,10.181.0.102/31,,,intact
@@ -192,8 +182,6 @@ isolation,1_as65004_151-20732,10.181.0.52/31,,,intact
 isolation,1_as65004_151-20732,10.181.0.54/31,,,intact
 isolation,1_as65004_151-20732,10.181.0.62/31,,,intact
 isolation,1_as65004_151-20732,10.181.0.64/31,,,intact
-isolation,1_as65004_151-20732,10.200.5.0/24,,,broken_added
-isolation,1_as65004_151-20732,10.200.6.0/24,,,broken_added
 reachability,1_as65004_151-20732,10.180.0.1/32,,,broken_removed
 isolation,20_as65007_139-5813,10.181.0.106/31,,,intact
 isolation,20_as65007_139-5813,10.181.0.108/31,,,intact
@@ -218,8 +206,6 @@ isolation,21_as65004_174-76667,10.181.0.52/31,,,intact
 isolation,21_as65004_174-76667,10.181.0.54/31,,,intact
 isolation,21_as65004_174-76667,10.181.0.62/31,,,intact
 isolation,21_as65004_174-76667,10.181.0.64/31,,,intact
-isolation,21_as65004_174-76667,10.200.5.0/24,,,broken_added
-isolation,21_as65004_174-76667,10.200.6.0/24,,,broken_added
 reachability,21_as65004_174-76667,10.180.0.1/32,,,broken_removed
 isolation,22_as65004_22,10.181.0.0/31,,,intact
 isolation,22_as65004_22,10.181.0.10/31,,,intact
@@ -241,8 +227,6 @@ isolation,22_as65004_22,10.181.0.52/31,,,intact
 isolation,22_as65004_22,10.181.0.54/31,,,intact
 isolation,22_as65004_22,10.181.0.62/31,,,intact
 isolation,22_as65004_22,10.181.0.64/31,,,intact
-isolation,22_as65004_22,10.200.5.0/24,,,broken_added
-isolation,22_as65004_22,10.200.6.0/24,,,broken_added
 reachability,22_as65004_22,10.180.0.1/32,,,broken_removed
 isolation,23_as65004_23,10.181.0.0/31,,,intact
 isolation,23_as65004_23,10.181.0.10/31,,,intact
@@ -264,8 +248,6 @@ isolation,23_as65004_23,10.181.0.52/31,,,intact
 isolation,23_as65004_23,10.181.0.54/31,,,intact
 isolation,23_as65004_23,10.181.0.62/31,,,intact
 isolation,23_as65004_23,10.181.0.64/31,,,intact
-isolation,23_as65004_23,10.200.5.0/24,,,broken_added
-isolation,23_as65004_23,10.200.6.0/24,,,broken_added
 reachability,23_as65004_23,10.180.0.1/32,,,broken_removed
 isolation,24_as65001_77-48749,10.181.0.112/31,,,intact
 isolation,24_as65001_77-48749,10.181.0.114/31,,,intact
@@ -436,8 +418,6 @@ isolation,37_as65006_37,10.181.0.52/31,,,intact
 isolation,37_as65006_37,10.181.0.54/31,,,intact
 isolation,37_as65006_37,10.181.0.62/31,,,intact
 isolation,37_as65006_37,10.181.0.64/31,,,intact
-isolation,37_as65006_37,10.200.5.0/24,,,broken_added
-isolation,37_as65006_37,10.200.6.0/24,,,broken_added
 reachability,37_as65006_37,10.180.0.1/32,,,broken_removed
 isolation,38_as65006_38,10.181.0.0/31,,,intact
 isolation,38_as65006_38,10.181.0.10/31,,,intact
@@ -460,8 +440,6 @@ isolation,38_as65006_38,10.181.0.52/31,,,intact
 isolation,38_as65006_38,10.181.0.54/31,,,intact
 isolation,38_as65006_38,10.181.0.62/31,,,intact
 isolation,38_as65006_38,10.181.0.64/31,,,intact
-isolation,38_as65006_38,10.200.5.0/24,,,broken_added
-isolation,38_as65006_38,10.200.6.0/24,,,broken_added
 reachability,38_as65006_38,10.180.0.1/32,,,broken_removed
 isolation,39_as65006_39,10.181.0.0/31,,,intact
 isolation,39_as65006_39,10.181.0.10/31,,,intact
@@ -484,8 +462,6 @@ isolation,39_as65006_39,10.181.0.52/31,,,intact
 isolation,39_as65006_39,10.181.0.54/31,,,intact
 isolation,39_as65006_39,10.181.0.62/31,,,intact
 isolation,39_as65006_39,10.181.0.64/31,,,intact
-isolation,39_as65006_39,10.200.5.0/24,,,broken_added
-isolation,39_as65006_39,10.200.6.0/24,,,broken_added
 reachability,39_as65006_39,10.180.0.1/32,,,broken_removed
 isolation,3_as65002_144-96332,10.181.0.0/31,,,intact
 isolation,3_as65002_144-96332,10.181.0.10/31,,,intact
@@ -508,8 +484,6 @@ isolation,3_as65002_144-96332,10.181.0.52/31,,,intact
 isolation,3_as65002_144-96332,10.181.0.54/31,,,intact
 isolation,3_as65002_144-96332,10.181.0.62/31,,,intact
 isolation,3_as65002_144-96332,10.181.0.64/31,,,intact
-isolation,3_as65002_144-96332,10.200.5.0/24,,,broken_added
-isolation,3_as65002_144-96332,10.200.6.0/24,,,broken_added
 reachability,3_as65002_144-96332,10.180.0.1/32,,,broken_removed
 isolation,40_as65006_40,10.181.0.0/31,,,intact
 isolation,40_as65006_40,10.181.0.10/31,,,intact
@@ -532,8 +506,6 @@ isolation,40_as65006_40,10.181.0.52/31,,,intact
 isolation,40_as65006_40,10.181.0.54/31,,,intact
 isolation,40_as65006_40,10.181.0.62/31,,,intact
 isolation,40_as65006_40,10.181.0.64/31,,,intact
-isolation,40_as65006_40,10.200.5.0/24,,,broken_added
-isolation,40_as65006_40,10.200.6.0/24,,,broken_added
 reachability,40_as65006_40,10.180.0.1/32,,,broken_removed
 isolation,41_as65007_41,10.181.0.106/31,,,intact
 isolation,41_as65007_41,10.181.0.108/31,,,intact
@@ -578,8 +550,6 @@ isolation,46_as65004_46,10.181.0.52/31,,,intact
 isolation,46_as65004_46,10.181.0.54/31,,,intact
 isolation,46_as65004_46,10.181.0.62/31,,,intact
 isolation,46_as65004_46,10.181.0.64/31,,,intact
-isolation,46_as65004_46,10.200.5.0/24,,,broken_added
-isolation,46_as65004_46,10.200.6.0/24,,,broken_added
 reachability,46_as65004_46,10.180.0.1/32,,,broken_removed
 isolation,47_as65002_47,10.181.0.0/31,,,intact
 isolation,47_as65002_47,10.181.0.10/31,,,intact
@@ -622,8 +592,6 @@ isolation,48_as65002_48,10.181.0.52/31,,,intact
 isolation,48_as65002_48,10.181.0.54/31,,,intact
 isolation,48_as65002_48,10.181.0.62/31,,,intact
 isolation,48_as65002_48,10.181.0.64/31,,,intact
-isolation,48_as65002_48,10.200.5.0/24,,,broken_added
-isolation,48_as65002_48,10.200.6.0/24,,,broken_added
 reachability,48_as65002_48,10.180.0.1/32,,,broken_removed
 isolation,49_as65002_49,10.181.0.0/31,,,intact
 isolation,49_as65002_49,10.181.0.10/31,,,intact
@@ -645,8 +613,6 @@ isolation,49_as65002_49,10.181.0.52/31,,,intact
 isolation,49_as65002_49,10.181.0.54/31,,,intact
 isolation,49_as65002_49,10.181.0.62/31,,,intact
 isolation,49_as65002_49,10.181.0.64/31,,,intact
-isolation,49_as65002_49,10.200.5.0/24,,,broken_added
-isolation,49_as65002_49,10.200.6.0/24,,,broken_added
 reachability,49_as65002_49,10.180.0.1/32,,,broken_removed
 isolation,4_as65004_153-02809,10.181.0.0/31,,,intact
 isolation,4_as65004_153-02809,10.181.0.10/31,,,intact
@@ -669,8 +635,6 @@ isolation,4_as65004_153-02809,10.181.0.52/31,,,intact
 isolation,4_as65004_153-02809,10.181.0.54/31,,,intact
 isolation,4_as65004_153-02809,10.181.0.62/31,,,intact
 isolation,4_as65004_153-02809,10.181.0.64/31,,,intact
-isolation,4_as65004_153-02809,10.200.5.0/24,,,broken_added
-isolation,4_as65004_153-02809,10.200.6.0/24,,,broken_added
 reachability,4_as65004_153-02809,10.180.0.1/32,,,broken_removed
 isolation,50_as65002_50,10.181.0.0/31,,,broken_removed
 isolation,50_as65002_50,10.181.0.10/31,,,broken_removed
@@ -701,8 +665,6 @@ isolation,50_as65002_50,10.181.0.82/31,,,broken_removed
 isolation,50_as65002_50,10.181.0.86/31,,,broken_removed
 isolation,50_as65002_50,10.181.0.88/31,,,broken_removed
 isolation,50_as65002_50,10.181.0.90/31,,,broken_removed
-isolation,50_as65002_50,10.200.5.0/24,,,broken_added
-isolation,50_as65002_50,10.200.6.0/24,,,broken_added
 isolation,51_as65004_51,10.181.0.0/31,,,intact
 isolation,51_as65004_51,10.181.0.10/31,,,intact
 isolation,51_as65004_51,10.181.0.12/31,,,intact
@@ -723,8 +685,6 @@ isolation,51_as65004_51,10.181.0.50/31,,,intact
 isolation,51_as65004_51,10.181.0.54/31,,,intact
 isolation,51_as65004_51,10.181.0.62/31,,,intact
 isolation,51_as65004_51,10.181.0.64/31,,,intact
-isolation,51_as65004_51,10.200.5.0/24,,,broken_added
-isolation,51_as65004_51,10.200.6.0/24,,,broken_added
 reachability,51_as65004_51,10.180.0.1/32,,,broken_removed
 isolation,52_as65004_52,10.181.0.0/31,,,intact
 isolation,52_as65004_52,10.181.0.10/31,,,intact
@@ -746,8 +706,6 @@ isolation,52_as65004_52,10.181.0.50/31,,,intact
 isolation,52_as65004_52,10.181.0.52/31,,,intact
 isolation,52_as65004_52,10.181.0.62/31,,,intact
 isolation,52_as65004_52,10.181.0.64/31,,,intact
-isolation,52_as65004_52,10.200.5.0/24,,,broken_added
-isolation,52_as65004_52,10.200.6.0/24,,,broken_added
 reachability,52_as65004_52,10.180.0.1/32,,,broken_removed
 isolation,53_as65002_53,10.181.0.0/31,,,intact
 isolation,53_as65002_53,10.181.0.10/31,,,intact
@@ -864,8 +822,6 @@ isolation,5_as65002_147-32941,10.181.0.52/31,,,intact
 isolation,5_as65002_147-32941,10.181.0.54/31,,,intact
 isolation,5_as65002_147-32941,10.181.0.62/31,,,intact
 isolation,5_as65002_147-32941,10.181.0.64/31,,,intact
-isolation,5_as65002_147-32941,10.200.5.0/24,,,broken_added
-isolation,5_as65002_147-32941,10.200.6.0/24,,,broken_added
 isolation,60_as65003_138-6,10.181.0.136/31,,,intact
 isolation,60_as65003_138-6,10.181.0.138/31,,,intact
 isolation,60_as65003_138-6,10.181.0.140/31,,,intact
@@ -951,8 +907,6 @@ isolation,6_as65004_151-20732,10.181.0.50/31,,,intact
 isolation,6_as65004_151-20732,10.181.0.52/31,,,intact
 isolation,6_as65004_151-20732,10.181.0.54/31,,,intact
 isolation,6_as65004_151-20732,10.181.0.62/31,,,intact
-isolation,6_as65004_151-20732,10.200.5.0/24,,,broken_added
-isolation,6_as65004_151-20732,10.200.6.0/24,,,broken_added
 isolation,7_as65004_153-02809,10.181.0.0/31,,,intact
 isolation,7_as65004_153-02809,10.181.0.10/31,,,intact
 isolation,7_as65004_153-02809,10.181.0.12/31,,,intact
@@ -973,8 +927,6 @@ isolation,7_as65004_153-02809,10.181.0.50/31,,,intact
 isolation,7_as65004_153-02809,10.181.0.52/31,,,intact
 isolation,7_as65004_153-02809,10.181.0.54/31,,,intact
 isolation,7_as65004_153-02809,10.181.0.62/31,,,intact
-isolation,7_as65004_153-02809,10.200.5.0/24,,,broken_added
-isolation,7_as65004_153-02809,10.200.6.0/24,,,broken_added
 isolation,8_as65001_8,10.181.0.112/31,,,intact
 isolation,8_as65001_8,10.181.0.114/31,,,intact
 isolation,8_as65001_8,10.181.0.116/31,,,intact

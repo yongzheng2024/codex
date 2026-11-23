@@ -347,7 +347,6 @@ reachability,12_as65006_12,10.180.0.53/32,,,broken_removed
 reachability,12_as65006_12,10.180.0.54/32,,,intact
 reachability,12_as65006_12,10.180.0.56/32,,,broken_removed
 reachability,12_as65006_12,10.180.0.57/32,,,intact
-reachability,12_as65006_12,10.181.0.0/30,,,broken_added
 reachability,12_as65006_12,10.181.0.38/32,,,intact
 reachability,12_as65006_12,10.200.0.0/24,,,intact
 reachability,12_as65006_12,10.200.1.0/24,,,intact
@@ -486,9 +485,6 @@ waypointing,12_as65006_12,10.180.0.57/32,13_as65006_13,,intact
 waypointing,12_as65006_12,10.180.0.57/32,26_as65006_26,,intact
 waypointing,12_as65006_12,10.180.0.57/32,42_as65006_42,,intact
 waypointing,12_as65006_12,10.180.0.57/32,56_as65006_56,,intact
-waypointing,12_as65006_12,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,12_as65006_12,10.181.0.0/30,26_as65006_26,,broken_added
-waypointing,12_as65006_12,10.181.0.0/30,31_as65002_31,,broken_added
 waypointing,12_as65006_12,10.200.0.0/24,13_as65006_13,,intact
 waypointing,12_as65006_12,10.200.1.0/24,13_as65006_13,,intact
 isolation,13_as65006_13,10.181.0.0/31,,,broken_removed
@@ -547,7 +543,6 @@ reachability,13_as65006_13,10.180.0.53/32,,,broken_removed
 reachability,13_as65006_13,10.180.0.54/32,,,intact
 reachability,13_as65006_13,10.180.0.56/32,,,broken_removed
 reachability,13_as65006_13,10.180.0.57/32,,,intact
-reachability,13_as65006_13,10.181.0.0/30,,,broken_added
 reachability,13_as65006_13,10.181.0.40/32,,,intact
 reachability,13_as65006_13,10.181.0.42/32,,,intact
 reachability,13_as65006_13,10.181.0.44/32,,,intact
@@ -652,7 +647,6 @@ waypointing,13_as65006_13,10.180.0.56/32,35_as65003_35,,broken_removed
 waypointing,13_as65006_13,10.180.0.56/32,55_as65003_55,,broken_removed
 waypointing,13_as65006_13,10.180.0.57/32,42_as65006_42,,intact
 waypointing,13_as65006_13,10.180.0.57/32,56_as65006_56,,intact
-waypointing,13_as65006_13,10.181.0.0/30,31_as65002_31,,broken_added
 isolation,14_as65007_14,10.181.0.60/31,,,intact
 isolation,14_as65007_14,10.181.0.62/31,,,intact
 isolation,14_as65007_14,10.181.0.64/31,,,intact
@@ -1909,7 +1903,6 @@ reachability,26_as65006_26,10.180.0.53/32,,,broken_removed
 reachability,26_as65006_26,10.180.0.54/32,,,intact
 reachability,26_as65006_26,10.180.0.56/32,,,broken_removed
 reachability,26_as65006_26,10.180.0.57/32,,,intact
-reachability,26_as65006_26,10.181.0.0/30,,,broken_added
 reachability,26_as65006_26,10.181.0.104/32,,,intact
 reachability,26_as65006_26,10.181.0.106/32,,,intact
 reachability,26_as65006_26,10.181.0.39/32,,,intact
@@ -2030,8 +2023,6 @@ waypointing,26_as65006_26,10.180.0.56/32,55_as65003_55,,broken_removed
 waypointing,26_as65006_26,10.180.0.57/32,13_as65006_13,,intact
 waypointing,26_as65006_26,10.180.0.57/32,42_as65006_42,,intact
 waypointing,26_as65006_26,10.180.0.57/32,56_as65006_56,,intact
-waypointing,26_as65006_26,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,26_as65006_26,10.181.0.0/30,31_as65002_31,,broken_added
 waypointing,26_as65006_26,10.200.0.0/24,13_as65006_13,,intact
 waypointing,26_as65006_26,10.200.1.0/24,13_as65006_13,,intact
 isolation,27_as65006_27,10.181.0.0/31,,,broken_removed
@@ -2089,7 +2080,6 @@ reachability,27_as65006_27,10.180.0.53/32,,,broken_removed
 reachability,27_as65006_27,10.180.0.54/32,,,intact
 reachability,27_as65006_27,10.180.0.56/32,,,broken_removed
 reachability,27_as65006_27,10.180.0.57/32,,,intact
-reachability,27_as65006_27,10.181.0.0/30,,,broken_added
 reachability,27_as65006_27,10.181.0.105/32,,,intact
 reachability,27_as65006_27,10.200.0.0/24,,,intact
 reachability,27_as65006_27,10.200.1.0/24,,,intact
@@ -2228,9 +2218,6 @@ waypointing,27_as65006_27,10.180.0.57/32,13_as65006_13,,intact
 waypointing,27_as65006_27,10.180.0.57/32,26_as65006_26,,intact
 waypointing,27_as65006_27,10.180.0.57/32,42_as65006_42,,intact
 waypointing,27_as65006_27,10.180.0.57/32,56_as65006_56,,intact
-waypointing,27_as65006_27,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,27_as65006_27,10.181.0.0/30,26_as65006_26,,broken_added
-waypointing,27_as65006_27,10.181.0.0/30,31_as65002_31,,broken_added
 waypointing,27_as65006_27,10.200.0.0/24,13_as65006_13,,intact
 waypointing,27_as65006_27,10.200.1.0/24,13_as65006_13,,intact
 isolation,28_as65002_28,10.181.0.0/31,,,intact
@@ -4404,7 +4391,6 @@ reachability,42_as65006_42,10.180.0.53/32,,,broken_removed
 reachability,42_as65006_42,10.180.0.54/32,,,intact
 reachability,42_as65006_42,10.180.0.56/32,,,broken_removed
 reachability,42_as65006_42,10.180.0.57/32,,,intact
-reachability,42_as65006_42,10.181.0.0/30,,,broken_added
 reachability,42_as65006_42,10.181.0.144/32,,,intact
 reachability,42_as65006_42,10.181.0.35/32,,,intact
 reachability,42_as65006_42,10.181.0.41/32,,,intact
@@ -4526,8 +4512,6 @@ waypointing,42_as65006_42,10.180.0.56/32,33_as65003_33,,broken_removed
 waypointing,42_as65006_42,10.180.0.56/32,35_as65003_35,,broken_removed
 waypointing,42_as65006_42,10.180.0.56/32,55_as65003_55,,broken_removed
 waypointing,42_as65006_42,10.180.0.57/32,56_as65006_56,,intact
-waypointing,42_as65006_42,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,42_as65006_42,10.181.0.0/30,31_as65002_31,,broken_added
 isolation,43_as65004_43,10.181.0.140/31,,,intact
 isolation,43_as65004_43,10.181.0.148/31,,,intact
 isolation,43_as65004_43,10.181.0.150/31,,,intact
@@ -5726,7 +5710,6 @@ reachability,53_as65006_53,10.180.0.53/32,,,broken_removed
 reachability,53_as65006_53,10.180.0.54/32,,,intact
 reachability,53_as65006_53,10.180.0.56/32,,,broken_removed
 reachability,53_as65006_53,10.180.0.57/32,,,intact
-reachability,53_as65006_53,10.181.0.0/30,,,broken_added
 reachability,53_as65006_53,10.181.0.47/32,,,intact
 reachability,53_as65006_53,10.181.0.49/32,,,intact
 reachability,53_as65006_53,10.200.0.0/24,,,intact
@@ -5845,8 +5828,6 @@ waypointing,53_as65006_53,10.180.0.56/32,55_as65003_55,,broken_removed
 waypointing,53_as65006_53,10.180.0.57/32,13_as65006_13,,intact
 waypointing,53_as65006_53,10.180.0.57/32,42_as65006_42,,intact
 waypointing,53_as65006_53,10.180.0.57/32,56_as65006_56,,intact
-waypointing,53_as65006_53,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,53_as65006_53,10.181.0.0/30,31_as65002_31,,broken_added
 waypointing,53_as65006_53,10.200.0.0/24,13_as65006_13,,intact
 waypointing,53_as65006_53,10.200.1.0/24,13_as65006_13,,intact
 isolation,54_as65007_54,10.181.0.60/31,,,intact
@@ -6140,7 +6121,6 @@ reachability,56_as65006_56,10.180.0.53/32,,,broken_removed
 reachability,56_as65006_56,10.180.0.54/32,,,intact
 reachability,56_as65006_56,10.180.0.56/32,,,broken_removed
 reachability,56_as65006_56,10.180.0.57/32,,,intact
-reachability,56_as65006_56,10.181.0.0/30,,,broken_added
 reachability,56_as65006_56,10.181.0.145/32,,,intact
 reachability,56_as65006_56,10.200.0.0/24,,,intact
 reachability,56_as65006_56,10.200.1.0/24,,,intact
@@ -6279,9 +6259,6 @@ waypointing,56_as65006_56,10.180.0.56/32,33_as65003_33,,broken_removed
 waypointing,56_as65006_56,10.180.0.56/32,35_as65003_35,,broken_removed
 waypointing,56_as65006_56,10.180.0.56/32,42_as65006_42,,broken_removed
 waypointing,56_as65006_56,10.180.0.56/32,55_as65003_55,,broken_removed
-waypointing,56_as65006_56,10.181.0.0/30,13_as65006_13,,broken_added
-waypointing,56_as65006_56,10.181.0.0/30,31_as65002_31,,broken_added
-waypointing,56_as65006_56,10.181.0.0/30,42_as65006_42,,broken_added
 waypointing,56_as65006_56,10.200.0.0/24,13_as65006_13,,intact
 waypointing,56_as65006_56,10.200.1.0/24,13_as65006_13,,intact
 isolation,5_as65001_5,10.181.0.10/31,,,intact

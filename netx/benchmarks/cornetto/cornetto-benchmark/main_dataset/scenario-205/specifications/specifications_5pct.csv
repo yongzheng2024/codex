@@ -3,7 +3,6 @@ isolation,0_as65003_1-09078,0.0.0.0/0,,,broken_removed
 isolation,10_as65004_1-18218,0.0.0.0/0,,,intact
 isolation,11_as65002_11,10.181.0.10/31,,,intact
 isolation,12_as65003_1-06121,0.0.0.0/0,,,intact
-isolation,12_as65003_1-06121,10.180.0.1/32,,,broken_added
 isolation,13_as65002_0-2647,10.181.0.10/31,,,intact
 isolation,14_as65006_0-02978,0.0.0.0/0,,,intact
 isolation,15_as65003_1-08382,0.0.0.0/0,,,intact

@@ -130,9 +130,6 @@ reachability,10_as65001_targu-mures,10.200.11.0/24,,,intact
 reachability,10_as65001_targu-mures,10.200.12.0/24,,,intact
 reachability,10_as65001_targu-mures,10.200.13.0/24,,,intact
 reachability,10_as65001_targu-mures,10.200.14.0/24,,,intact
-reachability,10_as65001_targu-mures,10.200.15.0/24,,,broken_added
-reachability,10_as65001_targu-mures,10.200.16.0/24,,,broken_added
-reachability,10_as65001_targu-mures,10.200.17.0/24,,,broken_added
 reachability,10_as65001_targu-mures,10.200.18.0/24,,,intact
 reachability,10_as65001_targu-mures,10.200.19.0/24,,,intact
 reachability,10_as65001_targu-mures,10.200.2.0/24,,,broken_removed
@@ -436,9 +433,6 @@ reachability,14_as65001_piatra-neamt,10.200.11.0/24,,,intact
 reachability,14_as65001_piatra-neamt,10.200.12.0/24,,,intact
 reachability,14_as65001_piatra-neamt,10.200.13.0/24,,,intact
 reachability,14_as65001_piatra-neamt,10.200.14.0/24,,,intact
-reachability,14_as65001_piatra-neamt,10.200.15.0/24,,,broken_added
-reachability,14_as65001_piatra-neamt,10.200.16.0/24,,,broken_added
-reachability,14_as65001_piatra-neamt,10.200.17.0/24,,,broken_added
 reachability,14_as65001_piatra-neamt,10.200.18.0/24,,,intact
 reachability,14_as65001_piatra-neamt,10.200.19.0/24,,,intact
 reachability,14_as65001_piatra-neamt,10.200.2.0/24,,,broken_removed
@@ -675,9 +669,6 @@ reachability,17_as65001_cluj,10.200.11.1/32,,,intact
 reachability,17_as65001_cluj,10.200.12.0/24,,,intact
 reachability,17_as65001_cluj,10.200.13.0/24,,,intact
 reachability,17_as65001_cluj,10.200.14.0/24,,,intact
-reachability,17_as65001_cluj,10.200.15.0/24,,,broken_added
-reachability,17_as65001_cluj,10.200.16.0/24,,,broken_added
-reachability,17_as65001_cluj,10.200.17.0/24,,,broken_added
 reachability,17_as65001_cluj,10.200.18.0/24,,,intact
 reachability,17_as65001_cluj,10.200.19.0/24,,,intact
 reachability,17_as65001_cluj,10.200.2.0/24,,,broken_removed
@@ -913,9 +904,6 @@ reachability,1_as65001_plaiesti,10.200.11.0/24,,,intact
 reachability,1_as65001_plaiesti,10.200.12.0/24,,,intact
 reachability,1_as65001_plaiesti,10.200.13.0/24,,,intact
 reachability,1_as65001_plaiesti,10.200.14.0/24,,,intact
-reachability,1_as65001_plaiesti,10.200.15.0/24,,,broken_added
-reachability,1_as65001_plaiesti,10.200.16.0/24,,,broken_added
-reachability,1_as65001_plaiesti,10.200.17.0/24,,,broken_added
 reachability,1_as65001_plaiesti,10.200.18.0/24,,,intact
 reachability,1_as65001_plaiesti,10.200.19.0/24,,,intact
 reachability,1_as65001_plaiesti,10.200.2.0/24,,,broken_removed
@@ -1079,9 +1067,6 @@ reachability,2_as65001_brasov,10.200.11.0/24,,,intact
 reachability,2_as65001_brasov,10.200.12.0/24,,,intact
 reachability,2_as65001_brasov,10.200.13.0/24,,,intact
 reachability,2_as65001_brasov,10.200.14.0/24,,,intact
-reachability,2_as65001_brasov,10.200.15.0/24,,,broken_added
-reachability,2_as65001_brasov,10.200.16.0/24,,,broken_added
-reachability,2_as65001_brasov,10.200.17.0/24,,,broken_added
 reachability,2_as65001_brasov,10.200.18.0/24,,,intact
 reachability,2_as65001_brasov,10.200.19.0/24,,,intact
 reachability,2_as65001_brasov,10.200.2.0/24,,,broken_removed
@@ -1155,9 +1140,6 @@ reachability,3_as65001_targoviste,10.200.11.0/24,,,intact
 reachability,3_as65001_targoviste,10.200.12.0/24,,,intact
 reachability,3_as65001_targoviste,10.200.13.0/24,,,intact
 reachability,3_as65001_targoviste,10.200.14.0/24,,,intact
-reachability,3_as65001_targoviste,10.200.15.0/24,,,broken_added
-reachability,3_as65001_targoviste,10.200.16.0/24,,,broken_added
-reachability,3_as65001_targoviste,10.200.17.0/24,,,broken_added
 reachability,3_as65001_targoviste,10.200.18.0/24,,,intact
 reachability,3_as65001_targoviste,10.200.19.0/24,,,intact
 reachability,3_as65001_targoviste,10.200.2.0/24,,,broken_removed
@@ -1231,9 +1213,6 @@ reachability,4_as65001_constanta,10.200.11.0/24,,,intact
 reachability,4_as65001_constanta,10.200.12.0/24,,,intact
 reachability,4_as65001_constanta,10.200.13.0/24,,,intact
 reachability,4_as65001_constanta,10.200.14.0/24,,,intact
-reachability,4_as65001_constanta,10.200.15.0/24,,,broken_added
-reachability,4_as65001_constanta,10.200.16.0/24,,,broken_added
-reachability,4_as65001_constanta,10.200.17.0/24,,,broken_added
 reachability,4_as65001_constanta,10.200.18.0/24,,,intact
 reachability,4_as65001_constanta,10.200.19.0/24,,,intact
 reachability,4_as65001_constanta,10.200.2.0/24,,,broken_removed
@@ -1316,9 +1295,6 @@ reachability,5_as65001_bucarest,10.200.11.0/24,,,intact
 reachability,5_as65001_bucarest,10.200.12.0/24,,,intact
 reachability,5_as65001_bucarest,10.200.13.0/24,,,intact
 reachability,5_as65001_bucarest,10.200.14.0/24,,,intact
-reachability,5_as65001_bucarest,10.200.15.0/24,,,broken_added
-reachability,5_as65001_bucarest,10.200.16.0/24,,,broken_added
-reachability,5_as65001_bucarest,10.200.17.0/24,,,broken_added
 reachability,5_as65001_bucarest,10.200.18.0/24,,,intact
 reachability,5_as65001_bucarest,10.200.18.1/32,,,intact
 reachability,5_as65001_bucarest,10.200.19.0/24,,,intact
@@ -1390,9 +1366,6 @@ reachability,6_as65001_galati,10.200.11.0/24,,,intact
 reachability,6_as65001_galati,10.200.12.0/24,,,intact
 reachability,6_as65001_galati,10.200.13.0/24,,,intact
 reachability,6_as65001_galati,10.200.14.0/24,,,intact
-reachability,6_as65001_galati,10.200.15.0/24,,,broken_added
-reachability,6_as65001_galati,10.200.16.0/24,,,broken_added
-reachability,6_as65001_galati,10.200.17.0/24,,,broken_added
 reachability,6_as65001_galati,10.200.18.0/24,,,intact
 reachability,6_as65001_galati,10.200.19.0/24,,,intact
 reachability,6_as65001_galati,10.200.2.0/24,,,broken_removed
@@ -1464,9 +1437,6 @@ reachability,7_as65001_focsani,10.200.11.0/24,,,intact
 reachability,7_as65001_focsani,10.200.12.0/24,,,intact
 reachability,7_as65001_focsani,10.200.13.0/24,,,intact
 reachability,7_as65001_focsani,10.200.14.0/24,,,intact
-reachability,7_as65001_focsani,10.200.15.0/24,,,broken_added
-reachability,7_as65001_focsani,10.200.16.0/24,,,broken_added
-reachability,7_as65001_focsani,10.200.17.0/24,,,broken_added
 reachability,7_as65001_focsani,10.200.18.0/24,,,intact
 reachability,7_as65001_focsani,10.200.19.0/24,,,intact
 reachability,7_as65001_focsani,10.200.2.0/24,,,broken_removed

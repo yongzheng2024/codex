@@ -1,7 +1,6 @@
 predicate_type,node,prefix,waypoint,num_routes,sources
 isolation,0_as65006_fukuoka-dc,10.181.0.0/31,,,intact
 isolation,0_as65006_fukuoka-dc,10.181.0.10/31,,,intact
-reachability,10_as65004_matsuyama-dc,10.180.0.1/32,,,broken_added
 reachability,10_as65004_matsuyama-dc,10.200.0.0/24,,,broken_removed
 reachability,18_as65003_doshisha-u,10.200.0.0/24,,,broken_removed
 reachability,19_as65003_icr--kyoto-u,10.200.0.0/24,,,broken_removed

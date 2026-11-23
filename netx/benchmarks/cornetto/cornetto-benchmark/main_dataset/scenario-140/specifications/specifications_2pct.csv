@@ -16,9 +16,6 @@ isolation,19_as65005_uia-arendal,0.0.0.0/0,,,intact
 isolation,19_as65005_uia-arendal,10.181.0.100/31,,,intact
 isolation,19_as65005_uia-arendal,10.181.0.102/31,,,intact
 isolation,1_as65001_uio,0.0.0.0/0,,,intact
-isolation,1_as65001_uio,10.180.0.1/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.42/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.59/32,,,broken_added
 isolation,1_as65001_uio,10.181.0.10/31,,,intact
 isolation,20_as65005_hit-rauland,0.0.0.0/0,,,intact
 isolation,20_as65005_hit-rauland,10.181.0.100/31,,,intact
@@ -73,8 +70,6 @@ isolation,53_as65001_hrp-halden,10.181.0.10/31,,,intact
 isolation,54_as65001_hve-larvik,0.0.0.0/0,,,intact
 isolation,55_as65003_eiscat,0.0.0.0/0,,,intact
 isolation,56_as65001_hio-sarpsborg,0.0.0.0/0,,,intact
-isolation,56_as65001_hio-sarpsborg,10.180.0.1/32,,,broken_added
-isolation,56_as65001_hio-sarpsborg,10.180.0.42/32,,,broken_added
 isolation,56_as65001_hio-sarpsborg,10.181.0.10/31,,,intact
 isolation,57_as65001_hio-halden,0.0.0.0/0,,,intact
 isolation,57_as65001_hio-halden,10.181.0.10/31,,,intact

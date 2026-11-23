@@ -22,7 +22,6 @@ reachability,113_as65006_30-73262,10.181.0.0/30,,,broken_added
 isolation,114_as65006_28-05,10.181.0.0/31,,,intact
 isolation,114_as65006_28-05,10.181.0.10/31,,,intact
 isolation,114_as65006_28-05,10.181.0.12/31,,,intact
-load_balancing,114_as65006_28-05,10.180.0.1/32,,2,broken_added
 load_balancing,114_as65006_28-05,10.180.0.10/32,,2,broken_added
 load_balancing,114_as65006_28-05,10.181.0.0/30,,2,broken_added
 reachability,114_as65006_28-05,10.180.0.2/32,,,broken_removed
@@ -357,7 +356,7 @@ reachability,190_as65006_36-25,10.181.0.0/30,,,broken_added
 isolation,191_as65006_30-5238,10.181.0.0/31,,,intact
 isolation,191_as65006_30-5238,10.181.0.10/31,,,intact
 isolation,191_as65006_30-5238,10.181.0.12/31,,,intact
-load_balancing,191_as65006_30-5238,10.180.0.1/32,,2,broken_removed|intact
+load_balancing,191_as65006_30-5238,10.180.0.1/32,,2,intact
 load_balancing,191_as65006_30-5238,10.180.0.2/32,,2,broken_removed
 reachability,191_as65006_30-5238,10.180.0.2/32,,,broken_removed
 reachability,191_as65006_30-5238,10.181.0.0/30,,,broken_added

@@ -24,7 +24,6 @@ reachability,0_as65001_uio,10.180.0.57/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.58/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.59/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.60/32,,,broken_removed
-reachability,0_as65001_uio,10.181.0.0/30,,,broken_added
 reachability,0_as65001_uio,10.181.0.0/32,,,intact
 reachability,0_as65001_uio,10.181.0.10/32,,,intact
 reachability,0_as65001_uio,10.181.0.2/32,,,intact
@@ -254,8 +253,6 @@ reachability,11_as65001_hve-borre,10.200.65.0/24,,,intact
 reachability,11_as65001_hve-borre,10.200.66.0/24,,,intact
 reachability,11_as65001_hve-borre,10.200.67.0/24,,,intact
 waypointing,11_as65001_hve-borre,10.180.0.1/32,0_as65001_uio,,broken_removed
-waypointing,11_as65001_hve-borre,10.180.0.1/32,10_as65001_hibu-drammen,,broken_added
-waypointing,11_as65001_hve-borre,10.180.0.1/32,3_as65001_uio-st-olavsplass-5,,broken_added
 waypointing,11_as65001_hve-borre,10.180.0.11/32,10_as65001_hibu-drammen,,intact
 waypointing,11_as65001_hve-borre,10.180.0.2/32,1_as65001_uio,,intact
 waypointing,11_as65001_hve-borre,10.180.0.2/32,56_as65001_hio-sarpsborg,,intact
@@ -867,9 +864,6 @@ waypointing,19_as65005_uia-arendal,10.200.61.0/24,50_as65008_hit-notodden,,intac
 waypointing,19_as65005_uia-arendal,10.200.62.0/24,49_as65005_hit-bo,,intact
 waypointing,19_as65005_uia-arendal,10.200.62.0/24,50_as65008_hit-notodden,,intact
 isolation,1_as65001_uio,0.0.0.0/0,,,intact
-isolation,1_as65001_uio,10.180.0.1/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.42/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.59/32,,,broken_added
 isolation,1_as65001_uio,10.181.0.0/30,,,broken_added
 isolation,1_as65001_uio,10.181.0.0/31,,,broken_removed
 isolation,1_as65001_uio,10.181.0.10/31,,,intact
@@ -878,7 +872,7 @@ isolation,1_as65001_uio,10.181.0.174/31,,,intact
 isolation,1_as65001_uio,10.181.0.176/31,,,intact
 isolation,1_as65001_uio,10.181.0.178/31,,,intact
 isolation,1_as65001_uio,10.181.0.18/31,,,intact
-isolation,1_as65001_uio,10.181.0.180/31,,,broken_removed|intact
+isolation,1_as65001_uio,10.181.0.180/31,,,intact
 isolation,1_as65001_uio,10.181.0.2/31,,,intact
 isolation,1_as65001_uio,10.181.0.24/31,,,intact
 isolation,1_as65001_uio,10.181.0.26/31,,,intact
@@ -889,12 +883,12 @@ load_balancing,1_as65001_uio,10.180.0.60/32,,2,broken_removed
 reachability,1_as65001_uio,10.180.0.1/32,,,broken_removed
 reachability,1_as65001_uio,10.180.0.2/32,,,intact
 reachability,1_as65001_uio,10.180.0.4/32,,,intact
-reachability,1_as65001_uio,10.180.0.42/32,,,broken_removed|intact
+reachability,1_as65001_uio,10.180.0.42/32,,,intact
 reachability,1_as65001_uio,10.180.0.54/32,,,intact
 reachability,1_as65001_uio,10.180.0.57/32,,,intact
 reachability,1_as65001_uio,10.180.0.58/32,,,intact
-reachability,1_as65001_uio,10.180.0.59/32,,,broken_removed|intact
-reachability,1_as65001_uio,10.180.0.60/32,,,broken_removed|intact
+reachability,1_as65001_uio,10.180.0.59/32,,,intact
+reachability,1_as65001_uio,10.180.0.60/32,,,intact
 reachability,1_as65001_uio,10.181.0.1/32,,,intact
 reachability,1_as65001_uio,10.181.0.12/32,,,intact
 reachability,1_as65001_uio,10.181.0.14/32,,,intact
@@ -926,7 +920,7 @@ reachability,1_as65001_uio,10.200.68.0/24,,,intact
 waypointing,1_as65001_uio,10.180.0.1/32,0_as65001_uio,,broken_removed
 waypointing,1_as65001_uio,10.180.0.4/32,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,1_as65001_uio,10.180.0.42/32,3_as65001_uio-st-olavsplass-5,,broken_added
-waypointing,1_as65001_uio,10.180.0.42/32,41_as65001_uib-bt,,broken_removed|intact
+waypointing,1_as65001_uio,10.180.0.42/32,41_as65001_uib-bt,,intact
 waypointing,1_as65001_uio,10.180.0.54/32,53_as65001_hrp-halden,,intact
 waypointing,1_as65001_uio,10.180.0.54/32,56_as65001_hio-sarpsborg,,intact
 waypointing,1_as65001_uio,10.180.0.54/32,57_as65001_hio-halden,,intact
@@ -936,11 +930,11 @@ waypointing,1_as65001_uio,10.180.0.58/32,57_as65001_hio-halden,,intact
 waypointing,1_as65001_uio,10.180.0.59/32,0_as65001_uio,,broken_removed
 waypointing,1_as65001_uio,10.180.0.59/32,56_as65001_hio-sarpsborg,,broken_added
 waypointing,1_as65001_uio,10.180.0.59/32,57_as65001_hio-halden,,broken_added
-waypointing,1_as65001_uio,10.180.0.59/32,58_as65001_umb-as,,broken_removed|intact
+waypointing,1_as65001_uio,10.180.0.59/32,58_as65001_umb-as,,intact
 waypointing,1_as65001_uio,10.180.0.59/32,59_as65001_hio-fredrikstad,,broken_added
 waypointing,1_as65001_uio,10.180.0.60/32,56_as65001_hio-sarpsborg,,broken_added
 waypointing,1_as65001_uio,10.180.0.60/32,57_as65001_hio-halden,,broken_added
-waypointing,1_as65001_uio,10.180.0.60/32,59_as65001_hio-fredrikstad,,broken_removed|intact
+waypointing,1_as65001_uio,10.180.0.60/32,59_as65001_hio-fredrikstad,,intact
 waypointing,1_as65001_uio,10.200.16.0/24,2_as65006_hig-gjovik,,intact
 waypointing,1_as65001_uio,10.200.16.0/24,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,1_as65001_uio,10.200.17.0/24,2_as65006_hig-gjovik,,intact
@@ -2538,7 +2532,6 @@ load_balancing,41_as65001_uib-bt,10.180.0.2/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.54/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.57/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.58/32,,2,broken_removed
-load_balancing,41_as65001_uib-bt,10.181.0.0/30,,2,broken_added
 reachability,41_as65001_uib-bt,10.180.0.1/32,,,broken_removed
 reachability,41_as65001_uib-bt,10.180.0.2/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.4/32,,,intact
@@ -2548,7 +2541,6 @@ reachability,41_as65001_uib-bt,10.180.0.57/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.58/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.59/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.60/32,,,intact
-reachability,41_as65001_uib-bt,10.181.0.0/30,,,broken_added
 reachability,41_as65001_uib-bt,10.181.0.107/32,,,intact
 reachability,41_as65001_uib-bt,10.181.0.25/32,,,intact
 reachability,41_as65001_uib-bt,10.181.0.89/32,,,intact
@@ -2608,7 +2600,6 @@ waypointing,41_as65001_uib-bt,10.180.0.60/32,56_as65001_hio-sarpsborg,,broken_ad
 waypointing,41_as65001_uib-bt,10.180.0.60/32,57_as65001_hio-halden,,broken_added
 waypointing,41_as65001_uib-bt,10.180.0.60/32,58_as65001_umb-as,,broken_removed
 waypointing,41_as65001_uib-bt,10.180.0.60/32,59_as65001_hio-fredrikstad,,intact
-waypointing,41_as65001_uib-bt,10.181.0.0/30,0_as65001_uio,,broken_added
 waypointing,41_as65001_uib-bt,10.200.13.0/24,17_as65004_uib-hoyteklogibygget,,intact
 waypointing,41_as65001_uib-bt,10.200.14.0/24,17_as65004_uib-hoyteklogibygget,,intact
 waypointing,41_as65001_uib-bt,10.200.15.0/24,17_as65004_uib-hoyteklogibygget,,intact
@@ -3365,8 +3356,6 @@ reachability,53_as65001_hrp-halden,10.200.66.0/24,,,intact
 reachability,53_as65001_hrp-halden,10.200.67.0/24,,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.1/32,0_as65001_uio,,broken_removed
 waypointing,53_as65001_hrp-halden,10.180.0.1/32,57_as65001_hio-halden,,broken_removed
-waypointing,53_as65001_hrp-halden,10.180.0.1/32,58_as65001_umb-as,,broken_added
-waypointing,53_as65001_hrp-halden,10.180.0.1/32,59_as65001_hio-fredrikstad,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.2/32,1_as65001_uio,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.2/32,56_as65001_hio-sarpsborg,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.2/32,57_as65001_hio-halden,,intact
@@ -3374,14 +3363,11 @@ waypointing,53_as65001_hrp-halden,10.180.0.4/32,1_as65001_uio,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.4/32,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.4/32,56_as65001_hio-sarpsborg,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.4/32,57_as65001_hio-halden,,intact
-waypointing,53_as65001_hrp-halden,10.180.0.42/32,0_as65001_uio,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.42/32,1_as65001_uio,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.42/32,3_as65001_uio-st-olavsplass-5,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.42/32,41_as65001_uib-bt,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.42/32,56_as65001_hio-sarpsborg,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.42/32,57_as65001_hio-halden,,intact
-waypointing,53_as65001_hrp-halden,10.180.0.42/32,58_as65001_umb-as,,broken_added
-waypointing,53_as65001_hrp-halden,10.180.0.42/32,59_as65001_hio-fredrikstad,,broken_added
 waypointing,53_as65001_hrp-halden,10.180.0.57/32,56_as65001_hio-sarpsborg,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.57/32,57_as65001_hio-halden,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.58/32,57_as65001_hio-halden,,intact
@@ -3484,8 +3470,6 @@ waypointing,55_as65003_eiscat,10.200.81.0/24,8_as65007_uito,,intact
 waypointing,55_as65003_eiscat,10.200.82.0/24,29_as65003_hih-harstad,,intact
 waypointing,55_as65003_eiscat,10.200.82.0/24,8_as65007_uito,,intact
 isolation,56_as65001_hio-sarpsborg,0.0.0.0/0,,,intact
-isolation,56_as65001_hio-sarpsborg,10.180.0.1/32,,,broken_added
-isolation,56_as65001_hio-sarpsborg,10.180.0.42/32,,,broken_added
 isolation,56_as65001_hio-sarpsborg,10.181.0.0/30,,,broken_added
 isolation,56_as65001_hio-sarpsborg,10.181.0.0/31,,,broken_removed
 isolation,56_as65001_hio-sarpsborg,10.181.0.10/31,,,intact
@@ -3510,7 +3494,7 @@ reachability,56_as65001_hio-sarpsborg,10.180.0.12/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.2/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.28/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.4/32,,,intact
-reachability,56_as65001_hio-sarpsborg,10.180.0.42/32,,,broken_removed|intact
+reachability,56_as65001_hio-sarpsborg,10.180.0.42/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.54/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.55/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.57/32,,,intact
@@ -3542,9 +3526,9 @@ waypointing,56_as65001_hio-sarpsborg,10.180.0.28/32,11_as65001_hve-borre,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.28/32,27_as65001_hve-eik,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.4/32,1_as65001_uio,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.4/32,3_as65001_uio-st-olavsplass-5,,intact
-waypointing,56_as65001_hio-sarpsborg,10.180.0.42/32,1_as65001_uio,,broken_removed|intact
+waypointing,56_as65001_hio-sarpsborg,10.180.0.42/32,1_as65001_uio,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.42/32,3_as65001_uio-st-olavsplass-5,,broken_added
-waypointing,56_as65001_hio-sarpsborg,10.180.0.42/32,41_as65001_uib-bt,,broken_removed|intact
+waypointing,56_as65001_hio-sarpsborg,10.180.0.42/32,41_as65001_uib-bt,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.54/32,53_as65001_hrp-halden,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.54/32,57_as65001_hio-halden,,intact
 waypointing,56_as65001_hio-sarpsborg,10.180.0.55/32,11_as65001_hve-borre,,intact
@@ -3618,20 +3602,15 @@ reachability,57_as65001_hio-halden,10.200.65.0/24,,,intact
 reachability,57_as65001_hio-halden,10.200.66.0/24,,,intact
 reachability,57_as65001_hio-halden,10.200.67.0/24,,,intact
 waypointing,57_as65001_hio-halden,10.180.0.1/32,0_as65001_uio,,broken_removed
-waypointing,57_as65001_hio-halden,10.180.0.1/32,58_as65001_umb-as,,broken_added
-waypointing,57_as65001_hio-halden,10.180.0.1/32,59_as65001_hio-fredrikstad,,broken_added
 waypointing,57_as65001_hio-halden,10.180.0.2/32,1_as65001_uio,,intact
 waypointing,57_as65001_hio-halden,10.180.0.2/32,56_as65001_hio-sarpsborg,,intact
 waypointing,57_as65001_hio-halden,10.180.0.4/32,1_as65001_uio,,intact
 waypointing,57_as65001_hio-halden,10.180.0.4/32,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,57_as65001_hio-halden,10.180.0.4/32,56_as65001_hio-sarpsborg,,intact
-waypointing,57_as65001_hio-halden,10.180.0.42/32,0_as65001_uio,,broken_added
 waypointing,57_as65001_hio-halden,10.180.0.42/32,1_as65001_uio,,broken_added
 waypointing,57_as65001_hio-halden,10.180.0.42/32,3_as65001_uio-st-olavsplass-5,,broken_added
 waypointing,57_as65001_hio-halden,10.180.0.42/32,41_as65001_uib-bt,,intact
 waypointing,57_as65001_hio-halden,10.180.0.42/32,56_as65001_hio-sarpsborg,,broken_added
-waypointing,57_as65001_hio-halden,10.180.0.42/32,58_as65001_umb-as,,broken_added
-waypointing,57_as65001_hio-halden,10.180.0.42/32,59_as65001_hio-fredrikstad,,broken_added
 waypointing,57_as65001_hio-halden,10.180.0.54/32,53_as65001_hrp-halden,,intact
 waypointing,57_as65001_hio-halden,10.180.0.57/32,56_as65001_hio-sarpsborg,,intact
 waypointing,57_as65001_hio-halden,10.180.0.59/32,58_as65001_umb-as,,intact
@@ -3683,7 +3662,6 @@ reachability,58_as65001_umb-as,10.180.0.57/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.58/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.59/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.60/32,,,intact
-reachability,58_as65001_umb-as,10.181.0.0/30,,,broken_added
 reachability,58_as65001_umb-as,10.181.0.11/32,,,intact
 reachability,58_as65001_umb-as,10.181.0.180/32,,,intact
 reachability,58_as65001_umb-as,10.200.16.0/24,,,intact
@@ -3726,7 +3704,6 @@ waypointing,58_as65001_umb-as,10.180.0.57/32,59_as65001_hio-fredrikstad,,broken_
 waypointing,58_as65001_umb-as,10.180.0.58/32,57_as65001_hio-halden,,intact
 waypointing,58_as65001_umb-as,10.180.0.58/32,59_as65001_hio-fredrikstad,,intact
 waypointing,58_as65001_umb-as,10.180.0.60/32,59_as65001_hio-fredrikstad,,intact
-waypointing,58_as65001_umb-as,10.181.0.0/30,0_as65001_uio,,broken_added
 waypointing,58_as65001_umb-as,10.200.16.0/24,2_as65006_hig-gjovik,,intact
 waypointing,58_as65001_umb-as,10.200.16.0/24,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,58_as65001_umb-as,10.200.17.0/24,2_as65006_hig-gjovik,,intact
@@ -3764,7 +3741,6 @@ isolation,59_as65001_hio-fredrikstad,10.181.0.26/31,,,intact
 isolation,59_as65001_hio-fredrikstad,10.181.0.60/31,,,intact
 isolation,59_as65001_hio-fredrikstad,10.181.0.8/31,,,intact
 load_balancing,59_as65001_hio-fredrikstad,10.180.0.2/32,,2,broken_removed
-load_balancing,59_as65001_hio-fredrikstad,10.181.0.0/30,,2,broken_added
 reachability,59_as65001_hio-fredrikstad,10.180.0.1/32,,,broken_removed
 reachability,59_as65001_hio-fredrikstad,10.180.0.2/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.4/32,,,intact
@@ -3774,7 +3750,6 @@ reachability,59_as65001_hio-fredrikstad,10.180.0.57/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.58/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.59/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.60/32,,,intact
-reachability,59_as65001_hio-fredrikstad,10.181.0.0/30,,,broken_added
 reachability,59_as65001_hio-fredrikstad,10.181.0.179/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.181.0.181/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.200.16.0/24,,,intact
@@ -3813,8 +3788,6 @@ waypointing,59_as65001_hio-fredrikstad,10.180.0.57/32,56_as65001_hio-sarpsborg,,
 waypointing,59_as65001_hio-fredrikstad,10.180.0.57/32,57_as65001_hio-halden,,intact
 waypointing,59_as65001_hio-fredrikstad,10.180.0.58/32,57_as65001_hio-halden,,intact
 waypointing,59_as65001_hio-fredrikstad,10.180.0.59/32,58_as65001_umb-as,,intact
-waypointing,59_as65001_hio-fredrikstad,10.181.0.0/30,0_as65001_uio,,broken_added
-waypointing,59_as65001_hio-fredrikstad,10.181.0.0/30,58_as65001_umb-as,,broken_added
 waypointing,59_as65001_hio-fredrikstad,10.200.16.0/24,2_as65006_hig-gjovik,,intact
 waypointing,59_as65001_hio-fredrikstad,10.200.16.0/24,3_as65001_uio-st-olavsplass-5,,intact
 waypointing,59_as65001_hio-fredrikstad,10.200.17.0/24,2_as65006_hig-gjovik,,intact

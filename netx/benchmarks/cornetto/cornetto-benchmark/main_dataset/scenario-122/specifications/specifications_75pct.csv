@@ -529,8 +529,6 @@ reachability,21_as65004_21,10.200.16.0/24,,,intact
 reachability,21_as65004_21,10.200.16.1/32,,,intact
 reachability,21_as65004_21,10.200.2.0/24,,,broken_removed
 reachability,21_as65004_21,10.200.3.0/24,,,broken_removed
-reachability,21_as65004_21,10.200.39.0/24,,,broken_added
-reachability,21_as65004_21,10.200.40.0/24,,,broken_added
 waypointing,21_as65004_21,10.180.0.13/32,12_as65004_12,,intact
 waypointing,21_as65004_21,10.180.0.13/32,20_as65004_20,,intact
 waypointing,21_as65004_21,10.180.0.20/32,19_as65004_19,,intact

@@ -1628,7 +1628,6 @@ waypointing,21_as65004_21,10.200.19.0/24,53_as65002_53,,broken_removed
 waypointing,21_as65004_21,10.200.2.0/24,10_as65002_10,,broken_removed
 waypointing,21_as65004_21,10.200.2.0/24,14_as65007_14,,broken_removed
 waypointing,21_as65004_21,10.200.2.0/24,44_as65007_44,,broken_removed
-waypointing,21_as65004_21,10.200.2.0/24,53_as65002_53,,broken_added
 waypointing,21_as65004_21,10.200.20.0/24,10_as65002_10,,broken_removed
 waypointing,21_as65004_21,10.200.20.0/24,33_as65001_33,,broken_removed
 waypointing,21_as65004_21,10.200.20.0/24,35_as65001_35,,broken_removed

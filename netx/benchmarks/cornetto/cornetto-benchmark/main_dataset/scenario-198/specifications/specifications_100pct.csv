@@ -362,7 +362,7 @@ reachability,19_as65002_19,10.200.10.0/24,,,intact
 reachability,19_as65002_19,10.200.11.0/24,,,intact
 reachability,19_as65002_19,10.200.12.0/24,,,intact
 reachability,19_as65002_19,10.200.13.0/24,,,intact
-reachability,19_as65002_19,10.200.2.0/24,,,broken_removed|intact
+reachability,19_as65002_19,10.200.2.0/24,,,intact
 reachability,19_as65002_19,10.200.3.0/24,,,intact
 reachability,19_as65002_19,10.200.4.0/24,,,intact
 reachability,19_as65002_19,10.200.4.1/32,,,intact
@@ -390,7 +390,7 @@ waypointing,19_as65002_19,10.200.12.0/24,16_as65004_16,,broken_added
 waypointing,19_as65002_19,10.200.12.0/24,4_as65004_4,,intact
 waypointing,19_as65002_19,10.200.13.0/24,16_as65004_16,,broken_added
 waypointing,19_as65002_19,10.200.13.0/24,4_as65004_4,,intact
-waypointing,19_as65002_19,10.200.2.0/24,16_as65004_16,,broken_removed|intact
+waypointing,19_as65002_19,10.200.2.0/24,16_as65004_16,,intact
 waypointing,19_as65002_19,10.200.3.0/24,16_as65004_16,,intact
 waypointing,19_as65002_19,10.200.7.0/24,21_as65003_21,,intact
 waypointing,19_as65002_19,10.200.8.0/24,21_as65003_21,,intact

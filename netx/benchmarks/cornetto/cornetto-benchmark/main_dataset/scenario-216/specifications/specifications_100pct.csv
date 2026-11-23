@@ -980,7 +980,7 @@ reachability,30_as65001_maribor,10.181.0.57/32,,,intact
 reachability,30_as65001_maribor,10.181.0.87/32,,,intact
 reachability,30_as65001_maribor,10.181.0.88/32,,,intact
 reachability,30_as65001_maribor,10.181.0.90/32,,,intact
-reachability,30_as65001_maribor,10.200.0.0/24,,,broken_removed|intact
+reachability,30_as65001_maribor,10.200.0.0/24,,,intact
 reachability,30_as65001_maribor,10.200.1.0/24,,,intact
 reachability,30_as65001_maribor,10.200.11.0/24,,,intact
 reachability,30_as65001_maribor,10.200.12.0/24,,,intact
@@ -1008,7 +1008,7 @@ waypointing,30_as65001_maribor,10.180.0.3/32,2_as65001_celje,,intact
 waypointing,30_as65001_maribor,10.180.0.32/32,31_as65001_slovenska-bistrica,,intact
 waypointing,30_as65001_maribor,10.180.0.4/32,3_as65001_lasko,,intact
 waypointing,30_as65001_maribor,10.180.0.8/32,7_as65001_ljubljana,,intact
-waypointing,30_as65001_maribor,10.200.0.0/24,11_as65005_gornja-radgona,,broken_removed|intact
+waypointing,30_as65001_maribor,10.200.0.0/24,11_as65005_gornja-radgona,,intact
 waypointing,30_as65001_maribor,10.200.1.0/24,11_as65005_gornja-radgona,,intact
 waypointing,30_as65001_maribor,10.200.11.0/24,2_as65001_celje,,intact
 waypointing,30_as65001_maribor,10.200.12.0/24,2_as65001_celje,,intact

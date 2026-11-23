@@ -64,15 +64,6 @@ reachability,11_as65001_liege-2,10.181.0.35/32,,,intact
 reachability,11_as65001_liege-2,10.181.0.7/32,,,intact
 reachability,11_as65001_liege-2,10.200.0.0/24,,,broken_removed
 reachability,11_as65001_liege-2,10.200.1.0/24,,,broken_removed
-reachability,11_as65001_liege-2,10.200.11.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.12.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.13.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.14.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.15.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.16.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.17.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.18.0/24,,,broken_added
-reachability,11_as65001_liege-2,10.200.19.0/24,,,broken_added
 reachability,11_as65001_liege-2,10.200.2.0/24,,,intact
 reachability,11_as65001_liege-2,10.200.2.1/32,,,intact
 reachability,11_as65001_liege-2,10.200.23.0/24,,,intact

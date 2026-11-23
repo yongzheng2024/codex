@@ -1634,10 +1634,8 @@ waypointing,2_as65001_2,10.180.0.23/32,23_as65001_23,,intact
 waypointing,2_as65001_2,10.180.0.24/32,16_as65001_16,,intact
 waypointing,2_as65001_2,10.180.0.24/32,23_as65001_23,,intact
 waypointing,2_as65001_2,10.200.0.0/24,0_as65002_0,,broken_removed
-waypointing,2_as65001_2,10.200.0.0/24,17_as65002_17,,broken_added
 waypointing,2_as65001_2,10.200.0.0/24,5_as65004_5,,broken_removed
 waypointing,2_as65001_2,10.200.1.0/24,0_as65002_0,,broken_removed
-waypointing,2_as65001_2,10.200.1.0/24,17_as65002_17,,broken_added
 waypointing,2_as65001_2,10.200.1.0/24,5_as65004_5,,broken_removed
 waypointing,2_as65001_2,10.200.10.0/24,0_as65002_0,,broken_removed
 waypointing,2_as65001_2,10.200.10.0/24,17_as65002_17,,intact
@@ -1799,10 +1797,8 @@ waypointing,3_as65003_3,10.180.0.22/32,21_as65003_21,,intact
 waypointing,3_as65003_3,10.180.0.8/32,21_as65003_21,,intact
 waypointing,3_as65003_3,10.180.0.8/32,7_as65003_7,,intact
 waypointing,3_as65003_3,10.200.0.0/24,0_as65002_0,,broken_removed
-waypointing,3_as65003_3,10.200.0.0/24,17_as65002_17,,broken_added
 waypointing,3_as65003_3,10.200.0.0/24,5_as65004_5,,broken_removed
 waypointing,3_as65003_3,10.200.1.0/24,0_as65002_0,,broken_removed
-waypointing,3_as65003_3,10.200.1.0/24,17_as65002_17,,broken_added
 waypointing,3_as65003_3,10.200.1.0/24,5_as65004_5,,broken_removed
 waypointing,3_as65003_3,10.200.10.0/24,0_as65002_0,,broken_removed
 waypointing,3_as65003_3,10.200.10.0/24,17_as65002_17,,intact
@@ -2103,9 +2099,7 @@ waypointing,5_as65004_5,10.180.0.5/32,4_as65004_4,,intact
 waypointing,5_as65004_5,10.180.0.7/32,6_as65004_6,,intact
 waypointing,5_as65004_5,10.180.0.9/32,8_as65004_8,,intact
 waypointing,5_as65004_5,10.200.0.0/24,0_as65002_0,,broken_removed
-waypointing,5_as65004_5,10.200.0.0/24,17_as65002_17,,broken_added
 waypointing,5_as65004_5,10.200.1.0/24,0_as65002_0,,broken_removed
-waypointing,5_as65004_5,10.200.1.0/24,17_as65002_17,,broken_added
 waypointing,5_as65004_5,10.200.10.0/24,0_as65002_0,,broken_removed
 waypointing,5_as65004_5,10.200.10.0/24,17_as65002_17,,intact
 waypointing,5_as65004_5,10.200.11.0/24,0_as65002_0,,broken_removed

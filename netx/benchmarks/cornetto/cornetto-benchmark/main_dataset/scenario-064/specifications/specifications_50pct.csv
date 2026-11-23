@@ -234,7 +234,6 @@ isolation,103_as65003_103,10.181.0.84/31,,,intact
 isolation,103_as65003_103,10.181.0.86/31,,,intact
 isolation,103_as65003_103,10.181.0.88/31,,,intact
 isolation,103_as65003_103,10.181.1.0/31,,,intact
-reachability,103_as65003_103,10.180.0.103/32,,,broken_added
 reachability,103_as65003_103,10.180.0.104/32,,,intact
 reachability,103_as65003_103,10.180.0.105/32,,,intact
 reachability,103_as65003_103,10.180.0.106/32,,,intact
@@ -291,10 +290,7 @@ reachability,103_as65003_103,10.181.0.224/32,,,intact
 reachability,103_as65003_103,10.200.0.0/24,,,broken_removed
 reachability,103_as65003_103,10.200.1.0/24,,,broken_removed
 reachability,103_as65003_103,10.200.2.0/24,,,intact
-reachability,103_as65003_103,10.200.28.0/24,,,broken_added
-reachability,103_as65003_103,10.200.29.0/24,,,broken_added
 reachability,103_as65003_103,10.200.3.0/24,,,intact
-reachability,103_as65003_103,10.200.30.0/24,,,broken_added
 reachability,103_as65003_103,10.200.35.0/24,,,intact
 reachability,103_as65003_103,10.200.36.0/24,,,intact
 reachability,103_as65003_103,10.200.4.0/24,,,intact
@@ -302,8 +298,6 @@ reachability,103_as65003_103,10.200.5.0/24,,,intact
 reachability,103_as65003_103,10.200.6.0/24,,,intact
 reachability,103_as65003_103,10.200.7.0/24,,,intact
 reachability,103_as65003_103,10.200.8.0/24,,,intact
-waypointing,103_as65003_103,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,103_as65003_103,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,103_as65003_103,10.180.0.105/32,104_as65003_104,,intact
 waypointing,103_as65003_103,10.180.0.105/32,126_as65003_pakistan,,intact
 waypointing,103_as65003_103,10.180.0.106/32,105_as65003_105,,intact
@@ -366,7 +360,6 @@ isolation,104_as65003_104,10.181.0.84/31,,,intact
 isolation,104_as65003_104,10.181.0.86/31,,,intact
 isolation,104_as65003_104,10.181.0.88/31,,,intact
 isolation,104_as65003_104,10.181.1.0/31,,,intact
-reachability,104_as65003_104,10.180.0.103/32,,,broken_added
 reachability,104_as65003_104,10.180.0.104/32,,,intact
 reachability,104_as65003_104,10.180.0.105/32,,,intact
 reachability,104_as65003_104,10.180.0.106/32,,,intact
@@ -423,10 +416,7 @@ reachability,104_as65003_104,10.181.0.226/32,,,intact
 reachability,104_as65003_104,10.200.0.0/24,,,broken_removed
 reachability,104_as65003_104,10.200.1.0/24,,,broken_removed
 reachability,104_as65003_104,10.200.2.0/24,,,intact
-reachability,104_as65003_104,10.200.28.0/24,,,broken_added
-reachability,104_as65003_104,10.200.29.0/24,,,broken_added
 reachability,104_as65003_104,10.200.3.0/24,,,intact
-reachability,104_as65003_104,10.200.30.0/24,,,broken_added
 reachability,104_as65003_104,10.200.35.0/24,,,intact
 reachability,104_as65003_104,10.200.36.0/24,,,intact
 reachability,104_as65003_104,10.200.4.0/24,,,intact
@@ -434,8 +424,6 @@ reachability,104_as65003_104,10.200.5.0/24,,,intact
 reachability,104_as65003_104,10.200.6.0/24,,,intact
 reachability,104_as65003_104,10.200.7.0/24,,,intact
 reachability,104_as65003_104,10.200.8.0/24,,,intact
-waypointing,104_as65003_104,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,104_as65003_104,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,104_as65003_104,10.180.0.104/32,103_as65003_103,,intact
 waypointing,104_as65003_104,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,104_as65003_104,10.180.0.106/32,105_as65003_105,,intact
@@ -498,7 +486,6 @@ isolation,105_as65003_105,10.181.0.84/31,,,intact
 isolation,105_as65003_105,10.181.0.86/31,,,intact
 isolation,105_as65003_105,10.181.0.88/31,,,intact
 isolation,105_as65003_105,10.181.1.0/31,,,intact
-reachability,105_as65003_105,10.180.0.103/32,,,broken_added
 reachability,105_as65003_105,10.180.0.104/32,,,intact
 reachability,105_as65003_105,10.180.0.105/32,,,intact
 reachability,105_as65003_105,10.180.0.106/32,,,intact
@@ -555,10 +542,7 @@ reachability,105_as65003_105,10.181.0.228/32,,,intact
 reachability,105_as65003_105,10.200.0.0/24,,,broken_removed
 reachability,105_as65003_105,10.200.1.0/24,,,broken_removed
 reachability,105_as65003_105,10.200.2.0/24,,,intact
-reachability,105_as65003_105,10.200.28.0/24,,,broken_added
-reachability,105_as65003_105,10.200.29.0/24,,,broken_added
 reachability,105_as65003_105,10.200.3.0/24,,,intact
-reachability,105_as65003_105,10.200.30.0/24,,,broken_added
 reachability,105_as65003_105,10.200.35.0/24,,,intact
 reachability,105_as65003_105,10.200.36.0/24,,,intact
 reachability,105_as65003_105,10.200.4.0/24,,,intact
@@ -566,8 +550,6 @@ reachability,105_as65003_105,10.200.5.0/24,,,intact
 reachability,105_as65003_105,10.200.6.0/24,,,intact
 reachability,105_as65003_105,10.200.7.0/24,,,intact
 reachability,105_as65003_105,10.200.8.0/24,,,intact
-waypointing,105_as65003_105,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,105_as65003_105,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,105_as65003_105,10.180.0.104/32,103_as65003_103,,intact
 waypointing,105_as65003_105,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,105_as65003_105,10.180.0.105/32,104_as65003_104,,intact
@@ -630,7 +612,6 @@ isolation,106_as65003_106,10.181.0.84/31,,,intact
 isolation,106_as65003_106,10.181.0.86/31,,,intact
 isolation,106_as65003_106,10.181.0.88/31,,,intact
 isolation,106_as65003_106,10.181.1.0/31,,,intact
-reachability,106_as65003_106,10.180.0.103/32,,,broken_added
 reachability,106_as65003_106,10.180.0.104/32,,,intact
 reachability,106_as65003_106,10.180.0.105/32,,,intact
 reachability,106_as65003_106,10.180.0.106/32,,,intact
@@ -687,10 +668,7 @@ reachability,106_as65003_106,10.181.0.230/32,,,intact
 reachability,106_as65003_106,10.200.0.0/24,,,broken_removed
 reachability,106_as65003_106,10.200.1.0/24,,,broken_removed
 reachability,106_as65003_106,10.200.2.0/24,,,intact
-reachability,106_as65003_106,10.200.28.0/24,,,broken_added
-reachability,106_as65003_106,10.200.29.0/24,,,broken_added
 reachability,106_as65003_106,10.200.3.0/24,,,intact
-reachability,106_as65003_106,10.200.30.0/24,,,broken_added
 reachability,106_as65003_106,10.200.35.0/24,,,intact
 reachability,106_as65003_106,10.200.36.0/24,,,intact
 reachability,106_as65003_106,10.200.4.0/24,,,intact
@@ -698,8 +676,6 @@ reachability,106_as65003_106,10.200.5.0/24,,,intact
 reachability,106_as65003_106,10.200.6.0/24,,,intact
 reachability,106_as65003_106,10.200.7.0/24,,,intact
 reachability,106_as65003_106,10.200.8.0/24,,,intact
-waypointing,106_as65003_106,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,106_as65003_106,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,106_as65003_106,10.180.0.104/32,103_as65003_103,,intact
 waypointing,106_as65003_106,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,106_as65003_106,10.180.0.105/32,104_as65003_104,,intact
@@ -762,7 +738,6 @@ isolation,107_as65003_107,10.181.0.84/31,,,intact
 isolation,107_as65003_107,10.181.0.86/31,,,intact
 isolation,107_as65003_107,10.181.0.88/31,,,intact
 isolation,107_as65003_107,10.181.1.0/31,,,intact
-reachability,107_as65003_107,10.180.0.103/32,,,broken_added
 reachability,107_as65003_107,10.180.0.104/32,,,intact
 reachability,107_as65003_107,10.180.0.105/32,,,intact
 reachability,107_as65003_107,10.180.0.106/32,,,intact
@@ -819,10 +794,7 @@ reachability,107_as65003_107,10.181.0.232/32,,,intact
 reachability,107_as65003_107,10.200.0.0/24,,,broken_removed
 reachability,107_as65003_107,10.200.1.0/24,,,broken_removed
 reachability,107_as65003_107,10.200.2.0/24,,,intact
-reachability,107_as65003_107,10.200.28.0/24,,,broken_added
-reachability,107_as65003_107,10.200.29.0/24,,,broken_added
 reachability,107_as65003_107,10.200.3.0/24,,,intact
-reachability,107_as65003_107,10.200.30.0/24,,,broken_added
 reachability,107_as65003_107,10.200.35.0/24,,,intact
 reachability,107_as65003_107,10.200.36.0/24,,,intact
 reachability,107_as65003_107,10.200.4.0/24,,,intact
@@ -830,8 +802,6 @@ reachability,107_as65003_107,10.200.5.0/24,,,intact
 reachability,107_as65003_107,10.200.6.0/24,,,intact
 reachability,107_as65003_107,10.200.7.0/24,,,intact
 reachability,107_as65003_107,10.200.8.0/24,,,intact
-waypointing,107_as65003_107,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,107_as65003_107,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,107_as65003_107,10.180.0.104/32,103_as65003_103,,intact
 waypointing,107_as65003_107,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,107_as65003_107,10.180.0.105/32,104_as65003_104,,intact
@@ -894,7 +864,6 @@ isolation,108_as65003_108,10.181.0.84/31,,,intact
 isolation,108_as65003_108,10.181.0.86/31,,,intact
 isolation,108_as65003_108,10.181.0.88/31,,,intact
 isolation,108_as65003_108,10.181.1.0/31,,,intact
-reachability,108_as65003_108,10.180.0.103/32,,,broken_added
 reachability,108_as65003_108,10.180.0.104/32,,,intact
 reachability,108_as65003_108,10.180.0.105/32,,,intact
 reachability,108_as65003_108,10.180.0.106/32,,,intact
@@ -951,10 +920,7 @@ reachability,108_as65003_108,10.181.0.234/32,,,intact
 reachability,108_as65003_108,10.200.0.0/24,,,broken_removed
 reachability,108_as65003_108,10.200.1.0/24,,,broken_removed
 reachability,108_as65003_108,10.200.2.0/24,,,intact
-reachability,108_as65003_108,10.200.28.0/24,,,broken_added
-reachability,108_as65003_108,10.200.29.0/24,,,broken_added
 reachability,108_as65003_108,10.200.3.0/24,,,intact
-reachability,108_as65003_108,10.200.30.0/24,,,broken_added
 reachability,108_as65003_108,10.200.35.0/24,,,intact
 reachability,108_as65003_108,10.200.36.0/24,,,intact
 reachability,108_as65003_108,10.200.4.0/24,,,intact
@@ -962,8 +928,6 @@ reachability,108_as65003_108,10.200.5.0/24,,,intact
 reachability,108_as65003_108,10.200.6.0/24,,,intact
 reachability,108_as65003_108,10.200.7.0/24,,,intact
 reachability,108_as65003_108,10.200.8.0/24,,,intact
-waypointing,108_as65003_108,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,108_as65003_108,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,108_as65003_108,10.180.0.104/32,103_as65003_103,,intact
 waypointing,108_as65003_108,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,108_as65003_108,10.180.0.105/32,104_as65003_104,,intact
@@ -1028,7 +992,6 @@ isolation,109_as65003_109,10.181.0.84/31,,,intact
 isolation,109_as65003_109,10.181.0.86/31,,,intact
 isolation,109_as65003_109,10.181.0.88/31,,,intact
 isolation,109_as65003_109,10.181.1.0/31,,,intact
-reachability,109_as65003_109,10.180.0.103/32,,,broken_added
 reachability,109_as65003_109,10.180.0.104/32,,,intact
 reachability,109_as65003_109,10.180.0.105/32,,,intact
 reachability,109_as65003_109,10.180.0.106/32,,,intact
@@ -1085,10 +1048,7 @@ reachability,109_as65003_109,10.181.0.236/32,,,intact
 reachability,109_as65003_109,10.200.0.0/24,,,broken_removed
 reachability,109_as65003_109,10.200.1.0/24,,,broken_removed
 reachability,109_as65003_109,10.200.2.0/24,,,intact
-reachability,109_as65003_109,10.200.28.0/24,,,broken_added
-reachability,109_as65003_109,10.200.29.0/24,,,broken_added
 reachability,109_as65003_109,10.200.3.0/24,,,intact
-reachability,109_as65003_109,10.200.30.0/24,,,broken_added
 reachability,109_as65003_109,10.200.35.0/24,,,intact
 reachability,109_as65003_109,10.200.36.0/24,,,intact
 reachability,109_as65003_109,10.200.4.0/24,,,intact
@@ -1096,8 +1056,6 @@ reachability,109_as65003_109,10.200.5.0/24,,,intact
 reachability,109_as65003_109,10.200.6.0/24,,,intact
 reachability,109_as65003_109,10.200.7.0/24,,,intact
 reachability,109_as65003_109,10.200.8.0/24,,,intact
-waypointing,109_as65003_109,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,109_as65003_109,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,109_as65003_109,10.180.0.104/32,103_as65003_103,,intact
 waypointing,109_as65003_109,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,109_as65003_109,10.180.0.105/32,104_as65003_104,,intact
@@ -1211,7 +1169,6 @@ isolation,110_as65003_110,10.181.0.84/31,,,intact
 isolation,110_as65003_110,10.181.0.86/31,,,intact
 isolation,110_as65003_110,10.181.0.88/31,,,intact
 isolation,110_as65003_110,10.181.1.0/31,,,intact
-reachability,110_as65003_110,10.180.0.103/32,,,broken_added
 reachability,110_as65003_110,10.180.0.104/32,,,intact
 reachability,110_as65003_110,10.180.0.105/32,,,intact
 reachability,110_as65003_110,10.180.0.106/32,,,intact
@@ -1268,10 +1225,7 @@ reachability,110_as65003_110,10.181.0.238/32,,,intact
 reachability,110_as65003_110,10.200.0.0/24,,,broken_removed
 reachability,110_as65003_110,10.200.1.0/24,,,broken_removed
 reachability,110_as65003_110,10.200.2.0/24,,,intact
-reachability,110_as65003_110,10.200.28.0/24,,,broken_added
-reachability,110_as65003_110,10.200.29.0/24,,,broken_added
 reachability,110_as65003_110,10.200.3.0/24,,,intact
-reachability,110_as65003_110,10.200.30.0/24,,,broken_added
 reachability,110_as65003_110,10.200.35.0/24,,,intact
 reachability,110_as65003_110,10.200.36.0/24,,,intact
 reachability,110_as65003_110,10.200.4.0/24,,,intact
@@ -1279,8 +1233,6 @@ reachability,110_as65003_110,10.200.5.0/24,,,intact
 reachability,110_as65003_110,10.200.6.0/24,,,intact
 reachability,110_as65003_110,10.200.7.0/24,,,intact
 reachability,110_as65003_110,10.200.8.0/24,,,intact
-waypointing,110_as65003_110,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,110_as65003_110,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,110_as65003_110,10.180.0.104/32,103_as65003_103,,intact
 waypointing,110_as65003_110,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,110_as65003_110,10.180.0.105/32,104_as65003_104,,intact
@@ -1345,7 +1297,6 @@ isolation,111_as65003_111,10.181.0.84/31,,,intact
 isolation,111_as65003_111,10.181.0.86/31,,,intact
 isolation,111_as65003_111,10.181.0.88/31,,,intact
 isolation,111_as65003_111,10.181.1.0/31,,,intact
-reachability,111_as65003_111,10.180.0.103/32,,,broken_added
 reachability,111_as65003_111,10.180.0.104/32,,,intact
 reachability,111_as65003_111,10.180.0.105/32,,,intact
 reachability,111_as65003_111,10.180.0.106/32,,,intact
@@ -1402,10 +1353,7 @@ reachability,111_as65003_111,10.181.0.240/32,,,intact
 reachability,111_as65003_111,10.200.0.0/24,,,broken_removed
 reachability,111_as65003_111,10.200.1.0/24,,,broken_removed
 reachability,111_as65003_111,10.200.2.0/24,,,intact
-reachability,111_as65003_111,10.200.28.0/24,,,broken_added
-reachability,111_as65003_111,10.200.29.0/24,,,broken_added
 reachability,111_as65003_111,10.200.3.0/24,,,intact
-reachability,111_as65003_111,10.200.30.0/24,,,broken_added
 reachability,111_as65003_111,10.200.35.0/24,,,intact
 reachability,111_as65003_111,10.200.36.0/24,,,intact
 reachability,111_as65003_111,10.200.4.0/24,,,intact
@@ -1413,8 +1361,6 @@ reachability,111_as65003_111,10.200.5.0/24,,,intact
 reachability,111_as65003_111,10.200.6.0/24,,,intact
 reachability,111_as65003_111,10.200.7.0/24,,,intact
 reachability,111_as65003_111,10.200.8.0/24,,,intact
-waypointing,111_as65003_111,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,111_as65003_111,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,111_as65003_111,10.180.0.104/32,103_as65003_103,,intact
 waypointing,111_as65003_111,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,111_as65003_111,10.180.0.105/32,104_as65003_104,,intact
@@ -1478,7 +1424,6 @@ isolation,112_as65003_112,10.181.0.84/31,,,intact
 isolation,112_as65003_112,10.181.0.86/31,,,intact
 isolation,112_as65003_112,10.181.0.88/31,,,intact
 isolation,112_as65003_112,10.181.1.0/31,,,intact
-reachability,112_as65003_112,10.180.0.103/32,,,broken_added
 reachability,112_as65003_112,10.180.0.104/32,,,intact
 reachability,112_as65003_112,10.180.0.105/32,,,intact
 reachability,112_as65003_112,10.180.0.106/32,,,intact
@@ -1535,10 +1480,7 @@ reachability,112_as65003_112,10.181.0.242/32,,,intact
 reachability,112_as65003_112,10.200.0.0/24,,,broken_removed
 reachability,112_as65003_112,10.200.1.0/24,,,broken_removed
 reachability,112_as65003_112,10.200.2.0/24,,,intact
-reachability,112_as65003_112,10.200.28.0/24,,,broken_added
-reachability,112_as65003_112,10.200.29.0/24,,,broken_added
 reachability,112_as65003_112,10.200.3.0/24,,,intact
-reachability,112_as65003_112,10.200.30.0/24,,,broken_added
 reachability,112_as65003_112,10.200.35.0/24,,,intact
 reachability,112_as65003_112,10.200.36.0/24,,,intact
 reachability,112_as65003_112,10.200.4.0/24,,,intact
@@ -1546,8 +1488,6 @@ reachability,112_as65003_112,10.200.5.0/24,,,intact
 reachability,112_as65003_112,10.200.6.0/24,,,intact
 reachability,112_as65003_112,10.200.7.0/24,,,intact
 reachability,112_as65003_112,10.200.8.0/24,,,intact
-waypointing,112_as65003_112,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,112_as65003_112,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,112_as65003_112,10.180.0.104/32,103_as65003_103,,intact
 waypointing,112_as65003_112,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,112_as65003_112,10.180.0.105/32,104_as65003_104,,intact
@@ -2922,7 +2862,6 @@ isolation,126_as65003_pakistan,10.181.0.84/31,,,intact
 isolation,126_as65003_pakistan,10.181.0.86/31,,,intact
 isolation,126_as65003_pakistan,10.181.0.88/31,,,intact
 isolation,126_as65003_pakistan,10.181.1.0/31,,,intact
-reachability,126_as65003_pakistan,10.180.0.103/32,,,broken_added
 reachability,126_as65003_pakistan,10.180.0.104/32,,,intact
 reachability,126_as65003_pakistan,10.180.0.105/32,,,intact
 reachability,126_as65003_pakistan,10.180.0.106/32,,,intact
@@ -3001,10 +2940,7 @@ reachability,126_as65003_pakistan,10.181.1.1/32,,,intact
 reachability,126_as65003_pakistan,10.200.0.0/24,,,broken_removed
 reachability,126_as65003_pakistan,10.200.1.0/24,,,broken_removed
 reachability,126_as65003_pakistan,10.200.2.0/24,,,intact
-reachability,126_as65003_pakistan,10.200.28.0/24,,,broken_added
-reachability,126_as65003_pakistan,10.200.29.0/24,,,broken_added
 reachability,126_as65003_pakistan,10.200.3.0/24,,,intact
-reachability,126_as65003_pakistan,10.200.30.0/24,,,broken_added
 reachability,126_as65003_pakistan,10.200.35.0/24,,,intact
 reachability,126_as65003_pakistan,10.200.36.0/24,,,intact
 reachability,126_as65003_pakistan,10.200.4.0/24,,,intact
@@ -3016,7 +2952,6 @@ reachability,126_as65003_pakistan,10.200.7.0/24,,,intact
 reachability,126_as65003_pakistan,10.200.7.1/32,,,intact
 reachability,126_as65003_pakistan,10.200.8.0/24,,,intact
 reachability,126_as65003_pakistan,10.200.8.1/32,,,intact
-waypointing,126_as65003_pakistan,10.180.0.103/32,102_as65005_pakistan,,broken_added
 waypointing,126_as65003_pakistan,10.180.0.104/32,103_as65003_103,,intact
 waypointing,126_as65003_pakistan,10.180.0.105/32,104_as65003_104,,intact
 waypointing,126_as65003_pakistan,10.180.0.106/32,105_as65003_105,,intact
@@ -3859,7 +3794,6 @@ isolation,27_as65003_27,10.181.0.84/31,,,intact
 isolation,27_as65003_27,10.181.0.86/31,,,intact
 isolation,27_as65003_27,10.181.0.88/31,,,intact
 isolation,27_as65003_27,10.181.1.0/31,,,intact
-reachability,27_as65003_27,10.180.0.103/32,,,broken_added
 reachability,27_as65003_27,10.180.0.104/32,,,intact
 reachability,27_as65003_27,10.180.0.105/32,,,intact
 reachability,27_as65003_27,10.180.0.106/32,,,intact
@@ -3916,10 +3850,7 @@ reachability,27_as65003_27,10.181.0.70/32,,,intact
 reachability,27_as65003_27,10.200.0.0/24,,,broken_removed
 reachability,27_as65003_27,10.200.1.0/24,,,broken_removed
 reachability,27_as65003_27,10.200.2.0/24,,,intact
-reachability,27_as65003_27,10.200.28.0/24,,,broken_added
-reachability,27_as65003_27,10.200.29.0/24,,,broken_added
 reachability,27_as65003_27,10.200.3.0/24,,,intact
-reachability,27_as65003_27,10.200.30.0/24,,,broken_added
 reachability,27_as65003_27,10.200.35.0/24,,,intact
 reachability,27_as65003_27,10.200.36.0/24,,,intact
 reachability,27_as65003_27,10.200.4.0/24,,,intact
@@ -3927,8 +3858,6 @@ reachability,27_as65003_27,10.200.5.0/24,,,intact
 reachability,27_as65003_27,10.200.6.0/24,,,intact
 reachability,27_as65003_27,10.200.7.0/24,,,intact
 reachability,27_as65003_27,10.200.8.0/24,,,intact
-waypointing,27_as65003_27,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,27_as65003_27,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,27_as65003_27,10.180.0.104/32,103_as65003_103,,intact
 waypointing,27_as65003_27,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,27_as65003_27,10.180.0.105/32,104_as65003_104,,intact
@@ -3991,7 +3920,6 @@ isolation,28_as65003_28,10.181.0.84/31,,,intact
 isolation,28_as65003_28,10.181.0.86/31,,,intact
 isolation,28_as65003_28,10.181.0.88/31,,,intact
 isolation,28_as65003_28,10.181.1.0/31,,,intact
-reachability,28_as65003_28,10.180.0.103/32,,,broken_added
 reachability,28_as65003_28,10.180.0.104/32,,,intact
 reachability,28_as65003_28,10.180.0.105/32,,,intact
 reachability,28_as65003_28,10.180.0.106/32,,,intact
@@ -4048,10 +3976,7 @@ reachability,28_as65003_28,10.181.0.72/32,,,intact
 reachability,28_as65003_28,10.200.0.0/24,,,broken_removed
 reachability,28_as65003_28,10.200.1.0/24,,,broken_removed
 reachability,28_as65003_28,10.200.2.0/24,,,intact
-reachability,28_as65003_28,10.200.28.0/24,,,broken_added
-reachability,28_as65003_28,10.200.29.0/24,,,broken_added
 reachability,28_as65003_28,10.200.3.0/24,,,intact
-reachability,28_as65003_28,10.200.30.0/24,,,broken_added
 reachability,28_as65003_28,10.200.35.0/24,,,intact
 reachability,28_as65003_28,10.200.36.0/24,,,intact
 reachability,28_as65003_28,10.200.4.0/24,,,intact
@@ -4059,8 +3984,6 @@ reachability,28_as65003_28,10.200.5.0/24,,,intact
 reachability,28_as65003_28,10.200.6.0/24,,,intact
 reachability,28_as65003_28,10.200.7.0/24,,,intact
 reachability,28_as65003_28,10.200.8.0/24,,,intact
-waypointing,28_as65003_28,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,28_as65003_28,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,28_as65003_28,10.180.0.104/32,103_as65003_103,,intact
 waypointing,28_as65003_28,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,28_as65003_28,10.180.0.105/32,104_as65003_104,,intact
@@ -4123,7 +4046,6 @@ isolation,29_as65003_29,10.181.0.84/31,,,intact
 isolation,29_as65003_29,10.181.0.86/31,,,intact
 isolation,29_as65003_29,10.181.0.88/31,,,intact
 isolation,29_as65003_29,10.181.1.0/31,,,intact
-reachability,29_as65003_29,10.180.0.103/32,,,broken_added
 reachability,29_as65003_29,10.180.0.104/32,,,intact
 reachability,29_as65003_29,10.180.0.105/32,,,intact
 reachability,29_as65003_29,10.180.0.106/32,,,intact
@@ -4180,10 +4102,7 @@ reachability,29_as65003_29,10.181.0.74/32,,,intact
 reachability,29_as65003_29,10.200.0.0/24,,,broken_removed
 reachability,29_as65003_29,10.200.1.0/24,,,broken_removed
 reachability,29_as65003_29,10.200.2.0/24,,,intact
-reachability,29_as65003_29,10.200.28.0/24,,,broken_added
-reachability,29_as65003_29,10.200.29.0/24,,,broken_added
 reachability,29_as65003_29,10.200.3.0/24,,,intact
-reachability,29_as65003_29,10.200.30.0/24,,,broken_added
 reachability,29_as65003_29,10.200.35.0/24,,,intact
 reachability,29_as65003_29,10.200.36.0/24,,,intact
 reachability,29_as65003_29,10.200.4.0/24,,,intact
@@ -4191,8 +4110,6 @@ reachability,29_as65003_29,10.200.5.0/24,,,intact
 reachability,29_as65003_29,10.200.6.0/24,,,intact
 reachability,29_as65003_29,10.200.7.0/24,,,intact
 reachability,29_as65003_29,10.200.8.0/24,,,intact
-waypointing,29_as65003_29,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,29_as65003_29,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,29_as65003_29,10.180.0.104/32,103_as65003_103,,intact
 waypointing,29_as65003_29,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,29_as65003_29,10.180.0.105/32,104_as65003_104,,intact
@@ -4295,7 +4212,6 @@ isolation,30_as65003_30,10.181.0.84/31,,,intact
 isolation,30_as65003_30,10.181.0.86/31,,,intact
 isolation,30_as65003_30,10.181.0.88/31,,,intact
 isolation,30_as65003_30,10.181.1.0/31,,,intact
-reachability,30_as65003_30,10.180.0.103/32,,,broken_added
 reachability,30_as65003_30,10.180.0.104/32,,,intact
 reachability,30_as65003_30,10.180.0.105/32,,,intact
 reachability,30_as65003_30,10.180.0.106/32,,,intact
@@ -4352,10 +4268,7 @@ reachability,30_as65003_30,10.181.0.76/32,,,intact
 reachability,30_as65003_30,10.200.0.0/24,,,broken_removed
 reachability,30_as65003_30,10.200.1.0/24,,,broken_removed
 reachability,30_as65003_30,10.200.2.0/24,,,intact
-reachability,30_as65003_30,10.200.28.0/24,,,broken_added
-reachability,30_as65003_30,10.200.29.0/24,,,broken_added
 reachability,30_as65003_30,10.200.3.0/24,,,intact
-reachability,30_as65003_30,10.200.30.0/24,,,broken_added
 reachability,30_as65003_30,10.200.35.0/24,,,intact
 reachability,30_as65003_30,10.200.36.0/24,,,intact
 reachability,30_as65003_30,10.200.4.0/24,,,intact
@@ -4363,8 +4276,6 @@ reachability,30_as65003_30,10.200.5.0/24,,,intact
 reachability,30_as65003_30,10.200.6.0/24,,,intact
 reachability,30_as65003_30,10.200.7.0/24,,,intact
 reachability,30_as65003_30,10.200.8.0/24,,,intact
-waypointing,30_as65003_30,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,30_as65003_30,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,30_as65003_30,10.180.0.104/32,103_as65003_103,,intact
 waypointing,30_as65003_30,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,30_as65003_30,10.180.0.105/32,104_as65003_104,,intact
@@ -4427,7 +4338,6 @@ isolation,31_as65003_31,10.181.0.84/31,,,intact
 isolation,31_as65003_31,10.181.0.86/31,,,intact
 isolation,31_as65003_31,10.181.0.88/31,,,intact
 isolation,31_as65003_31,10.181.1.0/31,,,intact
-reachability,31_as65003_31,10.180.0.103/32,,,broken_added
 reachability,31_as65003_31,10.180.0.104/32,,,intact
 reachability,31_as65003_31,10.180.0.105/32,,,intact
 reachability,31_as65003_31,10.180.0.106/32,,,intact
@@ -4484,10 +4394,7 @@ reachability,31_as65003_31,10.181.0.78/32,,,intact
 reachability,31_as65003_31,10.200.0.0/24,,,broken_removed
 reachability,31_as65003_31,10.200.1.0/24,,,broken_removed
 reachability,31_as65003_31,10.200.2.0/24,,,intact
-reachability,31_as65003_31,10.200.28.0/24,,,broken_added
-reachability,31_as65003_31,10.200.29.0/24,,,broken_added
 reachability,31_as65003_31,10.200.3.0/24,,,intact
-reachability,31_as65003_31,10.200.30.0/24,,,broken_added
 reachability,31_as65003_31,10.200.35.0/24,,,intact
 reachability,31_as65003_31,10.200.36.0/24,,,intact
 reachability,31_as65003_31,10.200.4.0/24,,,intact
@@ -4495,8 +4402,6 @@ reachability,31_as65003_31,10.200.5.0/24,,,intact
 reachability,31_as65003_31,10.200.6.0/24,,,intact
 reachability,31_as65003_31,10.200.7.0/24,,,intact
 reachability,31_as65003_31,10.200.8.0/24,,,intact
-waypointing,31_as65003_31,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,31_as65003_31,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,31_as65003_31,10.180.0.104/32,103_as65003_103,,intact
 waypointing,31_as65003_31,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,31_as65003_31,10.180.0.105/32,104_as65003_104,,intact
@@ -4559,7 +4464,6 @@ isolation,32_as65003_32,10.181.0.84/31,,,intact
 isolation,32_as65003_32,10.181.0.86/31,,,intact
 isolation,32_as65003_32,10.181.0.88/31,,,intact
 isolation,32_as65003_32,10.181.1.0/31,,,intact
-reachability,32_as65003_32,10.180.0.103/32,,,broken_added
 reachability,32_as65003_32,10.180.0.104/32,,,intact
 reachability,32_as65003_32,10.180.0.105/32,,,intact
 reachability,32_as65003_32,10.180.0.106/32,,,intact
@@ -4616,10 +4520,7 @@ reachability,32_as65003_32,10.181.0.80/32,,,intact
 reachability,32_as65003_32,10.200.0.0/24,,,broken_removed
 reachability,32_as65003_32,10.200.1.0/24,,,broken_removed
 reachability,32_as65003_32,10.200.2.0/24,,,intact
-reachability,32_as65003_32,10.200.28.0/24,,,broken_added
-reachability,32_as65003_32,10.200.29.0/24,,,broken_added
 reachability,32_as65003_32,10.200.3.0/24,,,intact
-reachability,32_as65003_32,10.200.30.0/24,,,broken_added
 reachability,32_as65003_32,10.200.35.0/24,,,intact
 reachability,32_as65003_32,10.200.36.0/24,,,intact
 reachability,32_as65003_32,10.200.4.0/24,,,intact
@@ -4627,8 +4528,6 @@ reachability,32_as65003_32,10.200.5.0/24,,,intact
 reachability,32_as65003_32,10.200.6.0/24,,,intact
 reachability,32_as65003_32,10.200.7.0/24,,,intact
 reachability,32_as65003_32,10.200.8.0/24,,,intact
-waypointing,32_as65003_32,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,32_as65003_32,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,32_as65003_32,10.180.0.104/32,103_as65003_103,,intact
 waypointing,32_as65003_32,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,32_as65003_32,10.180.0.105/32,104_as65003_104,,intact
@@ -4691,7 +4590,6 @@ isolation,33_as65003_33,10.181.0.84/31,,,intact
 isolation,33_as65003_33,10.181.0.86/31,,,intact
 isolation,33_as65003_33,10.181.0.88/31,,,intact
 isolation,33_as65003_33,10.181.1.0/31,,,intact
-reachability,33_as65003_33,10.180.0.103/32,,,broken_added
 reachability,33_as65003_33,10.180.0.104/32,,,intact
 reachability,33_as65003_33,10.180.0.105/32,,,intact
 reachability,33_as65003_33,10.180.0.106/32,,,intact
@@ -4748,10 +4646,7 @@ reachability,33_as65003_33,10.181.0.82/32,,,intact
 reachability,33_as65003_33,10.200.0.0/24,,,broken_removed
 reachability,33_as65003_33,10.200.1.0/24,,,broken_removed
 reachability,33_as65003_33,10.200.2.0/24,,,intact
-reachability,33_as65003_33,10.200.28.0/24,,,broken_added
-reachability,33_as65003_33,10.200.29.0/24,,,broken_added
 reachability,33_as65003_33,10.200.3.0/24,,,intact
-reachability,33_as65003_33,10.200.30.0/24,,,broken_added
 reachability,33_as65003_33,10.200.35.0/24,,,intact
 reachability,33_as65003_33,10.200.36.0/24,,,intact
 reachability,33_as65003_33,10.200.4.0/24,,,intact
@@ -4759,8 +4654,6 @@ reachability,33_as65003_33,10.200.5.0/24,,,intact
 reachability,33_as65003_33,10.200.6.0/24,,,intact
 reachability,33_as65003_33,10.200.7.0/24,,,intact
 reachability,33_as65003_33,10.200.8.0/24,,,intact
-waypointing,33_as65003_33,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,33_as65003_33,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,33_as65003_33,10.180.0.104/32,103_as65003_103,,intact
 waypointing,33_as65003_33,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,33_as65003_33,10.180.0.105/32,104_as65003_104,,intact
@@ -4823,7 +4716,6 @@ isolation,34_as65003_34,10.181.0.82/31,,,intact
 isolation,34_as65003_34,10.181.0.86/31,,,intact
 isolation,34_as65003_34,10.181.0.88/31,,,intact
 isolation,34_as65003_34,10.181.1.0/31,,,intact
-reachability,34_as65003_34,10.180.0.103/32,,,broken_added
 reachability,34_as65003_34,10.180.0.104/32,,,intact
 reachability,34_as65003_34,10.180.0.105/32,,,intact
 reachability,34_as65003_34,10.180.0.106/32,,,intact
@@ -4880,10 +4772,7 @@ reachability,34_as65003_34,10.181.0.84/32,,,intact
 reachability,34_as65003_34,10.200.0.0/24,,,broken_removed
 reachability,34_as65003_34,10.200.1.0/24,,,broken_removed
 reachability,34_as65003_34,10.200.2.0/24,,,intact
-reachability,34_as65003_34,10.200.28.0/24,,,broken_added
-reachability,34_as65003_34,10.200.29.0/24,,,broken_added
 reachability,34_as65003_34,10.200.3.0/24,,,intact
-reachability,34_as65003_34,10.200.30.0/24,,,broken_added
 reachability,34_as65003_34,10.200.35.0/24,,,intact
 reachability,34_as65003_34,10.200.36.0/24,,,intact
 reachability,34_as65003_34,10.200.4.0/24,,,intact
@@ -4891,8 +4780,6 @@ reachability,34_as65003_34,10.200.5.0/24,,,intact
 reachability,34_as65003_34,10.200.6.0/24,,,intact
 reachability,34_as65003_34,10.200.7.0/24,,,intact
 reachability,34_as65003_34,10.200.8.0/24,,,intact
-waypointing,34_as65003_34,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,34_as65003_34,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,34_as65003_34,10.180.0.104/32,103_as65003_103,,intact
 waypointing,34_as65003_34,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,34_as65003_34,10.180.0.105/32,104_as65003_104,,intact
@@ -4955,7 +4842,6 @@ isolation,35_as65003_35,10.181.0.82/31,,,intact
 isolation,35_as65003_35,10.181.0.84/31,,,intact
 isolation,35_as65003_35,10.181.0.88/31,,,intact
 isolation,35_as65003_35,10.181.1.0/31,,,intact
-reachability,35_as65003_35,10.180.0.103/32,,,broken_added
 reachability,35_as65003_35,10.180.0.104/32,,,intact
 reachability,35_as65003_35,10.180.0.105/32,,,intact
 reachability,35_as65003_35,10.180.0.106/32,,,intact
@@ -5012,10 +4898,7 @@ reachability,35_as65003_35,10.181.0.86/32,,,intact
 reachability,35_as65003_35,10.200.0.0/24,,,broken_removed
 reachability,35_as65003_35,10.200.1.0/24,,,broken_removed
 reachability,35_as65003_35,10.200.2.0/24,,,intact
-reachability,35_as65003_35,10.200.28.0/24,,,broken_added
-reachability,35_as65003_35,10.200.29.0/24,,,broken_added
 reachability,35_as65003_35,10.200.3.0/24,,,intact
-reachability,35_as65003_35,10.200.30.0/24,,,broken_added
 reachability,35_as65003_35,10.200.35.0/24,,,intact
 reachability,35_as65003_35,10.200.36.0/24,,,intact
 reachability,35_as65003_35,10.200.4.0/24,,,intact
@@ -5023,8 +4906,6 @@ reachability,35_as65003_35,10.200.5.0/24,,,intact
 reachability,35_as65003_35,10.200.6.0/24,,,intact
 reachability,35_as65003_35,10.200.7.0/24,,,intact
 reachability,35_as65003_35,10.200.8.0/24,,,intact
-waypointing,35_as65003_35,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,35_as65003_35,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,35_as65003_35,10.180.0.104/32,103_as65003_103,,intact
 waypointing,35_as65003_35,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,35_as65003_35,10.180.0.105/32,104_as65003_104,,intact
@@ -5087,7 +4968,6 @@ isolation,36_as65003_36,10.181.0.82/31,,,intact
 isolation,36_as65003_36,10.181.0.84/31,,,intact
 isolation,36_as65003_36,10.181.0.86/31,,,intact
 isolation,36_as65003_36,10.181.1.0/31,,,intact
-reachability,36_as65003_36,10.180.0.103/32,,,broken_added
 reachability,36_as65003_36,10.180.0.104/32,,,intact
 reachability,36_as65003_36,10.180.0.105/32,,,intact
 reachability,36_as65003_36,10.180.0.106/32,,,intact
@@ -5144,10 +5024,7 @@ reachability,36_as65003_36,10.181.0.88/32,,,intact
 reachability,36_as65003_36,10.200.0.0/24,,,broken_removed
 reachability,36_as65003_36,10.200.1.0/24,,,broken_removed
 reachability,36_as65003_36,10.200.2.0/24,,,intact
-reachability,36_as65003_36,10.200.28.0/24,,,broken_added
-reachability,36_as65003_36,10.200.29.0/24,,,broken_added
 reachability,36_as65003_36,10.200.3.0/24,,,intact
-reachability,36_as65003_36,10.200.30.0/24,,,broken_added
 reachability,36_as65003_36,10.200.35.0/24,,,intact
 reachability,36_as65003_36,10.200.36.0/24,,,intact
 reachability,36_as65003_36,10.200.4.0/24,,,intact
@@ -5155,8 +5032,6 @@ reachability,36_as65003_36,10.200.5.0/24,,,intact
 reachability,36_as65003_36,10.200.6.0/24,,,intact
 reachability,36_as65003_36,10.200.7.0/24,,,intact
 reachability,36_as65003_36,10.200.8.0/24,,,intact
-waypointing,36_as65003_36,10.180.0.103/32,102_as65005_pakistan,,broken_added
-waypointing,36_as65003_36,10.180.0.103/32,126_as65003_pakistan,,broken_added
 waypointing,36_as65003_36,10.180.0.104/32,103_as65003_103,,intact
 waypointing,36_as65003_36,10.180.0.104/32,126_as65003_pakistan,,intact
 waypointing,36_as65003_36,10.180.0.105/32,104_as65003_104,,intact

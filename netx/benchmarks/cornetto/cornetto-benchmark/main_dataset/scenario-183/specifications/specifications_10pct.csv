@@ -4,7 +4,6 @@ isolation,0_as65002_auckland-2,10.181.0.10/31,,,intact
 isolation,0_as65002_auckland-2,10.181.0.2/31,,,broken_removed
 isolation,0_as65002_auckland-2,10.181.0.4/31,,,intact
 isolation,0_as65002_auckland-2,10.181.0.60/30,,,broken_added
-isolation,0_as65002_auckland-2,10.181.0.62/31,,,broken_added
 reachability,0_as65002_auckland-2,10.180.0.2/32,,,broken_removed
 reachability,0_as65002_auckland-2,10.180.0.4/32,,,broken_removed
 reachability,0_as65002_auckland-2,10.181.0.0/32,,,broken_removed
@@ -16,7 +15,6 @@ isolation,11_as65002_sydney-2,10.181.0.10/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.2/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.4/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.60/30,,,broken_added
-isolation,11_as65002_sydney-2,10.181.0.62/31,,,broken_added
 reachability,11_as65002_sydney-2,10.180.0.2/32,,,broken_removed
 reachability,11_as65002_sydney-2,10.180.0.4/32,,,broken_removed
 reachability,11_as65002_sydney-2,10.200.0.0/24,,,broken_removed
@@ -82,7 +80,6 @@ isolation,1_as65002_fiji,10.181.0.0/31,,,broken_removed
 isolation,1_as65002_fiji,10.181.0.10/31,,,intact
 isolation,1_as65002_fiji,10.181.0.2/31,,,intact
 isolation,1_as65002_fiji,10.181.0.60/30,,,broken_added
-isolation,1_as65002_fiji,10.181.0.62/31,,,broken_added
 reachability,1_as65002_fiji,10.180.0.2/32,,,broken_removed
 reachability,1_as65002_fiji,10.180.0.4/32,,,broken_removed
 reachability,1_as65002_fiji,10.181.0.6/32,,,broken_removed
@@ -92,7 +89,6 @@ isolation,2_as65002_sydney-1,10.181.0.10/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.2/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.4/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.60/30,,,broken_added
-isolation,2_as65002_sydney-1,10.181.0.62/31,,,broken_added
 reachability,2_as65002_sydney-1,10.180.0.2/32,,,broken_removed
 reachability,2_as65002_sydney-1,10.180.0.4/32,,,broken_removed
 reachability,2_as65002_sydney-1,10.200.0.0/24,,,broken_removed

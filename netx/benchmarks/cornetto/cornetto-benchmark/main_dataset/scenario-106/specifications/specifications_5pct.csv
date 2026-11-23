@@ -73,7 +73,6 @@ isolation,25_as65004_76-61219,10.181.0.102/31,,,intact
 isolation,25_as65004_76-61219,10.181.0.106/31,,,intact
 isolation,25_as65004_76-61219,10.181.0.12/31,,,intact
 isolation,25_as65004_76-61219,10.181.0.162/31,,,broken_added
-load_balancing,25_as65004_76-61219,10.180.0.1/32,,2,broken_added
 isolation,26_as65004_77-03637,10.181.0.0/31,,,intact
 isolation,26_as65004_77-03637,10.181.0.10/31,,,intact
 isolation,26_as65004_77-03637,10.181.0.100/31,,,intact

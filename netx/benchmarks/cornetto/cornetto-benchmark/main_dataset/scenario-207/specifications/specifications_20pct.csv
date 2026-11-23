@@ -28,9 +28,6 @@ isolation,11_as65001_11,10.181.0.54/31,,,intact
 isolation,11_as65001_11,10.181.0.56/31,,,intact
 isolation,11_as65001_11,10.181.0.62/31,,,intact
 isolation,11_as65001_11,10.181.0.66/31,,,intact
-reachability,11_as65001_11,10.200.17.0/24,,,broken_added
-reachability,11_as65001_11,10.200.18.0/24,,,broken_added
-reachability,11_as65001_11,10.200.19.0/24,,,broken_added
 isolation,12_as65004_12,0.0.0.0/0,,,intact
 isolation,12_as65004_12,10.181.0.36/31,,,intact
 isolation,12_as65004_12,10.181.0.40/31,,,intact
@@ -57,9 +54,6 @@ isolation,14_as65001_israel,10.181.0.54/31,,,intact
 isolation,14_as65001_israel,10.181.0.56/31,,,intact
 isolation,14_as65001_israel,10.181.0.62/31,,,intact
 isolation,14_as65001_israel,10.181.0.66/31,,,intact
-reachability,14_as65001_israel,10.200.17.0/24,,,broken_added
-reachability,14_as65001_israel,10.200.18.0/24,,,broken_added
-reachability,14_as65001_israel,10.200.19.0/24,,,broken_added
 isolation,15_as65001_15,0.0.0.0/0,,,broken_removed
 isolation,15_as65001_15,10.181.0.26/31,,,intact
 isolation,15_as65001_15,10.181.0.28/31,,,intact
@@ -69,9 +63,6 @@ isolation,15_as65001_15,10.181.0.52/31,,,intact
 isolation,15_as65001_15,10.181.0.56/31,,,intact
 isolation,15_as65001_15,10.181.0.62/31,,,intact
 isolation,15_as65001_15,10.181.0.66/31,,,intact
-reachability,15_as65001_15,10.200.17.0/24,,,broken_added
-reachability,15_as65001_15,10.200.18.0/24,,,broken_added
-reachability,15_as65001_15,10.200.19.0/24,,,broken_added
 isolation,16_as65001_16,0.0.0.0/0,,,broken_removed
 isolation,16_as65001_16,10.181.0.26/31,,,intact
 isolation,16_as65001_16,10.181.0.28/31,,,intact
@@ -84,8 +75,6 @@ isolation,16_as65001_16,10.181.0.62/31,,,intact
 isolation,16_as65001_16,10.181.0.66/31,,,intact
 load_balancing,16_as65001_16,10.180.0.20/32,,2,intact
 load_balancing,16_as65001_16,10.180.0.27/32,,2,intact
-reachability,16_as65001_16,10.200.17.0/24,,,broken_added
-reachability,16_as65001_16,10.200.18.0/24,,,broken_added
 isolation,17_as65002_17,0.0.0.0/0,,,intact
 isolation,17_as65002_17,10.181.0.10/31,,,intact
 isolation,17_as65002_17,10.181.0.14/31,,,intact
@@ -118,8 +107,6 @@ load_balancing,19_as65001_19,10.180.0.12/32,,2,intact
 load_balancing,19_as65001_19,10.180.0.16/32,,2,intact
 load_balancing,19_as65001_19,10.180.0.17/32,,2,intact
 load_balancing,19_as65001_19,10.180.0.27/32,,2,intact
-reachability,19_as65001_19,10.200.17.0/24,,,broken_added
-reachability,19_as65001_19,10.200.18.0/24,,,broken_added
 isolation,1_as65002_1,0.0.0.0/0,,,intact
 isolation,1_as65002_1,10.181.0.10/31,,,intact
 isolation,1_as65002_1,10.181.0.14/31,,,intact

@@ -1,10 +1,15 @@
-import pandas as pd
-from pybatfish.client.session import Session
+from __future__ import annotations
+
 from ipaddress import IPv4Network
-from typing import Dict, Iterable, List, Set, Tuple, cast, Optional
+from typing import TYPE_CHECKING, Dict, Iterable, List, Optional, Set, Tuple, cast
+
+import pandas as pd
 from .forwarding_graph import ForwardingGraph, ForwardingGraphGroup, ForwardingEdge
 from .utils.layer1 import remote_nodes_for_interface
 from .utils.fecs import FECFinder
+
+if TYPE_CHECKING:
+    from pybatfish.client.session import Session
 
 
 def build_forwarding_graphs(
@@ -19,21 +24,25 @@ def build_forwarding_graphs(
     """
     # Create session if not provided
     if bf is None:
+        from pybatfish.client.session import Session
+
         bf = Session(host="localhost")
 
-    # For each prefix present in the forwarding behaviour table,
-    # construct a directed graph where nodes are routers and edges represent forwarding paths.
-    table = forwarding_behaviour_df
-    df = table.copy()
+    if forwarding_behaviour_df.empty:
+        return []
+    ip_owners_df = bf.q.ipOwners().answer(snapshot=snapshot).frame()
+    return graphs_from_tables(forwarding_behaviour_df, snapshot, layer1_map, _build_ip_owners_map(ip_owners_df))
+
+
+def graphs_from_tables(df, snapshot, layer1_map, ip_owners_map):
+    """Build the same prefix graphs from offline or live question answers."""
+    # NOTE: Cornetto's online scorer and NetX's local Batfish adapter share this entry
+    # point so action handling, target resolution and prefix grouping stay identical.
     if df.empty:
         return []
-    
-    ip_owners_df = bf.q.ipOwners().answer(snapshot=snapshot).frame()
-    ip_owners_map = _build_ip_owners_map(ip_owners_df)
-
     required_columns = {"Node", "Prefix", "Action"}
     for column in required_columns:
-        if column not in table.columns:
+        if column not in df.columns:
             raise ValueError(f"Forwarding behaviour table missing required column: {column}")
         
     graphs: Dict[str, ForwardingGraph] = {}
@@ -97,30 +106,7 @@ def build_forwarding_graphs(
                 if not (edge.action.lower() == "forwarded" and edge.src in blocked_nodes)
             }
 
-        has_prefix_sink = any(edge.dst.startswith("prefix:") for edge in edges.values())
-
-        if not has_prefix_sink and not blocked_nodes:
-            full_subset = df[df["Prefix"].astype(str) == prefix_str]
-            for row in full_subset.itertuples(index=False):
-                action = str(getattr(row, "Action"))
-                if action.lower() != "accepted":
-                    continue
-
-                node = str(getattr(row, "Node"))
-                next_hop_interface = _safe_string(getattr(row, "Next_Hop_Interface", None))
-                next_hop_ip = _safe_string(getattr(row, "Next_Hop_IP", None))
-                terminal = _terminal_target(prefix_str, action)
-                edge = ForwardingEdge(
-                    src=node,
-                    dst=terminal,
-                    action=action,
-                    next_hop_interface=next_hop_interface,
-                    next_hop_ip=next_hop_ip,
-                )
-                edges[edge.as_tuple()] = edge
-
-            has_prefix_sink = any(edge.dst.startswith("prefix:") for edge in edges.values())
-
+        # Accepted rows already point to the sink. Blocking removes only forwarded edges.
         if not edges:
             continue
 

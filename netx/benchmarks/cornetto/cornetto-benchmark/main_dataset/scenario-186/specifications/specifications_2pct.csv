@@ -1,6 +1,5 @@
 predicate_type,node,prefix,waypoint,num_routes,sources
 isolation,0_as65005_liege-1,10.181.0.12/31,,,intact
-isolation,1_as65002_brussels-campus,10.200.0.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.1.0/24,,,broken_added
 isolation,2_as65005_arlon,10.181.0.0/31,,,intact
 isolation,2_as65005_arlon,10.181.0.2/31,,,intact

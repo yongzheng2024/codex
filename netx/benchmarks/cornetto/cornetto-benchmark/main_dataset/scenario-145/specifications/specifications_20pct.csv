@@ -251,11 +251,6 @@ isolation,2_as65002_2-73333,10.181.0.14/31,,,intact
 isolation,2_as65002_2-73333,10.181.0.16/31,,,intact
 isolation,2_as65002_2-73333,10.181.0.18/31,,,intact
 isolation,2_as65002_2-73333,10.181.0.20/31,,,intact
-isolation,2_as65002_2-73333,10.200.47.0/24,,,broken_added
-isolation,2_as65002_2-73333,10.200.48.0/24,,,broken_added
-isolation,2_as65002_2-73333,10.200.49.0/24,,,broken_added
-isolation,2_as65002_2-73333,10.200.50.0/24,,,broken_added
-isolation,2_as65002_2-73333,10.200.64.0/24,,,broken_added
 isolation,30_as65001_8-65,0.0.0.0/0,,,intact
 isolation,30_as65001_8-65,10.181.0.56/31,,,intact
 isolation,30_as65001_8-65,10.181.0.58/31,,,intact
@@ -745,11 +740,6 @@ isolation,78_as65007_2-48333,10.181.0.150/31,,,intact
 isolation,78_as65007_2-48333,10.181.0.152/31,,,intact
 isolation,78_as65007_2-48333,10.181.0.176/31,,,intact
 isolation,78_as65007_2-48333,10.181.0.66/31,,,intact
-isolation,78_as65007_2-48333,10.200.47.0/24,,,broken_added
-isolation,78_as65007_2-48333,10.200.48.0/24,,,broken_added
-isolation,78_as65007_2-48333,10.200.49.0/24,,,broken_added
-isolation,78_as65007_2-48333,10.200.50.0/24,,,broken_added
-isolation,78_as65007_2-48333,10.200.64.0/24,,,broken_added
 reachability,78_as65007_2-48333,10.180.0.22/32,,,intact
 isolation,79_as65006_2-22818,0.0.0.0/0,,,intact
 isolation,79_as65006_2-22818,10.181.0.44/31,,,intact

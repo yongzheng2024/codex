@@ -16,7 +16,7 @@ isolation,12_as65001_an-giang,10.181.0.16/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.18/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.20/31,,,intact
 isolation,12_as65001_an-giang,10.181.0.22/31,,,intact
-reachability,12_as65001_an-giang,10.180.0.1/32,,,broken_removed|intact
+reachability,12_as65001_an-giang,10.180.0.1/32,,,intact
 isolation,13_as65001_da-lat,10.181.0.0/31,,,broken_removed
 isolation,13_as65001_da-lat,10.181.0.16/31,,,intact
 isolation,13_as65001_da-lat,10.181.0.18/31,,,intact

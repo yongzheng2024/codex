@@ -13,7 +13,6 @@ isolation,10_as65004_matsuyama-dc,10.181.0.28/31,,,intact
 isolation,10_as65004_matsuyama-dc,10.181.0.34/31,,,intact
 isolation,10_as65004_matsuyama-dc,10.181.0.36/31,,,intact
 isolation,10_as65004_matsuyama-dc,10.181.0.38/31,,,intact
-reachability,10_as65004_matsuyama-dc,10.180.0.1/32,,,broken_added
 reachability,10_as65004_matsuyama-dc,10.200.0.0/24,,,broken_removed
 reachability,10_as65004_matsuyama-dc,10.200.1.0/24,,,broken_removed
 isolation,11_as65004_kagawa-u,10.181.0.134/31,,,intact

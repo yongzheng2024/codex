@@ -20,8 +20,8 @@ isolation,10_as65003_nash,10.181.0.74/31,,,intact
 reachability,10_as65003_nash,10.180.0.1/32,,,broken_added
 reachability,10_as65003_nash,10.180.0.11/32,,,intact
 reachability,10_as65003_nash,10.180.0.12/32,,,intact
-reachability,10_as65003_nash,10.200.0.0/24,,,broken_removed|intact
-reachability,10_as65003_nash,10.200.1.0/24,,,broken_removed|intact
+reachability,10_as65003_nash,10.200.0.0/24,,,intact
+reachability,10_as65003_nash,10.200.1.0/24,,,intact
 isolation,11_as65003_atla,10.181.0.122/31,,,intact
 isolation,11_as65003_atla,10.181.0.124/31,,,intact
 isolation,11_as65003_atla,10.181.0.146/31,,,intact
@@ -32,8 +32,8 @@ isolation,11_as65003_atla,10.181.0.74/31,,,intact
 reachability,11_as65003_atla,10.180.0.1/32,,,broken_added
 reachability,11_as65003_atla,10.180.0.11/32,,,intact
 reachability,11_as65003_atla,10.180.0.12/32,,,intact
-reachability,11_as65003_atla,10.200.0.0/24,,,broken_removed|intact
-reachability,11_as65003_atla,10.200.1.0/24,,,broken_removed|intact
+reachability,11_as65003_atla,10.200.0.0/24,,,intact
+reachability,11_as65003_atla,10.200.1.0/24,,,intact
 isolation,12_as65007_abilene,10.181.0.134/31,,,intact
 isolation,12_as65007_abilene,10.181.0.136/31,,,intact
 isolation,12_as65007_abilene,10.181.0.138/31,,,intact
@@ -321,8 +321,8 @@ isolation,36_as65003_arm,10.181.0.74/31,,,intact
 reachability,36_as65003_arm,10.180.0.1/32,,,broken_added
 reachability,36_as65003_arm,10.180.0.11/32,,,intact
 reachability,36_as65003_arm,10.180.0.12/32,,,intact
-reachability,36_as65003_arm,10.200.0.0/24,,,broken_removed|intact
-reachability,36_as65003_arm,10.200.1.0/24,,,broken_removed|intact
+reachability,36_as65003_arm,10.200.0.0/24,,,intact
+reachability,36_as65003_arm,10.200.1.0/24,,,intact
 isolation,37_as65003_noaa,10.181.0.122/31,,,intact
 isolation,37_as65003_noaa,10.181.0.146/31,,,intact
 isolation,37_as65003_noaa,10.181.0.148/31,,,intact
@@ -332,8 +332,8 @@ isolation,37_as65003_noaa,10.181.0.74/31,,,intact
 reachability,37_as65003_noaa,10.180.0.1/32,,,broken_added
 reachability,37_as65003_noaa,10.180.0.11/32,,,intact
 reachability,37_as65003_noaa,10.180.0.12/32,,,intact
-reachability,37_as65003_noaa,10.200.0.0/24,,,broken_removed|intact
-reachability,37_as65003_noaa,10.200.1.0/24,,,broken_removed|intact
+reachability,37_as65003_noaa,10.200.0.0/24,,,intact
+reachability,37_as65003_noaa,10.200.1.0/24,,,intact
 isolation,38_as65008_none,10.181.0.126/31,,,intact
 isolation,38_as65008_none,10.181.0.128/31,,,intact
 isolation,38_as65008_none,10.181.0.130/31,,,intact
@@ -439,8 +439,8 @@ isolation,48_as65003_osti,10.181.0.74/31,,,intact
 reachability,48_as65003_osti,10.180.0.1/32,,,broken_added
 reachability,48_as65003_osti,10.180.0.11/32,,,intact
 reachability,48_as65003_osti,10.180.0.12/32,,,intact
-reachability,48_as65003_osti,10.200.0.0/24,,,broken_removed|intact
-reachability,48_as65003_osti,10.200.1.0/24,,,broken_removed|intact
+reachability,48_as65003_osti,10.200.0.0/24,,,intact
+reachability,48_as65003_osti,10.200.1.0/24,,,intact
 isolation,49_as65003_orau,10.181.0.122/31,,,intact
 isolation,49_as65003_orau,10.181.0.124/31,,,intact
 isolation,49_as65003_orau,10.181.0.146/31,,,intact
@@ -450,8 +450,8 @@ isolation,49_as65003_orau,10.181.0.74/31,,,intact
 reachability,49_as65003_orau,10.180.0.1/32,,,broken_added
 reachability,49_as65003_orau,10.180.0.11/32,,,intact
 reachability,49_as65003_orau,10.180.0.12/32,,,intact
-reachability,49_as65003_orau,10.200.0.0/24,,,broken_removed|intact
-reachability,49_as65003_orau,10.200.1.0/24,,,broken_removed|intact
+reachability,49_as65003_orau,10.200.0.0/24,,,intact
+reachability,49_as65003_orau,10.200.1.0/24,,,intact
 isolation,4_as65001_anl,10.181.0.10/31,,,intact
 isolation,4_as65001_anl,10.181.0.12/31,,,intact
 isolation,4_as65001_anl,10.181.0.14/31,,,intact
@@ -476,8 +476,8 @@ isolation,50_as65003_ornl,10.181.0.74/31,,,intact
 reachability,50_as65003_ornl,10.180.0.1/32,,,broken_added
 reachability,50_as65003_ornl,10.180.0.11/32,,,intact
 reachability,50_as65003_ornl,10.180.0.12/32,,,intact
-reachability,50_as65003_ornl,10.200.0.0/24,,,broken_removed|intact
-reachability,50_as65003_ornl,10.200.1.0/24,,,broken_removed|intact
+reachability,50_as65003_ornl,10.200.0.0/24,,,intact
+reachability,50_as65003_ornl,10.200.1.0/24,,,intact
 isolation,51_as65002_wash,10.181.0.100/31,,,intact
 isolation,51_as65002_wash,10.181.0.118/31,,,intact
 isolation,51_as65002_wash,10.181.0.142/31,,,intact
@@ -531,7 +531,7 @@ isolation,55_as65003_srs,10.181.0.72/31,,,intact
 reachability,55_as65003_srs,10.180.0.1/32,,,broken_added
 reachability,55_as65003_srs,10.180.0.11/32,,,intact
 reachability,55_as65003_srs,10.180.0.12/32,,,intact
-reachability,55_as65003_srs,10.200.0.0/24,,,broken_removed|intact
+reachability,55_as65003_srs,10.200.0.0/24,,,intact
 isolation,56_as65009_pnnl,10.181.0.160/31,,,intact
 isolation,56_as65009_pnnl,10.181.0.162/31,,,intact
 isolation,56_as65009_pnnl,10.181.0.168/31,,,intact

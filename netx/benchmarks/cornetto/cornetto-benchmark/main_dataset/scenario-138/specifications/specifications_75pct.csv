@@ -64,8 +64,6 @@ reachability,10_as65004_matsuyama-dc,10.181.0.38/32,,,intact
 reachability,10_as65004_matsuyama-dc,10.200.0.0/24,,,broken_removed
 reachability,10_as65004_matsuyama-dc,10.200.1.0/24,,,broken_removed
 reachability,10_as65004_matsuyama-dc,10.200.2.0/24,,,broken_removed
-reachability,10_as65004_matsuyama-dc,10.200.24.0/24,,,broken_added
-reachability,10_as65004_matsuyama-dc,10.200.25.0/24,,,broken_added
 reachability,10_as65004_matsuyama-dc,10.200.26.0/24,,,intact
 reachability,10_as65004_matsuyama-dc,10.200.27.0/24,,,intact
 reachability,10_as65004_matsuyama-dc,10.200.28.0/24,,,intact
@@ -723,8 +721,6 @@ reachability,27_as65004_u-tokushima,10.181.0.37/32,,,intact
 reachability,27_as65004_u-tokushima,10.200.0.0/24,,,broken_removed
 reachability,27_as65004_u-tokushima,10.200.1.0/24,,,broken_removed
 reachability,27_as65004_u-tokushima,10.200.2.0/24,,,broken_removed
-reachability,27_as65004_u-tokushima,10.200.24.0/24,,,broken_added
-reachability,27_as65004_u-tokushima,10.200.25.0/24,,,broken_added
 reachability,27_as65004_u-tokushima,10.200.3.0/24,,,broken_removed
 reachability,27_as65004_u-tokushima,10.200.4.0/24,,,intact
 reachability,27_as65004_u-tokushima,10.200.5.0/24,,,intact
@@ -2109,8 +2105,6 @@ reachability,52_as65004_kansai-u,10.200.2.0/24,,,broken_removed
 reachability,52_as65004_kansai-u,10.200.21.0/24,,,intact
 reachability,52_as65004_kansai-u,10.200.22.0/24,,,intact
 reachability,52_as65004_kansai-u,10.200.23.0/24,,,intact
-reachability,52_as65004_kansai-u,10.200.24.0/24,,,broken_added
-reachability,52_as65004_kansai-u,10.200.25.0/24,,,broken_added
 reachability,52_as65004_kansai-u,10.200.26.0/24,,,intact
 reachability,52_as65004_kansai-u,10.200.27.0/24,,,intact
 reachability,52_as65004_kansai-u,10.200.28.0/24,,,intact
@@ -2210,8 +2204,6 @@ reachability,54_as65004_kobe-u,10.200.2.0/24,,,broken_removed
 reachability,54_as65004_kobe-u,10.200.21.0/24,,,intact
 reachability,54_as65004_kobe-u,10.200.22.0/24,,,intact
 reachability,54_as65004_kobe-u,10.200.23.0/24,,,intact
-reachability,54_as65004_kobe-u,10.200.24.0/24,,,broken_added
-reachability,54_as65004_kobe-u,10.200.25.0/24,,,broken_added
 reachability,54_as65004_kobe-u,10.200.26.0/24,,,intact
 reachability,54_as65004_kobe-u,10.200.27.0/24,,,intact
 reachability,54_as65004_kobe-u,10.200.28.0/24,,,intact
@@ -2309,8 +2301,6 @@ reachability,56_as65004_jasri,10.181.0.140/32,,,intact
 reachability,56_as65004_jasri,10.200.0.0/24,,,broken_removed
 reachability,56_as65004_jasri,10.200.1.0/24,,,broken_removed
 reachability,56_as65004_jasri,10.200.2.0/24,,,broken_removed
-reachability,56_as65004_jasri,10.200.24.0/24,,,broken_added
-reachability,56_as65004_jasri,10.200.25.0/24,,,broken_added
 reachability,56_as65004_jasri,10.200.3.0/24,,,broken_removed
 reachability,56_as65004_jasri,10.200.4.0/24,,,intact
 reachability,56_as65004_jasri,10.200.5.0/24,,,intact

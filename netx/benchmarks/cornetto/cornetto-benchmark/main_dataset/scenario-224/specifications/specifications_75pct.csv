@@ -1752,12 +1752,6 @@ reachability,3_as65005_bialystok,10.200.26.1/32,,,intact
 reachability,3_as65005_bialystok,10.200.27.0/24,,,intact
 reachability,3_as65005_bialystok,10.200.27.1/32,,,intact
 reachability,3_as65005_bialystok,10.200.3.0/24,,,intact
-reachability,3_as65005_bialystok,10.200.36.0/24,,,broken_added
-reachability,3_as65005_bialystok,10.200.37.0/24,,,broken_added
-reachability,3_as65005_bialystok,10.200.38.0/24,,,broken_added
-reachability,3_as65005_bialystok,10.200.39.0/24,,,broken_added
-reachability,3_as65005_bialystok,10.200.42.0/24,,,broken_added
-reachability,3_as65005_bialystok,10.200.43.0/24,,,broken_added
 waypointing,3_as65005_bialystok,10.180.0.12/32,11_as65005_suwalki,,intact
 waypointing,3_as65005_bialystok,10.180.0.29/32,11_as65005_suwalki,,intact
 waypointing,3_as65005_bialystok,10.180.0.29/32,28_as65005_olsztyn,,intact

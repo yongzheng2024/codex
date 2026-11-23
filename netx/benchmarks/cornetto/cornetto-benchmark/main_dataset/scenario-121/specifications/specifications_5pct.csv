@@ -148,7 +148,6 @@ isolation,45_as65002_45,10.181.0.108/31,,,intact
 isolation,45_as65002_45,10.181.0.12/31,,,intact
 isolation,45_as65002_45,10.181.0.14/31,,,intact
 load_balancing,45_as65002_45,10.180.0.1/32,,2,broken_added
-load_balancing,45_as65002_45,10.180.0.2/32,,2,broken_added
 load_balancing,45_as65002_45,10.180.0.5/32,,2,broken_added
 isolation,47_as65003_47,10.181.0.124/31,,,intact
 isolation,47_as65003_47,10.181.0.126/31,,,intact

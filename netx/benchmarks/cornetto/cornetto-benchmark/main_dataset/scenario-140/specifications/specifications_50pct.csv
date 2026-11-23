@@ -24,7 +24,6 @@ reachability,0_as65001_uio,10.180.0.57/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.58/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.59/32,,,broken_removed
 reachability,0_as65001_uio,10.180.0.60/32,,,broken_removed
-reachability,0_as65001_uio,10.181.0.0/30,,,broken_added
 reachability,0_as65001_uio,10.181.0.0/32,,,intact
 reachability,0_as65001_uio,10.181.0.10/32,,,intact
 reachability,0_as65001_uio,10.181.0.2/32,,,intact
@@ -158,8 +157,6 @@ reachability,11_as65001_hve-borre,10.200.65.0/24,,,intact
 reachability,11_as65001_hve-borre,10.200.66.0/24,,,intact
 reachability,11_as65001_hve-borre,10.200.67.0/24,,,intact
 waypointing,11_as65001_hve-borre,10.180.0.1/32,0_as65001_uio,,broken_removed
-waypointing,11_as65001_hve-borre,10.180.0.1/32,10_as65001_hibu-drammen,,broken_added
-waypointing,11_as65001_hve-borre,10.180.0.1/32,3_as65001_uio-st-olavsplass-5,,broken_added
 isolation,12_as65007_hif-vadso,0.0.0.0/0,,,intact
 isolation,12_as65007_hif-vadso,10.181.0.120/31,,,intact
 isolation,12_as65007_hif-vadso,10.181.0.44/31,,,intact
@@ -432,9 +429,6 @@ reachability,19_as65005_uia-arendal,10.200.60.0/24,,,intact
 reachability,19_as65005_uia-arendal,10.200.61.0/24,,,intact
 reachability,19_as65005_uia-arendal,10.200.62.0/24,,,intact
 isolation,1_as65001_uio,0.0.0.0/0,,,intact
-isolation,1_as65001_uio,10.180.0.1/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.42/32,,,broken_added
-isolation,1_as65001_uio,10.180.0.59/32,,,broken_added
 isolation,1_as65001_uio,10.181.0.0/30,,,broken_added
 isolation,1_as65001_uio,10.181.0.0/31,,,broken_removed
 isolation,1_as65001_uio,10.181.0.10/31,,,intact
@@ -443,7 +437,7 @@ isolation,1_as65001_uio,10.181.0.174/31,,,intact
 isolation,1_as65001_uio,10.181.0.176/31,,,intact
 isolation,1_as65001_uio,10.181.0.178/31,,,intact
 isolation,1_as65001_uio,10.181.0.18/31,,,intact
-isolation,1_as65001_uio,10.181.0.180/31,,,broken_removed|intact
+isolation,1_as65001_uio,10.181.0.180/31,,,intact
 isolation,1_as65001_uio,10.181.0.2/31,,,intact
 isolation,1_as65001_uio,10.181.0.24/31,,,intact
 isolation,1_as65001_uio,10.181.0.26/31,,,intact
@@ -454,12 +448,12 @@ load_balancing,1_as65001_uio,10.180.0.60/32,,2,broken_removed
 reachability,1_as65001_uio,10.180.0.1/32,,,broken_removed
 reachability,1_as65001_uio,10.180.0.2/32,,,intact
 reachability,1_as65001_uio,10.180.0.4/32,,,intact
-reachability,1_as65001_uio,10.180.0.42/32,,,broken_removed|intact
+reachability,1_as65001_uio,10.180.0.42/32,,,intact
 reachability,1_as65001_uio,10.180.0.54/32,,,intact
 reachability,1_as65001_uio,10.180.0.57/32,,,intact
 reachability,1_as65001_uio,10.180.0.58/32,,,intact
-reachability,1_as65001_uio,10.180.0.59/32,,,broken_removed|intact
-reachability,1_as65001_uio,10.180.0.60/32,,,broken_removed|intact
+reachability,1_as65001_uio,10.180.0.59/32,,,intact
+reachability,1_as65001_uio,10.180.0.60/32,,,intact
 reachability,1_as65001_uio,10.181.0.1/32,,,intact
 reachability,1_as65001_uio,10.181.0.12/32,,,intact
 reachability,1_as65001_uio,10.181.0.14/32,,,intact
@@ -1302,7 +1296,6 @@ load_balancing,41_as65001_uib-bt,10.180.0.2/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.54/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.57/32,,2,broken_removed
 load_balancing,41_as65001_uib-bt,10.180.0.58/32,,2,broken_removed
-load_balancing,41_as65001_uib-bt,10.181.0.0/30,,2,broken_added
 reachability,41_as65001_uib-bt,10.180.0.1/32,,,broken_removed
 reachability,41_as65001_uib-bt,10.180.0.2/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.4/32,,,intact
@@ -1312,7 +1305,6 @@ reachability,41_as65001_uib-bt,10.180.0.57/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.58/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.59/32,,,intact
 reachability,41_as65001_uib-bt,10.180.0.60/32,,,intact
-reachability,41_as65001_uib-bt,10.181.0.0/30,,,broken_added
 reachability,41_as65001_uib-bt,10.181.0.107/32,,,intact
 reachability,41_as65001_uib-bt,10.181.0.25/32,,,intact
 reachability,41_as65001_uib-bt,10.181.0.89/32,,,intact
@@ -1738,8 +1730,6 @@ reachability,53_as65001_hrp-halden,10.200.66.0/24,,,intact
 reachability,53_as65001_hrp-halden,10.200.67.0/24,,,intact
 waypointing,53_as65001_hrp-halden,10.180.0.1/32,0_as65001_uio,,broken_removed
 waypointing,53_as65001_hrp-halden,10.180.0.1/32,57_as65001_hio-halden,,broken_removed
-waypointing,53_as65001_hrp-halden,10.180.0.1/32,58_as65001_umb-as,,broken_added
-waypointing,53_as65001_hrp-halden,10.180.0.1/32,59_as65001_hio-fredrikstad,,broken_added
 isolation,54_as65001_hve-larvik,0.0.0.0/0,,,intact
 isolation,54_as65001_hve-larvik,10.181.0.26/31,,,intact
 isolation,54_as65001_hve-larvik,10.181.0.58/31,,,intact
@@ -1774,8 +1764,6 @@ reachability,55_as65003_eiscat,10.200.31.0/24,,,intact
 reachability,55_as65003_eiscat,10.200.32.0/24,,,intact
 reachability,55_as65003_eiscat,10.200.33.0/24,,,intact
 isolation,56_as65001_hio-sarpsborg,0.0.0.0/0,,,intact
-isolation,56_as65001_hio-sarpsborg,10.180.0.1/32,,,broken_added
-isolation,56_as65001_hio-sarpsborg,10.180.0.42/32,,,broken_added
 isolation,56_as65001_hio-sarpsborg,10.181.0.0/30,,,broken_added
 isolation,56_as65001_hio-sarpsborg,10.181.0.0/31,,,broken_removed
 isolation,56_as65001_hio-sarpsborg,10.181.0.10/31,,,intact
@@ -1800,7 +1788,7 @@ reachability,56_as65001_hio-sarpsborg,10.180.0.12/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.2/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.28/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.4/32,,,intact
-reachability,56_as65001_hio-sarpsborg,10.180.0.42/32,,,broken_removed|intact
+reachability,56_as65001_hio-sarpsborg,10.180.0.42/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.54/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.55/32,,,intact
 reachability,56_as65001_hio-sarpsborg,10.180.0.57/32,,,intact
@@ -1866,8 +1854,6 @@ reachability,57_as65001_hio-halden,10.200.65.0/24,,,intact
 reachability,57_as65001_hio-halden,10.200.66.0/24,,,intact
 reachability,57_as65001_hio-halden,10.200.67.0/24,,,intact
 waypointing,57_as65001_hio-halden,10.180.0.1/32,0_as65001_uio,,broken_removed
-waypointing,57_as65001_hio-halden,10.180.0.1/32,58_as65001_umb-as,,broken_added
-waypointing,57_as65001_hio-halden,10.180.0.1/32,59_as65001_hio-fredrikstad,,broken_added
 isolation,58_as65001_umb-as,0.0.0.0/0,,,intact
 isolation,58_as65001_umb-as,10.181.0.0/30,,,broken_added
 isolation,58_as65001_umb-as,10.181.0.0/31,,,broken_removed
@@ -1893,7 +1879,6 @@ reachability,58_as65001_umb-as,10.180.0.57/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.58/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.59/32,,,intact
 reachability,58_as65001_umb-as,10.180.0.60/32,,,intact
-reachability,58_as65001_umb-as,10.181.0.0/30,,,broken_added
 reachability,58_as65001_umb-as,10.181.0.11/32,,,intact
 reachability,58_as65001_umb-as,10.181.0.180/32,,,intact
 reachability,58_as65001_umb-as,10.200.16.0/24,,,intact
@@ -1929,7 +1914,6 @@ isolation,59_as65001_hio-fredrikstad,10.181.0.26/31,,,intact
 isolation,59_as65001_hio-fredrikstad,10.181.0.60/31,,,intact
 isolation,59_as65001_hio-fredrikstad,10.181.0.8/31,,,intact
 load_balancing,59_as65001_hio-fredrikstad,10.180.0.2/32,,2,broken_removed
-load_balancing,59_as65001_hio-fredrikstad,10.181.0.0/30,,2,broken_added
 reachability,59_as65001_hio-fredrikstad,10.180.0.1/32,,,broken_removed
 reachability,59_as65001_hio-fredrikstad,10.180.0.2/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.4/32,,,intact
@@ -1939,7 +1923,6 @@ reachability,59_as65001_hio-fredrikstad,10.180.0.57/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.58/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.59/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.180.0.60/32,,,intact
-reachability,59_as65001_hio-fredrikstad,10.181.0.0/30,,,broken_added
 reachability,59_as65001_hio-fredrikstad,10.181.0.179/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.181.0.181/32,,,intact
 reachability,59_as65001_hio-fredrikstad,10.200.16.0/24,,,intact

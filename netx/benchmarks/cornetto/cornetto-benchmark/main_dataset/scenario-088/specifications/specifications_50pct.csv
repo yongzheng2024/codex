@@ -484,10 +484,7 @@ reachability,113_as65007_30-73262,10.181.1.80/32,,,intact
 reachability,113_as65007_30-73262,10.181.1.82/32,,,intact
 waypointing,113_as65007_30-73262,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,113_as65007_30-73262,10.180.0.1/32,114_as65007_28-05,,broken_added
-waypointing,113_as65007_30-73262,10.180.0.1/32,191_as65007_30-5238,,broken_added
 waypointing,113_as65007_30-73262,10.180.0.1/32,1_as65007_26-10626,,broken_added
-waypointing,113_as65007_30-73262,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,113_as65007_30-73262,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,113_as65007_30-73262,10.180.0.10/32,191_as65007_30-5238,,intact
 waypointing,113_as65007_30-73262,10.180.0.10/32,8_as65007_17-10674,,intact
 waypointing,113_as65007_30-73262,10.180.0.10/32,9_as65007_19-03991,,intact
@@ -523,8 +520,6 @@ reachability,114_as65007_28-05,10.181.1.81/32,,,intact
 waypointing,114_as65007_28-05,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,114_as65007_28-05,10.180.0.1/32,176_as65007_176,,broken_removed
 waypointing,114_as65007_28-05,10.180.0.1/32,1_as65007_26-10626,,intact
-waypointing,114_as65007_28-05,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,114_as65007_28-05,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,114_as65007_28-05,10.180.0.10/32,1_as65007_26-10626,,intact
 waypointing,114_as65007_28-05,10.180.0.10/32,8_as65007_17-10674,,intact
 waypointing,114_as65007_28-05,10.180.0.10/32,9_as65007_19-03991,,intact
@@ -583,8 +578,6 @@ reachability,116_as65007_28-65,10.181.1.85/32,,,intact
 waypointing,116_as65007_28-65,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,116_as65007_28-65,10.180.0.1/32,176_as65007_176,,broken_removed
 waypointing,116_as65007_28-65,10.180.0.1/32,1_as65007_26-10626,,intact
-waypointing,116_as65007_28-65,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,116_as65007_28-65,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,116_as65007_28-65,10.180.0.10/32,1_as65007_26-10626,,intact
 waypointing,116_as65007_28-65,10.180.0.10/32,8_as65007_17-10674,,intact
 waypointing,116_as65007_28-65,10.180.0.10/32,9_as65007_19-03991,,intact
@@ -656,8 +649,6 @@ reachability,119_as65007_23-32415,10.181.1.94/32,,,intact
 waypointing,119_as65007_23-32415,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,119_as65007_23-32415,10.180.0.1/32,176_as65007_176,,broken_removed
 waypointing,119_as65007_23-32415,10.180.0.1/32,1_as65007_26-10626,,broken_added
-waypointing,119_as65007_23-32415,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,119_as65007_23-32415,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,119_as65007_23-32415,10.180.0.10/32,9_as65007_19-03991,,intact
 isolation,11_as65008_93-26384,0.0.0.0/0,,,intact
 isolation,11_as65008_93-26384,10.181.0.104/31,,,intact
@@ -729,8 +720,6 @@ waypointing,120_as65007_26-31667,10.180.0.1/32,0_as65007_21-22722,,broken_remove
 waypointing,120_as65007_26-31667,10.180.0.1/32,175_as65007_175,,intact
 waypointing,120_as65007_26-31667,10.180.0.1/32,176_as65007_176,,broken_removed
 waypointing,120_as65007_26-31667,10.180.0.1/32,1_as65007_26-10626,,broken_added
-waypointing,120_as65007_26-31667,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,120_as65007_26-31667,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,120_as65007_26-31667,10.180.0.10/32,175_as65007_175,,intact
 waypointing,120_as65007_26-31667,10.180.0.10/32,1_as65007_26-10626,,intact
 waypointing,120_as65007_26-31667,10.180.0.10/32,8_as65007_17-10674,,intact
@@ -3120,8 +3109,6 @@ reachability,175_as65007_175,10.181.1.97/32,,,intact
 waypointing,175_as65007_175,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,175_as65007_175,10.180.0.1/32,176_as65007_176,,broken_removed
 waypointing,175_as65007_175,10.180.0.1/32,1_as65007_26-10626,,broken_added
-waypointing,175_as65007_175,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,175_as65007_175,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,175_as65007_175,10.180.0.10/32,1_as65007_26-10626,,intact
 waypointing,175_as65007_175,10.180.0.10/32,8_as65007_17-10674,,intact
 waypointing,175_as65007_175,10.180.0.10/32,9_as65007_19-03991,,intact
@@ -3158,8 +3145,6 @@ reachability,176_as65007_176,10.181.0.7/32,,,intact
 reachability,176_as65007_176,10.181.1.93/32,,,intact
 waypointing,176_as65007_176,10.180.0.1/32,0_as65007_21-22722,,broken_removed
 waypointing,176_as65007_176,10.180.0.1/32,1_as65007_26-10626,,broken_added
-waypointing,176_as65007_176,10.180.0.1/32,8_as65007_17-10674,,broken_added
-waypointing,176_as65007_176,10.180.0.1/32,9_as65007_19-03991,,broken_added
 waypointing,176_as65007_176,10.180.0.10/32,9_as65007_19-03991,,intact
 isolation,177_as65004_6-26719,0.0.0.0/0,,,intact
 isolation,177_as65004_6-26719,10.181.0.124/31,,,intact

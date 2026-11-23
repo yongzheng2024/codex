@@ -1,7 +1,5 @@
 predicate_type,node,prefix,waypoint,num_routes,sources
 isolation,0_as65001_tampa,0.0.0.0/0,,,intact
-isolation,0_as65001_tampa,10.180.0.65/32,,,broken_added
-isolation,0_as65001_tampa,10.180.0.66/32,,,broken_added
 isolation,0_as65001_tampa,10.181.0.10/31,,,intact
 isolation,0_as65001_tampa,10.181.0.12/31,,,intact
 isolation,0_as65001_tampa,10.181.0.14/31,,,intact
@@ -246,8 +244,6 @@ isolation,62_as65001_daytona-beach,10.181.0.10/31,,,intact
 isolation,62_as65001_daytona-beach,10.181.0.12/31,,,intact
 isolation,62_as65001_daytona-beach,10.181.0.14/31,,,intact
 isolation,63_as65001_orlando,0.0.0.0/0,,,intact
-isolation,63_as65001_orlando,10.180.0.65/32,,,broken_added
-isolation,63_as65001_orlando,10.180.0.66/32,,,broken_added
 isolation,63_as65001_orlando,10.181.0.10/31,,,intact
 isolation,63_as65001_orlando,10.181.0.12/31,,,intact
 isolation,63_as65001_orlando,10.181.0.14/31,,,intact
@@ -277,8 +273,6 @@ isolation,6_as65001_jacksonville,0.0.0.0/0,,,intact
 isolation,6_as65001_jacksonville,10.181.0.10/31,,,intact
 isolation,6_as65001_jacksonville,10.181.0.12/31,,,intact
 isolation,70_as65001_cocoa-beach,0.0.0.0/0,,,intact
-isolation,70_as65001_cocoa-beach,10.180.0.65/32,,,broken_added
-isolation,70_as65001_cocoa-beach,10.180.0.66/32,,,broken_added
 isolation,70_as65001_cocoa-beach,10.181.0.10/31,,,intact
 isolation,70_as65001_cocoa-beach,10.181.0.12/31,,,intact
 isolation,71_as65001_melbourne,0.0.0.0/0,,,intact
@@ -356,7 +350,6 @@ isolation,87_as65004_panama-city,0.0.0.0/0,,,intact
 isolation,88_as65004_crestview,0.0.0.0/0,,,intact
 isolation,89_as65004_meridian,0.0.0.0/0,,,intact
 isolation,8_as65001_ocala,0.0.0.0/0,,,intact
-isolation,8_as65001_ocala,10.180.0.65/32,,,broken_added
 isolation,8_as65001_ocala,10.181.0.10/31,,,intact
 isolation,8_as65001_ocala,10.181.0.12/31,,,intact
 isolation,90_as65004_tuscaloosa,0.0.0.0/0,,,intact
@@ -387,6 +380,5 @@ isolation,99_as65003_none,10.181.0.134/31,,,intact
 isolation,99_as65003_none,10.181.0.136/31,,,intact
 isolation,99_as65003_none,10.181.0.138/31,,,intact
 isolation,9_as65001_winter-haven,0.0.0.0/0,,,intact
-isolation,9_as65001_winter-haven,10.180.0.65/32,,,broken_added
 isolation,9_as65001_winter-haven,10.181.0.10/31,,,intact
 isolation,9_as65001_winter-haven,10.181.0.12/31,,,intact

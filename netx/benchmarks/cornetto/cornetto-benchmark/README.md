@@ -69,5 +69,25 @@ The `sources` column compares each predicate in the golden and faulty states.
 - `broken_added` holds only in the faulty state. It should be absent after repair.
 - `broken_removed` holds only in the golden state. It should be present after repair.
 
-When scoring a CSV, the evaluator treats `broken_removed|intact` as
-`broken_removed`.
+### NetX reconciliation
+
+The working samples for scenarios 001–231 use the golden target from the
+published row and faulty-state membership observed independently by NetX and
+the pinned Cornetto scorer. The golden configurations were unavailable for replay.
+
+- The published samples included 934 rows labeled `broken_removed|intact`.
+  Their golden target is presence and both scorers observed presence on the
+  faulty snapshot. These rows now carry the single label `intact`.
+- Both scorers found 4,243 published `broken_added` rows absent on the faulty
+  snapshot. Their published golden target is also absence. The three labels
+  describe predicates present in at least one state, so these rows were removed
+  from every sample in which they occurred. They no longer contribute to repair
+  or regression scoring. The remaining 17,880 `broken_added` rows retain their label.
+
+The 1,611 corrected CSVs contain 5,094,387 rows. Sampling percentages in the
+filenames refer to the original draw. To retrieve a sample with its original
+line numbers, run the following from the repository root. [Audit and scorer details](../../../repair_understand.md#all-231-published-scenarios)
+
+```sh
+git show da6221cf7d1b2c8f2cc6f9b390d0dcea96b983d0:netx/benchmarks/cornetto/cornetto-benchmark/main_dataset/scenario-051/specifications/specifications_100pct.csv
+```

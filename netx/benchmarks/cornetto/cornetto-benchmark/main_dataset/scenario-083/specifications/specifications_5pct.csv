@@ -611,8 +611,6 @@ load_balancing,18_as65003_fayetteville,10.200.0.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.1.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.2.0/24,,2,broken_removed
 load_balancing,18_as65003_fayetteville,10.200.3.0/24,,2,broken_removed
-load_balancing,18_as65003_fayetteville,10.200.81.0/24,,2,broken_added
-load_balancing,18_as65003_fayetteville,10.200.82.0/24,,2,broken_added
 reachability,18_as65003_fayetteville,10.200.0.0/24,,,broken_removed
 isolation,19_as65003_wilmington,10.181.0.196/31,,,intact
 reachability,19_as65003_wilmington,10.200.0.0/24,,,broken_removed

@@ -40,7 +40,6 @@ isolation,1_as65002_brussels-campus,10.181.0.26/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.28/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.30/31,,,intact
 isolation,1_as65002_brussels-campus,10.181.0.32/31,,,intact
-isolation,1_as65002_brussels-campus,10.200.0.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.1.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.2.0/24,,,broken_added
 isolation,1_as65002_brussels-campus,10.200.3.0/24,,,broken_added
@@ -48,12 +47,10 @@ isolation,20_as65004_charleroi,10.181.0.42/31,,,intact
 isolation,20_as65004_charleroi,10.181.0.44/31,,,intact
 isolation,2_as65005_arlon,10.181.0.0/31,,,intact
 isolation,2_as65005_arlon,10.181.0.2/31,,,intact
-load_balancing,2_as65005_arlon,10.200.0.0/24,,2,broken_added
 load_balancing,2_as65005_arlon,10.200.1.0/24,,2,broken_added
 isolation,3_as65005_liege-2,10.181.0.0/31,,,intact
 isolation,3_as65005_liege-2,10.181.0.12/31,,,intact
 isolation,3_as65005_liege-2,10.181.0.2/31,,,intact
-load_balancing,3_as65005_liege-2,10.200.0.0/24,,2,broken_added
 isolation,4_as65003_leuven1,10.181.0.20/31,,,intact
 isolation,4_as65003_leuven1,10.181.0.40/31,,,intact
 isolation,5_as65003_leuven2,10.181.0.14/31,,,intact

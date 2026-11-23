@@ -4,7 +4,6 @@ isolation,0_as65002_auckland-2,10.181.0.10/31,,,intact
 isolation,0_as65002_auckland-2,10.181.0.2/31,,,broken_removed
 isolation,0_as65002_auckland-2,10.181.0.4/31,,,intact
 isolation,0_as65002_auckland-2,10.181.0.60/30,,,broken_added
-isolation,0_as65002_auckland-2,10.181.0.62/31,,,broken_added
 reachability,0_as65002_auckland-2,10.180.0.1/32,,,intact
 reachability,0_as65002_auckland-2,10.180.0.12/32,,,intact
 reachability,0_as65002_auckland-2,10.180.0.2/32,,,broken_removed
@@ -72,7 +71,6 @@ isolation,11_as65002_sydney-2,10.181.0.10/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.2/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.4/31,,,intact
 isolation,11_as65002_sydney-2,10.181.0.60/30,,,broken_added
-isolation,11_as65002_sydney-2,10.181.0.62/31,,,broken_added
 reachability,11_as65002_sydney-2,10.180.0.1/32,,,intact
 reachability,11_as65002_sydney-2,10.180.0.12/32,,,intact
 reachability,11_as65002_sydney-2,10.180.0.2/32,,,broken_removed
@@ -361,7 +359,6 @@ isolation,1_as65002_fiji,10.181.0.0/31,,,broken_removed
 isolation,1_as65002_fiji,10.181.0.10/31,,,intact
 isolation,1_as65002_fiji,10.181.0.2/31,,,intact
 isolation,1_as65002_fiji,10.181.0.60/30,,,broken_added
-isolation,1_as65002_fiji,10.181.0.62/31,,,broken_added
 reachability,1_as65002_fiji,10.180.0.1/32,,,intact
 reachability,1_as65002_fiji,10.180.0.12/32,,,intact
 reachability,1_as65002_fiji,10.180.0.2/32,,,broken_removed
@@ -417,7 +414,6 @@ isolation,2_as65002_sydney-1,10.181.0.10/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.2/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.4/31,,,intact
 isolation,2_as65002_sydney-1,10.181.0.60/30,,,broken_added
-isolation,2_as65002_sydney-1,10.181.0.62/31,,,broken_added
 reachability,2_as65002_sydney-1,10.180.0.1/32,,,intact
 reachability,2_as65002_sydney-1,10.180.0.12/32,,,intact
 reachability,2_as65002_sydney-1,10.180.0.2/32,,,broken_removed
@@ -605,9 +601,7 @@ waypointing,6_as65003_hawaii-1,10.180.0.5/32,5_as65003_los-angeles,,broken_added
 waypointing,6_as65003_hawaii-1,10.180.0.5/32,7_as65003_hawaii-2,,broken_added
 waypointing,6_as65003_hawaii-1,10.180.0.6/32,4_as65003_sacramento,,broken_removed
 waypointing,6_as65003_hawaii-1,10.180.0.6/32,7_as65003_hawaii-2,,broken_added
-waypointing,6_as65003_hawaii-1,10.200.0.0/24,14_as65001_guam,,broken_added
 waypointing,6_as65003_hawaii-1,10.200.0.0/24,1_as65002_fiji,,broken_removed
-waypointing,6_as65003_hawaii-1,10.200.0.0/24,2_as65002_sydney-1,,broken_added
 isolation,7_as65003_hawaii-2,10.181.0.18/31,,,intact
 isolation,7_as65003_hawaii-2,10.181.0.20/31,,,intact
 isolation,7_as65003_hawaii-2,10.181.0.22/31,,,intact

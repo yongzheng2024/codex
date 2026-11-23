@@ -165,7 +165,6 @@ reachability,101_as65005_101,10.180.0.6/32,,,intact
 reachability,101_as65005_101,10.180.0.7/32,,,intact
 reachability,101_as65005_101,10.180.0.8/32,,,intact
 reachability,101_as65005_101,10.180.0.9/32,,,intact
-reachability,101_as65005_101,10.181.0.0/30,,,broken_added
 reachability,101_as65005_101,10.181.0.220/32,,,intact
 reachability,101_as65005_101,10.200.0.0/24,,,intact
 reachability,101_as65005_101,10.200.1.0/24,,,intact
@@ -214,7 +213,6 @@ reachability,102_as65005_pakistan,10.180.0.6/32,,,intact
 reachability,102_as65005_pakistan,10.180.0.7/32,,,intact
 reachability,102_as65005_pakistan,10.180.0.8/32,,,intact
 reachability,102_as65005_pakistan,10.180.0.9/32,,,intact
-reachability,102_as65005_pakistan,10.181.0.0/30,,,broken_added
 reachability,102_as65005_pakistan,10.181.0.1/32,,,intact
 reachability,102_as65005_pakistan,10.181.0.11/32,,,intact
 reachability,102_as65005_pakistan,10.181.0.13/32,,,intact
@@ -2494,7 +2492,6 @@ reachability,1_as65005_1,10.180.0.6/32,,,intact
 reachability,1_as65005_1,10.180.0.7/32,,,intact
 reachability,1_as65005_1,10.180.0.8/32,,,intact
 reachability,1_as65005_1,10.180.0.9/32,,,intact
-reachability,1_as65005_1,10.181.0.0/30,,,broken_added
 reachability,1_as65005_1,10.181.0.2/32,,,intact
 reachability,1_as65005_1,10.200.0.0/24,,,intact
 reachability,1_as65005_1,10.200.1.0/24,,,intact
@@ -3527,7 +3524,6 @@ reachability,2_as65005_2,10.180.0.6/32,,,intact
 reachability,2_as65005_2,10.180.0.7/32,,,intact
 reachability,2_as65005_2,10.180.0.8/32,,,intact
 reachability,2_as65005_2,10.180.0.9/32,,,intact
-reachability,2_as65005_2,10.181.0.0/30,,,broken_added
 reachability,2_as65005_2,10.181.0.4/32,,,intact
 reachability,2_as65005_2,10.200.0.0/24,,,intact
 reachability,2_as65005_2,10.200.1.0/24,,,intact
@@ -4479,7 +4475,6 @@ reachability,3_as65005_3,10.180.0.6/32,,,intact
 reachability,3_as65005_3,10.180.0.7/32,,,intact
 reachability,3_as65005_3,10.180.0.8/32,,,intact
 reachability,3_as65005_3,10.180.0.9/32,,,intact
-reachability,3_as65005_3,10.181.0.0/30,,,broken_added
 reachability,3_as65005_3,10.181.0.6/32,,,intact
 reachability,3_as65005_3,10.200.0.0/24,,,intact
 reachability,3_as65005_3,10.200.1.0/24,,,intact
@@ -5132,7 +5127,6 @@ reachability,4_as65005_4,10.180.0.6/32,,,intact
 reachability,4_as65005_4,10.180.0.7/32,,,intact
 reachability,4_as65005_4,10.180.0.8/32,,,intact
 reachability,4_as65005_4,10.180.0.9/32,,,intact
-reachability,4_as65005_4,10.181.0.0/30,,,broken_added
 reachability,4_as65005_4,10.181.0.8/32,,,intact
 reachability,4_as65005_4,10.200.0.0/24,,,intact
 reachability,4_as65005_4,10.200.1.0/24,,,intact
@@ -5685,7 +5679,6 @@ reachability,5_as65005_5,10.180.0.6/32,,,intact
 reachability,5_as65005_5,10.180.0.7/32,,,intact
 reachability,5_as65005_5,10.180.0.8/32,,,intact
 reachability,5_as65005_5,10.180.0.9/32,,,intact
-reachability,5_as65005_5,10.181.0.0/30,,,broken_added
 reachability,5_as65005_5,10.181.0.10/32,,,intact
 reachability,5_as65005_5,10.200.0.0/24,,,intact
 reachability,5_as65005_5,10.200.1.0/24,,,intact
@@ -6287,7 +6280,6 @@ reachability,6_as65005_6,10.180.0.6/32,,,intact
 reachability,6_as65005_6,10.180.0.7/32,,,intact
 reachability,6_as65005_6,10.180.0.8/32,,,intact
 reachability,6_as65005_6,10.180.0.9/32,,,intact
-reachability,6_as65005_6,10.181.0.0/30,,,broken_added
 reachability,6_as65005_6,10.181.0.12/32,,,intact
 reachability,6_as65005_6,10.200.0.0/24,,,intact
 reachability,6_as65005_6,10.200.1.0/24,,,intact
@@ -6966,7 +6958,6 @@ reachability,7_as65005_7,10.180.0.6/32,,,intact
 reachability,7_as65005_7,10.180.0.7/32,,,intact
 reachability,7_as65005_7,10.180.0.8/32,,,intact
 reachability,7_as65005_7,10.180.0.9/32,,,intact
-reachability,7_as65005_7,10.181.0.0/30,,,broken_added
 reachability,7_as65005_7,10.181.0.14/32,,,intact
 reachability,7_as65005_7,10.200.0.0/24,,,intact
 reachability,7_as65005_7,10.200.1.0/24,,,intact
@@ -7660,7 +7651,6 @@ reachability,8_as65005_8,10.180.0.6/32,,,intact
 reachability,8_as65005_8,10.180.0.7/32,,,intact
 reachability,8_as65005_8,10.180.0.8/32,,,intact
 reachability,8_as65005_8,10.180.0.9/32,,,intact
-reachability,8_as65005_8,10.181.0.0/30,,,broken_added
 reachability,8_as65005_8,10.181.0.16/32,,,intact
 reachability,8_as65005_8,10.200.0.0/24,,,intact
 reachability,8_as65005_8,10.200.1.0/24,,,intact
@@ -8743,7 +8733,6 @@ reachability,9_as65005_9,10.180.0.6/32,,,intact
 reachability,9_as65005_9,10.180.0.7/32,,,intact
 reachability,9_as65005_9,10.180.0.8/32,,,intact
 reachability,9_as65005_9,10.180.0.9/32,,,intact
-reachability,9_as65005_9,10.181.0.0/30,,,broken_added
 reachability,9_as65005_9,10.181.0.18/32,,,intact
 reachability,9_as65005_9,10.200.0.0/24,,,intact
 reachability,9_as65005_9,10.200.1.0/24,,,intact

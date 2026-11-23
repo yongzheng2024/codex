@@ -138,9 +138,9 @@ reachability,11_as65001_brno-warsaw,10.180.0.24/32,,,intact
 reachability,11_as65001_brno-warsaw,10.180.0.25/32,,,intact
 reachability,11_as65001_brno-warsaw,10.180.0.29/32,,,intact
 reachability,11_as65001_brno-warsaw,10.181.0.26/32,,,intact
-reachability,11_as65001_brno-warsaw,10.200.6.0/24,,,broken_removed|intact
-reachability,11_as65001_brno-warsaw,10.200.7.0/24,,,broken_removed|intact
-reachability,11_as65001_brno-warsaw,10.200.8.0/24,,,broken_removed|intact
+reachability,11_as65001_brno-warsaw,10.200.6.0/24,,,intact
+reachability,11_as65001_brno-warsaw,10.200.7.0/24,,,intact
+reachability,11_as65001_brno-warsaw,10.200.8.0/24,,,intact
 waypointing,11_as65001_brno-warsaw,10.180.0.11/32,10_as65001_komarno,,broken_removed
 waypointing,11_as65001_brno-warsaw,10.180.0.11/32,28_as65001_bratislava,,broken_removed
 waypointing,11_as65001_brno-warsaw,10.180.0.13/32,12_as65001_prague-frankfurt,,intact
@@ -164,9 +164,9 @@ waypointing,11_as65001_brno-warsaw,10.180.0.24/32,28_as65001_bratislava,,intact
 waypointing,11_as65001_brno-warsaw,10.180.0.25/32,24_as65001_nove-mest-nad-vahom,,intact
 waypointing,11_as65001_brno-warsaw,10.180.0.25/32,28_as65001_bratislava,,intact
 waypointing,11_as65001_brno-warsaw,10.180.0.29/32,28_as65001_bratislava,,intact
-waypointing,11_as65001_brno-warsaw,10.200.6.0/24,28_as65001_bratislava,,broken_removed|intact
-waypointing,11_as65001_brno-warsaw,10.200.7.0/24,28_as65001_bratislava,,broken_removed|intact
-waypointing,11_as65001_brno-warsaw,10.200.8.0/24,28_as65001_bratislava,,broken_removed|intact
+waypointing,11_as65001_brno-warsaw,10.200.6.0/24,28_as65001_bratislava,,intact
+waypointing,11_as65001_brno-warsaw,10.200.7.0/24,28_as65001_bratislava,,intact
+waypointing,11_as65001_brno-warsaw,10.200.8.0/24,28_as65001_bratislava,,intact
 isolation,12_as65001_prague-frankfurt,10.181.0.24/31,,,intact
 isolation,12_as65001_prague-frankfurt,10.181.0.26/31,,,intact
 isolation,12_as65001_prague-frankfurt,10.181.0.30/31,,,intact
@@ -539,8 +539,7 @@ isolation,19_as65002_novaky,10.181.0.20/31,,,intact
 isolation,19_as65002_novaky,10.181.0.22/31,,,intact
 isolation,19_as65002_novaky,10.181.0.44/31,,,intact
 isolation,19_as65002_novaky,10.181.0.6/31,,,intact
-isolation,19_as65002_novaky,10.181.0.74/31,,,broken_added
-reachability,19_as65002_novaky,10.180.0.1/32,,,broken_removed|intact
+reachability,19_as65002_novaky,10.180.0.1/32,,,intact
 reachability,19_as65002_novaky,10.180.0.10/32,,,intact
 reachability,19_as65002_novaky,10.180.0.2/32,,,broken_removed
 reachability,19_as65002_novaky,10.180.0.20/32,,,intact
@@ -562,7 +561,7 @@ reachability,19_as65002_novaky,10.200.7.0/24,,,intact
 reachability,19_as65002_novaky,10.200.8.0/24,,,intact
 waypointing,19_as65002_novaky,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,19_as65002_novaky,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,19_as65002_novaky,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,19_as65002_novaky,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,19_as65002_novaky,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,19_as65002_novaky,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,19_as65002_novaky,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -601,8 +600,7 @@ isolation,1_as65002_none,10.181.0.22/31,,,intact
 isolation,1_as65002_none,10.181.0.42/31,,,intact
 isolation,1_as65002_none,10.181.0.44/31,,,intact
 isolation,1_as65002_none,10.181.0.6/31,,,intact
-isolation,1_as65002_none,10.181.0.74/31,,,broken_added
-reachability,1_as65002_none,10.180.0.1/32,,,broken_removed|intact
+reachability,1_as65002_none,10.180.0.1/32,,,intact
 reachability,1_as65002_none,10.180.0.10/32,,,intact
 reachability,1_as65002_none,10.180.0.2/32,,,broken_removed
 reachability,1_as65002_none,10.180.0.20/32,,,intact
@@ -636,8 +634,7 @@ isolation,20_as65002_prievidza,10.181.0.20/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.22/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.42/31,,,intact
 isolation,20_as65002_prievidza,10.181.0.6/31,,,intact
-isolation,20_as65002_prievidza,10.181.0.74/31,,,broken_added
-reachability,20_as65002_prievidza,10.180.0.1/32,,,broken_removed|intact
+reachability,20_as65002_prievidza,10.180.0.1/32,,,intact
 reachability,20_as65002_prievidza,10.180.0.10/32,,,intact
 reachability,20_as65002_prievidza,10.180.0.2/32,,,broken_removed
 reachability,20_as65002_prievidza,10.180.0.20/32,,,intact
@@ -659,7 +656,7 @@ reachability,20_as65002_prievidza,10.200.7.0/24,,,intact
 reachability,20_as65002_prievidza,10.200.8.0/24,,,intact
 waypointing,20_as65002_prievidza,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,20_as65002_prievidza,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,20_as65002_prievidza,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,20_as65002_prievidza,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,20_as65002_prievidza,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,20_as65002_prievidza,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,20_as65002_prievidza,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -1042,9 +1039,8 @@ isolation,27_as65002_banska-bystrica,10.181.0.22/31,,,intact
 isolation,27_as65002_banska-bystrica,10.181.0.42/31,,,intact
 isolation,27_as65002_banska-bystrica,10.181.0.44/31,,,intact
 isolation,27_as65002_banska-bystrica,10.181.0.6/31,,,intact
-isolation,27_as65002_banska-bystrica,10.181.0.74/31,,,broken_added
 isolation,27_as65002_banska-bystrica,10.181.0.8/31,,,intact
-reachability,27_as65002_banska-bystrica,10.180.0.1/32,,,broken_removed|intact
+reachability,27_as65002_banska-bystrica,10.180.0.1/32,,,intact
 reachability,27_as65002_banska-bystrica,10.180.0.10/32,,,intact
 reachability,27_as65002_banska-bystrica,10.180.0.2/32,,,broken_removed
 reachability,27_as65002_banska-bystrica,10.180.0.20/32,,,intact
@@ -1485,8 +1481,7 @@ isolation,3_as65002_liptovdky-mikulas,10.181.0.20/31,,,intact
 isolation,3_as65002_liptovdky-mikulas,10.181.0.22/31,,,intact
 isolation,3_as65002_liptovdky-mikulas,10.181.0.42/31,,,intact
 isolation,3_as65002_liptovdky-mikulas,10.181.0.44/31,,,intact
-isolation,3_as65002_liptovdky-mikulas,10.181.0.74/31,,,broken_added
-reachability,3_as65002_liptovdky-mikulas,10.180.0.1/32,,,broken_removed|intact
+reachability,3_as65002_liptovdky-mikulas,10.180.0.1/32,,,intact
 reachability,3_as65002_liptovdky-mikulas,10.180.0.10/32,,,intact
 reachability,3_as65002_liptovdky-mikulas,10.180.0.2/32,,,broken_removed
 reachability,3_as65002_liptovdky-mikulas,10.180.0.20/32,,,intact
@@ -1498,7 +1493,7 @@ reachability,3_as65002_liptovdky-mikulas,10.180.0.8/32,,,intact
 reachability,3_as65002_liptovdky-mikulas,10.181.0.6/32,,,intact
 waypointing,3_as65002_liptovdky-mikulas,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,3_as65002_liptovdky-mikulas,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,3_as65002_liptovdky-mikulas,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,3_as65002_liptovdky-mikulas,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,3_as65002_liptovdky-mikulas,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,3_as65002_liptovdky-mikulas,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,3_as65002_liptovdky-mikulas,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -1522,9 +1517,8 @@ isolation,4_as65002_detva,10.181.0.22/31,,,intact
 isolation,4_as65002_detva,10.181.0.42/31,,,intact
 isolation,4_as65002_detva,10.181.0.44/31,,,intact
 isolation,4_as65002_detva,10.181.0.6/31,,,intact
-isolation,4_as65002_detva,10.181.0.74/31,,,broken_added
 isolation,4_as65002_detva,10.181.0.8/31,,,intact
-reachability,4_as65002_detva,10.180.0.1/32,,,broken_removed|intact
+reachability,4_as65002_detva,10.180.0.1/32,,,intact
 reachability,4_as65002_detva,10.180.0.10/32,,,intact
 reachability,4_as65002_detva,10.180.0.2/32,,,broken_removed
 reachability,4_as65002_detva,10.180.0.20/32,,,intact
@@ -1543,7 +1537,7 @@ reachability,4_as65002_detva,10.200.4.0/24,,,intact
 reachability,4_as65002_detva,10.200.5.0/24,,,intact
 waypointing,4_as65002_detva,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,4_as65002_detva,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,4_as65002_detva,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,4_as65002_detva,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,4_as65002_detva,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,4_as65002_detva,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,4_as65002_detva,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -1573,8 +1567,7 @@ isolation,5_as65002_zvolen,10.181.0.22/31,,,intact
 isolation,5_as65002_zvolen,10.181.0.42/31,,,intact
 isolation,5_as65002_zvolen,10.181.0.44/31,,,intact
 isolation,5_as65002_zvolen,10.181.0.6/31,,,intact
-isolation,5_as65002_zvolen,10.181.0.74/31,,,broken_added
-reachability,5_as65002_zvolen,10.180.0.1/32,,,broken_removed|intact
+reachability,5_as65002_zvolen,10.180.0.1/32,,,intact
 reachability,5_as65002_zvolen,10.180.0.10/32,,,intact
 reachability,5_as65002_zvolen,10.180.0.2/32,,,broken_removed
 reachability,5_as65002_zvolen,10.180.0.20/32,,,intact
@@ -1586,7 +1579,7 @@ reachability,5_as65002_zvolen,10.180.0.8/32,,,intact
 reachability,5_as65002_zvolen,10.181.0.12/32,,,intact
 waypointing,5_as65002_zvolen,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,5_as65002_zvolen,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,5_as65002_zvolen,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,5_as65002_zvolen,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,5_as65002_zvolen,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,5_as65002_zvolen,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,5_as65002_zvolen,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -1644,8 +1637,7 @@ isolation,7_as65002_namestovo,10.181.0.22/31,,,intact
 isolation,7_as65002_namestovo,10.181.0.42/31,,,intact
 isolation,7_as65002_namestovo,10.181.0.44/31,,,intact
 isolation,7_as65002_namestovo,10.181.0.6/31,,,intact
-isolation,7_as65002_namestovo,10.181.0.74/31,,,broken_added
-reachability,7_as65002_namestovo,10.180.0.1/32,,,broken_removed|intact
+reachability,7_as65002_namestovo,10.180.0.1/32,,,intact
 reachability,7_as65002_namestovo,10.180.0.10/32,,,intact
 reachability,7_as65002_namestovo,10.180.0.2/32,,,broken_removed
 reachability,7_as65002_namestovo,10.180.0.20/32,,,intact
@@ -1657,7 +1649,7 @@ reachability,7_as65002_namestovo,10.180.0.8/32,,,intact
 reachability,7_as65002_namestovo,10.181.0.20/32,,,intact
 waypointing,7_as65002_namestovo,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,7_as65002_namestovo,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,7_as65002_namestovo,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,7_as65002_namestovo,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,7_as65002_namestovo,10.180.0.10/32,27_as65002_banska-bystrica,,intact
 waypointing,7_as65002_namestovo,10.180.0.10/32,9_as65002_lucenec,,intact
 waypointing,7_as65002_namestovo,10.180.0.2/32,1_as65002_none,,broken_removed
@@ -1686,8 +1678,7 @@ isolation,9_as65002_lucenec,10.181.0.20/31,,,intact
 isolation,9_as65002_lucenec,10.181.0.42/31,,,intact
 isolation,9_as65002_lucenec,10.181.0.44/31,,,intact
 isolation,9_as65002_lucenec,10.181.0.6/31,,,intact
-isolation,9_as65002_lucenec,10.181.0.74/31,,,broken_added
-reachability,9_as65002_lucenec,10.180.0.1/32,,,broken_removed|intact
+reachability,9_as65002_lucenec,10.180.0.1/32,,,intact
 reachability,9_as65002_lucenec,10.180.0.10/32,,,intact
 reachability,9_as65002_lucenec,10.180.0.2/32,,,broken_removed
 reachability,9_as65002_lucenec,10.180.0.20/32,,,intact
@@ -1699,7 +1690,7 @@ reachability,9_as65002_lucenec,10.180.0.8/32,,,intact
 reachability,9_as65002_lucenec,10.181.0.22/32,,,intact
 waypointing,9_as65002_lucenec,10.180.0.1/32,0_as65002_ruzombernk,,broken_removed
 waypointing,9_as65002_lucenec,10.180.0.1/32,1_as65002_none,,broken_added
-waypointing,9_as65002_lucenec,10.180.0.1/32,27_as65002_banska-bystrica,,broken_removed|intact
+waypointing,9_as65002_lucenec,10.180.0.1/32,27_as65002_banska-bystrica,,intact
 waypointing,9_as65002_lucenec,10.180.0.2/32,1_as65002_none,,broken_removed
 waypointing,9_as65002_lucenec,10.180.0.2/32,27_as65002_banska-bystrica,,broken_removed
 waypointing,9_as65002_lucenec,10.180.0.20/32,19_as65002_novaky,,intact

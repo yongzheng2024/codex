@@ -1,13 +1,13 @@
 predicate_type,node,prefix,waypoint,num_routes,sources
-isolation,0_as65009_linz,0.0.0.0/0,,,broken_removed|intact
+isolation,0_as65009_linz,0.0.0.0/0,,,intact
 isolation,0_as65009_linz,10.181.0.0/31,,,intact
-isolation,0_as65009_linz,10.181.0.36/31,,,broken_removed|intact
+isolation,0_as65009_linz,10.181.0.36/31,,,intact
 isolation,100_as65009_klagenfurt,0.0.0.0/0,,,broken_removed
 isolation,100_as65009_klagenfurt,10.181.0.2/31,,,broken_removed
 isolation,101_as65009_budapest,0.0.0.0/0,,,broken_removed
 isolation,101_as65009_budapest,10.181.0.2/31,,,broken_removed
 isolation,101_as65009_budapest,10.181.0.36/31,,,broken_removed
-isolation,102_as65009_innsbruck,0.0.0.0/0,,,broken_removed|intact
+isolation,102_as65009_innsbruck,0.0.0.0/0,,,intact
 isolation,102_as65009_innsbruck,10.181.0.0/31,,,intact
 isolation,102_as65009_innsbruck,10.181.0.36/31,,,broken_added
 isolation,104_as65009_bucharest,0.0.0.0/0,,,broken_removed
@@ -15,7 +15,7 @@ isolation,104_as65009_bucharest,10.181.0.2/31,,,broken_removed
 isolation,107_as65007_padova,10.181.0.100/31,,,intact
 isolation,109_as65007_bergamo,10.181.0.100/31,,,intact
 isolation,10_as65009_vienna,0.0.0.0/0,,,intact
-isolation,10_as65009_vienna,10.181.0.0/31,,,broken_removed|intact
+isolation,10_as65009_vienna,10.181.0.0/31,,,intact
 isolation,10_as65009_vienna,10.181.0.2/31,,,broken_removed
 isolation,111_as65007_verona,10.181.0.100/31,,,intact
 isolation,112_as65007_brescia,10.181.0.100/31,,,intact
@@ -175,7 +175,7 @@ isolation,19_as65004_rotterdam,0.0.0.0/0,,,intact
 isolation,19_as65004_rotterdam,10.181.0.148/31,,,intact
 isolation,19_as65004_rotterdam,10.181.0.154/31,,,intact
 isolation,19_as65004_rotterdam,10.181.0.156/31,,,intact
-isolation,1_as65009_st-pollen,0.0.0.0/0,,,broken_removed|intact
+isolation,1_as65009_st-pollen,0.0.0.0/0,,,intact
 isolation,20_as65003_sintra,0.0.0.0/0,,,intact
 isolation,21_as65007_catania,10.181.0.100/31,,,intact
 isolation,22_as65003_porto,0.0.0.0/0,,,intact
@@ -461,7 +461,7 @@ isolation,97_as65009_graz,0.0.0.0/0,,,broken_removed
 isolation,97_as65009_graz,10.181.0.2/31,,,broken_removed
 isolation,98_as65009_bratislava,0.0.0.0/0,,,broken_removed
 isolation,98_as65009_bratislava,10.181.0.2/31,,,broken_removed
-isolation,99_as65009_salzburg,0.0.0.0/0,,,broken_removed|intact
+isolation,99_as65009_salzburg,0.0.0.0/0,,,intact
 isolation,99_as65009_salzburg,10.181.0.0/31,,,intact
 isolation,9_as65008_erding,0.0.0.0/0,,,intact
 isolation,9_as65008_erding,10.181.0.108/31,,,intact

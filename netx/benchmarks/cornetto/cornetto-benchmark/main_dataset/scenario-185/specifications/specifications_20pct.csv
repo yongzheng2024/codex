@@ -2,11 +2,6 @@ predicate_type,node,prefix,waypoint,num_routes,sources
 isolation,0_as65004_salt-lake-city,0.0.0.0/0,,,intact
 isolation,0_as65004_salt-lake-city,10.181.0.6/31,,,intact
 isolation,0_as65004_salt-lake-city,10.181.0.8/31,,,intact
-isolation,0_as65004_salt-lake-city,10.200.21.0/24,,,broken_added
-isolation,0_as65004_salt-lake-city,10.200.22.0/24,,,broken_added
-isolation,0_as65004_salt-lake-city,10.200.3.0/24,,,broken_added
-isolation,0_as65004_salt-lake-city,10.200.4.0/24,,,broken_added
-isolation,0_as65004_salt-lake-city,10.200.5.0/24,,,broken_added
 reachability,0_as65004_salt-lake-city,10.180.0.1/32,,,intact
 reachability,0_as65004_salt-lake-city,10.180.0.13/32,,,intact
 isolation,10_as65002_los-angeles,0.0.0.0/0,,,intact
@@ -51,11 +46,6 @@ isolation,14_as65002_oakland,10.181.0.26/31,,,intact
 isolation,14_as65002_oakland,10.181.0.34/31,,,intact
 isolation,14_as65002_oakland,10.181.0.36/31,,,intact
 isolation,14_as65002_oakland,10.181.0.38/31,,,intact
-isolation,14_as65002_oakland,10.200.21.0/24,,,broken_added
-isolation,14_as65002_oakland,10.200.22.0/24,,,broken_added
-isolation,14_as65002_oakland,10.200.3.0/24,,,broken_added
-isolation,14_as65002_oakland,10.200.4.0/24,,,broken_added
-isolation,14_as65002_oakland,10.200.5.0/24,,,broken_added
 reachability,14_as65002_oakland,10.180.0.11/32,,,intact
 reachability,14_as65002_oakland,10.180.0.14/32,,,intact
 reachability,14_as65002_oakland,10.180.0.15/32,,,intact

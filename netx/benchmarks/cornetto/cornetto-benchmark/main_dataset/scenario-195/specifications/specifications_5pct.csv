@@ -52,7 +52,6 @@ isolation,1_as65004_1,10.181.0.4/31,,,intact
 isolation,1_as65004_1,10.181.0.6/31,,,intact
 reachability,1_as65004_1,10.200.0.0/24,,,broken_removed
 reachability,1_as65004_1,10.200.1.0/24,,,broken_removed
-reachability,1_as65004_1,10.200.12.0/24,,,broken_added
 isolation,20_as65002_20,10.181.0.0/31,,,intact
 isolation,20_as65002_20,10.181.0.40/31,,,intact
 isolation,20_as65002_20,10.181.0.42/31,,,intact
@@ -87,7 +86,6 @@ isolation,5_as65004_5,10.181.0.4/31,,,intact
 isolation,5_as65004_5,10.181.0.6/31,,,intact
 reachability,5_as65004_5,10.200.0.0/24,,,broken_removed
 reachability,5_as65004_5,10.200.1.0/24,,,broken_removed
-reachability,5_as65004_5,10.200.12.0/24,,,broken_added
 isolation,6_as65004_6,10.181.0.16/31,,,intact
 isolation,6_as65004_6,10.181.0.22/31,,,intact
 isolation,6_as65004_6,10.181.0.4/31,,,intact
