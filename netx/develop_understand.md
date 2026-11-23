@@ -17,6 +17,8 @@ This describes the conceptual flow, not a requirement to run both original syste
 
 For this initial stage, focus on understanding the current configuration. Modular contracts, repair-space generation, and a broader repair framework are outside this document's scope.
 
+For a failed run or a disputed result, follow the [Understand repair guide](repair_understand.md).
+
 ## 2. Three building blocks
 
 ### A. Summarize supplied intents
@@ -36,6 +38,8 @@ A waypoint lies on every graph path from the source to the synthetic prefix dest
 Start with the current snapshot. Reuse existing failure-aware results when available, but do not require a new fault-tolerance engine for this component. State which scenarios each result covers.
 
 ### B. Supplement with Batfish facts
+
+For Cornetto references, compute prefix membership on the supplied snapshot using ordinary Batfish `ibdp` and the scorer's graph rules. Keep the CSV label, the published presence for that snapshot and the observed membership individually visible. A device connected to the destination by an `accepted` edge reaches the prefix vertex. A `delivered_to_subnet` edge can terminate a connected route while a packet addressed to the router's interface reaches the router. Packet observations and role assignments use the physical links and BGP settings recorded in the device evidence run. [Implementation and output](tools/understand/README.md#reading-the-evidence)
 
 Summaries alone do not explain route choices or filtering. Supplement them with the following facts, using existing Batfish simulation and analysis where supported.
 

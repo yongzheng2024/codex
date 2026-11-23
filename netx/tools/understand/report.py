@@ -3,6 +3,7 @@
 import json
 
 from .inputs import reference_input, reference_matches_snapshot
+from .prefix_graphs import compare_graphs
 from .role_validation import SUCCESSFUL_DISPOSITIONS
 from .roles import role_hypotheses
 from .summaries import imported_properties, summarize
@@ -108,6 +109,24 @@ def build_report(facts, plan, rows, provenance, specs_path, *, rows_in_file=None
                            attributedRows=0, unattributedRows=list(summary["evidence"]))
     roles = role_hypotheses(facts, role_summaries, rows, intent_only=specs_path is not None)
     state = provenance["configurationState"]
+    comparison = {}
+    if "cornettoModel" in facts:
+        model = facts["cornettoModel"]
+        for name in ("layer1", "ipOwners"):
+            facts["cornettoTables"][name].sort(key=lambda row: json.dumps(row, sort_keys=True))
+        model["modelGaps"] = model_gaps(model, provenance)
+        gaps.extend(f"Cornetto model: {gap}" for gap in model["modelGaps"] if gap not in gaps)
+        try:
+            graph = compare_graphs(facts["cornettoTables"], rows, state, model["modelGaps"])
+        except ModuleNotFoundError as error:
+            if error.name not in {"networkx", "pandas"}:
+                raise
+            reason = f"Install {error.name} to compare Cornetto prefix graphs"
+            graph = {"status": "unavailable", "reason": reason, "configurationState": state}
+            gaps.append(reason)
+        graph.update(engine=model["engine"], snapshot=provenance["snapshot"], topology="snapshot_inputs",
+                     modelEvidence="#/evidence/cornettoModel", tableEvidence="#/evidence/cornettoTables")
+        comparison["predicateComparison"] = graph
     facts["configurationState"] = state
     for i, role in enumerate(roles):
         role["configurationState"] = state
@@ -125,6 +144,6 @@ def build_report(facts, plan, rows, provenance, specs_path, *, rows_in_file=None
                       "up to 64 ICMP probes for members sampled across summaries" if "intentMembers" in plan else
                       "first 64 inter-device representative VRF pairs"),
         "benchmark": {**reference, "rowsInFile": rows_in_file, "rows": rows},
-        "summaries": summaries, "gaps": gaps, "evidence": facts,
+        **comparison, "summaries": summaries, "gaps": gaps, "evidence": facts,
         "roleHypotheses": roles,
     }

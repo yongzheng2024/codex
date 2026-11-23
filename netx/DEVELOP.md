@@ -33,7 +33,7 @@ The snapshot understanding tool summarizes supplied forwarding predicates,
 collects forwarding and routing evidence from the vendored Batfish engine, and
 returns scoped device roles. Its three-router example exercises backup routes,
 import/export rejections and interface ACLs. [Tool guide](tools/understand/README.md) ·
-[Understand development guide](understand_develop.md) ·
+[Understand development guide](develop_understand.md) ·
 [Cornetto benchmark](benchmarks/cornetto/cornetto-benchmark/README.md)
 
 ## SpecLens verification and configuration explanations

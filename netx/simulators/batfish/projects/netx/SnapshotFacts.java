@@ -48,7 +48,12 @@ public final class SnapshotFacts {
       focus.addPrefixRange(PrefixRange.ALL);
     }
     TracingDataPlanePlugin plugin = new TracingDataPlanePlugin(focus);
-    settings.setDataplaneEngineName(plugin.getName());
+    // NOTE: Cornetto scores the ordinary ibdp convergence. The device-role run uses the
+    // tracing plugin's SpecLens-compatible BGP exports and needs a separate data plane.
+    boolean prefixGraph = queries.path("cornettoTablesOnly").asBoolean();
+    if (!prefixGraph) {
+      settings.setDataplaneEngineName(plugin.getName());
+    }
     FileBasedStorage storage = new FileBasedStorage(storageRoot, settings.getLogger());
     NetworkSnapshot snapshot =
         new NetworkSnapshot(new NetworkId("netx"), new SnapshotId("current"));
@@ -68,7 +73,9 @@ public final class SnapshotFacts {
             Caffeine.newBuilder().build(),
             storage,
             null);
-    plugin.initialize(batfish);
+    if (!prefixGraph) {
+      plugin.initialize(batfish);
+    }
     var configs = batfish.loadConfigurations(snapshot);
     if (configs.isEmpty()) {
       throw new IllegalArgumentException("No device configurations could be loaded");
@@ -78,16 +85,22 @@ public final class SnapshotFacts {
     var convert = batfish.loadConvertConfigurationAnswerElementOrReparse(snapshot);
     Map<String, Object> facts = new LinkedHashMap<>();
     facts.put("batfishVersion", BatfishVersion.getVersionStatic());
-    facts.put("bgpMultipathExport", "speclens_compatible");
     facts.put("parseStatus", parse.getParseStatus());
     facts.put("parseWarnings", parse.getWarnings());
     facts.put("conversionWarnings", convert.getWarnings());
     facts.put("conversionStatus", convert.getConvertStatus());
+    facts.put("domains", RoutingFacts.domains(configs));
+    if (prefixGraph) {
+      facts.put("cornettoTables", CornettoTables.collect(batfish, snapshot));
+      facts.put("engine", settings.getDataPlaneEngineName());
+      BatfishObjectMapper.verboseMapper().writeValue(Path.of(args[3]).toFile(), facts);
+      return;
+    }
+    facts.put("bgpMultipathExport", "speclens_compatible");
     facts.put("definitions", convert.getDefinedStructures());
     facts.put("policySources", RoutingFacts.policySources(configs));
     facts.put("files", parse.getFileMap().asMap());
     facts.put("layer3Edges", batfish.getTopologyProvider().getLayer3Topology(snapshot).getEdges());
-    facts.put("domains", RoutingFacts.domains(configs));
     var bgpTopology = batfish.getTopologyProvider().getBgpTopology(snapshot);
     facts.put("bgpSessions", RoutingFacts.numberedSessions(bgpTopology));
     facts.put("routes", RoutingFacts.routes(batfish.loadDataPlane(snapshot), focus));

@@ -16,7 +16,10 @@ its default best-path export behavior. Reports identify the assumption as
 ## Run the three-router example
 
 Build the adapter in the vendored Batfish workspace. The Python entry point
-requires Python 3.10 or newer and uses the standard library.
+requires Python 3.10 or newer. Comparing a matched Cornetto CSV also requires
+pandas and NetworkX (`python3 -m pip install -r netx/tools/understand/requirements.txt`). The Java
+adapter reads the snapshot locally. If either Python package is missing,
+the report records the unavailable comparison in its gaps.
 
 ```sh
 (cd netx/simulators/batfish && bazelisk build //projects/netx:snapshot_facts)
@@ -140,6 +143,18 @@ same precedence Cornetto uses for scoring. An `isolation` row with
   reconstruct the exact source node set. `evidence` links to the original rows,
   including duplicates. Without a specifications CSV, the tool returns an empty
   summary list and the available simulation evidence and roles.
+- **Prefix predicate comparison.** For a CSV from the same Cornetto scenario,
+  `predicateComparison.rows` links each original row to its membership in the
+  current NetX implementation of the Cornetto scorer. `agreement` compares
+  that membership with the published presence for the selected snapshot.
+  `modelStatus` and the diagnostics at `modelEvidence` identify partial parses.
+  The comparison uses ordinary `ibdp` and the native inputs in `initial_configs/`
+  or `final_configs/`. The separate device evidence run can add benchmark
+  topology and use SpecLens multipath export. Each run uses its own data plane.
+  `representativePrefix` identifies the prefix for which the scorer emits
+  predicates when several graphs have the same signature. A null value means
+  the table produced no graph for that prefix. Predicate absence describes
+  scorer membership. A device role requires a scoped action.
 - **Packet paths.** Each flow observation includes dispositions and up to 256
   paths, together with the total path count. NetX treats `ACCEPTED`,
   `DELIVERED_TO_SUBNET` and `EXITS_NETWORK` as successful. Complete,
@@ -196,7 +211,7 @@ same precedence Cornetto uses for scoring. An `isolation` row with
   role, inspect the two VRFs and the packet in the cited query pair. The
   result applies to that destination and those headers. An unmatched ACL
   replay produces `inconsistent` and a report gap. Role cross-checks use
-  the current simulator. The [development guide](../../understand_develop.md)
+  the current simulator. The [development guide](../../develop_understand.md)
   gives the assignment and cross-check for each role.
 - **Completeness.** Unresolved queries, incomplete traces and model diagnostics
   produce `partial` with reasons. Fatal errors produce `error` and a nonzero

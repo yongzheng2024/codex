@@ -14,6 +14,15 @@ NETX = Path(__file__).resolve().parents[2]
 BACKEND = NETX / "simulators/batfish/bazel-bin/projects/netx/snapshot_facts"
 
 
+def _snapshot_facts(snapshot, plan, temp):
+    with tempfile.TemporaryDirectory(dir=temp) as folder:
+        run = Path(folder)
+        queries, output = run / "queries.json", run / "facts.json"
+        queries.write_text(json.dumps(plan))
+        subprocess.run([BACKEND, snapshot, queries, run / "work", output], check=True, stdout=sys.stderr)
+        return json.loads(output.read_text())
+
+
 def analyze(snapshot_path: Path, *, queries_path: Path | None = None,
             specifications: Path | None = None, specification_lines: set[int] | None = None):
     """Analyze one snapshot, optionally sampling reference rows by their original CSV line."""
@@ -31,11 +40,18 @@ def analyze(snapshot_path: Path, *, queries_path: Path | None = None,
         snapshot, provenance = prepare_snapshot(snapshot_path.resolve(), temp)
         reference = reference_input(specifications)
         summaries = summarize(imported_properties(rows, reference))
-        if specifications and "flows" not in plan and reference_matches_snapshot(reference, provenance):
+        matched = reference_matches_snapshot(reference, provenance)
+        if specifications and "flows" not in plan and matched:
             plan["intentMembers"] = probe_members(summaries, rows)
-        queries, output = temp / "queries.json", temp / "facts.json"
-        queries.write_text(json.dumps(plan))
-        subprocess.run([BACKEND, snapshot, queries, temp / "work", output], check=True, stdout=sys.stderr)
-        facts = json.loads(output.read_text())
+        facts = _snapshot_facts(snapshot, plan, temp)
+        if rows and reference["scenario"] and provenance["scenario"] and matched:
+            # NOTE: Cornetto reads final_configs/ or initial_configs/ as supplied. Adding
+            # external physical links here can change waypoint and reachability predicates.
+            supplied = Path(provenance["snapshot"])
+            model = _snapshot_facts(supplied, {"cornettoTablesOnly": True}, temp)
+            if "cornettoTables" not in model:
+                raise ValueError("Rebuild //projects/netx:snapshot_facts for Cornetto prefix-graph support")
+            facts["cornettoTables"] = model.pop("cornettoTables")
+            facts["cornettoModel"] = model
     return build_report(facts, plan, rows, provenance, specifications, rows_in_file=rows_in_file,
                         summaries=summaries)

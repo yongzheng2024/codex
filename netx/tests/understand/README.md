@@ -17,6 +17,52 @@ bazelisk test //projects/batfish/src/test/java/org/batfish/dataplane/ibdp:tests 
   //projects/batfish/src/test/java/org/batfish/dataplane/traceroute:tests
 ```
 
+## Cornetto reference control
+
+The prefix-graph tests cover source membership, endpoint acceptance, waypoint dominance, exact ECMP fanout, equivalent-prefix representatives and both reference states. Scenario-194 exercises a packet accepted at an interface inside a prefix whose isolation predicate is present.
+
+To run the independent control, install the Cornetto pybatfish client for decoding the original question answers, use a compatible JDK (tested with JDK 25), and export the bundle from the scorer image. From the repository root:
+
+```sh
+image=iprotogeros/batfish-allione@sha256:333119e3ccd448d0d096973f1002552c580d0daefc90a0331f84cef7a656ff47
+control_dir=$(mktemp -d)
+docker run --rm --network none --entrypoint cat "$image" /allinone-bundle.jar > "$control_dir/cornetto.jar"
+export CORNETTO_REFERENCE_JAR="$control_dir/cornetto.jar"
+python3 -m unittest netx.tests.understand.test_prefix_graphs -v
+```
+
+The test launches the bundle's own data plane and three questions, compares the forwarding rows as a multiset and checks predicate membership for every row of the 10% sample. The expected SHA-256 of the exported bundle is `887666d1b64a6783332e2a4a547733df1e5d9a552e5b0cc93db9c7bdf2863233`. Set `JAVA_HOME` to select the JDK.
+
+To check every available sampling percentage in one scenario, run the audit from the
+repository root with the same reference bundle. It computes one native data plane
+and one reference data plane, expands each CSV's summaries and checks every row.
+
+```sh
+python3 -m netx.tests.understand.audit_specifications \
+  netx/benchmarks/cornetto/cornetto-benchmark/main_dataset/scenario-097 \
+  --reference-jar "$CORNETTO_REFERENCE_JAR" --output netx/runs/audit-scenario-097
+```
+
+`comparison.json` records per-file counts, hashes, model gaps and forwarding-table
+differences. `differences.csv.gz` identifies the sample and physical CSV line for
+each disagreement, including repeats of a predicate across files.
+
+To repeat the audit for the entire published dataset with Bash, set the reference
+bundle as above and use a separate output directory for each scenario.
+
+```sh
+(
+  set -e
+  dataset=netx/benchmarks/cornetto/cornetto-benchmark/main_dataset
+  mkdir -p netx/runs
+  audit_dir=$(mktemp -d netx/runs/audit-published-XXXXXX)
+  for id in $(seq -w 1 231); do
+    python3 -m netx.tests.understand.audit_specifications "$dataset/scenario-$id" \
+      --reference-jar "$CORNETTO_REFERENCE_JAR" --output "$audit_dir/scenario-$id"
+  done
+)
+```
+
 ## Protocol coverage
 
 The role tests check all six responsibilities against a snapshot with known

@@ -18,6 +18,7 @@ class Property:
 
 def reference_presences(label):
     """Return the expected and fault-injected presence implied by a Cornetto status."""
+    # NOTE: Cornetto's broken tag takes precedence over an accompanying intact tag.
     tags = {tag.strip().lower() for tag in label.split("|")}
     if tags - {"intact", "broken_added", "broken_removed"} or {"broken_added", "broken_removed"} <= tags:
         return "unspecified", "unspecified"
