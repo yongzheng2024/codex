@@ -146,7 +146,14 @@ def _role_highlight(summary, report, outcomes):
             return names, f"`{node}` installed " + " and ".join(choices) + "."
     if part.get("action") == "reject" and scope.get("direction") in {"import", "export"}:
         direction = "imports from" if scope["direction"] == "import" else "exports to"
-        return names, f"`{node}` filtered BGP {direction} `{scope['peer']}` for {_examples(part['prefixes'], 2)}."
+        observation = f"`{node}` filtered BGP {direction} `{scope['peer']}` for {_examples(part['prefixes'], 2)}."
+        sent = sorted({e["prefix"] for e in report["evidence"]["events"]
+                       if scope["direction"] == "export" and e["node"] == node
+                       and e["peer"] == scope["peer"] and e["vrf"] == scope.get("vrf")
+                       and e["action"] == "sent" and e["prefix"] in part["prefixes"]})
+        if sent:
+            observation += f" Advertisements were also sent during convergence for {_examples(sent, 2)}."
+        return names, observation
     if role == "Origin" and "intentLinks" in part:
         publishers = {}
         for other, contribution in candidates:
@@ -171,6 +178,9 @@ def overview(report):
     lines = ["# Intent Summary", "",
              f"{len(report['benchmark']['rows'])} reference rows form {len(summaries)} intent summaries.",
              "", "[Device Roles](#device-roles) · [Full evidence and row references](result.json)"]
+    if report.get("simulation", {}).get("bgpMultipathExport") == "speclens_compatible":
+        lines.extend(["", "BGP export uses SpecLens-compatible multipath simulation; internal path IDs "
+                      "do not establish negotiated ADD-PATH or real device behavior."])
     # Use the summary position because different reference labels can yield identical intent titles.
     for number, s in enumerate(summaries, start=1):
         scope = s["scope"]

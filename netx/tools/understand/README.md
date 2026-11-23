@@ -5,6 +5,14 @@ Batfish routing events, packet traces and routing domains to describe six scoped
 device roles. Start at a summary to see its devices, their contributions, relevant
 reference members, packet observations and rows still awaiting attribution.
 
+The NetX plugin uses SpecLens-compatible BGP multipath export: each installed
+multipath candidate is evaluated against the peer's export policy. It assigns
+internal path IDs when needed to keep those candidates distinct at the receiver.
+These IDs and this behavior do not imply that ADD-PATH was negotiated or that a
+real device would send multiple paths. Ordinary Batfish's `ibdp` plugin retains
+its default best-path export behavior. Reports identify the assumption as
+`bgpMultipathExport: speclens_compatible`.
+
 ## Run the three-router example
 
 Build the adapter in the vendored Batfish workspace. The Python entry point

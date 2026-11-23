@@ -230,6 +230,14 @@ public final class VirtualRouter {
   }
 
   VirtualRouter(@Nonnull String name, @Nonnull Node node, @Nonnull PrefixTracer prefixTracer) {
+    this(name, node, prefixTracer, false);
+  }
+
+  VirtualRouter(
+      @Nonnull String name,
+      @Nonnull Node node,
+      @Nonnull PrefixTracer prefixTracer,
+      boolean exportMultipath) {
     _node = node;
     _c = node.getConfiguration();
     _name = name;
@@ -256,7 +264,13 @@ public final class VirtualRouter {
     if (_vrf.getBgpProcess() != null) {
       _bgpRoutingProcess =
           new BgpRoutingProcess(
-              _vrf.getBgpProcess(), _c, _name, _mainRib, BgpTopology.EMPTY, _prefixTracer);
+              _vrf.getBgpProcess(),
+              _c,
+              _name,
+              _mainRib,
+              BgpTopology.EMPTY,
+              _prefixTracer,
+              exportMultipath);
     }
     _hmmRoutes = ImmutableList.of();
     _kernelConditionalRoutes = ImmutableList.of();

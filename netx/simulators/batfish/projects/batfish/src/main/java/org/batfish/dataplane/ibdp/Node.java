@@ -31,10 +31,19 @@ public final class Node {
 
   /** Allows a data plane plugin to collect prefix events separately for each local VRF. */
   public Node(Configuration configuration, Function<String, PrefixTracer> tracerFactory) {
+    this(configuration, tracerFactory, false);
+  }
+
+  /** Selects SpecLens-compatible multipath export for a dedicated simulation plugin. */
+  public Node(
+      Configuration configuration,
+      Function<String, PrefixTracer> tracerFactory,
+      boolean exportMultipath) {
     _c = configuration;
     ImmutableSortedMap.Builder<String, VirtualRouter> b = ImmutableSortedMap.naturalOrder();
     for (String vrfName : _c.getVrfs().keySet()) {
-      VirtualRouter vr = new VirtualRouter(vrfName, this, tracerFactory.apply(vrfName));
+      VirtualRouter vr =
+          new VirtualRouter(vrfName, this, tracerFactory.apply(vrfName), exportMultipath);
       b.put(vrfName, vr);
     }
     _virtualRouters = b.build();

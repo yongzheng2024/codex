@@ -119,7 +119,8 @@ def build_report(facts, plan, rows, provenance, specs_path, *, rows_in_file=None
             "original_correct": "Single snapshot of the original correct Cornetto configuration",
             "as_supplied": "Single snapshot of the supplied configuration",
         }[state],
-        "input": provenance, "routeFocus": plan.get("prefixes", "all prefixes"),
+        "input": provenance, "simulation": {"bgpMultipathExport": facts.get("bgpMultipathExport", "unspecified")},
+        "routeFocus": plan.get("prefixes", "all prefixes"),
         "flowScope": ("explicit flows" if "flows" in plan else
                       "up to 64 ICMP probes for members sampled across summaries" if "intentMembers" in plan else
                       "first 64 inter-device representative VRF pairs"),

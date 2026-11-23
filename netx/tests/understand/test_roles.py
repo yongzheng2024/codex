@@ -186,6 +186,9 @@ class RoleTests(ProtocolCase):
         self.assertEqual(groups["isolation", "intact"]["attributedRows"], 1)
         observations = [line for line in overview(report).splitlines() if line.startswith("**Observation**")]
         self.assertEqual(len(observations), len(report["summaries"]))
+        self.assertTrue(any("filtered BGP exports to `customer1` for `203.0.113.0/24`" in line
+                            and "Advertisements were also sent during convergence" in line
+                            for line in observations))
         self.assertIn("**Observation** `r4` installed 1 next hop for `192.0.2.0/24`, `198.51.100.0/24`.", observations)
         self.assertIn("**Observation** `r4` installed 2 next hops for `203.0.113.0/24`.", observations)
         self.assertIn("**Observation** `r4` filtered BGP imports from `customer1` for `172.16.0.0/12`.",

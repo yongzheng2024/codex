@@ -76,6 +76,7 @@ def compact(report, result_path):
     return {
         "status": report["status"], "scenario": report["scenario"], "batfishVersion": evidence["batfishVersion"],
         "input": {k: report["input"][k] for k in ("snapshot", "scenario", "configurationState")},
+        "simulation": report["simulation"],
         "benchmark": {k: v for k, v in report["benchmark"].items() if k != "rows"},
         "result_id": result_path.parent.name, "details": str(result_path),
         "gapCount": len(report["gaps"]), "gaps": report["gaps"][:8],

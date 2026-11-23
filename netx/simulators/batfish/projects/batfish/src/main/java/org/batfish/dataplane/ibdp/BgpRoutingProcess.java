@@ -228,9 +228,10 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
   private @Nonnull RibDelta<Bgpv4Route> _bgpv4DeltaPrevBestPath = RibDelta.empty();
 
   // copy of RIBs from prev round, for new links in the current round.
-  // note that we only populate the full Prev (not PrevBestPath) versions when
-  // some session has additional paths and we need to be able to send them.
-  private boolean _anySessionHasAdditionalPaths = true;
+  // Full Prev versions are populated for ADD-PATH sessions and SpecLens compatibility.
+  private boolean _retainMultipathRoutes = true;
+  // Compatibility mode models SpecLens's per-installed-path export, not negotiated ADD-PATH.
+  private final boolean _exportMultipath;
   private @Nonnull Set<Bgpv4Route> _ebgpv4Prev;
   private @Nonnull Set<Bgpv4Route> _ebgpv4PrevBestPath;
   private @Nonnull Set<Bgpv4Route> _bgpv4Prev;
@@ -381,6 +382,18 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
       Rib mainRib,
       BgpTopology topology,
       PrefixTracer prefixTracer) {
+    this(process, configuration, vrfName, mainRib, topology, prefixTracer, false);
+  }
+
+  BgpRoutingProcess(
+      BgpProcess process,
+      Configuration configuration,
+      String vrfName,
+      Rib mainRib,
+      BgpTopology topology,
+      PrefixTracer prefixTracer,
+      boolean exportMultipath) {
+    _exportMultipath = exportMultipath;
     _process = process;
     _c = configuration;
     _hostname = configuration.getHostname();
@@ -1216,10 +1229,10 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
     RibDelta<Bgpv4Route> bgpv4DeltaPrev;
     Set<Bgpv4Route> ebgpv4Prev;
     RibDelta<Bgpv4Route> ebgpv4DeltaPrev;
-    if (ourSession.getAdditionalPaths()) {
+    if (ourSession.getAdditionalPaths() || _exportMultipath) {
       // Two assertions to catch asynchrony bugs.
-      assert _anySessionHasAdditionalPaths;
-      assert _anySessionHasAdditionalPaths == computeAnySessionHasAdditionalPaths();
+      assert _retainMultipathRoutes;
+      assert _retainMultipathRoutes == shouldRetainMultipathRoutes();
       bgpv4Prev = _bgpv4Prev;
       bgpv4DeltaPrev = _bgpv4DeltaPrev;
       ebgpv4Prev = _ebgpv4Prev;
@@ -1878,6 +1891,18 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
         exportCandidate.getNextHopIp(),
         _pathIdGenerators,
         _routesToPathIds);
+    if (_exportMultipath
+        && !ourSessionProperties.getAdditionalPaths()
+        && addressFamily.getType() == Type.IPV4_UNICAST) {
+      // Preserve distinct candidates through the receiver's (peer, prefix, path ID) RIB key.
+      // These IDs are internal compatibility identifiers, not negotiated wire ADD-PATH IDs.
+      transformedOutgoingRouteBuilder.setPathId(
+          _routesToPathIds.computeIfAbsent(
+              exportCandidate,
+              route ->
+                  _pathIdGenerators.compute(
+                      route.getNetwork(), (prefix, lastId) -> lastId == null ? 1 : lastId + 1)));
+    }
     // Successfully exported route
     R transformedOutgoingRoute = transformedOutgoingRouteBuilder.build();
 
@@ -2523,10 +2548,13 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
   }
 
   /**
-   * Returns true iff any active session requires sending all routes, not just best-paths. When
-   * false, this enables a compute and storage savings as we do not need to materialize all routes.
+   * Returns true when the simulation needs all BGP routes for export. Otherwise, avoid
+   * materializing the full route sets.
    */
-  private boolean computeAnySessionHasAdditionalPaths() {
+  private boolean shouldRetainMultipathRoutes() {
+    if (_exportMultipath) {
+      return true;
+    }
     for (EdgeId edge : _bgpv4Edges) {
       // Edges are receiver-oriented, so need to reverse for the sender-side configuration.
       if (getBgpSessionProperties(_topology, edge.reverse()).getAdditionalPaths()) {
@@ -2538,9 +2566,9 @@ final class BgpRoutingProcess implements RoutingProcess<BgpTopology, BgpRoute<?,
 
   /** Record state at beginning of round prior to pulling from neighbors. */
   public void startOfInnerRound() {
-    // Take a snapshot of current RIBs so we know to to send to new add-path sessions.
-    _anySessionHasAdditionalPaths = computeAnySessionHasAdditionalPaths();
-    if (_anySessionHasAdditionalPaths) {
+    // Take a snapshot of current RIBs for sessions that export multiple paths.
+    _retainMultipathRoutes = shouldRetainMultipathRoutes();
+    if (_retainMultipathRoutes) {
       _bgpv4Prev = _bgpv4Rib.getRoutes();
       _ebgpv4Prev = _ebgpv4Rib.getRoutes();
     } else {

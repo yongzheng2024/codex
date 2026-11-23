@@ -49,7 +49,8 @@ final class TracingDataPlanePlugin extends IncrementalDataPlanePlugin {
           OriginTracer tracer = new OriginTracer(prefixes);
           tracers.put(new Location(config.getHostname(), vrf), tracer);
           return tracer;
-        });
+        },
+        true);
   }
 
   List<OriginTracer.Export> originExports(BgpTopology topology) {

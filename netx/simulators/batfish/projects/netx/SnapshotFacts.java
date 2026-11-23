@@ -78,6 +78,7 @@ public final class SnapshotFacts {
     var convert = batfish.loadConvertConfigurationAnswerElementOrReparse(snapshot);
     Map<String, Object> facts = new LinkedHashMap<>();
     facts.put("batfishVersion", BatfishVersion.getVersionStatic());
+    facts.put("bgpMultipathExport", "speclens_compatible");
     facts.put("parseStatus", parse.getParseStatus());
     facts.put("parseWarnings", parse.getWarnings());
     facts.put("conversionWarnings", convert.getWarnings());

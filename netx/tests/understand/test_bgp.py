@@ -1,6 +1,11 @@
 """BGP selection, session loss and route reflection in the converged data plane."""
 
+import shutil
+import tempfile
+from pathlib import Path
+
 from netx.tests.understand.protocol_cases import EDGE, IBDP, ProtocolCase, packet
+from netx.tools.understand import NETX, analyze
 
 
 SERVICE = "203.0.113.8/32"
@@ -9,6 +14,50 @@ REFLECTED = "5.5.5.5/32"
 
 
 class EbgpTests(ProtocolCase):
+    def test_speclens_multipath_export_applies_policy_to_each_installed_path(self):
+        scenario = NETX / "benchmarks/cornetto/cornetto-benchmark/main_dataset/scenario-300"
+        if not scenario.exists():
+            self.skipTest("Optional local scenario-300 is unavailable")
+        prefix = "203.0.113.0/24"
+        with tempfile.TemporaryDirectory(prefix="netx-multipath-export-") as directory:
+            snapshot = shutil.copytree(scenario, Path(directory) / "scenario-300")
+            config = snapshot / "final_configs/configs/r4.cfg"
+            original = config.read_text()
+            for policy in ("deny_comm1", "deny_both", "permit_both"):
+                with self.subTest(policy=policy):
+                    modified = original
+                    if policy == "deny_both":
+                        modified = modified.replace(
+                            "route-map R4_OUT_TO_C1 permit 100",
+                            "route-map R4_OUT_TO_C1 deny 20\n  match community comm2\n!\n"
+                            "route-map R4_OUT_TO_C1 permit 100")
+                    elif policy == "permit_both":
+                        modified = modified.replace("  neighbor as700 route-map R4_OUT_TO_C1 out\n", "")
+                    config.write_text(modified)
+                    report = analyze(snapshot)
+                    self.assertEqual(report["status"], "ok", report["gaps"])
+                    self.assertEqual(report["simulation"]["bgpMultipathExport"], "speclens_compatible")
+                    facts = report["evidence"]
+                    paths = [r for r in self.routes(facts, "r4", prefix) if r["inMainRib"]]
+                    self.assertEqual({r["nextHop"]["ip"] for r in paths}, {"192.18.4.2", "192.18.4.6"})
+                    candidates = self.routes(facts, "customer1", prefix)
+                    received = [r for r in candidates if r["inMainRib"]]
+                    if policy == "deny_both":
+                        self.assertEqual(received, [])
+                    elif policy == "deny_comm1":
+                        route, = received
+                        self.assertEqual(route["attributes"]["communities"], ["100:300"])
+                        self.assertEqual(route["nextHop"]["ip"], "192.18.7.2")
+                        events = [e for e in facts["events"] if e["node"] == "r4"
+                                  and e["peer"] == "customer1" and e["prefix"] == prefix
+                                  and e["direction"] == "export"]
+                        self.assertEqual({e["action"] for e in events}, {"sent", "rejected"})
+                    else:
+                        self.assertEqual({tuple(r["attributes"]["communities"]) for r in candidates},
+                                         {("100:200",), ("100:300",)})
+                        self.assertEqual(len({r["attributes"]["pathId"] for r in candidates}), 2)
+                        self.assertEqual(len(received), 1)  # Both paths have the same next hop here.
+
     def test_local_preference_and_as_path_length(self):
         prepend = ("primary.cfg", "route-map TO-EDGE permit 20\n",
                    "route-map TO-EDGE permit 20\n set as-path prepend 65001 65001\n")
