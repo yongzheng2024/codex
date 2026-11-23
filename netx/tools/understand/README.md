@@ -16,10 +16,7 @@ its default best-path export behavior. Reports identify the assumption as
 ## Run the three-router example
 
 Build the adapter in the vendored Batfish workspace. The Python entry point
-requires Python 3.10 or newer. Comparing a matched Cornetto CSV also requires
-pandas and NetworkX (`python3 -m pip install -r netx/tools/understand/requirements.txt`). The Java
-adapter reads the snapshot locally. If either Python package is missing,
-the report records the unavailable comparison in its gaps.
+requires Python 3.10 or newer. The Java adapter reads and simulates the snapshot locally. The default workflow needs the NetX Batfish build and the Python standard library.
 
 ```sh
 (cd netx/simulators/batfish && bazelisk build //projects/netx:snapshot_facts)
@@ -143,18 +140,20 @@ same precedence Cornetto uses for scoring. An `isolation` row with
   reconstruct the exact source node set. `evidence` links to the original rows,
   including duplicates. Without a specifications CSV, the tool returns an empty
   summary list and the available simulation evidence and roles.
-- **Prefix predicate comparison.** For a CSV from the same Cornetto scenario,
-  `predicateComparison.rows` links each original row to its membership in the
-  current NetX implementation of the Cornetto scorer. `agreement` compares
-  that membership with the published presence for the selected snapshot.
-  `modelStatus` and the diagnostics at `modelEvidence` identify partial parses.
-  The comparison uses ordinary `ibdp` and the native inputs in `initial_configs/`
-  or `final_configs/`. The separate device evidence run can add benchmark
-  topology and use SpecLens multipath export. Each run uses its own data plane.
-  `representativePrefix` identifies the prefix for which the scorer emits
-  predicates when several graphs have the same signature. A null value means
-  the table produced no graph for that prefix. Predicate absence describes
-  scorer membership. A device role requires a scoped action.
+- **Intent checks.** Every supplied source/prefix pair is checked on the same NetX Batfish
+  convergence that supplies device roles. The 64-flow limit applies only to detailed role traces.
+  `intentEvaluation.rows` preserves CSV line numbers, repair targets, observed presence and
+  evidence pointers. `result` compares presence with the repair target, including on candidate
+  copies named `final_configs/`. `faultyReference` retains the original label interpretation.
+  Default-VRF reachability means at least one modeled ICMP echo path is accepted at the original
+  destination address. The destination is a modeled interface address inside the prefix, or its
+  first usable address when there is none. Isolation means every path fails and the
+  enumeration is conclusive. Waypointing requires the named router on every accepted path after the source,
+  including the receiving router. At least one path must be accepted. Load balancing counts distinct resolved neighboring
+  routers installed in the source FIB for the same destination, independently of delivery.
+  A missing source, unresolved forwarding neighbor, inconclusive delivery, or partial model can
+  yield `unknown`. These observations are scoped to the recorded destination and headers.
+  The historical Cornetto scorer remains available to the standalone dataset audit.
 - **Packet paths.** Each flow observation includes dispositions and up to 256
   paths, together with the total path count. NetX treats `ACCEPTED`,
   `DELIVERED_TO_SUBNET` and `EXITS_NETWORK` as successful. Complete,

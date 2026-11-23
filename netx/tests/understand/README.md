@@ -1,10 +1,11 @@
 # Snapshot understanding tests
 
 Run from the repository root. Build the adapter once before running the Python
-suite. Discovery starts at the shared NetX test directory.
+suite. The historical Cornetto graph tests also use pandas and NetworkX.
 
 ```sh
 (cd netx/simulators/batfish && bazelisk build //projects/netx:snapshot_facts)
+python3 -m pip install -r netx/tests/understand/requirements.txt
 python3 -m unittest discover -s netx/tests -v
 ```
 
@@ -19,7 +20,7 @@ bazelisk test //projects/batfish/src/test/java/org/batfish/dataplane/ibdp:tests 
 
 ## Cornetto reference control
 
-The prefix-graph tests cover source membership, endpoint acceptance, waypoint dominance, exact ECMP fanout, equivalent-prefix representatives and both reference states. Scenario-194 exercises a packet accepted at an interface inside a prefix whose isolation predicate is present.
+The historical dataset-audit tests cover source membership, endpoint acceptance, waypoint dominance, exact ECMP fanout, equivalent-prefix representatives and both reference states. The native scenario-194 test checks that an accepted packet contradicts isolation for that probe.
 
 To run the independent control, install the Cornetto pybatfish client for decoding the original question answers, use a compatible JDK (tested with JDK 25), and export the bundle from the scorer image. From the repository root:
 

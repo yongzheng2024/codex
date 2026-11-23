@@ -1,3 +1,1 @@
-# Offline Cornetto forwarding-graph extraction.
-networkx
-pandas
+# NetX Understand uses the Python standard library.

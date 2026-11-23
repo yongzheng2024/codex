@@ -41,17 +41,11 @@ def analyze(snapshot_path: Path, *, queries_path: Path | None = None,
         reference = reference_input(specifications)
         summaries = summarize(imported_properties(rows, reference))
         matched = reference_matches_snapshot(reference, provenance)
+        if rows and matched:
+            plan["checkIntents"] = [{"node": node, "prefix": prefix} for node, prefix in
+                                    sorted({(r["node"].lower(), r["prefix"]) for r in rows})]
         if specifications and "flows" not in plan and matched:
             plan["intentMembers"] = probe_members(summaries, rows)
         facts = _snapshot_facts(snapshot, plan, temp)
-        if rows and reference["scenario"] and provenance["scenario"] and matched:
-            # NOTE: Cornetto reads final_configs/ or initial_configs/ as supplied. Adding
-            # external physical links here can change waypoint and reachability predicates.
-            supplied = Path(provenance["snapshot"])
-            model = _snapshot_facts(supplied, {"cornettoTablesOnly": True}, temp)
-            if "cornettoTables" not in model:
-                raise ValueError("Rebuild //projects/netx:snapshot_facts for Cornetto prefix-graph support")
-            facts["cornettoTables"] = model.pop("cornettoTables")
-            facts["cornettoModel"] = model
     return build_report(facts, plan, rows, provenance, specifications, rows_in_file=rows_in_file,
                         summaries=summaries)

@@ -48,8 +48,8 @@ public final class SnapshotFacts {
       focus.addPrefixRange(PrefixRange.ALL);
     }
     TracingDataPlanePlugin plugin = new TracingDataPlanePlugin(focus);
-    // NOTE: Cornetto scores the ordinary ibdp convergence. The device-role run uses the
-    // tracing plugin's SpecLens-compatible BGP exports and needs a separate data plane.
+    // Only the standalone historical audit requests the Cornetto forwarding table.
+    // Understand and Plan use the tracing plugin for both intent and role observations.
     boolean prefixGraph = queries.path("cornettoTablesOnly").asBoolean();
     if (!prefixGraph) {
       settings.setDataplaneEngineName(plugin.getName());
@@ -108,6 +108,11 @@ public final class SnapshotFacts {
     facts.put("originExports", plugin.originExports(bgpTopology));
     SnapshotQueries analysis = new SnapshotQueries(batfish, snapshot, configs);
     facts.put("queries", analysis.run(queries));
+    if (queries.has("checkIntents")) {
+      facts.put(
+          "intentObservations",
+          IntentObservations.collect(batfish, snapshot, configs, queries.get("checkIntents")));
+    }
     BatfishObjectMapper.verboseMapper().writeValue(Path.of(args[3]).toFile(), facts);
   }
 }

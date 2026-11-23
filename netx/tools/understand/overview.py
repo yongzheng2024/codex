@@ -1,6 +1,6 @@
 """Render the reference summaries and attributed responsibilities for a compact run."""
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 from .details import resolve
 from .responsibilities import originated_prefixes
@@ -178,18 +178,15 @@ def overview(report):
     lines = ["# Intent Summary", "",
              f"{len(report['benchmark']['rows'])} reference rows form {len(summaries)} intent summaries.",
              "", "[Device Roles](#device-roles) · [Full evidence and row references](result.json)"]
-    graph = report.get("predicateComparison", {})
-    if graph.get("status") == "unavailable":
-        lines.extend(["", graph["reason"] + "."])
-    elif "counts" in graph:
-        counts = graph["counts"]
-        lines.extend(["", "The Cornetto prefix graph (ordinary Batfish `ibdp`, supplied snapshot topology) "
-                      f"matches {counts.get('matches', 0)} of "
-                      f"{len(graph['rows'])} reference rows for this snapshot. "
-                      f"{counts.get('differs', 0)} differ and {counts.get('unspecified', 0)} have unspecified labels. "
-                      f"Configuration model status is `{graph['modelStatus']}`."])
+    evaluation = report.get("intentEvaluation")
+    if evaluation:
+        counts = evaluation["counts"]
+        lines.extend(["", f"NetX Batfish simulation satisfies {counts['satisfied']} of {len(evaluation['rows'])} "
+                      f"repair targets. Violated {counts['violated']}, unknown {counts['unknown']}. "
+                      "Reachability uses an ICMP probe to the reported destination within each prefix. "
+                      "Load balancing counts distinct installed forwarding neighbors."])
     if report.get("simulation", {}).get("bgpMultipathExport") == "speclens_compatible":
-        lines.extend(["", "Device role evidence uses SpecLens-compatible BGP multipath export. Internal path IDs "
+        lines.extend(["", "The simulation uses SpecLens-compatible BGP multipath export. Internal path IDs "
                       "do not establish negotiated ADD-PATH or real device behavior."])
     # Use the summary position because different reference labels can yield identical intent titles.
     for number, s in enumerate(summaries, start=1):
@@ -198,13 +195,11 @@ def overview(report):
                       f"Reference label `{scope['sources']}`. The reference records the expected predicate as "
                       f"{scope['expectedPresence']} and its fault-injected state as {scope['faultyPresence']}.",
                       "", f"Destinations include {_examples(s['prefixes'])}."])
-        if graph.get("rows"):
-            members = (int(ref.rsplit("/", 1)[1]) for ref in s["evidence"])
-            different = [report["benchmark"]["rows"][i]["line"] for i in members
-                         if graph["rows"][i]["agreement"] == "differs"]
-            if different:
-                lines.append(f"Prefix-graph membership differs on {len(different)} rows. "
-                             f"CSV lines include {_examples(different)}.")
+        if evaluation:
+            observations = [evaluation["rows"][int(ref.rsplit("/", 1)[1])] for ref in s["evidence"]]
+            counts = Counter(r["result"] for r in observations)
+            lines.append(f"Simulation found {counts['satisfied']} satisfied, "
+                         f"{counts['violated']} violated, {counts['unknown']} unknown.")
         if s["exceptions"]:
             if s["baseNodes"]:
                 lines.append(f"The base source set includes {_examples(s['baseNodes'])}.")

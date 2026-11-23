@@ -35,7 +35,7 @@ import org.batfish.question.testroutepolicies.TestRoutePoliciesQuestion;
 /** Uses the forwarding engine and policy evaluator on the same snapshot. */
 final class SnapshotQueries {
   private static final int MAX_SAMPLED_FLOWS = 64;
-  private static final int MAX_PATHS_PER_FLOW = 256;
+  static final int MAX_PATHS_PER_FLOW = 256;
   private final TracerouteEngine traceroute;
   private final Batfish batfish;
   private final NetworkSnapshot snapshot;
@@ -87,7 +87,7 @@ final class SnapshotQueries {
     return results;
   }
 
-  private record Endpoint(String node, String vrf, Ip ip) {}
+  record Endpoint(String node, String vrf, Ip ip) {}
 
   private List<Endpoint> endpoints() {
     List<Endpoint> endpoints = new ArrayList<>();
@@ -107,7 +107,7 @@ final class SnapshotQueries {
     return endpoints;
   }
 
-  private static Flow echo(Endpoint src, Ip dst) {
+  static Flow echo(Endpoint src, Ip dst) {
     return Flow.builder()
         .setIngressNode(src.node)
         .setIngressVrf(src.vrf)
@@ -118,6 +118,17 @@ final class SnapshotQueries {
         .setIcmpCode(0)
         .setPacketLength(64)
         .build();
+  }
+
+  static Ip destination(TreeSet<Ip> addresses, Ip source, Prefix prefix) {
+    Ip dst = addresses.ceiling(prefix.getStartIp());
+    if (source.equals(dst)) {
+      Ip next = addresses.higher(dst);
+      if (next != null && prefix.containsIp(next)) {
+        dst = next;
+      }
+    }
+    return dst != null && prefix.containsIp(dst) ? dst : prefix.getFirstHostIp();
   }
 
   /** Prefer a modeled destination within the member prefix, then its first usable address. */
@@ -146,16 +157,7 @@ final class SnapshotQueries {
           continue;
         }
         found = true;
-        Ip dst = addresses.ceiling(prefix.getStartIp());
-        if (src.ip.equals(dst)) {
-          Ip next = addresses.higher(dst);
-          if (next != null && prefix.containsIp(next)) {
-            dst = next;
-          }
-        }
-        if (dst == null || !prefix.containsIp(dst)) {
-          dst = prefix.getFirstHostIp();
-        }
+        Ip dst = destination(addresses, src.ip, prefix);
         String id = "intent-" + ++count;
         try {
           results.add(new Result("flows", id, paths(echo(src, dst)), null));

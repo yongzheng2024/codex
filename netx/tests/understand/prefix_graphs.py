@@ -2,7 +2,7 @@
 
 from collections import Counter, defaultdict
 
-from .summaries import reference_presences
+from netx.tools.understand.summaries import reference_presences
 
 
 def prefix_graphs(tables):

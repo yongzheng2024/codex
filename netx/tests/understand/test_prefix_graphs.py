@@ -3,14 +3,15 @@
 from collections import Counter
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
-from netx.tools.understand import NETX, analyze
-from netx.tools.understand.prefix_graphs import compare_graphs
+from netx.tools.understand import NETX, analyze, _snapshot_facts
+from netx.tests.understand.prefix_graphs import compare_graphs
 
 PREFIX = "10.181.0.40/31"
 SCENARIO = NETX / "benchmarks/cornetto/cornetto-benchmark/main_dataset/scenario-194"
@@ -69,15 +70,44 @@ class PrefixGraphTests(unittest.TestCase):
 
 
 class ScorerInputsTests(unittest.TestCase):
+    def test_native_rows_use_one_convergence_with_explicit_flows(self):
+        fixture = Path(__file__).parent / "snapshot"
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            snapshot = shutil.copytree(fixture, root / "snapshot")
+            edge = snapshot / "configs/edge.cfg"
+            config = edge.read_text().replace("router bgp 65000", "router bgp 65000\n bgp bestpath as-path multipath-relax\n maximum-paths 2")
+            config = config.replace("set local-preference 200", "set local-preference 100")
+            edge.write_text(config.replace("deny tcp any host 203.0.113.8 eq 22", "deny icmp any host 203.0.113.8"))
+            csv = root / "rows.csv"
+            csv.write_text("predicate_type,node,prefix,waypoint,num_routes,sources\n"
+                           "load_balancing,edge,203.0.113.8/32,,2,broken_removed\n"
+                           "isolation,edge,203.0.113.8/32,,,broken_added\n"
+                           "waypointing,edge,203.0.113.8/32,secondary,,intact\n"
+                           "waypointing,edge,203.0.113.8/32,edge,,broken_added\n"
+                           "reachability,missing,203.0.113.8/32,,,intact\n")
+            queries = root / "queries.json"
+            queries.write_text('{"flows":[]}')
+            with patch("netx.tools.understand._snapshot_facts", wraps=_snapshot_facts) as simulate:
+                report = analyze(snapshot, queries_path=queries, specifications=csv)
+            self.assertEqual(simulate.call_count, 1)
+        checks = report["intentEvaluation"]["rows"]
+        self.assertEqual([r["presence"] for r in checks], ["present", "absent", "present", "absent", "unknown"])
+        self.assertEqual([r["result"] for r in checks], ["satisfied"] * 4 + ["unknown"])
+        self.assertEqual(len({r["evidence"] for r in checks}), 2)
+        self.assertEqual(report["evidence"]["queries"], [])
+        observed = next(o for o in report["evidence"]["intentObservations"] if o["node"] == "edge")
+        self.assertCountEqual(observed["nextHopNodes"], ["primary", "secondary"])
+        self.assertCountEqual(observed["dispositions"], ["ACCEPTED", "DENIED_OUT"])
+
     def test_benchmark_links_are_scoped_to_device_analysis(self):
         scenario = SCENARIO.with_name("scenario-100")
         report = analyze(scenario, specifications=scenario / "specifications/specifications_10pct.csv",
                          specification_lines={516, 517})
         self.assertTrue(report["input"]["topology"].endswith("/data_and_metrics/topology.json"))
-        graph = report["predicateComparison"]
-        self.assertEqual((graph["engine"], graph["topology"]), ("ibdp", "snapshot_inputs"))
-        self.assertEqual(graph["counts"], {"matches": 2})
-        self.assertEqual([r["presence"] for r in graph["rows"]], ["present", "present"])
+        self.assertEqual(len(report["intentEvaluation"]["rows"]), 2)
+        self.assertNotIn("cornettoTables", report["evidence"])
+        self.assertNotIn("predicateComparison", report)
 
 
 class Scenario194Tests(unittest.TestCase):
@@ -86,9 +116,9 @@ class Scenario194Tests(unittest.TestCase):
         cls.report = analyze(SCENARIO, specifications=SCENARIO / "specifications/specifications_10pct.csv")
 
     def test_isolation_and_accepted_probe_coexist(self):
-        graph = self.report["predicateComparison"]
-        self.assertEqual(graph["counts"], {"matches": 271})
-        self.assertEqual(graph["rows"][0]["presence"], "present")
+        evaluation = self.report["intentEvaluation"]
+        self.assertEqual(len(evaluation["rows"]), 271)
+        self.assertEqual(evaluation["rows"][0]["presence"], "absent")
         q = next(q for q in self.report["evidence"]["queries"] if q["id"] == "intent-1")
         self.assertEqual(q["result"]["flow"]["dstIp"], "10.181.0.40")
         self.assertIn("ACCEPTED", q["behavior"]["dispositions"])
@@ -109,12 +139,14 @@ class Scenario194Tests(unittest.TestCase):
             java = Path(os.environ["JAVA_HOME"]) / "bin/java" if "JAVA_HOME" in os.environ else "java"
             subprocess.run([java, "-cp", jar, source, SCENARIO / "final_configs", temp / "work", result], check=True)
             control = json.loads(result.read_text())
+            native = _snapshot_facts(SCENARIO / "final_configs", {"cornettoTablesOnly": True}, temp)["cornettoTables"]
+            audit = compare_graphs(native, self.report["benchmark"]["rows"], "fault_injected", [])
 
         def keys(rows):
             return Counter((r["Node"]["name"] if isinstance(r["Node"], dict) else r["Node"],
                             r["VRF"], r["Prefix"], r["Action"], r.get("Next_Hop_IP"), r.get("Next_Hop_Interface"))
                            for r in rows)
-        self.assertEqual(keys(control["forwarding"]["rows"]), keys(self.report["evidence"]["cornettoTables"]["forwarding"]))
+        self.assertEqual(keys(control["forwarding"]["rows"]), keys(native["forwarding"]))
         answers = {key: TableAnswer({"answerElements": [value]}) for key, value in control.items()}
         # Supply the three real answers to the online extractor without starting an HTTP service.
         session = Mock()
@@ -123,4 +155,4 @@ class Scenario194Tests(unittest.TestCase):
         observed = set(extract_forwarding_predicates(answers["forwarding"].frame(), bf=session).all())
         reference = read_specification_from_csv(str(SCENARIO / "specifications/specifications_10pct.csv"))
         expected = ["present" if p in observed else "absent" for p in reference]
-        self.assertEqual(expected, [r["presence"] for r in self.report["predicateComparison"]["rows"]])
+        self.assertEqual(expected, [r["presence"] for r in audit["rows"]])

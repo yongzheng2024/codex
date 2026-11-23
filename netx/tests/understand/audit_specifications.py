@@ -14,7 +14,7 @@ from unittest.mock import Mock
 
 from netx.tools.understand import _snapshot_facts
 from netx.tools.understand.inputs import read_specs, reference_input
-from netx.tools.understand.prefix_graphs import compare_graphs
+from netx.tests.understand.prefix_graphs import compare_graphs
 from netx.tools.understand.report import model_gaps
 from netx.tools.understand.summaries import imported_properties, summarize
 
